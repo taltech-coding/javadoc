@@ -20,3 +20,12 @@ Header 2
        print 'This one is not...'
        print '...but this one is.'
        
+Java näide:
+
+.. code-block:: java
+
+   public class Test {
+      public static void main(String[] args) {
+         System.out.println("Hello world!");
+      }
+   }
