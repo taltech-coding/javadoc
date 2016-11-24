@@ -13,7 +13,6 @@ Header 2
 --------
 
 .. code-block:: python
-   :emphasize-lines: 3,5
 
    def some_function():
        interesting = False
