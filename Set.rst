@@ -4,7 +4,7 @@ Set ehk hulk on kollektsioon või kogum elementidest, milles ükski liige ei kor
 
 *HashSet*
 ---------
-Üks võimalik hulga tüüpidest on HashSet<E>. Seda on võimalik saab nõnda:
+Üks võimalik hulga tüüpidest on HashSet<E>. Seda on saab luua nõnda:
 
 .. code-block:: java
 
