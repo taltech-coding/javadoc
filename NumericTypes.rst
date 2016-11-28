@@ -109,7 +109,7 @@ Konstandid MAX_VALUE ja MIN_VALUE sisaldavad valitud andmetüübi maksimaalset j
     int i = Integer.MAX_VALUE;
     System.out.println(i); // 2147483647
     byte b = Byte.MIN_VALUE;
-    System.out.println(b); // 128
+    System.out.println(b); // -127
 
 parseInt(), parseDouble(), ...
 ------------------------------
