@@ -14,8 +14,8 @@ Tee topeltklõps *System Variables* all oleval *Path* real ja vajuta *New*.
 Lisa sinna C:\\Program Files\\Java\\jdk1.8.0_xx\\bin asendades *8.0_xx* installeeritud Java versiooni numbriga. Vajuta *Move up*, kuni sinu lisatud asukoht on listi eesotsas. 
 
 Sulge aken ja ava command prompt. 
-Kirjuta sinna *path* ja vajuta Enter. Peaksid nägema enda installeeritud JDK asukohta, mille just lisasid.
-Kirjuta seejärel *java -version* ja vajuta enter. Peaksid nägema enda installeeritud Java versiooni.
+Kirjuta sinna *path* ja vajuta Enter. Peaksid nägema installeeritud JDK asukohta, mille just lisasid.
+Kirjuta seejärel *java -version* ja vajuta enter. Peaksid nägema installeeritud Java versiooni.
 
 Mac OS X
 --------
@@ -30,7 +30,7 @@ Kui installeerimine oli edukas, peaksid nüüd nägema installeeritud JDK versio
 
 Mis on JRE ja JDK vahe?
 --------
-JRE: Java Runtime Environment. See on Java Virtuaalmasin, kus peal jooksevad Java aplikatsioonid. See sisaldab ka brauseri pluginaid aplettide jooksutamiseks.
+JRE: Java Runtime Environment. See on Java virtuaalmasin, mille peal jooksevad Java aplikatsioonid. See sisaldab ka brauseri pluginaid aplettide jooksutamiseks.
 
 JDK: Java Software Development Kit. Sisaldab endas JRE-d, kompilaatorit ja vahendeid näiteks silumiseks, et luua ja kompileerida Java programme.
 
