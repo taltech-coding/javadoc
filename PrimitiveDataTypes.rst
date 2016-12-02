@@ -16,7 +16,7 @@ Primitiivsed andmetüübid on väikese algustähega ja objektid suure algustähe
 * **boolean** – kahe võimaliku väärtusega andmetüüp, mille väärtuseks on kas true või false. Vaikeväärtus on false.
 * **char** – 16-bitiline Unicode karakter, miiniumväärtus on '\\u0000' (või 0) ja maksimumväärtus on '\\uffff' (või 65,535). Vaikeväärtus on '\\u0000'.
 
-Sõned ei ole Java mõttes primitiivid, vaid (klassi String) objektid. Nende jaoks kehtivad mõned lihtsustavad erandid. Näiteks saab sõnesid luua (ilma isendiloome operaatorit *new* kasutamata), pannes vastava teksti jutumärkide(" ") vahele. Erinevalt Pythonist tähistavad ühekordsed (' ') jutumärgid Javas üksikuid tähemärke (char).
+Sõned ei ole Java mõttes primitiivid, vaid (klassi String) objektid. Nende jaoks kehtivad mõned lihtsustavad erandid. Näiteks saab sõnesid luua (ilma isendiloome operaatorit *new* kasutamata), pannes vastava teksti jutumärkide(" ") vahele. Erinevalt Pythonist tähistavad ühekordsed (' ') jutumärgid Javas üksikuid tähemärke.
 
 
 ----
