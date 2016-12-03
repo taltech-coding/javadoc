@@ -4,11 +4,11 @@ Võtmesõna super
 
 Kui on selged sellised terminid nagu override ja overload, siis on paras liikuda *super* võtmesõna juurde.
 
-Ligipääs ülemklassi meetodite ja väljade juurde
------------------------------------------------
+Kuidas saada ligi ülemklasis meeotidte ja väljade juurde?
+----------------------------------------------------------
 
 
-Kui teie alamklassis asuv meetod kirjutab üle mõnda ülemklassis olevat meetodit (@Override), on ikkagist võimalik pääseda ülekirjutadud meetodi juurde, ülemklassis *super* võtmesõna abil. Näite abil on seda lihtne näidata. Ütleme, et meil on ülemklass **Superclass**.
+Kui teie alamklassis asuv meetod kirjutab üle mõnda ülemklassis olevat meetodit (@Override), on ikkagi võimalik pääseda ülekirjutadud meetodi juurde, ülemklassis. Seda saab teha *super* võtmesõna abil. Ütleme, et meil on ülemklass **Superclass**.
 
 
 .. code-block:: java
@@ -20,7 +20,7 @@ Kui teie alamklassis asuv meetod kirjutab üle mõnda ülemklassis olevat meetod
         }
     }    
 
-Samuti on meil olemas alamklass **Subclass**, mis kirjutab üle meetodi *printMethod();*
+Samuti on meil olemas alamklass **Subclass**, mis laieneb ülemklassi ning kirjutab (Overrides) üle meetodi *printMethod();*
 
  .. code-block:: java
     
@@ -37,7 +37,7 @@ Samuti on meil olemas alamklass **Subclass**, mis kirjutab üle meetodi *printMe
          }
        }
     
-Alamklassi meetoid *printMethod()* kirjutab üle ülemklassi meetodi *printMethod()*. Samas, kui on soov viidata just ülemklassi meetodile *printMetod()*, siis on tarvis kasutada võtmesõna **super**. Konsooli trükitakse:
+Alamklassi meetoid *printMethod()* kirjutab üle ülemklassi meetodi *printMethod()*. Samas, kui on soov kutsuda välja just ülemklassi meetod *printMetod()*, siis on tarvis kasutada võtmesõna **super**. Konsooli trükitakse:
 
  .. code-block:: java
     
@@ -50,7 +50,7 @@ Ehk siis alguses käivitakase ülemklassi meetod **printMethod()**, ning siis p�
 
 
 
-- NB! Täpselt samamoodi on võimalik alamklassis välja juurde.
+- NB! Samamoodi on võimalik pääseda ülemklassi välja juurde.
 
  .. code-block:: java
     
@@ -71,7 +71,7 @@ Ehk siis alguses käivitakase ülemklassi meetod **printMethod()**, ning siis p�
          }        
 
 
-Kuna kasutatud oli **super.speed**, siis konsooli trükitakse
+Kuna kasutatud oli **super.speed**, siis konsooli trükitakse:
 
  .. code-block:: java
 
@@ -80,7 +80,7 @@ Kuna kasutatud oli **super.speed**, siis konsooli trükitakse
 Alamklassi konstruktor
 ----------------------
 
-Ütleme, et meil on ülemklass, Bicycle ning alamklass MountainBike. Jägmises näites on näha, kuidas alamklassi, MountainBike, konstruktoris kutsutakse välja ülemklassi konstruktor ning pärast seda lisatakse veel alamklassi poolsed väljad.
+Ütleme, et meil on ülemklass, Bicycle, ning alamklass MountainBike. Jägmises näites on näha, kuidas alamklassi, MountainBike, konstruktoris kutsutakse välja ülemklassi konstruktor ning pärast seda seadistatakse veel alamklassile iseloomulikud väljad *seatHeigth*.
 
  .. code-block:: java
 
@@ -90,8 +90,8 @@ Alamklassi konstruktor
                 }       
 
 
-Kui kutsutakse välja almaklassi konstruktrois super(), siis kutsutakse ülemklassi argumendita konstruktor, kui kutsutakse välja super(argumendite list), siis kutsutakse välja vastavate argumentidega ülemklassi konstruktor.
+Kui kutsutakse välja almaklassi konstruktrois super(), siis käivitub ülemklassi argumendita konstruktor, kui kutsutakse välja super(argumendite list), siis käivitub vastavate argumentidega ülemklassi konstruktor.
 
-- NB! super() sisestatakse igasse alamklassi konstrukorisse automaatselt, Java poolt, nii, et seda pole näha. Vastasel juhul tekib kompilatsiooniviga. Asi on selles, et alati seadistatakse enne ülemklass ning siis alamklassid, seetõttu on vaja alati ligipääsu igale ülemklassile.
+- NB! super() sisestatakse igasse alamklassi konstrukorisse automaatselt, Java poolt, nii, et seda polegi koodis näha. Vastasel juhul tekib kompilatsiooniviga. Asi on selles, et alati seadistatakse enne ülemklass ning siis alamklassid, seetõttu on vaja alati ligipääsu igale ülemklassile. (Constructor chaining)
         
 
