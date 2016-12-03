@@ -3,7 +3,7 @@ Objekti loomine
 -----------------------------------------------------------------------------------------
 *Objektide loomiseks kasutatakse võtmesõna "new"*
 -----------------------------------------------------------------------------------------
-Klassi võib kujutada ette, kui üldist juhist, mille järgi objekte luuakse. Javas kasutatakse objektide loomiseks võtmesõna **new**.
+*NB!* Klassi võib kujutada ette, kui üldist juhist, mille järgi objekte luuakse. Javas kasutatakse objektide loomiseks võtmesõna **new**.
 
 .. code-block:: java
 
@@ -28,34 +28,34 @@ Tavaliselt oleme harjunud looma muutujat nii:
 
 .. code-block:: java
 
+        //Tüüp ja nimi      
         type name;
 
 Kui tegemist on primitiivse tüübiga, näiteks *int*, siis koos deklareerimisega reserveeritakse muutujale kindel hulk mälu.
+Järgmises näites on näha objekti viida deklareerimist, aga mitte veel objekti loomist!
 
 .. code-block:: java
 
         Student student1;
 
-Siin on tegemist lihtsalt viite loomisega, objekti veel ei looda, kuna objekti loomine käib **new** operaatori abil. Kui proovida kasutada muutuja nime *student1* programmis, siis kood ei kompileeru, sest mällu ei ole objekt veel loodud.
+Objekti veel ei looda, kuna objekti loomine käib **new** operaatori abil. Kui proovida kasutada muutuja nime *student1* programmis, siis kood ei kompileeru, sest mällu ei ole objekt veel loodud.
 
 *Instantsi loomine* 
 -----------------------
 
-**new** operaatori abil luuakse objekt ning antakse äsjaloodud objektile koha mälus.
-
-**N.B!** Instantsi loomine on sama asi, mis objekti loomine. Kui luuakse objekt, siis on see sama, kui klassi instantsi loomine.
-
-**new** operaator tagastab viite objektile, mida ta on loonud. 
+**new** operaatori abil luuakse objekt ning antakse äsjaloodud objektile koha mälus. **new** operaator tagastab viite objektile, mida ta on loonud. 
 
 
 .. code-block:: java
 
         Point originOne = new Point(23, 94);
+        
+Antud näites LOODAKSE objekt **new** võtmesõna abil.
 
 *Initsialiseerimine* 
 -----------------------
 
-Pärast **new** võtmesõna kutsutakse välja konstruktor, kuhu antakse soovi korral parameetrid. See tuleb välja järgmises näites
+Pärast **new** võtmesõna kutsutakse välja konstruktor, kuhu antakse soovi korral parameetrid. See tuleb välja järgmises näites:
 
  .. code-block:: java
 
@@ -67,7 +67,7 @@ Pärast **new** võtmesõna kutsutakse välja konstruktor, kuhu antakse soovi ko
     
        public static void main(String []args) {
           // Following statement would create an object myPuppy
-          Puppy myPuppy = new Puppy( "tommy" );
+          Puppy myPuppy = new Puppy("tommy");
        }
     }
 
