@@ -1,15 +1,15 @@
 Konstruktorid
 ================================================
 -----------------------------------------------------------------------------------------
-*Konstruktorite abil luuakse klassi üksikesindajaid*
+*Konstruktorite abil luuakse klassi isendeid*
 -----------------------------------------------------------------------------------------
-Konstruktor on koodi plokk, mis võimaldab tekitada klassidest objekte. Konstruktor meenutab meetodit, kui päriselt ei ole ta meetod. Konstruktor erineb meetodist seepärast, et 
+Konstruktor on koodi plokk, mis võimaldab tekitada klassidest objekte. Konstruktor meenutab kujult meetodit, kui päriselt ei ole ta meetod. Konstruktor erineb meetodist seepärast, et 
 
-1. Konstruktori nimi peab olema sama, mis klassinimi.
+1. Konstruktori nimi peab olema **sama**, mis klassi nimi.
 
 2. Konstruktoritel ei ole tagastustüüpi, isegi mitte *void*.
 
-3. Konstruktor kutsutakse välja **new** operaatori abil, kui luuakse objekt. Konstruktorite roll on luua objekt.
+3. Konstruktor kutsutakse välja **new** operaatori abil, objekti loomise ajal. Konstruktorite roll on luua objekt.
 
 *Konstruktorite tüübid* 
 -----------------------
@@ -27,7 +27,7 @@ Konstruktor on koodi plokk, mis võimaldab tekitada klassidest objekte. Konstruk
          }
     }
 
-Nii näeks välja default constructor klassis *Demo*, kuid kuna me oleme selle ise kirja pannud, siis ei loeta seda enam default konstruktoriks.
+**NB!** Nii näeb välja default constructor klassis *Demo*, kuid kuna me oleme selle ise kirja pannud, siis ei loeta seda enam default konstruktoriks. Default on siis, kui seda ei kirjutata välja!
  
 
 2. **Argumendita konstruktor**
@@ -42,7 +42,7 @@ Nii näeks välja default constructor klassis *Demo*, kuid kuna me oleme selle i
          }
     } 
 
-Argumendita konstruktor sarnaneb signatuurilt default konstuktoriga, kuid koodi keha võib teha ükskõik mida. Antud juhul objekti loomisel trükitakse konsooli: "This is a default constructor"
+Argumendita konstruktor sarnaneb signatuurilt default konstuktoriga, kuid koodi keha võib teha ükskõik mida. Antud juhul objekti loomisel trükitakse konsooli: "This is a default constructor".
 
 3. **Argumentidega konstruktor**
 
@@ -60,9 +60,8 @@ Sel juhul antakse konstuktorisse veel eraldi argumendid. Neid võib olla ükskõ
 
 
 
-
-*Konstruktorite abil objektide loomine* 
----------------------------------------
+*Konstruktorite roll objektide loomises* 
+-----------------------------------------
 
 Konstruktor võimaldab anda klassi väljadele algväärtusi, kui objekt luuakse. Ütleme, et meil on klass *Actor*, millel on väljad *fistName* ja *lastName*. Loome konstruktori *Actor* klassile.
 
@@ -104,7 +103,7 @@ Ning loome vastava objekti
         Actor a = new Actor("Arnold", "Schwarzenegger", false);
 
 
-*Näide #1* 
+Veel üks näide 
 -----------------------------
 
 Mis on antud koodi väljundiks?
@@ -140,7 +139,7 @@ Konsooli väljundiks on:
 
         var is: 10
 
-Aga nüüd asendame * public static void main(String args[])* sellise koodi
+Aga nüüd asendame * public static void main(String args[])* sellise koodi:
 
  .. code-block:: java
 
@@ -162,7 +161,7 @@ Kõige tihedamini kasutatakse *this* võtmesõna, kuna väli on varjatud meetodi
 
 .. code-block:: java
 
-        public class Student {
+       public class Student {
         public int code = 0;
         public int age = 0;
             
@@ -188,4 +187,4 @@ Samas võib seda koodi kirjutada nii
         }
     }
 
-Nüüd seatakse klassivälja *code*, *name* väärtuseks konstruktori parameetri väärtus.
+Nüüd seatakse klassivälja *code*, *name* väärtuseks konstruktorisse antud argumentide väärtused.
