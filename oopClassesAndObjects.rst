@@ -74,7 +74,7 @@ Nagu on juba mitmeid kordi mainitud. Klass on plaan, ehk joonis, mille järgi ob
      }
     }
 
-Maja klass in konstruktor.
+Maja klass ning konstruktor.
 
  .. image:: http://i.imgur.com/erKUk7I.jpg
      :width: 200px
