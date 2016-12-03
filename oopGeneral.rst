@@ -4,7 +4,7 @@ Enne alustamist, on paras teha väike sissejuhatus OOP'i.
 
 Protseduurilises programmeerimises - mis on programmeerimine, mida me oleme siiamaani õppinud, programm on jaotatud väiksemateks osadeks, meetoditeks. Meetod töötab, kui eraldiseisev programmi osa, mida saab välja kutsuda ükskõik kust kohast programmi sees. Kui meetod kutsutakse välja, siis programmi täitmine liigub meetodi algusesse. Kui meetod on täidetud, pöördub programm tagasi sinna kohta, kust meetod oli välja kutsutud.
 
-OOP-is, nagu ka protseduurilises programmeerimises, me püüame lammutada programmi veel väiksemateks osadeks. OOPi väiksemad osad on objektid. Igal eraldiseisval objektil on individuaalsed kohutstused: iga objekti sees on kindel hulk informatsiooni ning funktsionaalsust. Objekt-orienteeritud programm koosneb mitmetest objektidest, mis ühekoos määravad, kuidas programm hakkab töötama.
+OOP-is, nagu ka protseduurilises programmeerimises, me püüame lammutada programmi veel väiksemateks osadeks. OOPi väiksemad osad on objektid. Igal eraldiseisval objektil on individuaalsed kohutstused: iga objekti sees on kindel hulk informatsiooni (väljad) ning funktsionaalsust (meetodid). Objekt-orienteeritud programm koosneb mitmetest objektidest, mis ühekoos määravad, kuidas programm hakkab töötama.
 
 Esimeseks päriselt OOP keeleks võib nimetada Smalltalk'i. (*circa* 1970)
  
@@ -12,7 +12,7 @@ Esimeseks päriselt OOP keeleks võib nimetada Smalltalk'i. (*circa* 1970)
 *OOP süsteem* 
 -----------------------
 
-**Objekt** Javas on sama kontseptsiooniga, mis **objekt** päris elus. Näiteks auto, pliiats, laud, tudeng jne. Objekt orienteeritud programmeerimine on metodoloogia, kuidas saab disainida programm kasutades klasse ning objekte. Üldiselt aitab selline lähenemine tarkvara loomist, tänu mõningatele võtmesõnadele
+**Objekt** Javas on sama kontseptsiooniga, mis **objekt** päris elus. Näiteks auto, pliiats, laud, tudeng jne. Objekt-orienteeritud programmeerimine on metodoloogia, kuidas saab disainida programme kasutades klasse ning objekte. Üldiselt aitab selline lähenemine tarkvara loomist, tänu mõningatele võtmesõnadele
 
 - Objekt
 - Klass
@@ -40,6 +40,8 @@ Kui me teeme telefonikõnesid, siis ei tea me täpselt, kuidas kogu side süstee
 5. Kapseldamine
 
 Kapseldamine on mehhanism, mille abil väljad ning meetodid seotakse ühte kohta kokku. Kapseldamise korral on klassi väljad peidetud teiste klasside eest, kuid samas klassis asuvate *public* meetodite abil saavad teised klassid selle info kätte. Selle tarvis on javas **getterid** ja **setterid**
+
+Kõiki punkte antud nimekirjas saame eraldi ning täpsemalt vaadata natuke hiljem.
 
 *Mis on OOP'i eelised protseduurilise programmeerimise ees?* 
 ------------------------------------------------------------
