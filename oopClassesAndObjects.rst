@@ -74,6 +74,8 @@ Nagu on juba mitmeid kordi mainitud. Klass on plaan, ehk joonis, mille järgi ob
      }
     }
 
+Maja klass in konstruktor.
+
  .. image:: http://i.imgur.com/erKUk7I.jpg
      :width: 200px
      :height: 200px
@@ -88,6 +90,9 @@ Nüüd kui meil on joonis olemas, saab maju ehitama hakata joonise järgi. Samas
     House myDreamHouse = new House("grey, 60, blue);
 
     }
+
+
+Ühe maja isendi loomine objektina.
 
  .. image:: http://i.imgur.com/EU0ZdJ5.jpg
          :width: 200px
