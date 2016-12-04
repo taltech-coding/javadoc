@@ -23,7 +23,7 @@ double      64-bitine ujukomaarv  *                   double d = 1.2345;
 Väärtustamine
 =============
 
-
+Numbriliste väärtuste esitamiseks on Javas mitmeid erinevaid võimalusi.
 
 Täisarvutüübid
 --------------
@@ -79,7 +79,81 @@ Alakriipse **ei tohi lisada**:
 Operatsioonid
 =============
 
-(-)
+Aritmeetilised operatsioonid
+----------------------------
+
+Javas on põhiliste aritmeetiliste operatsioonide jaoks defineetitud järgnevad operaatorid:
+
++---+-------------+
+| + | Liitmine    |
++---+-------------+
+| - | Lahutamine  |
++---+-------------+
+| * | Korrutamine |
++---+-------------+
+| / | Jagamine    |
++---+-------------+
+| % | Jääk        |
++---+-------------+
+
+(näited)
+
+Lisaks on olemas unaarsed operaatorid, mis kasutavad vaid ühte operandi. Operaatorit **+** üldjuhul ei kasutata, kuna numbrid on vaikimisi positiivsed.
+
++---+--------------------------------------+
+| + | Positiivne väärtus                   |
++---+--------------------------------------+
+| - | Numbrilise väärtuse inverteerimine   |
++---+--------------------------------------+
+| ++ | Suurendamine ühe võrra              |
++---+--------------------------------------+
+| -- | Vähendamine ühe võrra               |
++---+--------------------------------------+
+| ! | Loogikaväärtuse inverteerimine       |
++---+--------------------------------------+
+
+(näited)
+
+Võrdlemine
+----------
++----+--------------------+
+| == | võrdub             |
++----+--------------------+
+| != | ei võrdu           |
++----+--------------------+
+| >  | suurem kui         |
++----+--------------------+
+| >= | suurem või võrdne  |
++----+--------------------+
+| <  | väiksem kui        |
++----+--------------------+
+| <= | väiksem või võrdne |
++----+--------------------+
+
+(viide tõeväärtustüüpide teemale või tingimuslausetele? näited?)
+
+Operatsioonid bittidega
+-----------------------
+
+(Seletada nihete erinevust ja seda, et kõike tehakse iga biti jaoks eraldi)
+
++-----+-----------------------+
+| >>  | märgiga nihe paremale |
++-----+-----------------------+
+| <<  | nihe vasakule         |
++-----+-----------------------+
+| >>> | nihe paremale         |
++-----+-----------------------+
+| <<< | nihe vasakule         |
++-----+-----------------------+
+| ~   | inversioon (EI)       |
++-----+-----------------------+
+| &   | konjunktsioon (JA)    |
++-----+-----------------------+
+| \|  | disjunktsioon (VÕI)   |
++-----+-----------------------+
+| ^   | välistav VÕI (XOR)    |
++-----+-----------------------+
 
 Ületäide
 ========
@@ -143,7 +217,7 @@ Lisaks tavalistele klassidele (Byte, Short, Long, Integer, Float, Double) on ole
 
 .. code-block:: java
 
-    BigInteger i = new BigInteger(Integer.MAX_VALUE);     // suurim võimalik int väärtus
-    BigInteger j = new BigInteger(Integer.MAX_VALUE - 1); // eelmisest ühe võrra väiksem väärtus
-    BigInteger sum = i.add(j);                            // liidame need kokku...
-    System.out.println(sum.toString());                   // tulemus on (TULEMUS SIIA)
+    BigInteger i = BigInteger.valueOf(Integer.MAX_VALUE); // suurim võimalik int väärtus (2147483647)
+    BigInteger j = BigInteger.valueOf(1);
+    BigInteger sum = i.add(j);
+    System.out.println(sum.toString());                   // tulemus on 2147483648
