@@ -11,9 +11,9 @@ Kasutamine
 
 - Intellij avades valida "Create New Project".
 - Vasakul asuvast listis valida soovitud projektitüüp. (tavaliselt - kui ei öelda teisiti, siis "Java")
-- Projekti SDK - otsida üles Java JDK kaust (nt Program Files -> Java -> jdk1.8.0_77), valida see ning vajutada "OK".
+- Projekti SDK - otsida üles Java JDK kaust (Windowsil nt Program Files -> Java -> jdk1.8.0_77, OS X puhul tavaliselt /Library/Java/JavaVirtualMachines/jdk1.8.0_112.jdk/Contents/Home), valida see ning vajutada "OK".
 - "Additional Libraries and Frameworks" alt pole vaja midagi valida. Vajutada "Next".
--  "Create project from template" kasti panna linnuke ainult siis, kui on soov, et Intellij ise koostaks klassi Main meetodiga. Vajutada "Next".
+- "Create project from template" kasti panna linnuke ainult siis, kui on soov, et Intellij ise koostaks klassi Main meetodiga. Vajutada "Next".
 - Järgmiseks valida projektile soovitud asukoht. Seejärel panna projektile nimi (kausta nimi). Vajutada "Finish".
 
 **Projekti pakettide ning klasside loomine:**
