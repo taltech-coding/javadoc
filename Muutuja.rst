@@ -41,7 +41,7 @@ Näide
             return sum;
         }
     
-        public static void main(String args[]) {
+        public static void main(String[] args) {
             sum += addToSum(1, 2, 3);
             System.out.println(sum);
         }
