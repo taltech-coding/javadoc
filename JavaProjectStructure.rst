@@ -5,7 +5,7 @@ Java projekti ülesehitus
 Kirjeldus
 ---------
 
-Java projekt koosneb tüüpiliselt erinevatest pakettidest ja klassidest, millest igaüks täidab oma kindlat funktsionaalsust. Ühte paketti lähevad kõik selle alla käivad klassid.
+Java projekt koonseb tüüpiliselt ühest kaustast, kus asub java lähtekood. Organiseerimise mõttes ei asu aga lähtekood otse *src* kaustas, vaid nad paigutatakse eraldi pakettidesse (kaustadesse), mis seovad sarnase käitumismustriga klasse.
 
 Näide
 -----
@@ -65,7 +65,7 @@ Animal klassis saab vastavalt parameetritele nö teha uue looma. Ette tuleb anda
         }
     }
 
-Dog klass pikendab Animal klassi. Põhimõtteliselt on Dog klass Animal klassi alamklass. Kuna Dog on ka loom, siis saab Animal klassis põhiomadused paika panna ning igasugu erinevusi saab Dog klassis implementeerida jättes alles Animal klassi omadused. Selles näites lisasime hammaste arvu.
+Dog klass laieneb Animal klassi. Põhimõtteliselt on Dog klass Animal klassi alamklass. Kuna Dog on ka loom, siis saab Animal klassis põhiomadused paika panna ning igasugu erinevusi saab Dog klassis implementeerida jättes alles Animal klassi omadused. Selles näites lisasime hammaste arvu.
 
 .. code-block:: java
 
