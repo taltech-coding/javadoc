@@ -5,7 +5,7 @@ Java-faili ülesehitus
 Kirjeldus
 ---------
 
-Kõige lihtsam Java klass sisaldab funktsioone ning main-meetodit, mida kasutatakse koodi jooksutamiseks.
+Kõige lihtsam Java klass koosneb paketi deklaratsioonist (valikuline), import lausetest (kui neid on vaja), klassi definitsioonist (näites "Example". Panna tähele, et see peab vastama klassi nimele. Antud juhul peaks olema faili nimi Example.java), funktsioonidest ning main-meetodist, mida kasutatakse koodi jooksutamiseks.
 Näitena toodud koodis on vaid üks funktsioon ning see liidab kokku 2 ette antud numbrit.
 Main meetodis kutsume välja funktsioone, mida soovime käima panna (antud juhul addNumbers). 
 
@@ -16,24 +16,12 @@ Näide
 
 .. code-block:: java
 
-    /**
-     * @author L33tH4x0r.
-     */
     public class Example {
-        /**
-         * Add two given numbers.
-         * @param firstNumber number given.
-         * @param secondNumber number given.
-         * @return sum of two given numbers.
-         */
+        
         public static int addNumbers(int firstNumber, int secondNumber) {
             return firstNumber + secondNumber;
         }
     
-        /**
-         * Main method.
-         * @param args collection of Strings, separated by a space, which can be typed into the program in the terminal.
-         */
         public static void main(String[] args) {
             System.out.println(addNumbers(1, 2));
         }
