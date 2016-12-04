@@ -12,7 +12,7 @@ Näide
 
 .. image:: https://www.upload.ee/thumb/6403090/JavaProjectBuild.PNG
 
-Antud projektis on 2 paketti ja 3 klassi. Animal paketis on loomade klassid (sinna saab ka neid lisada) ning person paketis asub inimese klass.
+Antud projektis on 2 paketti ja 3 klassi. Animal paketis on loomade klassid (sinna saab neid ka lisada) ning person paketis asub inimese klass.
 
 .. code-block:: java
 
