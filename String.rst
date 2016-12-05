@@ -86,7 +86,7 @@ Kasutada on võimalik ka kahe argumendiga meetodit. Teine argument näitab ära,
 
 **replace**
 
-Sellel meetodil on kaks argumenti, millest esimene on vana sümbol ja teine argument on uus sümbol. Asendatakse vana sümbol uuega.
+Sellel meetodil on kaks argumenti, millest esimene on vana sümbol ja teine uus sümbol. Tagastab sõne, kus on asendatud vana sümbol uuega.
 
 .. code-block:: java
 
@@ -138,7 +138,7 @@ Kui mingil põhjusel s on null, annab programm veateate. Eelnevalt tuleks kontro
     		System.out.println(s.length());
 	}
 	
-Teine võimalus, kui meid huvitab, kas kaks sõne on võrdsed, võib kirjutada nii:
+Teine võimalus juhul kui meid huvitab, kas kaks sõne on võrdsed, saab kirjutada nii:
 
 .. code-block:: java
 
@@ -146,7 +146,8 @@ Teine võimalus, kui meid huvitab, kas kaks sõne on võrdsed, võib kirjutada n
     		// checks if s value is "jah"
 	}
 	
-"jah" on eelmise näite puhul samamoodi sõne ehk objekt. Kuna see objekt ei ole null, võib seda kasutada kontrollimise puhul esimesel kohal. Kui kaks sõne on sama sisuga, siis ei ole vahet, kumba kummaga kontrollime - mõlemal juhul peaks equals meetod tagastama true. Seega, selle näite puhul, isegi kui s on null, ei teki viga, kuna me ei proovi s muutuja kaudu mingeid meetodeid välja kutsuda.
+"jah" on eelmise näite puhul samamoodi sõne ehk objekt. Kuna see objekt ei ole null, võib seda kasutada kontrollimise puhul esimesel kohal. Kui kaks sõne on sama sisuga, siis ei ole vahet, kumba kummaga kontrollime - mõlemal juhul peaks *equals* meetod tagastama *true*.
+Järelikult selle näite puhul, isegi kui s on null, ei teki viga sest ei kutsuta selle muutuja kaudu meetodeid välja.
 
 -------
 
