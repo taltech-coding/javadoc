@@ -14,15 +14,17 @@ Void-tüüpi meetodit kasutame näiteks selleks, et globaalseid muutujaid muuta/
 
 .. code-block:: java
 
-    public class Example {
-        private String name;
-    
-        private void setName(String name) {
-            this.name = name;
+    public class ExampleVoid {
+        public static void examGrade(double points) {
+            if (points >= 91) {
+                System.out.println("Grade is 5.");
+            } else if (points >= 81) {
+                System.out.println("Grade is 4.");
+            } else {
+                System.out.println("Grade is 3 or lower."); }
         }
-    
+
         public static void main(String[] args) {
-            Example example = new Example();
-            example.setName("Example");
+            examGrade(83);
         }
     }
