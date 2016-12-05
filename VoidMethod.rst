@@ -10,7 +10,7 @@ Tagastustüübita meetod on void tüüpi. See tähendab, et meetod küll teeb mi
 Näide
 -----
 
-Void-tüüpi meetodit kasutame näiteks selleks, et globaalseid muutujaid muuta/määrata.
+Void-tüüpi meetodit kasutame näiteks selleks, et globaalseid muutujaid muuta/määrata. Või nagu allolevas näites, lihtsalt trükkida midagi konsooli vastavalt argumendile.
 
 .. code-block:: java
 
