@@ -23,10 +23,10 @@ Näide
 .. code-block:: java
 
         public static void main(String[] args) {
-                addTwoNumbers(1, 2); // -> 3
-                addTwoNumbers(5, 7); // -> 12
-                addTwoNumbers("a", 2.5); // -> error, kuna meetodis on sisendväärtused deklareeritud
-                                         // int-tüübina, aga üritame ette anda String ning double tüüpi väärtuseid.
+            addTwoNumbers(1, 2); // -> 3
+            addTwoNumbers(5, 7); // -> 12
+            addTwoNumbers("a", 2.5); // -> error, kuna meetodis on sisendväärtused deklareeritud
+                                     // int-tüübina, aga üritame ette anda String ning double tüüpi väärtuseid.
         }
 
 **Siin on meetodi argumendiks string-tüüpi väärtus:**
