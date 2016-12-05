@@ -29,7 +29,7 @@ Lisaks tekstilisele väärtusele võib väärtuseks olla ka null:
 Meetodid
 --------
 
-**.length()**
+**length()**
 
 Tagastab sõne pikkuse (mitu sümbolit on sõnes). Tagastatav väärtus on täisarv.
 
@@ -38,7 +38,7 @@ Tagastab sõne pikkuse (mitu sümbolit on sõnes). Tagastatav väärtus on täis
   System.out.println("hello".length()); // prindib "5"
   System.out.println("".length()); // prindib "0"
   
-**.charAt**
+**charAt**
 
 Võimaldab sõnest leida ühe sümboli vastavalt ette antud indeksile. See töötab sarnaselt massiividega. Indeks hakkab 0-st, st esimese elemendi index on 0. Meetod tagastab andmetüübina char ehk ühe sümboli.
 
@@ -47,7 +47,7 @@ Võimaldab sõnest leida ühe sümboli vastavalt ette antud indeksile. See töö
   char c = "hello".charAt(0); // c = 'h'
   c = "hello".charAt(1); // c = 'e'
   
-**.substring**
+**substring**
 
 Võimaldab sõnest alamosa võtta. Samanimelist meetodit on kaks: üks on ühe argumendiga, teine on kahe argumendiga.
 Ühe argumendiga meetod tagastab alamsõne, mille algus on ette antud indeksiga positsioonist ning mille lõpp on algse sõne lõpp.
@@ -64,7 +64,7 @@ Kahe argumendiga meetod tagastab alamsõne, mille algus on esimese argumendiga m
   System.out.println("tere".substring(1,3)); // prindib "er"
   System.out.println("tere".substring(3,4)); // prindib "e"
   
-**.indexOf**
+**indexOf**
 
 Otsib sõnest etteantud (alam)sõne ja tagastab positsiooni, kust otsitav (alam)sõne leiti. Kui otsitavat (alam)sõne ei leita, tagastab -1.
 
@@ -84,7 +84,7 @@ Kasutada on võimalik ka kahe argumendiga meetodit. Teine argument näitab ära,
   System.out.println("hello".indexOf("e", 1)); // prindib "1"
   System.out.println("hello".indexOf("l", 2)); // prindib "3", kui hakata positsioonist 2 otsima, leidub esimene "l" positsioonil 3
 
-**.replace**
+**replace**
 
 Sellel meetodil on kaks argumenti, millest esimene on vana sümbol ja teine argument on uus sümbol. Asendatakse vana sümbol uuega.
 
@@ -92,15 +92,15 @@ Sellel meetodil on kaks argumenti, millest esimene on vana sümbol ja teine argu
 
   System.out.println("abc".replace('a', 'b')); // prindib "bba"
   
-**.trim()**
+**trim()**
 
 Tagastab sõne, millelt on eemaldatud eelnevad ja järgnevad tühikud.
 
-**.toUpperCase()**
+**toUpperCase()**
 
 Tagastab sõne, kus kõik märgid on muudetud suurtähtedeks.
 
-**.toLowerCase()**
+**toLowerCase()**
 
 Tagastab sõne, kus kõik märgid on muudetud väiketähtedeks.
 
