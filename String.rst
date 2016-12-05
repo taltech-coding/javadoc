@@ -1,6 +1,7 @@
 Sõne
 ====
-Sõned (ingl.k. *string*) on objektid, mis kuuluvad klassi *java.lang.String*. Sõne on sümbolite kogum. Sõnest võib mõelda kui tähtede (või üldisemalt sümbolite) massiivist. Sõne on Java keeles objekt, mis tähendab, et tema kohta kehtivad natuke teised reeglid kui primitiivsete andmetüüpide puhul.
+Sõned (ingl.k. *string*) on objektid, mis kuuluvad klassi *java.lang.String*. Sõne on sümbolite kogum. Sõnest võib mõelda kui tähtede (või üldisemalt sümbolite) massiivist. 
+Sõne on Java keeles objekt, mis tähendab, et tema kohta kehtivad natuke teised reeglid kui primitiivsete andmetüüpide puhul.
 
 Sõne-tüüpi muutuja loomine:
 
@@ -9,7 +10,7 @@ Sõne-tüüpi muutuja loomine:
     String greeting;
     
 Sellisel juhul pole sõnel väärtust määratud. Vaikeväärtus on **null**. 
-**null** tähendab objektide puhul seda, et antud objekt on väärtustamata. Kui me allpool vaatleme String'i meetodeid, siis kui meie vaadeldava objekti väärtus on null, siis ükski allpool toodud meetod ei tööta - käivitamisel antakse veateade.
+**null** tähendab objektide puhul seda, et antud objekt on väärtustamata. Kui meie vaadeldava objekti väärtus on null, siis ei ole võimalik tema meetodeid välja kutsuda.
 		
 Muutuja loomisel võib sellele ka sisu anda:
 
@@ -28,16 +29,16 @@ Lisaks tekstilisele väärtusele võib väärtuseks olla ka null:
 Meetodid
 --------
 
-**length()**
+**.length()**
 
-Tagastab sõne pikkuse (mitu sümbolit on sõnes).
+Tagastab sõne pikkuse (mitu sümbolit on sõnes). Tagastatav väärtus on täisarv.
 
 .. code-block:: java
 
   System.out.println("hello".length()); // prindib "5"
   System.out.println("".length()); // prindib "0"
   
-**charAt**
+**.charAt**
 
 Võimaldab sõnest leida ühe sümboli vastavalt ette antud indeksile. See töötab sarnaselt massiividega. Indeks hakkab 0-st, st esimese elemendi index on 0. Meetod tagastab andmetüübina char ehk ühe sümboli.
 
@@ -46,7 +47,7 @@ Võimaldab sõnest leida ühe sümboli vastavalt ette antud indeksile. See töö
   char c = "hello".charAt(0); // c = 'h'
   c = "hello".charAt(1); // c = 'e'
   
-**substring**
+**.substring**
 
 Võimaldab sõnest alamosa võtta. Samanimelist meetodit on kaks: üks on ühe argumendiga, teine on kahe argumendiga.
 Ühe argumendiga meetod tagastab alamsõne, mille algus on ette antud indeksiga positsioonist ning mille lõpp on algse sõne lõpp.
@@ -59,10 +60,11 @@ Võimaldab sõnest alamosa võtta. Samanimelist meetodit on kaks: üks on ühe a
 Kahe argumendiga meetod tagastab alamsõne, mille algus on esimese argumendiga määratud indeksiga positsioonist ning mille lõpp on teise argumendiga määratud indeksiga positsioonist eelmine positsioon. Ehk siis alguse positsioon on kaasa arvatud, lõpu oma ei ole kaasa arvatud.
 
 .. code-block:: java
+
   System.out.println("tere".substring(1,3)); // prindib "er"
   System.out.println("tere".substring(3,4)); // prindib "e"
   
-**indexOf**
+**.indexOf**
 
 Otsib sõnest etteantud (alam)sõne ja tagastab positsiooni, kust otsitav (alam)sõne leiti. Kui otsitavat (alam)sõne ei leita, tagastab -1.
 
@@ -82,24 +84,74 @@ Kasutada on võimalik ka kahe argumendiga meetodit. Teine argument näitab ära,
   System.out.println("hello".indexOf("e", 1)); // prindib "1"
   System.out.println("hello".indexOf("l", 2)); // prindib "3", kui hakata positsioonist 2 otsima, leidub esimene "l" positsioonil 3
 
+**.replace**
+
+Sellel meetodil on kaks argumenti, millest esimene on vana sümbol ja teine argument on uus sümbol. Asendatakse vana sümbol uuega.
+
+.. code-block:: java
+
+  System.out.println("abc".replace('a', 'b')); // prindib "bba"
+  
+**.trim()**
+
+Tagastab sõne, millelt on eemaldatud eelnevad ja järgnevad tühikud.
+
+**.toUpperCase()**
+
+Tagastab sõne, kus kõik märgid on muudetud suurtähtedeks.
+
+**.toLowerCase()**
+
+Tagastab sõne, kus kõik märgid on muudetud väiketähtedeks.
+
 Sõnede võrdlemine
 -----------------
-TODO
+Sõnede puhul ei saa kasutada == võrdlust. See võrdleb objektide puhul seda, kas nad on täpselt sama instants. Meid huvitab aga, kas sisu (ehk väärtus) on sama. Selleks kasutatakse meetodit *equals*. Tagastab true/false.
 
-   
-    
-    
-    
-    
+.. code-block:: java
+  
+  if (s.equals("hello")) {
+    // do something
+  }
+  
+null väärtus
+------------
+
+Objektide (ka sõne) puhul on **null** eriline "väärtus". Sisuliselt tähendab see seda, et väärtus on määramata. Kui muidu objekti andmetüüp viitab lihtsustatult mäluaadressile, kus objekti sisu/väärtus salvestatud, siis null tähendab seda, et mälus pole selle objekti kohta (veel) andmeid.
+null "väärtusega" objekti puhul ei saa ühtegi meetodit kasutada. Ehk siis määramata sõne puhul s.length(); tuleks viga "NullPointerException". Kuna s on null, siis meil objekti (sõne) ennast polegi. Seega, kõik pöördumised s poole annavad tulemuseks 'null'.
+Kui kirjutada selline kontroll:
+
+.. code-block:: java
+
+	if (s.equals("jah")) {
+     		// do something if user entered "jah"
+	}
+	
+Kui mingil põhjusel s on null, annab programm veateate. Eelnevalt tuleks kontrollida kas s on väärtustatud:
+
+.. code-block:: java
+
+	if (s == null) {
+    		// here s is null
+	} else {
+    		// here s is not null, we can use string methods
+    		System.out.println(s.length());
+	}
+	
+Teine võimalus, kui meid huvitab, kas kaks sõne on võrdsed, võib kirjutada nii:
+
+.. code-block:: java
+
+	if ("jah".equals(s)) {
+    		// checks if s value is "jah"
+	}
+	
+"jah" on eelmise näite puhul samamoodi sõne ehk objekt. Kuna see objekt ei ole null, võib seda kasutada kontrollimise puhul esimesel kohal. Kui kaks sõne on sama sisuga, siis ei ole vahet, kumba kummaga kontrollime - mõlemal juhul peaks equals meetod tagastama true. Seega, selle näite puhul, isegi kui s on null, ei teki viga, kuna me ei proovi s muutuja kaudu mingeid meetodeid välja kutsuda.
 
 -------
 
-Dokumentatsioon: https://docs.oracle.com/javase/tutorial/java/data/strings.html
+Dokumentatsioon: 
 
-Dokumentatsioon: https://docs.oracle.com/javase/8/docs/api/java/lang/String.html
+https://docs.oracle.com/javase/tutorial/java/data/strings.html
 
-
-
-
-
-
+https://docs.oracle.com/javase/8/docs/api/java/lang/String.html
