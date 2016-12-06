@@ -40,7 +40,7 @@ Tagastab sõne pikkuse (mitu sümbolit on sõnes). Tagastatav väärtus on täis
   
 **charAt**
 
-Võimaldab sõnest leida ühe sümboli vastavalt ette antud indeksile. See töötab sarnaselt massiividega. Indeks hakkab 0-st, st esimese elemendi index on 0. Meetod tagastab andmetüübina char ehk ühe sümboli.
+Võimaldab sõnest leida ühe sümboli vastavalt ette antud indeksile. See töötab sarnaselt massiividega. Indeks hakkab 0-st, st esimese elemendi indeks on 0. Meetod tagastab andmetüübina char ehk ühe sümboli.
 
 .. code-block:: java
 
@@ -86,7 +86,7 @@ Kasutada on võimalik ka kahe argumendiga meetodit. Teine argument näitab ära,
 
 **replace**
 
-Sellel meetodil on kaks argumenti, millest esimene on vana sümbol ja teine uus sümbol. Tagastab sõne, kus on asendatud vana sümbol uuega.
+Sellel meetodil on kaks argumenti, millest esimene on vana sümbol ja teine uus sümbol. Tagastab sõne, kus on kõik vana sümbol instantsid asendatud uue sümboliga.
 
 .. code-block:: java
 
@@ -98,11 +98,11 @@ Tagastab sõne, millelt on eemaldatud eelnevad ja järgnevad tühikud.
 
 **toUpperCase()**
 
-Tagastab sõne, kus kõik märgid on muudetud suurtähtedeks.
+Tagastab sõne, kus kõik tähemärgid on muudetud suurtähtedeks.
 
 **toLowerCase()**
 
-Tagastab sõne, kus kõik märgid on muudetud väiketähtedeks.
+Tagastab sõne, kus kõik tähemärgid on muudetud väiketähtedeks.
 
 Sõnede võrdlemine
 -----------------
