@@ -9,7 +9,7 @@ Java-faili saab käivitada käsurealt (command line). Selleks tuleb fail kõigep
 **Käsureal:** tuleb liikuda õigesse foldrisse ning siis saab Java-faili kompileerida käsuga
 *javac failinimi.java*
 
-Java-faili käivitades kompileeritakse see class-faili, mis koosneb baitkoodist ja on seetõttu platvormist sõltumatu.
+Java-faili kompileeritakse class-faili, mis koosneb Java baitkoodist ja on seetõttu platvormist sõltumatu.
 
 Siis tuleb programm käivitada.
 
