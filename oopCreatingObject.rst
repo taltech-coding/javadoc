@@ -3,7 +3,7 @@ Objekti loomine
 -----------------------------------------------------------------------------------------
 *Objektide loomiseks kasutatakse võtmesõna "new"*
 -----------------------------------------------------------------------------------------
-*NB!* Klassi võib kujutada ette, kui üldist juhist, mille järgi objekte luuakse. Javas kasutatakse objektide loomiseks võtmesõna **new**.
+*NB!* Klassi võib kujutada ette kui üldist juhist, mille järgi objekte luuakse. Javas kasutatakse objektide loomiseks võtmesõna **new**.
 
 .. code-block:: java
 
@@ -62,18 +62,18 @@ Pärast **new** võtmesõna kutsutakse välja konstruktor, kuhu antakse soovi ko
     public class Puppy {
        public Puppy(String name) {
           // This constructor has one parameter, name.
-          System.out.println("Passed Name is :" + name );
+          System.out.println("Passed Name is: " + name );
        }
     
        public static void main(String []args) {
           // Following statement would create an object myPuppy
-          Puppy myPuppy = new Puppy("tommy");
+          Puppy myPuppy = new Puppy("Tommy");
        }
     }
 
 Antud näites me tekitame klassi *Puppy*, mis saab konstruktorisse kaasa argumendi, mis on antud juhul *String name*. Nüüd objekti loomisel *public static void main(String []args)* plokis deklareerime, et loodud objekt on klassist *Puppy*, mille nimeks valime *myPuppy*. 
-Seejärel kasutades **new** võtmesõna loome objekti, mille konstruktor saab sisse parameetri *"tommy"*, mis on parajasti koera nimi. Nüüd objekti loomisel käivitub ka konstruktor, mis automaatselt käivitab konstruktori kehas olevat koodijuppi *System.out.println("Passed Name is :" + name );*. Seepärast konsooli ilmub.
+Seejärel kasutades **new** võtmesõna loome objekti, mille konstruktor saab sisse parameetri *"Tommy"*, mis on parajasti koera nimi. Nüüd objekti loomisel käivitub ka konstruktor, mis automaatselt käivitab konstruktori kehas oleva koodijupi *System.out.println("Passed Name is: " + name );*. Konsooli prinditakse:
 
  .. code-block:: Java
 
-    Passed Name is :tommy
+    Passed Name is: Tommy
