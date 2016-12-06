@@ -1,6 +1,6 @@
-====================================================
-Java-faili käivitamine (kompileerimine, käivitamine)
-====================================================
+========================================
+Java-faili kompileerimine ja käivitamine
+========================================
 
 Java programm kirjutatakse inimloetavas Java keeles ning salvestatakse java-failina.
 
