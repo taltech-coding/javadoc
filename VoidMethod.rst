@@ -5,12 +5,13 @@ Meetod tagastustüübita
 Kirjeldus
 ---------
 
-Tagastustüübita meetod on void tüüpi. See tähendab, et meetod küll teeb midagi, kuid ei tagasta.
+Tagastustüübita meetod on *void* tüüpi. See tähendab, et meetod küll teeb midagi, kuid ei tagasta.
 
 Näide
 -----
 
-Void-tüüpi meetodit kasutame näiteks selleks, et globaalseid muutujaid muuta/määrata. Või nagu allolevas näites, lihtsalt trükkida midagi konsooli vastavalt argumendile.
+Void-tüüpi meetodit kasutame näiteks selleks, et globaalseid muutujaid muuta/määrata. Kasutame ka juhul, kui soovime lihtsalt trükkida midagi konsooli vastavalt argumendile, nagu ka alljärgnevas näites:
+
 
 .. code-block:: java
 
