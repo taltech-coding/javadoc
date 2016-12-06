@@ -5,9 +5,9 @@ Meetod (funktsioon)
 Kirjeldus
 ---------
 
-Meetod täidab ideaalis ainult ühte funktsionaalsust (näiteks antakse ette 2 numbrit ning meetod liidab need kokku ja tagastab saadud väärtuse. Lahutamisest, korrutamisest, jagamisest jms see meetod ei tegele, vaid selleks on eraldi meetodid).
+Meetod täidab ideaalis ainult ühte funktsionaalsust (näiteks antakse ette 2 numbrit ning meetod liidab need kokku ja tagastab saadud väärtuse. Lahutamise, korrutamise, jagamise jms see meetod ei tegele, vaid selleks on eraldi meetodid).
 
-Näide
+Meetodi ülesehitus
 -----
 
 modifier − defineerib nähtavuse ning selle kasutamine on valikuline (nt public).
