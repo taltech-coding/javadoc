@@ -11,7 +11,7 @@ Vajuta "Next" ja nõustu installeerimise seadetega. Kui installeerimine on lõpe
 Ava *Control Panel* -> *System and Security* -> *System* -> *Advanced system settings*. 
 Ava sealt *Advanced* menüü, ning vajuta nuppu *Environment Variables*.
 Tee topeltklõps *System Variables* all oleval *Path* real ja vajuta *New*. 
-Lisa sinna C:\\Program Files\\Java\\jdk1.8.0_xx\\bin asendades *8.0_xx* installeeritud Java versiooni numbriga. Vajuta *Move up*, kuni sinu lisatud asukoht on listi eesotsas. 
+Lisa sinna C:\\Program Files\\Java\\jdk1.8.0_xx\\bin asendades *8.0_xx* installeeritud Java versiooni numbriga. Vajuta *Move up*, kuni sinu lisatud asukoht on listi eesotsas. (Windows 7 puhul saab lisada *Pathi* mitu variable'i, kui need eraldada semikooloniga.)
 
 Sulge aken ja ava command prompt. 
 Kirjuta sinna *path* ja vajuta Enter. Peaksid nägema installeeritud JDK asukohta, mille just lisasid.
