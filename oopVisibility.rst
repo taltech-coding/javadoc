@@ -45,6 +45,14 @@ Meetoditele, muutujatele ning konstruktoritele, mis on määratud kui *private*,
 Kuna me ei saaks teistest klassidest *Student* klassile ligi, siis kasutame kahte *public* meetodit, *getName()*
 ja *setName(String name)*, et tagastada *name* väärtus, või soovi korral seada see väärtus.
 
+.. code-block:: java
+
+  private void privateMethod() {
+        System.out.println("Tere! Olen privaatne meetod!");
+    }
+    
+Samuti saab ka meetod olla privaatne. Sel juhul tuleb arvestada sellega, et antud meetodit saab kutsuda ainult samas klassis, kus see meetod deklareeritud on.  
+
 *no modifier* 
 -------------
 
@@ -67,20 +75,20 @@ Muutujad, meetoid ja konstruktorid, mis on deklareeritud, kui *protected* on kä
 
 .. code-block:: java
 
-         class AudioPlayer {
+     class AudioPlayer {
          
        protected boolean openSpeaker(Speaker sp) {
           // implementatsiooni detailid
        }
-    }
+     }
     
-        class StreamingAudioPlayer extends AudioPlayer {
+      class StreamingAudioPlayer extends AudioPlayer {
         
         @Override
         boolean openSpeaker(Speaker sp) {
               // implementatsiooni detailid
-           }
         }
+       }
     
 Klassil *AudioPlayer* on meetod *openSpeaker()*, mida ta lubab oma alamklassil üle kirjutada. Kui *openSpeaker()* oleks *public*, siis saaks sellele ligi **kõik, kes soovivad**  või, kui oleks *private*, siis saaks sellele ligi ainult *AudioPlayer* klass. Meie eesmärgiks on aga teha meetod nähtavaks **ainult** alamklassile.
 
@@ -90,10 +98,27 @@ Klassil *AudioPlayer* on meetod *openSpeaker()*, mida ta lubab oma alamklassil �
 Klass, meetod, konstruktor, liides jne, mis on deklareeritud, kui *public* on kättesaadav igast teisest klassist. Kui *private* oli kõige piiravam nähtavusaste, siis *public* on vastupidiselt kõige avatum.
 
 
+
+.. code-block:: java
+
+  public class Student {
+   private String name;
+
+   public String getName() {
+      return this.name;
+   }
+
+   public void setName(String name) {
+      this.name = name;
+   }}
+   
+Selleks, et saada kätte *private* field *name*, kasutatakse *public* nähtavusega getName() ja setName(). Neid meetodeid on näha igast teisest klassist vaatamata paketist. 
+
+
 .. code-block:: java
 
       public static void main(String[] arguments) {
        // ...
     }
 
-*main()* meetod peab olema *public*, kuna vastasel juhul ei saaks Java interpretaator teda välja kutsuda, et klass tööle panna.
+*main()* meetod peab olema *public*, kuna vastasel juhul ei saaks Java interpretaator teda välja kutsuda, et klass tööle panna. *Public* visibility **EI** tähenda, et kindlasti peab olema ka võtmesõna *static*.
