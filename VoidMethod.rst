@@ -22,7 +22,8 @@ Void-tüüpi meetodit kasutame näiteks selleks, et globaalseid muutujaid muuta/
             } else if (points >= 81) {
                 System.out.println("Grade is 4.");
             } else {
-                System.out.println("Grade is 3 or lower."); }
+                System.out.println("Grade is 3 or lower."); 
+            }
         }
 
         public static void main(String[] args) {
