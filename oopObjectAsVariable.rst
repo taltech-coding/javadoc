@@ -36,7 +36,7 @@ Kasutame näites enda loodud lihtsat klassi **Point**, millel on täisarvudena e
 
 Kui me anname muutujale väärtuseks objekti, hakkab muutuja sellele objektile viitama. Samale objektile võib viidata üheaegselt mitu muutujat – tegu on ikkagi üheainsa objektiga. Iga edaspidine muudatus selles objektis säilib ning on kättesaadav kõikide muutujate kaudu, mis talle viitavad.
 
-Kirjutame näiteklassi, mille main-meetodis loome kaks **Point** objekti ja lisame need ArrayList'i. Seejärel loome uue muutuja, mis viitab ühele punktile ning veendume, et koordinaadid on samad. Lõpuks muudame selle punkti koordinaate ning kontrollime, kas koordinaatide väärtus on igal juhul muutunud.
+Kirjutame näiteklassi, mille main-meetodis loome kaks **Point** objekti, ja lisame need ArrayList'i. Seejärel loome uue muutuja, mis viitab ühele punktile, ning veendume, et koordinaadid on samad. Lõpuks muudame selle punkti koordinaate ning kontrollime, kas koordinaatide väärtus on igal juhul muutunud.
 
 .. code-block:: java
 
@@ -88,7 +88,9 @@ Kui me tahaksime koodi ümber teha nii, et ühe muutuja kaudu objektis tehtud mu
 Objekt argumendina
 ------------------
 
-Nagu teisi muutujaid, saab ka objekte kasutada argumentidena. Tegelikult tegime seda juba eespool, lisades Point objekti ArrayList'i, kasutades meetodit **add**. Teeme oma näiteklassi ümber nii, et punkti koordinaatide printimine toimuks eraldi meetodi **printCoordinates** abil. Väljundi loetavuse huvideks võiks koordinaadid olla ka sulgudega ümbritsetud, nüüd on meil võimalik seda lihtsasti muuta.
+Nagu teisi muutujaid, saab ka objekte kasutada argumentidena. Tegelikult tegime seda juba eespool, lisades Point objekti **add** meetodi abil ArrayList'i.
+
+Teeme oma näiteklassi ümber nii, et punkti koordinaatide printimine toimuks eraldi meetodi **printCoordinates** abil. Väljundi loetavuse huvideks võiks koordinaadid olla ka sulgudega ümbritsetud. Kuna tegime eraldi meetodi, võime seda lihtsasti muuta.
 
 .. code-block:: java
 
