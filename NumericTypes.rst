@@ -96,7 +96,13 @@ Javas on põhiliste aritmeetiliste operatsioonide jaoks defineetitud järgnevad 
 | % | Jääk        |
 +---+-------------+
 
-(näited)
+.. code-block:: java
+
+    int result = 5 + 2;
+    System.out.println(result); // 7
+
+    result = result + 3;
+    System.out.println(result); // 10
 
 Lisaks on olemas unaarsed operaatorid, mis kasutavad vaid ühte operandi. Operaatorit **+** üldjuhul ei kasutata, kuna numbrid on vaikimisi positiivsed.
 
@@ -112,7 +118,21 @@ Lisaks on olemas unaarsed operaatorid, mis kasutavad vaid ühte operandi. Operaa
 | !  | Loogikaväärtuse inverteerimine      |
 +----+-------------------------------------+
 
-(näited)
+Ühe võrra suurendamise või vähendamise korral on võimalik valida, kas soovime operatsiooni läbi viia enne või peale väärtuse kasutamist.
+
+.. code-block:: java
+
+    int result = 5;
+
+    result++;
+    System.out.println(result);   // 6
+
+    System.out.println(result++); // Endiselt 6, kuna suurendamine toimub peale väärtuse lugemist
+    System.out.println(result);   // Nüüd on 7
+
+    System.out.println(++result); // 8, kuna suurendamine toimus enne väärtuse lugemist
+    System.out.println(result);   // Endiselt 8, kuna rohkem ei muudetud midagi
+
 
 Võrdlemine
 ----------
@@ -130,17 +150,25 @@ Võrdlemine
 | <= | väiksem või võrdne |
 +----+--------------------+
 
-(viide tõeväärtustüüpide teemale või tingimuslausetele? näited?)
+.. code-block:: java
+
+    double first = 2.567
+    double second = 5.654
+
+    System.out.println(first > second); // false
+    System.out.println(first < second); // true
+
+Võrdlusi saab kasutada näiteks tingimuslausetes või tsüklites programmi töö juhtimiseks.
 
 Operatsioonid bittidega
 -----------------------
 
-(Seletada nihete erinevust ja seda, et kõike tehakse iga biti jaoks eraldi)
+Järgnevaid operatsioone tehakse väärtuse iga bitiga eraldi. Neid kasutatakse harva, kuid sellegipoolest on oluline teada, et selline võimalus on olemas.
 
 +-----+-----------------------+
 | >>  | märgiga nihe paremale |
 +-----+-----------------------+
-| <<  | nihe vasakule         |
+| <<  | märgiga nihe vasakule |
 +-----+-----------------------+
 |\>>> | nihe paremale         |
 +-----+-----------------------+
@@ -154,6 +182,14 @@ Operatsioonid bittidega
 +-----+-----------------------+
 | ^   | välistav VÕI (XOR)    |
 +-----+-----------------------+
+
+.. code-block:: java
+
+    int a = 5; // 101
+    int b = 6; // 110
+
+    int result = a & b; // 100
+    System.out.println(result); // prinditakse välja kümnendarvuna (4)
 
 Ületäide
 ========
