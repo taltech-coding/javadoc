@@ -77,7 +77,7 @@ Muutujad, meetoid ja konstruktorid, mis on deklareeritud, kui *protected* on kä
 
      class AudioPlayer {
          
-       protected boolean openSpeaker(Speaker sp) {
+        protected boolean openSpeaker(Speaker sp) {
           // implementatsiooni detailid
        }
      }
@@ -88,7 +88,7 @@ Muutujad, meetoid ja konstruktorid, mis on deklareeritud, kui *protected* on kä
         boolean openSpeaker(Speaker sp) {
               // implementatsiooni detailid
         }
-       }
+     }
     
 Klassil *AudioPlayer* on meetod *openSpeaker()*, mida ta lubab oma alamklassil üle kirjutada. Kui *openSpeaker()* oleks *public*, siis saaks sellele ligi **kõik, kes soovivad**  või, kui oleks *private*, siis saaks sellele ligi ainult *AudioPlayer* klass. Meie eesmärgiks on aga teha meetod nähtavaks **ainult** alamklassile.
 
