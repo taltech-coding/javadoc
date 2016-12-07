@@ -46,7 +46,7 @@ Ujukomaarvude esitamisel tuleks kindlasti anda kaasa vähemalt üks komakoht, se
 .. code-block:: java
 
     double d1 = 55.0; // hea
-    double d2 = 55; // halb
+    double d2 = 55;   // halb
 
 Float tüüpi arvude eristamiseks tuleb neile lisada täht **f** või **F** (pole oluline, kas suur või väike täht). Samamoodi on võimalik double arve tähistada d-tähega, kuid see pole kohustuslik – vaikimisi on komakohtadega arvu andmetüübiks double. Mõlemat tüüpi ujukomaarvude puhul saab kasutada ka teaduslikku notatsiooni, mis kasutab korrutamist kümne astmetega.
 
@@ -95,6 +95,8 @@ Javas on põhiliste aritmeetiliste operatsioonide jaoks defineetitud järgnevad 
 +---+-------------+
 | % | Jääk        |
 +---+-------------+
+
+Näide:
 
 .. code-block:: java
 
@@ -150,10 +152,12 @@ Võrdlemine
 | <= | väiksem või võrdne |
 +----+--------------------+
 
+Näide:
+
 .. code-block:: java
 
-    double first = 2.567
-    double second = 5.654
+    double first = 2.567;
+    double second = 5.654;
 
     System.out.println(first > second); // false
     System.out.println(first < second); // true
@@ -183,12 +187,14 @@ Järgnevaid operatsioone tehakse väärtuse iga bitiga eraldi. Neid kasutatakse 
 | ^   | välistav VÕI (XOR)    |
 +-----+-----------------------+
 
+Näide:
+
 .. code-block:: java
 
-    int a = 5; // 101
-    int b = 6; // 110
+    int a = 5;                  // 101
+    int b = 6;                  // 110
 
-    int result = a & b; // 100
+    int result = a & b;         // 100
     System.out.println(result); // prinditakse välja kümnendarvuna (4)
 
 Ületäide
@@ -217,22 +223,24 @@ Konstandid MAX_VALUE ja MIN_VALUE sisaldavad valitud andmetüübi maksimaalset j
 .. code-block:: java
 
     int i = Integer.MAX_VALUE;
-    System.out.println(i); // 2147483647
+    System.out.println(i);     // 2147483647
+
     byte b = Byte.MIN_VALUE;
-    System.out.println(b); // -128
+    System.out.println(b);     // -128
 
-parseInt(), parseDouble() jms
------------------------------
+parseInt(), parseDouble() jt
+----------------------------
 
-Kasutatakse sõne numbriks teisendamisel. Integer klassi puhul on meetodi nimi parseInt, Float klassil parseFloat ja nii edasi.
+Kasutatakse sõne numbriks teisendamisel. Integer klassi puhul on meetodi nimi parseInt, Float klassil parseFloat jne.
 
 .. code-block:: java
 
     int i = 4;
     String number = "56";
+
     int j = Integer.parseInt(number);
     int sum = i + j;
-    System.out.println(sum); // 60
+    System.out.println(sum);          // 60
 
 Tehted numbriklassidega
 -----------------------
@@ -243,8 +251,9 @@ Numbriklasse saab kasutada primitiivsete andmetüüpide asendamiseks, kuid kuna 
 
     Integer i = new Integer(45);
     Integer j = new Integer(60);
+
     Integer sum = Integer.sum(i, j);
-    System.out.println(sum.intValue()); // 105
+    System.out.println(sum.intValue());  // 105
 
 BigInteger ja BigDecimal klassid
 -------------------------------
@@ -255,5 +264,6 @@ Lisaks põhilistele numbriklassidele (Byte, Short, Long, Integer, Float, Double)
 
     BigInteger i = BigInteger.valueOf(Integer.MAX_VALUE); // suurim võimalik int väärtus (2147483647)
     BigInteger j = BigInteger.valueOf(1);
+'
     BigInteger sum = i.add(j);
     System.out.println(sum.toString());                   // tulemus on 2147483648
