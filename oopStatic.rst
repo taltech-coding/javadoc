@@ -18,6 +18,28 @@ Staatilised meetodid
 
 - Staatiline meetod ei saa kasutada *this* ja *super* võtmesõnu.
 
+All on võimalik näha erinevust staatilise ja isendi meetodite väjakutsel.
+ 
+ 
+.. code-block:: java
+
+ class Difference {
+ 
+  public static void main(String[] args) {
+    display();  //calling without object
+    Difference t = new Difference();
+    t.show();  //calling using object
+  }
+ 
+  static void display() {
+    System.out.println("Programming is amazing.");
+  }
+ 
+  void show(){
+    System.out.println("Java is awesome.");
+   }
+ }
+
 Staatilised väljad
 -------------------
 
@@ -34,6 +56,8 @@ Kui väli on deklareeritud, kui staatiline, siis kuulub ta klassile. Kõik selle
     static int y = 0;
     //Kättesaamine
     <class-name>.<variable-name>
+   
+
 
 Meeldetuletus mitte-staatilistest väljadest
 --------------------------------------------
