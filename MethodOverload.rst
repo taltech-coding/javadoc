@@ -36,9 +36,7 @@ Meetodi ülelaadimine
         }
     }
 
-Näite käivitamisel trükitakse konsooli selline väljund:
-
-Output::
+Näite käivitamisel trükitakse konsooli selline väljund::
 
     Hello
     I will just say the number 5
