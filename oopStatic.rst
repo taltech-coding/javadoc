@@ -91,8 +91,8 @@ Näite staatiliste ja mitte-staatiliste väljade kättesaamisest
 
     public class Example {
 
-    private static boolean staticField;
-    private boolean instanceField;
+    public static boolean staticField;
+    public boolean instanceField;
 
     public static void main(String[] args) {
 
