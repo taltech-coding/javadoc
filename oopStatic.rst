@@ -1,5 +1,5 @@
-Staatilised meetodid, muutujad
-===========================================
+Staatilised meetodid, muutujad ja konstandid
+=============================================
 
 Esmalt on vaja aru saada, mida üldse staatiline tähendab. Inglise keeles on selle kohta öeldud nii: "Static keyword means that variable or method is shared between all instances of that class as it belongs to the type, not objects". Ehk eesti keeles võiks seda tõlgendada nii, et staatiline muutuja või meetod on jagatud kõikide klassi poolt loodud objektide vahel. Antud meetod või muutuja kuulub tüübile, mitte objektile.
 
@@ -56,6 +56,26 @@ Kui väli on deklareeritud, kui staatiline, siis kuulub ta klassile. Kõik selle
     static int y = 0;
     //Kättesaamine
     <class-name>.<variable-name>
+    
+    
+Väikseks näiteks staatilistest väljadest võib tuua tüüpilise probleemi, mida staalilise muutujaga muudetakse. Näiteks, kui me tahame lugeda kokku, mitu objekti oleme loonud.
+
+.. code-block:: java
+
+ public class Stuff {
+    
+    // Set count to zero initially.
+    static int count = 0;
+    
+    public Stuff() {
+        
+        // Every time the constructor runs, increment count.
+        count = count + 1;
+        
+        // Display count.
+        System.out.println("Created object number: " + count);
+    }
+ } 
    
 
 
@@ -83,3 +103,28 @@ Näite staatiliste ja mitte-staatiliste väljade kättesaamisest
         Example instance = new Example();
         instance.instanceField = true;
     }
+    
+Konstandid
+------------
+
+Tihti esinev põhjus, miks kasutatakse *static*, on konstantse välja loomine, mis on seotud klassiga. Selleks, et muuta staatiline väli konstantseks, peab lihtsalt lisama võtmesõna *final*. Konstante kirjutatakse java konventsioonis läbiva suure tähega.
+
+ .. code-block:: java
+ 
+   public class Stuff {
+   
+     public final static String NAME = "I'm a static variable";
+   }
+   
+   public class Application {
+   
+     public static void main(String[] args) {
+        System.out.println(Stuff.NAME);
+     }
+   }
+   
+   
+
+
+
+
