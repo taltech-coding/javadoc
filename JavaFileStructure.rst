@@ -5,7 +5,7 @@ Java-faili ülesehitus
 Kirjeldus
 ---------
 
-Kõige lihtsam Java klass koosneb paketi deklaratsioonist (valikuline), import lausetest (kui neid on vaja), klassi definitsioonist, funktsioonidest ning main-meetodist, mida kasutatakse koodi jooksutamiseks.
+Kõige lihtsam Java fail koosneb paketi deklaratsioonist (valikuline), import lausetest (kui neid on vaja), klassi definitsioonist, funktsioonidest ning main-meetodist, mida kasutatakse koodi jooksutamiseks.
 
 Näites on klassi definitsioon *public class Example*. Faili nimi tuleneb klassi nimest. Kui klassi nimi on *Example*, siis faili nimi peab olema *Example.java*.
 
