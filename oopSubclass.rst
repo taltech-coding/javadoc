@@ -45,7 +45,21 @@ Alamklass pärib kõik *public* ja *protected* ülemklassi liikmed olenemata sel
 Privaatsed liikmed ülemklassis
 ******************************
 
-Kui ülemklassis on liikmeid (meetodid, väljad jne.), mis on deklareeritud kui *private*, siis alamklass neid ei päri. Samas, kui ülemklassis on *public* või *protected* meetodeid, mis võimaldavad ligipääsu *private* väljadele, siis neid saab kasutada ka alamklassis. Näiteks *getterid* ja *setterid* on konstruktsioonid, mille abil saab *private* väljadele ligi.
+Kui ülemklassis on liikmeid (meetodid, väljad jne.), mis on deklareeritud kui *private*, siis alamklass neid ei päri. Samas, kui ülemklassis on *public* või *protected* meetodeid, mis võimaldavad ligipääsu *private* väljadele, siis neid saab kasutada ka alamklassis. Näiteks *getterid* ja *setterid* on konstruktsioonid, mille abil saab *private* väljadele ligi. 
+
+.. code-block:: java
+
+  public class Student {
+      private String name;
+
+      public String getName() {
+          return this.name;
+      }
+
+      public void setName(String name) {
+         this.name = name;
+      }
+  } 
 
 Näide alamklassidest ja ülemklassist
 ************************************
@@ -60,7 +74,8 @@ Näide alamklassidest ja ülemklassist
       }
 
       public class Cat extends Animal {
-
+      
+          @Override
           public static void hide() {
               System.out.println("The hide method in Cat.");
            }
