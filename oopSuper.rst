@@ -94,5 +94,5 @@ Alamklassi konstruktor
 
 Kui almaklassi konstruktoris kutsutakse välja meetod super(), siis käivitub ülemklassi argumendita konstruktor. Kui kutsutakse välja super(*argumentide list*), siis käivitub vastavate argumentidega ülemklassi konstruktor.
 
-- NB! super() kutsutakse iga alamklassi konstruktori alguses Java poolt automaatselt välja nii, et seda polegi koodis näha. Kui ülemklassis on defineeritud ainult argumentidega konstruktor, tekib kompilatsiooniviga. Asi on selles, et alati seadistatakse enne ülemklass ning siis alamklassid, seetõttu on alati vaja ligipääsu igale ülemklassile. (Constructor chaining)
+- NB! super() kutsutakse iga alamklassi konstruktori alguses Java poolt automaatselt välja nii, et seda polegi koodis näha (See päritakse Object klassilt). Kui ülemklassis on defineeritud ainult argumentidega konstruktor, tekib kompilatsiooniviga. Asi on selles, et alati seadistatakse enne ülemklass ning siis alamklassid, seetõttu on alati vaja ligipääsu igale ülemklassile. (Constructor chaining)
 
