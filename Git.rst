@@ -50,18 +50,23 @@ Esmakordseks salve kopeerimiseks.
 Failide lisamine
 ----------------
 
-Ühe faili lisamiseks:
+Ühe faili lisamine:
 
 .. code-block:: git
 
-  git add <failinimi>
+  git add <faili_nimi>
   
-Kõikide failide lisamiseks:
-
+Kõikide failide lisamine:
 
 .. code-block:: git
   
   git add *
+  
+Failide kustutamine:
+
+.. code-block:: git
+
+  git rm <faili_nimi>
 
 Muudatuste registreerimine
 --------------------------
@@ -77,7 +82,7 @@ Muudatuste üles laadimine serverisse
 
   git push origin master
   
-Commit käsk registreerib muudatused aga alles push laeb need serverisse üles. *master*'i võib muuta mistahes teiseks haruks, kuhu tahetakse muudatusi lükata.
+Commit käsk registreerib muudatused aga alles *push* käsk laeb need serverisse üles. *master*'i võib muuta mistahes teiseks haruks, kuhu tahetakse muudatusi lükata.
 
 Muudatuste alla laadimine serverist ja kohalike muudatuste integreerimine
 ---------------------------------------------------------------------------
@@ -86,12 +91,6 @@ Muudatuste alla laadimine serverist ja kohalike muudatuste integreerimine
 
   git pull
   
-Failide kustutamine
--------------------
-
-.. code-block:: git
-
-  git rm <failinimi>
   
 Sisseehitatud graafiline kasutajaliides
 --------------------------------------------
