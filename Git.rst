@@ -93,6 +93,14 @@ Failide kustutamine
 
   git rm <failinimi>
   
+Sisseehitatud graafiline kasutajaliides
+--------------------------------------------
+Graafiline kasutajaliides näitab mugavalt välja muudatuste üles laadimised serverisse koos aja ja kommentaariga, tehtud muudatused failis, harud jpm. Käsureal käsk:
+
+.. code-block:: git
+
+  gitk
+  
 Harud
 ------
 Harusid kasutatakse, et viia paraleelselt sisse muudatusi, mis on teineteisest isoleeritud. *master* haru on vaikimisi haru repositooriumi loomisel. Teisi harusid on mõistlik kasutada arendamiseks ja seejärel *master* haruga ühendamiseks (*merge*), kui arendus on lõpetatud.
@@ -137,18 +145,12 @@ Vahetu tagasi *master* harule:
   
 Git üritab automaatselt ühendada muudatusi. Vahel pole see aga võimalik ja tekivad konfliktid. Sellisel juhul tuleb näidatud faile manuaalselt muuta ja uuesti lisada. 
 
-
-
-
-
-  
-  
-  
-  
-  
-  
 ----------
 
+Kasulikke linke:
+
 http://rogerdudler.github.io/git-guide/
+
+https://www.atlassian.com/git/tutorials/what-is-git
   
 
