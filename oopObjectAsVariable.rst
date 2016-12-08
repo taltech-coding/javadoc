@@ -86,7 +86,7 @@ Koodi käivitamisel näeme, et eelpool kirjeldatud käitumine vastab tõele.
 Kui me tahaksime koodi ümber teha nii, et ühe muutuja kaudu objektis tehtud muudatus ei mõjutaks teisi, tuleb meil teha sellest objektist koopia. Selle jaoks on olemas spetsiaalne meetod nimega **clone**, mille kohta saab lähemalt lugeda näiteks eriliste meetodite peatükis siinsamas juhendis.
 
 Objekt argumendina
-------------------
+==================
 
 Nagu teisi muutujaid, saab ka objekte kasutada argumentidena. Tegelikult tegime seda juba eespool, lisades Point objekti **add** meetodi abil ArrayList'i.
 
