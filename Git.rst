@@ -22,10 +22,10 @@ Esmakordsel *Git Bashi*' käivitamisel tuleb kindlasti seadistada e-posti aadres
 Peale käsu andmist kuvatakse e-posti aadress, kuhu hakatakse teateid saatma.
 
 
-Navigeerimine kasutade vahel
+Navigeerimine kaustade vahel
 --------------------------------------------------------------
 Soovituslik oleks käsureale kirjutada käsk *pwd*, mis näitab, millises kaustas hetkel viibime.
-Trükkides käsureale *dir* (Mac OS X'is käsk *ls*), kuvatakse meile kausta sisu (kaustade ning failide nimetused), kus hetkel viibime.
+Trükkides käsureale *ls*, kuvatakse meile kausta sisu (kaustade ning failide nimetused), kus hetkel viibime.
 Kaustade vahel navigeerimiseks on käsk *cd*. Uue kausta loomiseks on käsk *mkdir*.
 
 
@@ -152,5 +152,7 @@ Kasulikke linke:
 http://rogerdudler.github.io/git-guide/
 
 https://www.atlassian.com/git/tutorials/what-is-git
+
+https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control
   
 
