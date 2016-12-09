@@ -61,6 +61,7 @@ equals ja hashCode
 **NB!** Võrdne räsiväärtus ei tähenda, et objektid on võrdsed. Seega ei saa seda kasutada unikaalse võtmena.
 
 Järgnevas näites eeldame, et Point klassis on juba kirjeldatud korrektne equals ja hashCode paar.
+
 .. code-block:: java
 
     Point p1 = new Point(1, 0);
@@ -81,9 +82,10 @@ Meetodid tuleks realiseerida, järgides teatud põhimõtteid.
 - räsiväärtuse arvutamisel tuleb võtta arvesse kõiki välju, mida kasutatakse **equals** meetodis võrdumise kontrollimiseks.
 
 Levinumates IDE-des on olemas võimalus neid meetodeid automaatselt genereerida. IntelliJ's saab seda teha nii:
- 1. Vali menüüst **Code** -> **Generate** -> **equals() and hashCode()** või vajuta Alt+Insert
- 2. Vali sobiv mall, näiteks IntelliJ Default
- 3. Vali väljad, mida tuleks arvutamisel kasutada.
+
+1. Vali menüüst **Code** -> **Generate** -> **equals() and hashCode()** või vajuta Alt+Insert
+2. Vali sobiv mall, näiteks IntelliJ Default
+3. Vali väljad, mida tuleks arvutamisel kasutada.
 
 Üks rida tuleks meie näite puhul välja kommenteerida. See rida on mõeldud klassidele, mis laiendavad mõnda muud klassi. Antud juhul on ülemklassiks Object, mille equals meetod kontrollib, kas tegu on täpselt sama objektiga, ning seetõttu saaksime selle rea kasutamisel vale tulemuse.
 
