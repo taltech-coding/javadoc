@@ -3,7 +3,7 @@ Git
 
 Git on versioonihaldustarkvara, mis võimaldab koodis tehtud muudatusi säilitada ning neile ligi pääseda erinevatest arvutitest. 
 Git on võimalik alla laadida järgnevalt leheküljelt: https://git-for-windows.github.io/ (kui operatsioonisüsteemiks on Mac OS X, siis pole vaja enamasti Git'i tarvis installeerida, see on juba arvutis vaikimisi olemas koos Xcode'iga. Olemasolu saab kontrollida, kui kirjutada Terminali *git --version*).
-Windowsis on käskude jooksutamiseks *Git Bash*, Mac OS X'is *Terminal*.
+Windows'is on käskude jooksutamiseks *Git Bash*, Mac OS X'is *Terminal*.
 
 .. image:: https://explainxkcd.com/wiki/images/4/4d/git.png
 
@@ -89,7 +89,7 @@ Commit käsk registreerib muudatused aga alles *push* käsk laeb need serverisse
   git status
 
 
-Muudatuste alla laadimine serverist ja kohalike muudatuste integreerimine
+Muudatuste allalaadimine serverist ja kohalike muudatuste integreerimine
 ---------------------------------------------------------------------------
 
 .. code-block:: git
@@ -100,7 +100,7 @@ Muudatuste alla laadimine serverist ja kohalike muudatuste integreerimine
   
 Sisseehitatud graafiline kasutajaliides
 --------------------------------------------
-Graafiline kasutajaliides näitab mugavalt välja muudatuste üles laadimised serverisse koos aja ja kommentaariga, tehtud muudatused failis, harud jpm. Käsureal käsk:
+Graafiline kasutajaliides näitab mugavalt välja muudatuste üleslaadimised serverisse koos aja ja kommentaariga, tehtud muudatused failis, harud jpm. Käsureal käsk:
 
 .. code-block:: git
 
