@@ -82,7 +82,12 @@ Muudatuste üles laadimine serverisse
 
   git push origin master
   
-Commit käsk registreerib muudatused aga alles *push* käsk laeb need serverisse üles. *master*'i võib muuta mistahes teiseks haruks, kuhu tahetakse muudatusi lükata.
+Commit käsk registreerib muudatused aga alles *push* käsk laeb need serverisse üles. *master*'i võib muuta mistahes teiseks haruks, kuhu tahetakse muudatusi lükata. Kui on vaja vaadata, milliseid faile on muudetud, ning mida on vaja Git'i lisada või muudatusi registreerida, siis selleks on käsk:
+
+.. code-block:: git
+
+  git status
+
 
 Muudatuste alla laadimine serverist ja kohalike muudatuste integreerimine
 ---------------------------------------------------------------------------
@@ -90,7 +95,8 @@ Muudatuste alla laadimine serverist ja kohalike muudatuste integreerimine
 .. code-block:: git
 
   git pull
-  
+
+
   
 Sisseehitatud graafiline kasutajaliides
 --------------------------------------------
