@@ -42,10 +42,10 @@ Set'ide kasutamiseks on javas mitmeid erinevaid meetodeid, neist esimene on *add
       //removes all elements from exampleSet
       exampleSet.clear();
       
-      //returns false, because exampleSet is empty
+      //returns false because exampleSet is empty
       boolean containsSix = exampleSet.contains(6);
       
-      //returns true, since exampleSet is empty
+      //returns true because exampleSet is empty
       boolean empty = exampleSet.isEmpty();
       
        exampleSet.add(1);
