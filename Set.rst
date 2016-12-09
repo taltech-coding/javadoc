@@ -1,12 +1,12 @@
-Set ehk hulk
+*Set* ehk hulk
 ============
 
-Set ehk hulk on kollektsioon või kogum elementidest, milles ükski liige ei kordu. Javas on set tegelikult interface ehk liides. Interface'i kohta leiab rohkem informatsiooni objektorienteeritud koodi kirjutamist käsitlevate teemade juures. Javas on mitmeid erinevaid hulga tüüpe nt *HashSet*, *AbstractSet*, *LinkedHashSet*, *TreeSet*, *ConcurrentSkipListSet*, *EnumSet* jt. Objektorienteeritud mõttes implementeerivad nad kõik Set liidest. Sisuliselt on aga kõigil neil hulkadel sarnased algsed omadused (see, et üksiki liige ei kordu) ning erinevat tüüpi set'ide kohta saab kutsuda välja sarnsaeid meetodeid.
+*Set* ehk hulk on kollektsioon või kogum elementidest, milles ükski liige ei kordu. Javas on *Set* tegelikult *interface* ehk liides. *Interface*'i kohta leiab rohkem informatsiooni objektorienteeritud koodi kirjutamist käsitlevate teemade juures. Javas on mitmeid erinevaid hulga tüüpe nt *HashSet*, *AbstractSet*, *LinkedHashSet*, *TreeSet*, *ConcurrentSkipListSet*, *EnumSet* jt. Objektorienteeritud mõttes implementeerivad nad kõik *Set* liidest. Sisuliselt on aga kõigil neil hulkadel sarnased algsed omadused (see, et üksiki liige ei kordu) ning erinevat tüüpi *Set*'ide kohta saab kutsuda välja sarnsaeid meetodeid.
 
-HashSet
+*HashSet*
 -------
 
-Üks võimalik hulga tüüpidest on HashSet<E>. HashSet ei hoia meeles sinna paigutatud elementide järjekorda, erinevalt mõnest teisest hulgast on võimalik HashSet'is hoida ka null elementi. Seda on saab luua nõnda:
+Üks võimalik hulga tüüpidest on *HashSet<E>*. *HashSet* ei hoia meeles sinna paigutatud elementide järjekorda, erinevalt mõnest teisest hulgast on võimalik *HashSet*'is hoida ka null elementi. Seda on saab luua nõnda:
 
 
 .. code-block:: java
@@ -25,7 +25,7 @@ HashSet
   }
   
   
-Set'ide kasutamiseks on javas mitmeid erinevaid meetodeid, neist esimene on *add(E e)*, mis lisab hulka ühe elemendi juhul kui seda juba hulgas pole. Teine kasulik meetod on *clear()*, mis kustutab kõik hulgas olevad elemendid. *contains(Object o)* tagastab boolean väärtuse (*true*/*false*) selle kohta, kas konkreetne objekt esineb hulgas või mitte. Seda, kas set'is on elemente või on see tühi saab kontrollida meetodi *isEmpty()* abil, mis tagastab true juhul kui hulgas pole ühtegi elementi. *remove(Object o)* eemaldab soovitud elemendi hulgast, kui see set'is olemas on ning meetod *size()* tagastab hulgas olevate elementide arvu ehk set'i pikkuse.
+*Set*'ide kasutamiseks on javas mitmeid erinevaid meetodeid, neist esimene on *add(E e)*, mis lisab hulka ühe elemendi juhul kui seda juba hulgas pole. Teine kasulik meetod on *clear()*, mis kustutab kõik hulgas olevad elemendid. *contains(Object o)* tagastab *boolean* väärtuse (*true*/*false*) selle kohta, kas konkreetne objekt esineb hulgas või mitte. Seda, kas *Set*'is on elemente või on see tühi saab kontrollida meetodi *isEmpty()* abil, mis tagastab true juhul kui hulgas pole ühtegi elementi. *remove(Object o)* eemaldab soovitud elemendi hulgast, kui see *Set*'is olemas on ning meetod *size()* tagastab hulgas olevate elementide arvu ehk *Set*'i pikkuse.
   
 
 .. code-block:: java
@@ -61,8 +61,8 @@ Set'ide kasutamiseks on javas mitmeid erinevaid meetodeid, neist esimene on *add
     }
   }
   
-LinkedHashSet
+*LinkedHashSet*
 -------------
 
-LinkedHashSet on sarnane HashSet'iga, kuid erinevalt viimasest sälitab LinkedHashSet elementide järjekorra.
+*LinkedHashSet* on sarnane *HashSet*'iga, kuid erinevalt viimasest sälitab *LinkedHashSet* oma elementide järjekorra.
   
