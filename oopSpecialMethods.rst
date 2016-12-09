@@ -2,9 +2,9 @@
 Erilised meetodid
 =================
 
-Kõik objektid pärivad automaatselt **Object** klassilt hulga meetodeid, mida võib soovi korral kasutada või üle kirjutada (*override*). Object klassist otse pärituna need meetodid midagi huvitavat ei tee, kuid paljudel klassidel nagu HashMap ja ArrayList on sobivad implementatsioonid olemas.
+Kõik objektid pärivad automaatselt **Object** klassilt hulga meetodeid, mida võib soovi korral kasutada või üle kirjutada (*override*). Object klassist otse pärituna need meetodid midagi huvitavat ei tee, kuid paljudel klassidel nagu HashMap ja ArrayList on sobivad implementatsioonid olemas. Enda klasside jaoks tuleb need ise kirjutada.
 
-Implementatsiooni käigus kasutame näitena klassi **Point**, mille täielik kood on leitav peatükis **Objekt muutujana**.
+Implementatsiooni näidetes kasutame klassi **Point**, mille täielik kood on leitav peatükis *Objekt muutujana*.
 
 toString
 ========
@@ -40,7 +40,7 @@ Konsooli trükitakse selle tulemusena midagi taolist::
 
     examples.Point@2a139a55
 
-Tegemist on sõnega, mis koosneb klassi nimest, @-märgist ning objekti hashCode'i (vt allpool) väärtusest kuueteistkümnendarvuna. Nagu näha, ei ole sellest informatsioonist palju kasu, ning võiksime kirjutada sobivama **toString** meetodi.
+Tegemist on sõnega, mis koosneb klassi nimest, @-märgist ning objekti hashCode (vt allpool) väärtusest kuueteistkümnendarvuna. Nagu näha, ei ole sellest informatsioonist palju kasu, ning võiksime kirjutada sobivama **toString** meetodi.
 
 .. code-block:: java
 
@@ -56,7 +56,68 @@ Antud koodi lisamisel **Point** klassi on tulemus järgmine::
 equals ja hashCode
 ==================
 
+**equals** ja **hashCode** on kaks meetodit, mis on omavahel tihedalt seotud, ning seetõttu räägitakse neist tihti koos. **equals** meetodit kasutatakse kahe objekti sisuliseks võrdlemiseks ning **hashCode** arvutab objekti andmete põhjal räsiväärtuse, mida kasutatakse näiteks HashSetis või HashMapis objektide paigutamiseks ja kiireks leidmiseks.
 
+**NB!** Võrdne HashCode ei tähenda, et objektid on võrdsed. Seega ei saa HashCode'i kasutada unikaalse võtmena.
+
+Järgnevas näites eeldame, et meie klassis Point on juba kirjeldatud korrektne **equals** ja **hashCode** paar. Allpool näeme ka seda, kuidas neid meetodeid luua saab.
+
+.. code-block:: java
+
+    Point p1 = new Point(1, 0);
+    Point p2 = new Point(0, 0);
+    Point p3 = new Point(0, 0);
+
+    System.out.println(p1 == p2);      // false
+    System.out.println(p1.equals(p2)); // false
+    System.out.println(p2.equals(p3)); // true
+
+Implementeerimine
+-----------------
+
+Meetodid tuleks realiseerida järgmistel põhimõtetel:
+
+- võrdsetel objektidel peavad olema ühe protsessi piires võrdsed räsiväärtused
+- realiseerida tuleb mõlemad meetodid korraga, kuna vastasel juhul pole eelmine punkt tagatud ning objekti käitumine teatud andmestruktuurides on vigane
+- räsiväärtuse arvutamisel tuleb võtta arvesse kõiki välju, mida kasutatakse **equals** meetodis võrdumise kontrollimiseks.
+
+Levinumates IDE-des on olemas võimalus neid meetodeid automaatselt genereerida. IntelliJ's saab seda teha nii:
+
+ 1. Vali menüüst **Code** -> **Generate** -> **equals() and hashCode()** või vajuta Alt+Insert
+ 2. Vali sobiv mall, näiteks IntelliJ Default
+ 3. Vali väljad, mida tuleks arvutamisel kasutada.
+
+Üks rida tuleks meie näite puhul välja kommenteerida, kuna see töötab ainult klasside puhul, mis laiendavad mõnda muud klassi. Vastasel juhul on ülemklassiks Object, mille equals meetod kontrollib, kas tegu on täpselt sama objektiga, ning tulemus on vale:
+
+.. code-block:: java
+
+    if (!super.equals(object)) return false;
+
+Tulemus on selline:
+
+.. code-block:: java
+
+public boolean equals(Object object) {
+        if (this == object) return true;
+        if (object == null || getClass() != object.getClass()) return false;
+        // if (!super.equals(object)) return false;
+
+        Point point = (Point) object;
+
+        if (x != point.x) return false;
+        if (y != point.y) return false;
+
+        return true;
+    }
+
+    public int hashCode() {
+        int result = super.hashCode();
+        result = 31 * result + x;
+        result = 31 * result + y;
+        return result;
+    }
+
+Kui soovite hiljem näiteks **equals** meetodit muuta, tuleks sellega koos genereerida ka uus **hashCode**.
 
 clone
 =====
@@ -119,7 +180,7 @@ Loome näite tarbeks klassi Line, kus hoitakse alg- ja lõpp-punkti koordinaate 
         }
     }
 
-Alustuseks loome vajaliku meetodi ja lisame märke liidese Cloneable kohta. Kuna me tahame seekord teha *deep copy**, peame kloonima eraldi ka mõlemad punktid.
+Alustuseks loome vajaliku meetodi ja lisame märke liidese Cloneable kohta. Kuna me tahame seekord teha *deep copy*, peame kloonima eraldi ka mõlemad punktid.
 
 .. code-block:: java
 
