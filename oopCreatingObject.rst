@@ -65,7 +65,7 @@ Pärast võtmesõna **new** kutsutakse välja konstruktor, kuhu antakse soovi ko
     public class Puppy {
        public Puppy(String name) {
           // This constructor has one parameter, name.
-          System.out.println("Passed Name is: " + name);
+          System.out.println("Puppy's name is: " + name);
        }
     
        public static void main(String []args) {
@@ -79,4 +79,4 @@ Seejärel kasutades **new** võtmesõna loome objekti, mille konstruktor saab si
 
  .. code-block:: Java
 
-    Passed Name is: Tommy
+    Puppy's name is: Tommy
