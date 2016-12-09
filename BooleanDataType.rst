@@ -8,14 +8,14 @@ Väärtustamine
 
 .. code-block:: java
 
-  boolean a = True;
+  boolean a = true;
   
 Meetodid
 ---------
   
 **compare(boolean x, boolean y)**
   
-Võrdleb kahte tõeväärtust (boolean) teineteisega. Tagastusväärtus on täisarv (*integer*). Tagastatakse:
+Võrdleb kahte tõeväärtust (*boolean*) teineteisega. Tagastusväärtus on täisarv (*integer*). Tagastatakse:
 
   - 0 kui x == y
   - -1 kui !x && y
@@ -23,15 +23,15 @@ Võrdleb kahte tõeväärtust (boolean) teineteisega. Tagastusväärtus on täis
   
 **logicalAnd(boolean a, boolean b)**
 
-Tagastusväärtus on boolean. Tagastab *true* ainult siis, kui mõlemad argumendid on tõesed.
+Tagastusväärtus on *boolean*. Tagastab *true* ainult siis, kui mõlemad argumendid on tõesed.
   
 **logicalOr(boolean a, boolean b)**
 
-Tagastusväärtus on boolean. Tagastab *true* siis, kui vähemalt üks argumentidest on tõene.
+Tagastusväärtus on *boolean*. Tagastab *true* siis, kui vähemalt üks argumentidest on tõene.
   
 **logicalXor(boolean a, boolean b)**
 
-Tagastusväärtus on boolean. Tagastab *false* ainult siis, kui mõlemad argumendid on kas tõesed või väärad. Muul juhul tagastab *true*.
+Tagastusväärtus on *boolean*. Tagastab *false* ainult siis, kui mõlemad argumendid on kas tõesed või väärad. Muul juhul tagastab *true*.
 
 **valueOf(boolean b)**
 
