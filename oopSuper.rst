@@ -4,7 +4,7 @@ Võtmesõna super
 
 Kui on selged sellised terminid nagu override ja overload, siis on paras liikuda *super* võtmesõna juurde.
 
-Kuidas saada ligi ülemklassis meetodite ja väljade juurde?
+Kuidas pääseda ligi ülemklassi meetoditele ja väljadele?
 ----------------------------------------------------------
 
 
@@ -38,7 +38,7 @@ Samuti on meil olemas alamklass **Subclass**, mis laiendab ülemklassi ning kirj
              }
        }
     
-Alamklassi meetoid *printMethod()* kirjutab üle ülemklassi meetodi *printMethod()*. Samas, kui on soov kutsuda välja just ülemklassi meetod *printMethod()*, siis on tarvis kasutada võtmesõna **super**. Konsooli trükitakse:
+Alamklassi meetod *printMethod()* kirjutab üle ülemklassi meetodi *printMethod()*. Samas, kui on soov kutsuda välja just ülemklassi meetod *printMethod()*, siis on tarvis kasutada võtmesõna **super**. Konsooli trükitakse:
 
  .. code-block:: java
     
