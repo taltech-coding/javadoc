@@ -28,10 +28,10 @@ Tavaliselt oleme harjunud looma muutujat nii:
 
 .. code-block:: java
 
-        //Tüüp ja nimi
+        //Type and name
         type name;
         
-        //Näiteks
+        //Example
         int randomNumber;
 
 Kui tegemist on primitiivse tüübiga, näiteks *int*, siis koos deklareerimisega reserveeritakse muutujale kindel hulk mälu.
@@ -89,25 +89,29 @@ Seejärel kasutades **new** võtmesõna loome objekti, mille konstruktor saab si
 
 .. code-block:: Java
 
-        Student std, std1,       // Deklareerime 4 muutujat
-          std2, std3;            // Student tüüpi.
+        Student std, std1,       // Declare four variables of
+                  std2, std3;    //   type Student.
 
-        std = new Student();     // Loome uue objeki, mis kuulub
-                                 // Student klassile ning viitame
-                                 // sellele objektile muutuja "std" abil.
+        std = new Student();     // Create a new object belonging
+                                 //   to the class Student, and
+                                 //   store a reference to that
+                                 //   object in the variable std.
 
-        std1 = new Student();    // Loome teise Student objekti
-                                 // ning viitame sellele objektile
-                                 // muutja "std1" abil.
+        std1 = new Student();    // Create a second Student object
+                                 //   and store a reference to
+                                 //   it in the variable std1.
 
-        std2 = std1;             // Kopeerime "std1" viite vääruse
-                                 // "std2" vääruseks.
+        std2 = std1;             // Copy the reference value in std1
+                                 //   into the variable std2.
 
-        std3 = null;             // "std3" viiteks seame tühja väärtuse.
- 
-                  
-        std.name = "John Smith";  // Deklareerime mõned välja väärtused.
+        std3 = null;             // Store a null reference in the
+                                 //   variable std3.
+
+        std.name = "John Smith";  // Set values of some instance variables.
         std1.name = "Mary Jones";
+
+     // (Other instance variables have default
+     //    initial values of zero.)
         
 Arvuti mälus tomuvat vastavalt näitele illustreerib allolev pilt. Siin on näha, et kaks muutujat viitavad samale objektile.    
 
