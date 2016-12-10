@@ -56,7 +56,7 @@ Klass defineerib, millised objektid tal on:
 - Mis meetodid on objektidel.
 - Mis sisu objektidel on, ehk teisisõnu väljad, mis objekte iseloomustavad.
 
-Nagu on juba mitmeid kordi mainitud. Klass on plaan või skeem, mille järgi objekte tegema hakatakse.
+Nagu on juba mitmeid kordi mainitud: klass on plaan või skeem, mille järgi objekte tegema hakatakse.
 
 Ütleme, et päris elus on meil olemas mingisuguse hoone joonis. Joonisel kujutatakse, milline hoone olema peab: milline on selle kuju, kui suur ta on jne. Koodis võib seda kirjeldada järgmiselt:
 
