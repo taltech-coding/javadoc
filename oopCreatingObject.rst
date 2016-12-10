@@ -80,3 +80,37 @@ Seejärel kasutades **new** võtmesõna loome objekti, mille konstruktor saab si
  .. code-block:: Java
 
     Puppy's name is: Tommy
+    
+ 
+ 
+ 
+*Ülevaade mälus toimuvast objektide loomisel* 
+-----------------------------------------------------
+
+.. code-block:: Java
+
+        Student std, std1,       // Deklareerime 4 muutujat
+          std2, std3;            // Student tüüpi.
+
+        std = new Student();     // Loome uue objeki, mis kuulub
+                                 // Student klassile ning viitame
+                                 // sellele objektile muutuja "std" abil.
+
+        std1 = new Student();    // Loome teise Student objekti
+                                 // ning viitame sellele objektile
+                                 // muutja "std1" abil.
+
+        std2 = std1;             // Kopeerime "std1" viite vääruse
+                                 // "std2" vääruseks.
+
+        std3 = null;             // "std3" viiteks seame tühja väärtuse.
+ 
+                  
+        std.name = "John Smith";  // Deklareerime mõned välja väärtused.
+        std1.name = "Mary Jones";
+        
+Arvuti mälus tomuvat vastavalt näitele illustreerib allolev pilt. Siin on näha, et kaks muutujat viitavad samale objektile.    
+
+.. image:: http://math.hws.edu/javanotes/c5/objects-in-heap.png
+
+
