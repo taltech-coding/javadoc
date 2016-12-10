@@ -10,7 +10,7 @@ Sõne-tüüpi muutuja loomine:
     String greeting;
     
 Sellisel juhul pole sõnel väärtust määratud. Vaikeväärtus on **null**. 
-**null** tähendab objektide puhul seda, et antud objekt on väärtustamata. Kui meie vaadeldava objekti väärtus on null, siis ei ole võimalik tema meetodeid välja kutsuda.
+null tähendab objektide puhul seda, et antud objekt on väärtustamata. Kui meie vaadeldava objekti väärtus on null, siis ei ole võimalik tema meetodeid välja kutsuda.
 		
 Muutuja loomisel võib sellele ka sisu anda:
 
@@ -35,8 +35,8 @@ Tagastab sõne pikkuse (mitu sümbolit on sõnes). Tagastatav väärtus on täis
 
 .. code-block:: java
 
-  System.out.println("hello".length()); // prindib "5"
-  System.out.println("".length()); // prindib "0"
+  System.out.println("hello".length()); // prints "5"
+  System.out.println("".length()); // prints "0"
   
 **charAt**
 
@@ -54,15 +54,15 @@ Võimaldab sõnest alamosa võtta. Samanimelist meetodit on kaks: üks on ühe a
 
 .. code-block:: java
 
-  System.out.println("tere".substring(1)); // prindib "ere"
-  System.out.println("tere".substring(3)); // prindib "e"
+  System.out.println("hello".substring(1)); // prints "ello"
+  System.out.println("hello".substring(3)); // prints "lo"
   
 Kahe argumendiga meetod tagastab alamsõne, mille algus on esimese argumendiga määratud indeksiga positsioonist ning mille lõpp on teise argumendiga määratud indeksiga positsioonist eelmine positsioon. Ehk siis alguse positsioon on kaasa arvatud, lõpu oma ei ole kaasa arvatud.
 
 .. code-block:: java
 
-  System.out.println("tere".substring(1,3)); // prindib "er"
-  System.out.println("tere".substring(3,4)); // prindib "e"
+  System.out.println("hello".substring(1,3)); // prints "el"
+  System.out.println("hello".substring(3,4)); // prints "l"
   
 **indexOf**
 
@@ -70,19 +70,19 @@ Otsib sõnest etteantud (alam)sõne ja tagastab positsiooni, kust otsitav (alam)
 
 .. code-block:: java
 
-  System.out.println("hello".indexOf("h")); // prindib "0"
-  System.out.println("hello".indexOf("he")); // prindib "0"
-  System.out.println("hello".indexOf("llo")); // prindib "2"
-  System.out.println("hello".indexOf("a")); // prindib "-1"
+  System.out.println("hello".indexOf("h")); // prints "0"
+  System.out.println("hello".indexOf("he")); // prints "0"
+  System.out.println("hello".indexOf("llo")); // prints "2"
+  System.out.println("hello".indexOf("a")); // prints "-1"
   
-Kasutada on võimalik ka kahe argumendiga meetodit. Teine argument näitab ära, alates mis positsioonist otsima hakata.
+Kasutada on võimalik ka kahe argumendiga meetodit. Teine argument näitab ära mis positsioonist alates otsima hakata.
 
 .. code-block:: java
 
-  System.out.println("hello".indexOf("h", 0)); // prindib "0"
-  System.out.println("hello".indexOf("h", 1)); // prindib "-1", kuna "t" ei leidu, kui hakata otsima alates positsioonist 1 (ehk siis teisest tähest)
-  System.out.println("hello".indexOf("e", 1)); // prindib "1"
-  System.out.println("hello".indexOf("l", 2)); // prindib "3", kui hakata positsioonist 2 otsima, leidub esimene "l" positsioonil 3
+  System.out.println("hello".indexOf("h", 0)); // prints "0"
+  System.out.println("hello".indexOf("h", 1)); // prints "-1", because there is no "h" found when you start looking from position 1 (from second letter)
+  System.out.println("hello".indexOf("e", 1)); // prints "1"
+  System.out.println("hello".indexOf("l", 2)); // prints "3"
 
 **replace**
 
@@ -90,7 +90,7 @@ Sellel meetodil on kaks argumenti, millest esimene on vana sümbol ja teine uus 
 
 .. code-block:: java
 
-  System.out.println("abc".replace('a', 'b')); // prindib "bba"
+  System.out.println("abc".replace('a', 'b')); // prints "bba"
   
 **trim()**
 
@@ -123,8 +123,8 @@ Kui kirjutada selline kontroll:
 
 .. code-block:: java
 
-	if (s.equals("jah")) {
-     		// do something if user entered "jah"
+	if (s.equals("yes")) {
+     		// do something if user entered "yes"
 	}
 	
 Kui mingil põhjusel s on null, annab programm veateate. Eelnevalt tuleks kontrollida kas s on väärtustatud:
@@ -142,11 +142,11 @@ Teine võimalus juhul kui meid huvitab, kas kaks sõne on võrdsed, saab kirjuta
 
 .. code-block:: java
 
-	if ("jah".equals(s)) {
-    		// checks if s value is "jah"
+	if ("yes".equals(s)) {
+    		// checks if s value is "yes"
 	}
 	
-"jah" on eelmise näite puhul samamoodi sõne ehk objekt. Kuna see objekt ei ole null, võib seda kasutada kontrollimise puhul esimesel kohal. Kui kaks sõne on sama sisuga, siis ei ole vahet, kumba kummaga kontrollime - mõlemal juhul peaks *equals* meetod tagastama *true*.
+"yes" on eelmise näite puhul samamoodi sõne ehk objekt. Kuna see objekt ei ole null, võib seda kasutada kontrollimise puhul esimesel kohal. Kui kaks sõne on sama sisuga, siis ei ole vahet, kumba kummaga kontrollime - mõlemal juhul peaks *equals* meetod tagastama *true*.
 Järelikult selle näite puhul, isegi kui s on null, ei teki viga sest ei kutsuta selle muutuja kaudu meetodeid välja.
 
 -------
