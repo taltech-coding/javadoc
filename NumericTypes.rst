@@ -34,9 +34,9 @@ Lisaks kümnendsüsteemile on võimaik täisarvude esitamiseks kasutada kahends�
 .. code-block:: java
 
     int a;
-    a = 26;      // numbrina
-    a = 0x1a;    // kuueteistkümnendsüsteemis (hexadecimal)
-    a = 0b11010; // kahendsüsteemis (binary)
+    a = 26;      // Decimal value
+    a = 0x1a;    // Hexadecimal value
+    a = 0b11010; // Binary value
 
 Ujukomatüübid
 -------------
@@ -45,17 +45,17 @@ Ujukomaarvude esitamisel tuleks kindlasti anda kaasa vähemalt üks komakoht, se
 
 .. code-block:: java
 
-    double d1 = 55.0; // hea
-    double d2 = 55;   // halb
+    double d1 = 55.0; // good
+    double d2 = 55;   // bad
 
 Float tüüpi arvude eristamiseks tuleb neile lisada täht **f** või **F** (pole oluline, kas suur või väike täht). Samamoodi on võimalik double arve tähistada d-tähega, kuid see pole kohustuslik – vaikimisi on komakohtadega arvu andmetüübiks double. Mõlemat tüüpi ujukomaarvude puhul saab kasutada ka teaduslikku notatsiooni, mis kasutab korrutamist kümne astmetega.
 
 .. code-block:: java
 
     double d1 = 123.4;
-    double d2 = 123.4d;  // d või D pole kohustuslik
-    double d3 = 1.234e2; // teaduslikus notatsioonis (e2 -> *10^2)
-    float f = 123.4f     // f või F on kohustuslik!
+    double d2 = 123.4d;  // Adding d or D is optional
+    double d3 = 1.234e2; // Scientific notation (e2 -> *10^2)
+    float f = 123.4f     // f or F must be added!
 
 Alakriipsude kasutamine
 -----------------------
@@ -129,11 +129,11 @@ Lisaks on olemas unaarsed operaatorid, mis kasutavad vaid ühte operandi. Operaa
     result++;
     System.out.println(result);   // 6
 
-    System.out.println(result++); // Endiselt 6, kuna suurendamine toimub peale väärtuse lugemist
-    System.out.println(result);   // Nüüd on 7
+    System.out.println(result++); // Still 6, because value is read before incrementing
+    System.out.println(result);   // Now it is 7
 
-    System.out.println(++result); // 8, kuna suurendamine toimus enne väärtuse lugemist
-    System.out.println(result);   // Endiselt 8, kuna rohkem ei muudetud midagi
+    System.out.println(++result); // 8, because value is incremented before reading
+    System.out.println(result);   // Still 8, because nothing changed after reading
 
 
 Võrdlemine
@@ -195,7 +195,7 @@ Näide:
     int b = 6;                  // 110
 
     int result = a & b;         // 100
-    System.out.println(result); // prinditakse välja kümnendarvuna (4)
+    System.out.println(result); // Printed as a decimal (4)
 
 Ületäide
 ========
@@ -206,8 +206,8 @@ Juhul kui muutuja väärtustamisel antakse väärtus, mis on väljaspool andmet�
 
 .. code-block:: java
 
-    byte b = 127; // Maksimaalne väärtus byte andmetüübi jaoks
-    b++;          // Uus väärtus on -128 ehk minimaalne väärtus
+    byte b = 127; // Largest possible byte value
+    b++;          // New value -128 (smallest possible)
 
 Numbriklassid
 =============
@@ -262,8 +262,8 @@ Lisaks põhilistele numbriklassidele (Byte, Short, Long, Integer, Float, Double)
 
 .. code-block:: java
 
-    BigInteger i = BigInteger.valueOf(Integer.MAX_VALUE); // suurim võimalik int väärtus (2147483647)
+    BigInteger i = BigInteger.valueOf(Integer.MAX_VALUE); // Largest int value (2147483647)
     BigInteger j = BigInteger.valueOf(1);
 '
     BigInteger sum = i.add(j);
-    System.out.println(sum.toString());                   // tulemus on 2147483648
+    System.out.println(sum.toString());                   // Result is 2147483648
