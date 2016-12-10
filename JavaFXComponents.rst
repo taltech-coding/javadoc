@@ -7,9 +7,9 @@ JavaFX: komponendid
 Label
 =====
 
-.. image:: images/Labels.PNG
-
 **Label** võimaldab kuvada teksti. Erinevalt tekstiväljadest pole Label kasutaja poolt otse muudetav.
+
+.. image:: images/Labels.PNG
 
 .. code-block:: java
 
@@ -18,7 +18,7 @@ Label
     // Label, mis sisaldab teksti
     Label label2 = new Label("Hello World");
     // Label koos ikooniga
-    Image image = new Image(getClass().getResourceAsStream("search.jpg"));
+    Image image = new Image(getClass().getResourceAsStream("search.png"));
     Label label3 = new Label("Search", new ImageView(image));
 
 Kasulikud meetodid
@@ -28,20 +28,23 @@ Kasulikud meetodid
     // Teksti muutmine
     label1.setText("Hello World");
     // Värvi muutmine
-    label1.setTextFill();
+    label1.setTextFill(Color.BLUE);
     // Kirjatüübi muutmine
-    label1.setFont("Arial", 25)
+    label1.setFont(new Font("Arial", 25));
     // Teksti murdmine, kui see on liiga pikk
     label1.setWrapText(true);
     // Ikooni või pildi lisamine
-    label1.setGraphic(new Image(getClass().getResourceAsStream("icon.jpg")))
+    Image img = new Image(getClass().getResourceAsStream("search.png"));
+    label1.setGraphic(new ImageView(img));
     // Pildi ja teksti vahelise tühimiku muutmine
-    label1.setGraphicTextGap(5.5)
+    label1.setGraphicTextGap(5.5);
     // Pildi asukoha valimine teksti suhtes
     label1.setContentDisplay(ContentDisplay.TOP);
 
 Button
 ======
+
+**Button** ehk nupp on komponent, mille vajutamisel kasutaja poolt peaks käivituma mingi funktsioon.
 
 .. image:: images/Buttons.PNG
 
@@ -50,15 +53,15 @@ Button
     Button button1 = new Button();
     Button button2 = new Button("Click here!");
 
-    Image imageCancel = new Image(getClass().getResourceAsStream("cancel.png"));
-    Button button3 = new Button("Cancel", new ImageView(imageCancel));
+    Image imageSearch = new Image(getClass().getResourceAsStream("search.png"));
+    Button button3 = new Button("Cancel", new ImageView(imageSearch));
 
 Nupuvajutuse töötlemise näide
 
 .. code-block:: java
 
-    button2.setOnAction((ActionEvent e) => {
-        label.setText("Accepted");
+    button2.setOnAction((ActionEvent e) -> {
+        button1.setText("Text!");
     });
 
 Button klass sisaldab samuti kõiki meetodeid, mis olid eelnevalt välja toodud Label klassi juures.
@@ -68,7 +71,7 @@ Toggle button
 
 .. image:: images/Togglebutton.PNG
 
-*Toggle button* ehk tumblernupp on nupp, millel on kaks olekut –  ta võib olla valitud või mitte. Selliseid nuppe saab lisada gruppidesse nii, et igas grupis võib korraga valitud olla maksimaalselt üks nupp.
+**Toggle button** ehk tumblernupp on nupp, millel on kaks olekut –  ta võib olla valitud või mitte. Selliseid nuppe saab lisada gruppidesse nii, et igas grupis võib korraga valitud olla maksimaalselt üks nupp.
 
 .. code-block:: java
 
@@ -76,7 +79,7 @@ Toggle button
     ToggleButton tb2 = new ToggleButton("Press me");
 
     Image image = new Image(getClass().getResourceAsStream("icon.png"));
-    ToggleButton tb3 = new ToggleButton("Press me", new ImageView(image));
+    ToggleButton tb3 = new ToggleButton("Press me instead", new ImageView(image));
 
 Grupi loomine
 
@@ -84,14 +87,14 @@ Grupi loomine
 
     final ToggleGroup group = new ToggleGroup();
 
-    ToggleButton tb1 = new ToggleButton("Minor");
+    ToggleButton tb1 = new ToggleButton("Easy");
     tb1.setToggleGroup(group);
     tb1.setSelected(true);                         // Kui tahame, et üks oleks vaikimisi valitud
 
-    ToggleButton tb2 = new ToggleButton("Major");
+    ToggleButton tb2 = new ToggleButton("Medium");
     tb2.setToggleGroup(group);
 
-    ToggleButton tb3 = new ToggleButton("Critical");
+    ToggleButton tb3 = new ToggleButton("Hard");
     tb3.setToggleGroup(group);
 
 Ka tumblernuppude jaoks kehtivad Labeli juures kirjeldatud meetodid. Lisaks saab nuppude grupi puhul juhtida programmi tööd vastavalt sellele, milline nupp on hetkel valitud:
@@ -110,12 +113,7 @@ Raadionupud sarnanevad oma käitumiselt tumblernuppudele, kuna neid kasutatakse 
     RadioButton rb1 = new RadioButton();
     RadioButton rb2 = new RadioButton("Select me");
 
-    Image image = new Image(getClass().getResourceAsStream("ok.png"));
-    RadioButton rb3 = new RadioButton("Press me", new ImageView(image));
-
-Grupeerimine ja valiku töötlemine käib sarnaselt eelnevale Toggle Group objekti kaudu. Kasutada saab kõiki eelpoolnimetatud meetodeid.
-
-(Kasutamise näide)
+Grupeerimine ja valiku töötlemine käib sarnaselt eelnevale Toggle Group objekti kaudu. Kasutada saab kõiki eelpoolnimetatud meetodeid. Raadionupul pole konstruktorit, millega saab pildi lisada, kuid setGraphic meetodiga saab seda sellegipoolest teha.
 
 Checkbox
 ========
@@ -127,18 +125,18 @@ Checkbox
 .. code-block:: java
 
     CheckBox cb1 = new CheckBox();
-    CheckBox cb2 = new CheckBox("Second");
+    CheckBox cb2 = new CheckBox("Box 2");
 
-    Image image = new Image(getClass().getResourceAsStream("picture.jpg"));
-    CheckBox tb3 = new CheckBox("Selection 1", new ImageView(image));
-
-Checkbox'il on kaks olekut: **defined** ja **undefined**. Selleks, et olekuks määrata undefined, tuleb kasutata meetodit **setIndeterminate**.
+Checkboxi väärtus võib olla määratud või määramata. Selleks, et väärtus oleks algul määramata, tuleb kasutata meetodit **setIndeterminate**.
 
 .. code-block:: java
 
-    cb2.setSelected(false);     // pole valitud
-    cb2.setIndeterminate(true); // määramata
-    cb2.setSelected(true);      // on valitud
+    CheckBox cb3 = new CheckBox("Box 3");
+
+    cb1.setAllowIndeterminate(true); // võimaldab kasutajal valida "indeterminate" väärtuse
+    cb1.setSelected(false);          // pole valitud
+    cb2.setIndeterminate(true);      // määramata
+    cb3.setSelected(true);           // on valitud
 
 (Kasutamise näide koos nupuga)
 
@@ -161,27 +159,28 @@ Choice box
     );
     // Alternatiivne viis elemente lisada
     cb.getItems().addAll(
-        "Option 4",
-        "Option 5",
-        "Option 6"
+        "Option 1",
+        "Option 2",
+        "Option 3"
     );
 
-(kasutamise näide
+(kasutamise näide)
 
 Combobox
 ========
 
 .. image:: images/Combobox.PNG
 
-**Combobox** on nagu Choice box, kuid on pikkade nimekirjade puhul mõistlikum valik. Lisaks on võimalik seadistada Combobox nii, et kasutaja saab ise väärtusi lisada.
+**Combobox** on samuti valikukast, kuid on pikkade nimekirjade puhul mõistlikum kui choice box. Lisaks on võimalik seadistada Combobox nii, et kasutaja saab ise väärtusi lisada.
 
 .. code-block:: java
 
     final ComboBox comboBox = new ComboBox();
     comboBox.getItems().addAll(
-        "Option 4",
-        "Option 5",
-        "Option 6"
+            "Option 1",
+            "Option 2",
+            new Separator(),
+            "Option 3"
     );
 
 (Väärtuste lisamise näide + kasutamise näide)
@@ -227,5 +226,3 @@ Parooliväli erineb tavalisest tekstiväljast selle poolest, et tema sisu on var
     passwordField.setPromptText("Your password");
 
 Kõik tekstivälja meetodid töötavad samamoodi ka paroolivälja puhul.
-
-
