@@ -89,6 +89,8 @@ Tulemus:
 
 .. image:: images/Togglebutton.PNG
 
+Ka tumblernuppude jaoks kehtivad Labeli juures kirjeldatud meetodid.
+
 Grupi loomine
 -------------
 
@@ -106,7 +108,7 @@ Grupi loomine
     ToggleButton tb3 = new ToggleButton("Hard");
     tb3.setToggleGroup(group);
 
-Ka tumblernuppude jaoks kehtivad Labeli juures kirjeldatud meetodid. Lisaks saab nuppude grupi puhul juhtida programmi tööd vastavalt sellele, milline nupp on hetkel valitud:
+Nuppude grupi puhul juhtida programmi tööd vastavalt sellele, milline nupp on hetkel valitud:
 
 (Kasutamise näide)
 
