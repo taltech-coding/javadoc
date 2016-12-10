@@ -254,6 +254,8 @@ Kõik tekstivälja meetodid töötavad samamoodi ka paroolivälja puhul.
 Kasutajaliidese näidis (registreerimisvorm)
 ===========================================
 
+.. image:: images/Registrationform.PNG
+
 .. code-block:: java
 
     import javafx.application.Application;
