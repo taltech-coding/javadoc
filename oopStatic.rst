@@ -1,7 +1,7 @@
 Staatilised meetodid, muutujad ja konstandid
 =============================================
 
-Esmalt on vaja aru saada, mida üldse sõna staatiline tähendab. Inglise keeles on selle kohta öeldud nii: "Static keyword means that a variable or a method is shared between all instances of that class as it belongs to the type, not the objects". Ehk eesti keeles võiks seda tõlgendada nii, et staatiline muutuja või meetod on jagatud kõikide klassi poolt loodud objektide vahel. Antud meetod või muutuja kuulub tüübile, mitte objektidele.
+Esmalt on vaja aru saada, mida üldse sõna staatiline tähendab. Inglise keeles on selle kohta öeldud nii: "Static keyword means that a variable or a method is shared between all instances of that class as it belongs to the type, not the objects". Ehk eesti keeles võiks seda tõlgendada nii, et staatiline muutuja või meetod on jagatud kõikide klassi poolt loodud objektide vahel. Antud meetod või muutuja kuulub tüübile (klassile), mitte objektidele.
 
 Staatilised meetodid
 ----------------------
@@ -39,6 +39,8 @@ All on võimalik näha erinevust staatilise ja isendi meetodite väjakutsel.
     System.out.println("Java is awesome.");
    }
  }
+
+Staatilise meetodi seest teise staatilise meetodi väljakutsmisel pole vaja kassinime kirjutada, seepärast *main* meetodi esimene rida *display()* kutsub välja sama klassi staatilise meetodi *display()*. Samaväärne oleks kirjutada *Difference.display()*.
 
 Staatilised väljad
 -------------------
@@ -83,9 +85,9 @@ Järgnev näide illustreerib seda, kuidas staatilist välja kasutades saab kokku
 Meeldetuletus mitte-staatilistest väljadest
 --------------------------------------------
 
-Mitte-staatilised väljad kuuluvad klassi isenditele. Igal isendil (instance) on oma koopia sellest väljast.
+Mitte-staatilised väljad kuuluvad klassi isenditele. Igal isendil (*instance*) on oma koopia sellest väljast.
 
-Näite staatiliste ja mitte-staatiliste väljade kättesaamisest
+Näide staatiliste ja mitte-staatiliste väljade kättesaamisest
 -------------------------------------------------------------
 
  .. code-block:: java
@@ -99,6 +101,8 @@ Näite staatiliste ja mitte-staatiliste väljade kättesaamisest
 
         // Staatiline meetod saab staatilise väja kätte otse.
         staticField = true;
+        // Samaväärne oleks kasutada
+        Example.staticField = true;
 
         // Staatiline meetod saab mitte-staatilise välja kätte läbi objekti.
         Example instance = new Example();
@@ -108,7 +112,7 @@ Näite staatiliste ja mitte-staatiliste väljade kättesaamisest
 Konstandid
 ------------
 
-Tihti kasutatakse *static*'ut, et luua konstantne väli, mis on seotud klassiga. Selleks, et muuta staatiline väli konstantseks, peab lihtsalt lisama võtmesõna *final*. Konstante kirjutatakse java konventsioonis läbiva suurtähega.
+Tihti kasutatakse *static*'ut, et luua konstantne väli, mis on seotud klassiga. Selleks, et muuta staatiline väli konstandiks, peab lisama võtmesõna *final*. Konstante kirjutatakse java konventsioonis läbiva suurtähega.
 
  .. code-block:: java
  
