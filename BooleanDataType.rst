@@ -47,18 +47,18 @@ Stiil
 Kehv stiil on võrrelda tingimust *false* või *true*'ga:
 
 +--------------------------------------------------+--------------------------------------------------+
-|          Kehv stiil                              |                     Parem stiil                  |
+|          Kehv stiil                              |                 Parem stiil                      |
 +==================================================+==================================================+
 | .. code-block:: java                             | .. code-block:: java                             |
 |                                                  |                                                  |
 |   if (isHappy == true) {                         |   if (isHappy) {                                 |
-|     System.out.println("Nii pole hea teha");     |       System.out.println("Nii on palju parem");  |
+|     System.out.println("This is poor style.");   |     System.out.println("This is better style."); |
 |   }                                              |   }                                              |
 +--------------------------------------------------+--------------------------------------------------+
 | .. code-block:: java                             | .. code-block:: java                             |
 |                                                  |                                                  |
-|   if (isHappy == false) {                        |   if (!isHappy) {                                |
-|     System.out.println("Nii pole hea teha");     |       System.out.println("Nii on palju parem");  |
+|   if (isHappy == false) {                        |   if (!isHappy) {                                |
+|     System.out.println("This is poor style.");   |     System.out.println("This is better style."); |
 |   }                                              |   }                                              |
 +--------------------------------------------------+--------------------------------------------------+
 
@@ -69,7 +69,7 @@ Tingimuslaused
 .. code-block:: java
 
  if (score < 0 || score > 100) {
-    System.out.println("Skoor peab olema vahemikus nullist sajani.");
+    System.out.println("Score has an illegal value.");
  } 
   
 Meetodid
@@ -122,7 +122,7 @@ Tagastab Boolean instantsi, mis väljendab booleani väärtust. Kui boolean on *
   Boolean b = true;
   String str = String.valueOf(b);
   
-  System.out.println(str); // prindib konsooli "true"
+  System.out.println(str); // prints "true" 
 
 **toString(boolean b)**
 
@@ -133,7 +133,7 @@ Muudab tõeväärtuse sõneks. Tuleks kasutada siis, kui ollakse kindel, et bool
   Boolean b = true;
   String str = Boolean.toString(b);
   
-  System.out.println(str); // prindib konsooli "true"
+  System.out.println(str); // prints "true" 
   
 -------
   
