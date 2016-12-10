@@ -1,7 +1,7 @@
 Staatilised meetodid, muutujad ja konstandid
 =============================================
 
-Esmalt on vaja aru saada, mida üldse staatiline tähendab. Inglise keeles on selle kohta öeldud nii: "Static keyword means that variable or method is shared between all instances of that class as it belongs to the type, not objects". Ehk eesti keeles võiks seda tõlgendada nii, et staatiline muutuja või meetod on jagatud kõikide klassi poolt loodud objektide vahel. Antud meetod või muutuja kuulub tüübile, mitte objektile.
+Esmalt on vaja aru saada, mida üldse sõna staatiline tähendab. Inglise keeles on selle kohta öeldud nii: "Static keyword means that a variable or a method is shared between all instances of that class as it belongs to the type, not the objects". Ehk eesti keeles võiks seda tõlgendada nii, et staatiline muutuja või meetod on jagatud kõikide klassi poolt loodud objektide vahel. Antud meetod või muutuja kuulub tüübile (klassile), mitte objektidele.
 
 Staatilised meetodid
 ----------------------
@@ -40,13 +40,15 @@ All on võimalik näha erinevust staatilise ja isendi meetodite väjakutsel.
    }
  }
 
+Staatilise meetodi seest teise staatilise meetodi väljakutsmisel pole vaja kassinime kirjutada, seepärast *main* meetodi esimene rida *display()* kutsub välja sama klassi staatilise meetodi *display()*. Samaväärne oleks kirjutada *Difference.display()*.
+
 Staatilised väljad
 -------------------
 
-Kui väli on deklareeritud, kui staatiline, siis kuulub ta klassile. Kõik selle klassi poolt loodud isendid saavad kasutada ühte ja sama staatilist välja. Ligi saab otse klassist, ei ole vaja luua uut objekti.
+Kui väli on deklareeritud kui staatiline, siis kuulub ta klassile. Kõik selle klassi poolt loodud isendid saavad kasutada ühte ja sama staatilist välja. Ligi saab otse klassist, ei ole vaja luua uut objekti.
 
 - Kuuluvad klassile, mitte objekite (isendile).
-- Initsialiseeritakse neid välju üks kord, programmi käivitamisel. Neid välju initsialiseeritakse kõige esimestena.
+- Selliseid välju initsialiseeritakse ainult ühel korral, programmi käivitamisel. Need väljad initsialiseeritakse esimesena.
 - Sama koopia on kõikide isendite (loodud objektide) käes.
 - Staatilistele meetoditele saab ligi otse läbi klassi nime.
 
@@ -56,9 +58,10 @@ Kui väli on deklareeritud, kui staatiline, siis kuulub ta klassile. Kõik selle
     static int y = 0;
     //Kättesaamine
     <class-name>.<variable-name>
+    //Näiteks
+    ExampleClass.y
     
-    
-Väikseks näiteks staatilistest väljadest võib tuua tüüpilise probleemi, mida staalilise muutujaga muudetakse. Näiteks, kui me tahame lugeda kokku, mitu objekti oleme loonud.
+Järgnev näide illustreerib seda, kuidas staatilist välja kasutades saab kokku lugeda, mitu objekti oleme loonud.
 
 .. code-block:: java
 
@@ -82,9 +85,9 @@ Väikseks näiteks staatilistest väljadest võib tuua tüüpilise probleemi, mi
 Meeldetuletus mitte-staatilistest väljadest
 --------------------------------------------
 
-Mitte-staatilised väljad kuuluvad klassi isenditele. Igal isendil (instance) on oma koopia sellest väljast.
+Mitte-staatilised väljad kuuluvad klassi isenditele. Igal isendil (*instance*) on oma koopia sellest väljast.
 
-Näite staatiliste ja mitte-staatiliste väljade kättesaamisest
+Näide staatiliste ja mitte-staatiliste väljade kättesaamisest
 -------------------------------------------------------------
 
  .. code-block:: java
@@ -98,6 +101,8 @@ Näite staatiliste ja mitte-staatiliste väljade kättesaamisest
 
         // Staatiline meetod saab staatilise väja kätte otse.
         staticField = true;
+        // Samaväärne oleks kasutada
+        Example.staticField = true;
 
         // Staatiline meetod saab mitte-staatilise välja kätte läbi objekti.
         Example instance = new Example();
@@ -107,7 +112,7 @@ Näite staatiliste ja mitte-staatiliste väljade kättesaamisest
 Konstandid
 ------------
 
-Tihti esinev põhjus, miks kasutatakse *static*, on konstantse välja loomine, mis on seotud klassiga. Selleks, et muuta staatiline väli konstantseks, peab lihtsalt lisama võtmesõna *final*. Konstante kirjutatakse java konventsioonis läbiva suure tähega.
+Tihti kasutatakse *static*'ut, et luua konstantne väli, mis on seotud klassiga. Selleks, et muuta staatiline väli konstandiks, peab lisama võtmesõna *final*. Konstante kirjutatakse java konventsioonis läbiva suurtähega.
 
  .. code-block:: java
  

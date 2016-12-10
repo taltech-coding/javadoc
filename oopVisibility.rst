@@ -27,7 +27,7 @@ OOP: nähtavus (private, protected, public, tühi)
 ---------
 
 Meetoditele, muutujatele ning konstruktoritele, mis on määratud kui *private*, saab ligi ainult samast klassist.
-*Private* ligipääs on kõige piiravam ligipääs ning *klassid* ja *liidesed* (*interface*) ei saa olla privaatsed. Muutujatele, mis on deklareeritud kui *private*, saab ligi teistest klassidest, kui nendes on olemas *getterid* ja *setterid*. Kasutades *private* nähtavust on võimalik olla kindel, et objekt peidab oma infot  välismaailma eest.
+*Private* ligipääs on kõige piiravam ligipääs ning *klassid* ja *liidesed* (*interface*) ei saa olla privaatsed. Muutujatele, mis on deklareeritud kui *private*, saab ligi teistest klassidest, kui nendes on olemas *getter*'id ja *setter*'id. Kasutades *private* nähtavust on võimalik olla kindel, et objekt peidab oma infot  välismaailma eest.
 
 .. code-block:: java
 
@@ -70,7 +70,7 @@ Kui ei ole eraldi deklareeritud, mis on antud meetodi, klassi või välja nähta
 *protected* 
 -----------
 
-Muutujad, meetoid ja konstruktorid, mis on deklareeritud kui *protected*, on kättesaadavad kõikidele klassidele samas paketis või teise paketi klassidele, **juhul, kui nad laienduvad sinna klassi**. Allolev koodiplokk näitab just seda laiendumise juhtu!
+Muutujad, meetodid ja konstruktorid, mis on deklareeritud kui *protected*, on kättesaadavad kõikidele klassidele samas paketis või teise paketi klassidele, **juhul, kui nad laienduvad sinna klassi**. Allolev koodiplokk näitab just seda laiendumise juhtu!
 
 - Klassid ning liidesed ei saa olla *protected*.
 
@@ -96,7 +96,7 @@ Klassil *AudioPlayer* on meetod *openSpeaker()*, mida ta lubab oma alamklassil �
 *public* 
 --------
 
-Klass, meetod, konstruktor, liides jne, mis on deklareeritu, kui *public*, on kättesaadav igast teisest klassist. Kui *private* oli kõige piiravam nähtavusaste, siis *public* on vastupidiselt kõige avatum.
+Klass, meetod, konstruktor, liides jne, mis on deklareeritud kui *public*, on kättesaadav igast teisest klassist. Kui *private* oli kõige piiravam nähtavusaste, siis *public* on vastupidiselt kõige avatum.
 
 
 

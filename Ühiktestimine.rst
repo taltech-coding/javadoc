@@ -4,25 +4,25 @@
 Test Driven Development
 -----------------------
 
-Ühiktestimine on seotud Test Driven Developmentiga, mille põhimõte on enne kirjutada testid ja pärast seda hakata implementeerima koodi mis läbib testid. Koodi loetakse siis valmis kui ei ole suutelie kirjutama teste mis kukkuksid meetodist läbi. 	Test class on eraldi class.
+Ühiktestimine on seotud Test Driven Development'iga (TDD), mille põhimõtteks on enne kirjutada testid ja pärast seda hakata implementeerima koodi, mis peab läbima kirjutatud testid. Kood on valmis siis, kui ei olda enam suutelised kirjutama uusi teste, millest kood saaks läbi kukkuda. Testklass on eraldi klass.
 
 -------------------------
 
-Test classi loomine
+Test klassi loomine
 -------------------
-- IntelliJ-s on võimalik autogenereerida test class kui vajutada *alt+enter* classi nime peal.
+- IntelliJ-s on võimalik autogenereerida testklass kui vajutada *alt+enter* klassi nime peal.
 - Uuest aknast saab valida kuhu tehakse Test Class ning milliseid meetodeid testitakse.
-- Tavaliselt on vaja lisada ka Dependancy vastavale testing versioonile, olgu selleks JUnit 5 või mõni muu.
-- Seda saab kergelt teha kui vajutada *fix* nuppu ja valida esimene varijant.
-- Teine võimalus lisada dependanci on File -> Project Setting -> Modules sealt valida module millele JUnit külge panna, siis paremalt poolt valida Dependancies ja rohelise nuppuga Junit-i külge panna.
+- Tavaliselt on vaja lisada ka Dependency vastavale testing versioonile, olgu selleks JUnit 5 või mõni muu.
+- Seda saab kergelt teha kui vajutada *fix* nuppu ja valida esimene variant.
+- Teine võimalus dependency lisamiseks on File -> Project Setting -> Modules, sealt valida moodul, millele JUnit külge panna, seejärel valida paremalt poolt Dependencies ja rohelise nuppuga lisada Junit.
 
 
 
-Assertimine
+Assert'imine
 -----------
-Hea oleks kui kasutada *@BeforeEach* meetodi ees mis setupib kõik vajaliku. Seda *@BeforeEach* tehakse enne igat testi, niimodi saab kindel olla, et testid üksteist ei mõjuta.
+Hea oleks kui kasutada koodi alguses *@BeforeEach* meetodit, mis setup'ib kõik vajaliku. *@BeforeEach*'i tehakse enne igat testi, niimodi saab kindel olla, et testid üksteist ei mõjuta.
 
-Vastuste võrdlemiseks on mitu erinevat võimalust olemas.
+Vastuste võrdlemiseks on mitu erinevat võimalust:
 
 - assertEquals(expected, actual)
 - assertTrue()

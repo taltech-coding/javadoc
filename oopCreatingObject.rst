@@ -18,7 +18,7 @@ Iga ülaltoodud lause koosneb kolmest osast:
           
     2. Instantsi loomine - Kasutatakse **new** võtmesõna, et luua objekt.
     
-    3. Initsialiseerimine - Pärast **new** võtmesõna kutsutakse välja konstruktor, kuhu antakse soovi korral parameetrid.
+    3. Initsialiseerimine - Pärast **new** võtmesõna kutsutakse välja konstruktor, kuhu antakse soovi korral sobivad parameetrid.
 
 
 *Deklareerimine* 
@@ -28,8 +28,11 @@ Tavaliselt oleme harjunud looma muutujat nii:
 
 .. code-block:: java
 
-        //Tüüp ja nimi      
+        //Tüüp ja nimi
         type name;
+        
+        //Näiteks
+        int randomNumber;
 
 Kui tegemist on primitiivse tüübiga, näiteks *int*, siis koos deklareerimisega reserveeritakse muutujale kindel hulk mälu.
 Järgmises näites on näha objekti viida deklareerimist, aga mitte veel objekti loomist!
@@ -38,31 +41,31 @@ Järgmises näites on näha objekti viida deklareerimist, aga mitte veel objekti
 
         Student student1;
 
-Objekti veel ei looda, kuna objekti loomine käib **new** operaatori abil. Kui proovida kasutada muutuja nime *student1* programmis, siis kood ei kompileeru, sest mällu ei ole objekt veel loodud.
+Objekti veel ei looda, kuna objekti loomine käib **new** operaatori abil. Kui proovida kasutada muutuja nime *student1* programmis, siis kood ei kompileeru, sest mällu ei ole objekti veel loodud.
 
 *Instantsi loomine* 
 -----------------------
 
-**new** operaatori abil luuakse objekt ning antakse äsjaloodud objektile koha mälus. **new** operaator tagastab viite objektile, mida ta on loonud. 
+**new** operaatori abil luuakse uus objekt ning antakse äsjaloodud objektile koht mälus. **new** operaator tagastab viite objektile, mille ta lõi. 
 
 
 .. code-block:: java
 
         Point originOne = new Point(23, 94);
         
-Antud näites LOODAKSE objekt **new** võtmesõna abil.
+Antud näites LUUAKSE objekt võtmesõna **new** abil.
 
 *Initsialiseerimine* 
 -----------------------
 
-Pärast **new** võtmesõna kutsutakse välja konstruktor, kuhu antakse soovi korral parameetrid. See tuleb välja järgmises näites:
+Pärast võtmesõna **new** kutsutakse välja konstruktor, kuhu antakse soovi korral parameetrid. Seda illustreerib järgnev näide:
 
  .. code-block:: java
 
     public class Puppy {
        public Puppy(String name) {
           // This constructor has one parameter, name.
-          System.out.println("Passed Name is: " + name );
+          System.out.println("Puppy's name is: " + name);
        }
     
        public static void main(String []args) {
@@ -76,4 +79,4 @@ Seejärel kasutades **new** võtmesõna loome objekti, mille konstruktor saab si
 
  .. code-block:: Java
 
-    Passed Name is: Tommy
+    Puppy's name is: Tommy

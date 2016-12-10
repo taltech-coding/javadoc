@@ -1,13 +1,13 @@
 ==============
 Loend ehk List
 ==============
-Loend on korrasatud andmekogum, mis tähendab, et see säilitab järjekorra. Kui lisada elemendid loendisse, siis hiljem on nad lugemisel täpselt samasjärjekorras kui nad sisestati.
+Loend on korrasatud andmekogum, mis tähendab, et see säilitab elementide järjekorra. Kui lisada elemendid loendisse, siis hiljem on nad lugemisel täpselt samas järjekorras kui pärast sisestamist.
 
-Javas on suht palju erinevail loendeid, kuid enim kasutatav on *Arraylist*  ja *List*.
+Javas on mitmeid erinevaid loendeid, kuid enim kasutatavad on *Arraylist*  ning *List*.
 
 ArrayList
 ---------
-ArrayList on dünaamiline masiiv. See tõõtab enamjaolt nagu massiiv, kuid pikkus on dünaamiline. Kui massiivis pidi teadma kui suur oli vaja lisada siis ArrayListis ei ole vaa teada. Loend suureneb ise vastavalt vajadusele
+ArrayList on dünaamiline masiiv. See töötab enamjaolt nagu massiiv, kuid selle pikkus on dünaamiline. Kui massiivis pidi loomisel teadma kui suur ta on, siis *ArrayList*'is ei ole seda tarvis teada. Loend suureneb ise vastavalt vajadusele
 
 .. code-block:: java
 
@@ -23,7 +23,7 @@ ArrayList on dünaamiline masiiv. See tõõtab enamjaolt nagu massiiv, kuid pikk
 			// loend: 1, 2, 3, 4
 			System.out.println(arrayList.size()); // 4
 	 	
-			System.out.println(arrayList.get(1)); // 2
+			System.out.println(arrayList.get(1)); // 2 (leitakse element indeksi järgi)
 	 	
 			arrayList.remove(1); // element indeksiga 1 eemaldatakse
 			// ülejäänud loendi elemendid liigutatakse ühe võrra ettepoole:
@@ -36,13 +36,14 @@ ArrayList on dünaamiline masiiv. See tõõtab enamjaolt nagu massiiv, kuid pikk
 			arrayList.set(1, 7); // asendame elemendi väärtuse positsioonil 1:
 			// loend: 1, 7, 3, 4
  	
-			arrayList.clear(); // tühjendame
-			// arrayList 1..10
+			arrayList.clear(); // tühjendame loendi kõigist elementidest
+			
+			// loome arrayList'i elementidega 1..10
 			for (int i = 0; i < 10; i++) {
 				arrayList.add(i + 1);
 			}
 
-			// prindime välja
+			// prindime välja kõik loendi elemendid ühest kümneni
 			for (int i = 0; i < arrayList.size(); i++) {
 				System.out.println(arrayList.get(i));
 			}

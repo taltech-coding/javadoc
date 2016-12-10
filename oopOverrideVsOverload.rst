@@ -1,12 +1,12 @@
 Overload ja Override
 ================================================
 
-Tavaliselt tekitavad antud terminid segadust, kuid nendesse natuke süvenedes on arusaadav, et terminite taga olevad kontseptsioonid on piisavalt lihtsad.
+Tavaliselt tekitavad antud terminid segadust, kuid nendesse natuke süvenedes on arusaadav, et terminite taga olevad kontseptsioonid on üpris lihtsad.
 
 *Overload* 
 ----------------------
 
-Tegemist on meetodi ülelaadimisega Javas, kui kahel või rohkemal meetodil **samas klassis** on sama meetodi nimi, kuid erinevad sisestatud argumendid. Ülelaadimine toimub kompileerimise ajal. 
+Tegemist on meetodi ülelaadimisega Javas, kui kahel või rohkemal meetodil **samas klassis** on sama meetodi nimi, kuid erinevad sisestatavad argumendid. Ülelaadimine toimub kompileerimise ajal. 
 
 Meetodi ülelaadimine on korrektne siis, kui täidetud on üks või mõlemad tingimused:
 
