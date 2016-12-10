@@ -11,11 +11,11 @@ Label
 
 .. code-block:: java
 
-    // Tühi Label
+    // Empty Label
     Label label1 = new Label();
-    // Label, mis sisaldab teksti
+    // Label with text
     Label label2 = new Label("Hello World");
-    // Label koos ikooniga
+    // Label with text and icon
     Image image = new Image(getClass().getResourceAsStream("search.png"));
     Label label3 = new Label("Search", new ImageView(image));
     
@@ -28,20 +28,20 @@ Kasulikud meetodid
 
 .. code-block:: java
 
-    // Teksti muutmine
+    // Change text
     label1.setText("Hello World");
-    // Värvi muutmine
+    // Change color
     label1.setTextFill(Color.BLUE);
-    // Kirjatüübi muutmine
+    // Change font
     label1.setFont(new Font("Arial", 25));
-    // Teksti murdmine, kui see on liiga pikk
+    // Wrap text
     label1.setWrapText(true);
-    // Ikooni või pildi lisamine
+    // Add image
     Image img = new Image(getClass().getResourceAsStream("search.png"));
     label1.setGraphic(new ImageView(img));
-    // Pildi ja teksti vahelise tühimiku muutmine
+    // Change gap between image and text
     label1.setGraphicTextGap(5.5);
-    // Pildi asukoha valimine teksti suhtes
+    // Position image relative to text
     label1.setContentDisplay(ContentDisplay.TOP);
 
 Button
@@ -100,7 +100,7 @@ Grupi loomine
 
     ToggleButton tb1 = new ToggleButton("Easy");
     tb1.setToggleGroup(group);
-    tb1.setSelected(true);                         // Kui tahame, et üks oleks vaikimisi valitud
+    tb1.setSelected(true);                         // Make button selected by default
 
     ToggleButton tb2 = new ToggleButton("Medium");
     tb2.setToggleGroup(group);
@@ -144,10 +144,10 @@ Checkboxi väärtus võib olla määratud või määramata. Selleks, et väärtu
 
     CheckBox cb3 = new CheckBox("Box 3");
 
-    cb1.setAllowIndeterminate(true); // võimaldab kasutajal valida "indeterminate" väärtuse
-    cb1.setSelected(false);          // pole valitud
-    cb2.setIndeterminate(true);      // määramata
-    cb3.setSelected(true);           // on valitud
+    cb1.setAllowIndeterminate(true); // Enables the user to set indeterminate value
+    cb1.setSelected(false);          // Not selected
+    cb2.setIndeterminate(true);      // Undefined
+    cb3.setSelected(true);           // Selected
 
 Tulemus:
 
@@ -166,7 +166,7 @@ Choice box
     cb.setItems(FXCollections.observableArrayList(
         "New Document",
         "Open ",
-        new Separator(),                            // Valikuline element gruppide eraldamiseks
+        new Separator(),                            // Optional element for separating groups
         "Save",
         "Save as")
     );
@@ -212,7 +212,7 @@ Tekstiväli võimaldab küsida kasutajalt sisendit tekstina.
 .. code-block:: java
 
     TextField textField = new TextField();
-    // Ettemääratud sisuga tekstiväli. Seda teksti loetakse kasutaja sisendiks, kui ta seda ei muuda.
+    // Text field with predetermined content. Will be returned by the getText method even if user doesn't change it.
     TextField textField2 = new TextField("Your text here");
 
 Kasulikud meetodid
@@ -220,15 +220,15 @@ Kasulikud meetodid
 
 .. code-block:: java
 
-    // Sisendi lugemine
+    // Get field content
     String userText = textField.getText();
-    // Teksti muutmine
+    // Change field content
     textField.setText("Your text here");
-    // Välja tühjendamine
+    // Clear the field
     textField.clear();
-    // Kirjatüübi muutmine
+    // Change font
     textField.setFont("Arial", 30);
-    // Juhendava teksti lisamine. Seda teksti ei loeta kui kasutaja sisendit.
+    // Add prompt text. This text is not returned by the getText method and disappears when user starts typing.
     textField.setPromptText("Enter your first name.");
 
 Tulemus:
