@@ -17,13 +17,13 @@ toString
     names.add("John");
     names.add("Jane");
 
-    System.out.println(names);                           // toString() kutsutakse välja automaatselt
+    System.out.println(names);                           // toString() is called automatically...
 
     HashMap<String,Integer> grades = new HashMap<>();
     grades.put("John", 5);
     grades.put("Jane", 3);
 
-    String gradesString = "Grades:" + grades.toString(); // võime ka ise välja kutsuda, kui vaja
+    String gradesString = "Grades:" + grades.toString(); // ..but if we wish, we can call it ourselves too
     System.out.println(gradesString);
 
 Implementeerimine
@@ -91,7 +91,7 @@ Levinumates IDE-des on olemas võimalus neid meetodeid automaatselt genereerida.
 
 .. code-block:: java
 
-    if (!super.equals(object)) return false; // peame välja jätma
+    if (!super.equals(object)) return false; // should comment out
 
 Tulemus:
 
@@ -137,23 +137,23 @@ Võtame näiteks **ArrayList** objekti, mille puhul tehakse clone meetodis *shal
     pointList.add(p2);
 
     ArrayList<Point> pointListClone;
-    pointListClone = (ArrayList) pointList.clone(); // tuleb cast'ida, kuna clone tagastustüübiks on Object
+    pointListClone = (ArrayList) pointList.clone(); // Must cast to ArrayList because return type of clone is Object
 
-    System.out.println(pointList);                  // Eeldame, et toString meetod on eelnevalt realiseeritud
+    System.out.println(pointList);                  // Asssuming the toString method has already been overridden
     System.out.println(pointListClone);
     System.out.println();
 
     Point p3 = new Point(2, 6);
     pointListClone.add(p3);
 
-    System.out.println(pointList);                  // Kahe listi sisud on erinevad
+    System.out.println(pointList);                  // The contents are different now!
     System.out.println(pointListClone);
     System.out.println();
 
-    Point p = pointList.get(0);                     // Valime mingi punkti esimesest listist
-    p.setX(9);                                      // Muudame selle sisu
+    Point p = pointList.get(0);                     // Choose a point from the original list
+    p.setX(9);                                      // Change its coordinate
 
-    System.out.println(pointList);                  // Muutus toimub mõlema listi punktides - shallow copy!
+    System.out.println(pointList);                  // The change happened in both lists - shallow copy!
     System.out.println(pointListClone);
 
 Implementeerimine
