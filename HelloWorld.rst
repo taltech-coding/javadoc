@@ -9,7 +9,7 @@ Alloleva koodinäite võib kopeerida faili nimega HelloWorld.java
 
 	public class HelloWorld {
 		public static void main(String[] args) {
-			// Prindib "Hello world!" terminali aknasse.
+			// Prints "Hello world!" to console window.
 			System.out.println("Hello world!");
 		}
 	}
@@ -34,14 +34,14 @@ See rida kirjeldab ära "main" meetodi. "public static void" osa võib hetkel ig
 
 .. code-block:: java
 
-			// Prindib "Hello world!" terminali aknasse.
+			// Prints "Hello world!" to console window.
 			
 See on üherealine kommentaar, mida kompilaator ignoreerib.
 
 
 .. code-block:: java
 
-	System.out.println("Tere maailm!"); 
+	System.out.println("Hello world!"); 
 	
 See on ainuke "main" meetodis sisalduv rida (5. real on "main" meetodi plokki lõpetav } märk). See rida kuvab ekraanile programmeerija poolt määratud teksti. Mida täpsemalt see System.out.println teeb, räägitakse hiljem. Esialgu piisab teadmisest, et selliselt saab teksti ekraanile trükkida: System.out.println("Mingi tekst");. Lisaks sellele meetodile on olemas ka System.out.print("Ilma ln-ta print");. Nende kahe meetodi vahe on, et esimene prindib välja teksti ja lisab lõppu reavahetuse (kursor liigub järgmisele reale, järgmine väljatrükk läheb järgmisele reale). Teine meetod prindib teksti, aga reavahetust ei lisa (kursor jääb prinditud teksti lõppu; järgmine väljatrükk läheb otse prinditud teksti järgi).
 
