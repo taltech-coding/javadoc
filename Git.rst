@@ -24,9 +24,9 @@ Peale käsu andmist kuvatakse e-posti aadress, kuhu hakatakse teateid saatma.
 
 Navigeerimine kaustade vahel
 --------------------------------------------------------------
-Soovituslik oleks käsureale kirjutada käsk *pwd*, mis näitab, millises kaustas hetkel viibime.
-Trükkides käsureale *ls*, kuvatakse meile kausta sisu (kaustade ning failide nimetused), kus hetkel viibime.
-Kaustade vahel navigeerimiseks on käsk *cd*. Uue kausta loomiseks on käsk *mkdir*.
+Soovituslik oleks käsureale kirjutada käsk *pwd* (print working directory), mis näitab, millises kaustas hetkel viibime.
+Trükkides käsureale *ls* (list directory contents), kuvatakse meile kausta sisu (kaustade ning failide nimetused), kus hetkel viibime.
+Kaustade vahel navigeerimiseks on käsk *cd* (change directory). Uue kausta loomiseks on käsk *mkdir* (make directory).
 
 
 Git repositooriumi loomine
@@ -88,7 +88,6 @@ Commit käsk registreerib muudatused aga alles *push* käsk laeb need serverisse
 
   git status
 
-
 Muudatuste allalaadimine serverist ja kohalike muudatuste integreerimine
 ---------------------------------------------------------------------------
 
@@ -96,11 +95,53 @@ Muudatuste allalaadimine serverist ja kohalike muudatuste integreerimine
 
   git pull
 
+Git'i kasutamine TTÜs
+----------------------
+
+Sammud projekti Git'i panemisel:
+
+.. code-block:: git
+
+  git clone https://uniid@git.ttu.ee/ained/iti0011/uniid.git
+  
+Repostiooriumi kloonimine enda arvutisse, kus *uniid* tuleb **asendada** enda Uni-ID-ga. Ainekood (iti0011) tuleks asendada vastava aine ainekoodiga.
+
+.. code-block:: git
+
+  cd uniid
+  
+  mkdir EX00
+  
+  cd EX00
+  
+Siia kausta tuleks nüüd luua fail, näiteks *Main.java*.
+
+.. code-block:: git
+
+  git add Main.java
+  
+  git commit -m "Lühike kommentaar koodi lisamise kohta"
+  
+  git push origin master
+  
+Tulemusena peaks tulema e-maili aadressile (mail.ttu.ee) kiri õnnestumise või ebaõnnestumise kohta, õnnestumise korral ka automaattestide tulemused. Peale tagasiside saamist võib funktsiooni täiendada, et vastus õige oleks. Sellisel juhul on vaja kood uuesti Git'i üles laadida:
+
+.. code-block:: git
+
+  git add Main.java
+  
+  git commit -m "Lühike kommentaar tehtud muudatuste kohta"
+  
+  git push origin master
+
+  
+Probleemide vältimiseks tuleks alati enne koodimuudatusi teha repositooriumile *git pull*. See tõmbab uusima versiooni serverist. Kui see samm jääb tegemata, võib juhtuda, et failide seis arvutis läheb konflikti serveris oleva seisuga.
+
 
   
 Sisseehitatud graafiline kasutajaliides
 --------------------------------------------
-Graafiline kasutajaliides näitab mugavalt välja muudatuste üleslaadimised serverisse koos aja ja kommentaariga, tehtud muudatused failis, harud jpm. Käsureal käsk:
+Graafiline kasutajaliides näitab mugavalt ja graafiliselt välja ajaloo: muudatuste üleslaadimised serverisse koos aja ja kommentaariga, tehtud muudatused failis, harud jpm. Käsureal käsk:
 
 .. code-block:: git
 
