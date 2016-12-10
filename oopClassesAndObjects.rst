@@ -44,7 +44,7 @@ Näiteks on erandiks sõne loomine *String* klassist. Seal ei kasuta me tavalise
 *Klass* 
 --------
 
-On arusaadav, et *ArrayList* järgi loodud objektid erinevad meeletult objektidest, mis on loodud *String* klassist. Kõigil *ArrayList* objektidel on meetodid *add, contains, remove, size ... *, ning igal *String* objektil on meetodid *substring, length, charAt...*. *ArrayList* ja *String* loovad erinevat tüüpi objekte ning seetõttu neil on erinevad meetodid.
+On arusaadav, et *ArrayList* järgi loodud objektid erinevad meeletult objektidest, mis on loodud *String* klassist. Kõigil *ArrayList* objektidel on meetodid *add, contains, remove, size ...*, ning igal *String* objektil on meetodid *substring, length, charAt...*. *ArrayList* ja *String* loovad erinevat tüüpi objekte ning seetõttu neil on erinevad meetodid.
 
 Kindlate objektide grupi tüübiks on klass. *ArrayList* on klass, *String* on klass, *Scanner* on klass jne. Objetid ise on klassi järgi loodud eraldiseisvad juhud, ehk isendid.
 
@@ -54,7 +54,7 @@ Kindlate objektide grupi tüübiks on klass. *ArrayList* on klass, *String* on k
 Klass defineerib, millised objektid tal on:
 
 - Mis meetodid on objektidel.
-- Mis sisu objektidel on, ehk teisisõnu väljad, mis objekte iseloomustavad.
+- Millist (mis tüüpi) sisu objektidele määrata saab, ehk teisisõnu väljad, mis objekte iseloomustavad.
 
 Nagu on juba mitmeid kordi mainitud: klass on plaan või skeem, mille järgi objekte tegema hakatakse.
 
@@ -63,15 +63,15 @@ Nagu on juba mitmeid kordi mainitud: klass on plaan või skeem, mille järgi obj
 .. code-block:: Java
 
     public class House {
-     String color;
-     int sizeInSquareMeters;
-     String doorColor;
+      String color;
+      int sizeInSquareMeters;
+      String doorColor;
      
-     public House(String color, int sizeInSquareMeters, String doorColor) {
-     this.color = color;
-     this.sizeInSquareMeters = sizeInSquaremeters;
-     this.doorColor = doorColor;
-     }
+      public House(String color, int sizeInSquareMeters, String doorColor) {
+        this.color = color;
+        this.sizeInSquareMeters = sizeInSquaremeters;
+        this.doorColor = doorColor;
+      }
     }
 
 Maja klass ning konstruktor.
@@ -87,7 +87,7 @@ Nüüd kui meil on joonis olemas, saab maju ehitama hakata joonise järgi. Samas
 .. code-block:: java
 
     public static void main(String[] args) {
-    House myDreamHouse = new House("grey, 60, blue);
+      House myDreamHouse = new House("grey", 60, blue);
 
     }
 
