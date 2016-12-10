@@ -38,7 +38,7 @@ Näiteks on erandiks sõne loomine *String* klassist. Seal ei kasuta me tavalise
  .. code-block:: Java
 
     String text = "some text";
-    //See on sama asi!
+    //Same thing as.
     String anotherText = new String("more text");
     
 *Klass* 
