@@ -78,7 +78,36 @@ Järgnev näide illustreerib seda, kuidas staatilist välja kasutades saab kokku
         // Display count.
         System.out.println("Created object number: " + count);
     }
- } 
+ }
+ 
+ 
+Nüüd, kui tahame olla ikka kindlad selles koodis, tekitame uue klassi, kus on *Main()* meetod.
+
+
+.. code-block:: java
+
+ public class Main {
+
+  public static void main(String[] args){
+    
+    Stuff testingObjectCreationCount1 = new Stuff();
+    Stuff testingObjectCreationCount2 = new Stuff();
+    Stuff testingObjectCreationCount3 = new Stuff();
+  }
+ }
+
+
+Konsooli ilmub:
+
+
+.. code-block:: java
+
+ Created object number: 1
+ Created object number: 2
+ Created object number: 3
+
+
+
    
 
 
@@ -109,8 +138,8 @@ Näide staatiliste ja mitte-staatiliste väljade kättesaamisest
         instance.instanceField = true;
     }
     
-Konstandid
-------------
+Konstandid ja Magic number
+--------------------------
 
 Tihti kasutatakse *static*'ut, et luua konstantne väli, mis on seotud klassiga. Selleks, et muuta staatiline väli konstandiks, peab lisama võtmesõna *final*. Konstante kirjutatakse java konventsioonis läbiva suurtähega.
 
@@ -127,6 +156,38 @@ Tihti kasutatakse *static*'ut, et luua konstantne väli, mis on seotud klassiga.
         System.out.println(Stuff.NAME);
      }
    }
+   
+   
+ Samuti puutute kokku sellise mõistega nagu magic number. Magic number on numbrite otsene kasutamine koodis. Näiteks:
+ 
+.. code-block:: java
+
+ public class Foo {
+    public void setPassword(String password) {
+         // don't do this
+         if (password.length() > 7) {
+              throw new InvalidArgumentException("password");
+         }
+    }
+ }
+ 
+Sellist koodi oleks tarvis refaktoreerida:
+
+.. code-block:: java
+
+ public class Foo {
+    public static final int MAX_PASSWORD_SIZE = 7;
+
+    public void setPassword(String password) {
+         if (password.length() > MAX_PASSWORD_SIZE) {
+              throw new InvalidArgumentException("password");
+         }
+    }
+ }
+ 
+Sellisel juhul on palju lihtsam aru saada, mis koodis toimub ning sellist koodi on lihtsam hallata, juhul, kui numbrilisi väärtusi tekib üha rohkem. Samuti on hiljem lihtsam koodi muuta, kui vaja on, kuna piisab numbri vahetamisest ainult *public static final int MAX_PASSWORD_SIZE = 7;* väljal.
+ 
+ 
    
    
 
