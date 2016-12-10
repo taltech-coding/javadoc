@@ -18,8 +18,13 @@ Label
     // Label koos ikooniga
     Image image = new Image(getClass().getResourceAsStream("search.png"));
     Label label3 = new Label("Search", new ImageView(image));
+    
+Tulemus:
+
+.. image:: images/Labels.PNG
 
 Kasulikud meetodid
+------------------
 
 .. code-block:: java
 
@@ -39,10 +44,6 @@ Kasulikud meetodid
     // Pildi asukoha valimine teksti suhtes
     label1.setContentDisplay(ContentDisplay.TOP);
 
-**Label** näited:
-
-.. image:: images/Labels.PNG
-
 Button
 ======
 
@@ -56,7 +57,12 @@ Button
     Image imageSearch = new Image(getClass().getResourceAsStream("search.png"));
     Button button3 = new Button("Cancel", new ImageView(imageSearch));
 
-Nupuvajutuse töötlemise näide
+Tulemus:
+
+.. image:: images/Buttons.PNG
+
+Nupuvajutuse töötlemine
+-----------------------
 
 .. code-block:: java
 
@@ -65,10 +71,6 @@ Nupuvajutuse töötlemise näide
     });
 
 Button klass sisaldab samuti kõiki meetodeid, mis olid eelnevalt välja toodud Label klassi juures.
-
-**Button** näited:
-
-.. image:: images/Buttons.PNG
 
 Toggle button
 =============
@@ -83,11 +85,12 @@ Toggle button
     Image image = new Image(getClass().getResourceAsStream("icon.png"));
     ToggleButton tb3 = new ToggleButton("Press me instead", new ImageView(image));
 
-**ToggleButton** näited:
+Tulemus:
 
 .. image:: images/Togglebutton.PNG
 
 Grupi loomine
+-------------
 
 .. code-block:: java
 
@@ -117,11 +120,11 @@ Raadionupud sarnanevad oma käitumiselt tumblernuppudele, kuna neid kasutatakse 
     RadioButton rb1 = new RadioButton();
     RadioButton rb2 = new RadioButton("Select me");
 
-Grupeerimine ja valiku töötlemine käib sarnaselt eelnevale Toggle Group objekti kaudu. Kasutada saab kõiki eelpoolnimetatud meetodeid. Raadionupul pole konstruktorit, millega saab pildi lisada, kuid setGraphic meetodiga saab seda sellegipoolest teha.
-
-**RadioButton** näited:
+Tulemus:
 
 .. image:: images/Radiobutton.PNG
+
+Grupeerimine ja valiku töötlemine käib sarnaselt eelnevale Toggle Group objekti kaudu. Kasutada saab kõiki eelpoolnimetatud meetodeid. Raadionupul pole konstruktorit, millega saab pildi lisada, kuid setGraphic meetodiga saab seda sellegipoolest teha.
 
 Checkbox
 ========
@@ -144,7 +147,7 @@ Checkboxi väärtus võib olla määratud või määramata. Selleks, et väärtu
     cb2.setIndeterminate(true);      // määramata
     cb3.setSelected(true);           // on valitud
 
-**CheckBox** näited:
+Tulemus:
 
 .. image:: images/Checkbox.PNG
 
@@ -172,7 +175,7 @@ Choice box
         "Option 3"
     );
 
-**ChoiceBox** näited:
+Tulemus:
 
 .. image:: images/Choicebox.PNG
 
@@ -193,7 +196,7 @@ Combobox
             "Option 3"
     );
 
-**ComboBox** näide:
+Tulemus 11 elemendi puhul:
 
 .. image:: images/Combobox.PNG
 
@@ -211,6 +214,7 @@ Tekstiväli võimaldab küsida kasutajalt sisendit tekstina.
     TextField textField2 = new TextField("Your text here");
 
 Kasulikud meetodid
+------------------
 
 .. code-block:: java
 
@@ -225,7 +229,7 @@ Kasulikud meetodid
     // Juhendava teksti lisamine. Seda teksti ei loeta kui kasutaja sisendit.
     textField.setPromptText("Enter your first name.");
 
-**TextField** näited:
+Tulemus:
 
 .. image:: images/Textfield.PNG
 
@@ -239,8 +243,8 @@ Parooliväli erineb tavalisest tekstiväljast selle poolest, et tema sisu on var
     PasswordField passwordField = new PasswordField();
     passwordField.setPromptText("Your password");
 
-Kõik tekstivälja meetodid töötavad samamoodi ka paroolivälja puhul.
-
-**PasswordField** näide:
+Tulemus:
 
 .. image:: images/password.PNG
+
+Kõik tekstivälja meetodid töötavad samamoodi ka paroolivälja puhul.
