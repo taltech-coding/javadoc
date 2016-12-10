@@ -10,13 +10,13 @@ Väärtustada võib lihtsalt andes muutujale väärtuse:
 
 .. code-block:: java
 
-  boolean a = true;
+  boolean isHappy = true;
 
 Keerukam väärtustamine:
   
 .. code-block:: java
   
-  boolean isWetAndCold = temperature > 0 && temperature < 10; // tagastab true kui temperatuur on 0 ja 10 vahel
+  boolean isWetAndCold = temperature > 0 && temperature < 10; // returns true if temperature is between 0 and 10 
 
 Ahvatlev on kirjutada näiteks "boolean a = 10 < x < 20", et näha, kas x on 10 ja 20 vahel. See aga ei tööta, sest iga < operaator peab saama enda kaks väärtust. Õige on kirjutada "boolean a = 10 < x && x < 20"
 
@@ -47,17 +47,17 @@ Stiil
 Kehv stiil on võrrelda tingimust *false* või *true*'ga:
 
 +--------------------------------------------------+--------------------------------------------------+
-|          Kehv stiil                              |                       Hea stiil                  |
+|          Kehv stiil                              |                     Parem stiil                  |
 +==================================================+==================================================+
 | .. code-block:: java                             | .. code-block:: java                             |
 |                                                  |                                                  |
-|   if (a == true) {                               |   if (a) {                                       |
+|   if (isHappy == true) {                         |   if (isHappy) {                                 |
 |     System.out.println("Nii pole hea teha");     |       System.out.println("Nii on palju parem");  |
 |   }                                              |   }                                              |
 +--------------------------------------------------+--------------------------------------------------+
 | .. code-block:: java                             | .. code-block:: java                             |
 |                                                  |                                                  |
-|   if (a == false) {                              |   if (!a) {                                      |
+|   if (isHappy == false) {                        |   if (!isHappy) {                                |
 |     System.out.println("Nii pole hea teha");     |       System.out.println("Nii on palju parem");  |
 |   }                                              |   }                                              |
 +--------------------------------------------------+--------------------------------------------------+
