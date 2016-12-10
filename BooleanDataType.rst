@@ -75,7 +75,9 @@ Tingimuslaused
 Meetodid
 ---------
 
-*Boolean* on primitiivse andmetüübi *boolean* wrapper. *Boolean* (suure algustähega) on objekt, väikese algustähega *boolean* on aga primitiivne andmetüüp. Esimesega kaasneb rohkem meetodeid, teine aga hoiab mälu kokku. Booleani väärtus võib olla true, false või null, booleani väärtus ainult kas true või false.
+*Boolean* on primitiivse andmetüübi *boolean* wrapper. *Boolean* (suure algustähega) on objekt, väikese algustähega *boolean* on aga primitiivne andmetüüp. Esimesega kaasneb rohkem meetodeid, teine aga hoiab mälu kokku. 
+
+Booleani väärtus võib olla true, false või null, booleani väärtus ainult kas true või false.
 
 Näiteks:
 
