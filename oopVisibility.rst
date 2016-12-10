@@ -60,13 +60,16 @@ Samuti saab ka meetod olla privaatne. Sel juhul tuleb arvestada sellega, et antu
 Kui ei ole eraldi deklareeritud, mis on antud meetodi, klassi või välja nähtavus, siis on nad kättesaadavad igast klassist, mis asub **samas** paketis. 
 
 .. code-block:: java
-
+ 
+ class NoModifierExample {
+ 
     String version = "1.7";
 
     boolean processStudents() {
        return true;
     }
-    
+ } 
+ 
 *protected* 
 -----------
 
@@ -76,22 +79,27 @@ Muutujad, meetodid ja konstruktorid, mis on deklareeritud kui *protected*, on k�
 
 .. code-block:: java
 
-     class AudioPlayer {
-         
-         protected boolean openSpeaker(Speaker sp) {
-             // implementatsiooni detailid
-         }
+  public class AudioPlayer {
+   ....
+    public void playMusic() {
+       chooseChannel();
+       openSpeaker();
+    }
+
+   protected void chooseChannel() {}
+   protected void openSpeaker() {}
+  }
+
+  public class StreamingAudioPlayer extends AudioPlayer {
+     @Override
+     protected void chooseChannel() {
+       // for example choose streaming channel
      }
+  }   
     
-     class StreamingAudioPlayer extends AudioPlayer {
-        
-         @Override
-         boolean openSpeaker(Speaker sp) {
-             // implementatsiooni detailid
-         }
-     }
     
-Klassil *AudioPlayer* on meetod *openSpeaker()*, mida ta lubab oma alamklassil üle kirjutada. Kui *openSpeaker()* oleks *public*, siis saaks sellele ligi **kõik, kes soovivad**  või, kui oleks *private*, siis saaks sellele ligi ainult *AudioPlayer* klass. Meie eesmärgiks on aga teha meetod nähtavaks **ainult** alamklassile.
+Klassil *AudioPlayer* on meetod *playMusic()*, mida jagatakse alamülesanneteks. Ei oleks ilus terve *playMusic()* ümber kirjutada, kui on vajadus ainult ühte osa kuidagi muuta. Antud juhul tohib alamklass ümber kirjutada *chooseChannel()* ning seetõttu näeb kood korrektne välja.  Ei ole mõtet neid alamülesaneid *public* teha, kuna kasutajal ei ole vajadust neid otse välja kutsuda ning arvatavasti tihti ei tohigi. 
+
 
 *public* 
 --------
