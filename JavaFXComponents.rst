@@ -9,8 +9,6 @@ Label
 
 **Label** võimaldab kuvada teksti. Erinevalt tekstiväljadest pole Label kasutaja poolt otse muudetav.
 
-.. image:: images/Labels.PNG
-
 .. code-block:: java
 
     // Tühi Label
@@ -40,6 +38,8 @@ Kasulikud meetodid
     label1.setGraphicTextGap(5.5);
     // Pildi asukoha valimine teksti suhtes
     label1.setContentDisplay(ContentDisplay.TOP);
+
+.. image:: images/Labels.PNG
 
 Button
 ======
