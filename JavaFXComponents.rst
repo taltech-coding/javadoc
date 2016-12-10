@@ -39,14 +39,14 @@ Kasulikud meetodid
     // Pildi asukoha valimine teksti suhtes
     label1.setContentDisplay(ContentDisplay.TOP);
 
+Näide:
+
 .. image:: images/Labels.PNG
 
 Button
 ======
 
 **Button** ehk nupp on komponent, mille vajutamisel kasutaja poolt peaks käivituma mingi funktsioon.
-
-.. image:: images/Buttons.PNG
 
 .. code-block:: java
 
@@ -65,6 +65,10 @@ Nupuvajutuse töötlemise näide
     });
 
 Button klass sisaldab samuti kõiki meetodeid, mis olid eelnevalt välja toodud Label klassi juures.
+
+Näide:
+
+.. image:: images/Buttons.PNG
 
 Toggle button
 =============
