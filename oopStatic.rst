@@ -128,12 +128,12 @@ Näide staatiliste ja mitte-staatiliste väljade kättesaamisest
 
     public static void main(String[] args) {
 
-        // Staatiline meetod saab staatilise väja kätte otse. Satic method can access static field directly.
+        // Static method can access static field directly.
         staticField = true;
         // Is same thing as above.
         Example.staticField = true;
 
-        //Static method can access non-static method by object reference
+        //Static method can access non-static method by object reference.
         Example instance = new Example();
         instance.instanceField = true;
     }
