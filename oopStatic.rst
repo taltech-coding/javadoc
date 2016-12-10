@@ -13,7 +13,7 @@ Staatilised meetodid
 
  .. code-block:: java
 
-    //Süntaks
+    //Syntax
     <class-name>.<method.name>
 
 - Staatiline meetod ei saa kasutada *this* ja *super* võtmesõnu.
