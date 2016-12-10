@@ -39,7 +39,7 @@ Kasulikud meetodid
     // Pildi asukoha valimine teksti suhtes
     label1.setContentDisplay(ContentDisplay.TOP);
 
-Näide:
+**Label** näited:
 
 .. image:: images/Labels.PNG
 
@@ -66,14 +66,12 @@ Nupuvajutuse töötlemise näide
 
 Button klass sisaldab samuti kõiki meetodeid, mis olid eelnevalt välja toodud Label klassi juures.
 
-Näide:
+**Button** näited:
 
 .. image:: images/Buttons.PNG
 
 Toggle button
 =============
-
-.. image:: images/Togglebutton.PNG
 
 **Toggle button** ehk tumblernupp on nupp, millel on kaks olekut –  ta võib olla valitud või mitte. Selliseid nuppe saab lisada gruppidesse nii, et igas grupis võib korraga valitud olla maksimaalselt üks nupp.
 
@@ -84,6 +82,10 @@ Toggle button
 
     Image image = new Image(getClass().getResourceAsStream("icon.png"));
     ToggleButton tb3 = new ToggleButton("Press me instead", new ImageView(image));
+
+**ToggleButton** näited:
+
+.. image:: images/Togglebutton.PNG
 
 Grupi loomine
 
@@ -108,8 +110,6 @@ Ka tumblernuppude jaoks kehtivad Labeli juures kirjeldatud meetodid. Lisaks saab
 Radio button
 ============
 
-.. image:: images/Radiobutton.PNG
-
 Raadionupud sarnanevad oma käitumiselt tumblernuppudele, kuna neid kasutatakse samuti grupina, kus kasutaja peab valima vaid ühe. Erinevalt tumblernupust peab üks raadionupp grupis alati valitud olema.
 
 .. code-block:: java
@@ -119,10 +119,12 @@ Raadionupud sarnanevad oma käitumiselt tumblernuppudele, kuna neid kasutatakse 
 
 Grupeerimine ja valiku töötlemine käib sarnaselt eelnevale Toggle Group objekti kaudu. Kasutada saab kõiki eelpoolnimetatud meetodeid. Raadionupul pole konstruktorit, millega saab pildi lisada, kuid setGraphic meetodiga saab seda sellegipoolest teha.
 
+**RadioButton** näited:
+
+.. image:: images/Radiobutton.PNG
+
 Checkbox
 ========
-
-.. image:: images/Checkbox.PNG
 
 **Checkbox** ehk märkeruut võimaldab üheaegselt valida rohkem kui ühe valiku grupis.
 
@@ -142,12 +144,14 @@ Checkboxi väärtus võib olla määratud või määramata. Selleks, et väärtu
     cb2.setIndeterminate(true);      // määramata
     cb3.setSelected(true);           // on valitud
 
+**CheckBox** näited:
+
+.. image:: images/Checkbox.PNG
+
 (Kasutamise näide koos nupuga)
 
 Choice box
 ==========
-
-.. image:: images/Choicebox.PNG
 
 **Choice box** on lihtne *drop-down* valikute nimekiri. Lisada saab ainult teksti ning element on mõeldud kasutamiseks väiksema arvu valikute korral.
 
@@ -168,12 +172,14 @@ Choice box
         "Option 3"
     );
 
+**ChoiceBox** näited:
+
+.. image:: images/Choicebox.PNG
+
 (kasutamise näide)
 
 Combobox
 ========
-
-.. image:: images/Combobox.PNG
 
 **Combobox** on samuti valikukast, kuid on pikkade nimekirjade puhul mõistlikum kui choice box. Lisaks on võimalik seadistada Combobox nii, et kasutaja saab ise väärtusi lisada.
 
@@ -187,12 +193,14 @@ Combobox
             "Option 3"
     );
 
+**ComboBox** näide:
+
+.. image:: images/Combobox.PNG
+
 (Väärtuste lisamise näide + kasutamise näide)
 
 Text field
 ==========
-
-.. image:: images/Textfield.PNG
 
 Tekstiväli võimaldab küsida kasutajalt sisendit tekstina.
 
@@ -217,10 +225,12 @@ Kasulikud meetodid
     // Juhendava teksti lisamine. Seda teksti ei loeta kui kasutaja sisendit.
     textField.setPromptText("Enter your first name.");
 
+**TextField** näited:
+
+.. image:: images/Textfield.PNG
+
 Password field
 ==============
-
-.. image:: images/password.PNG
 
 Parooliväli erineb tavalisest tekstiväljast selle poolest, et tema sisu on varjatud. Kui me soovime enne parooli sisestamist kuvada mingit teksti, tuleb kindlasti kasutada meetodit **setPromptText**, kuna setText sisestab algteksti samuti varjatud kujul.
 
@@ -230,3 +240,7 @@ Parooliväli erineb tavalisest tekstiväljast selle poolest, et tema sisu on var
     passwordField.setPromptText("Your password");
 
 Kõik tekstivälja meetodid töötavad samamoodi ka paroolivälja puhul.
+
+**PasswordField** näide:
+
+.. image:: images/password.PNG
