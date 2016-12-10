@@ -54,11 +54,11 @@ Kui väli on deklareeritud kui staatiline, siis kuulub ta klassile. Kõik selle 
 
 .. code-block:: java
 
-    //Süntaks
+    //Syntax
     static int y = 0;
-    //Kättesaamine
+    //Accessing
     <class-name>.<variable-name>
-    //Näiteks
+    //Example
     ExampleClass.y
     
 Järgnev näide illustreerib seda, kuidas staatilist välja kasutades saab kokku lugeda, mitu objekti oleme loonud.
@@ -128,12 +128,12 @@ Näide staatiliste ja mitte-staatiliste väljade kättesaamisest
 
     public static void main(String[] args) {
 
-        // Staatiline meetod saab staatilise väja kätte otse.
+        // Staatiline meetod saab staatilise väja kätte otse. Satic method can access static field directly.
         staticField = true;
-        // Samaväärne oleks kasutada
+        // Is same thing as above.
         Example.staticField = true;
 
-        // Staatiline meetod saab mitte-staatilise välja kätte läbi objekti.
+        //Static method can access non-static method by object reference
         Example instance = new Example();
         instance.instanceField = true;
     }
