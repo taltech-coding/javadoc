@@ -94,23 +94,39 @@ Ka tumblernuppude jaoks kehtivad Labeli juures kirjeldatud meetodid.
 Grupi loomine
 -------------
 
+Nuppude grupi puhul saab juhtida programmi tööd vastavalt sellele, milline nupp on hetkel valitud. Valitud nupu saab kätte meetodi **getSelectedToggle** abil.
+
 .. code-block:: java
 
     final ToggleGroup group = new ToggleGroup();
 
-    ToggleButton tb1 = new ToggleButton("Easy");
-    tb1.setToggleGroup(group);
-    tb1.setSelected(true);                         // Make button selected by default
+        ToggleButton tb1 = new ToggleButton("Button A");
+        tb1.setToggleGroup(group);
+        // Make button selected by default
+        tb1.setSelected(true);
 
-    ToggleButton tb2 = new ToggleButton("Medium");
-    tb2.setToggleGroup(group);
+        ToggleButton tb2 = new ToggleButton("Button B");
+        tb2.setToggleGroup(group);
 
-    ToggleButton tb3 = new ToggleButton("Hard");
-    tb3.setToggleGroup(group);
+        ToggleButton tb3 = new ToggleButton("Button C");
+        tb3.setToggleGroup(group);
 
-Nuppude grupi puhul juhtida programmi tööd vastavalt sellele, milline nupp on hetkel valitud:
+        Button button = new Button("Which button is pressed?");
 
-(Kasutamise näide)
+        Label label = new Label();
+
+        button.setOnAction((ActionEvent e) -> {
+            ToggleButton pressedButton = (ToggleButton) group.getSelectedToggle();
+            if (pressedButton != null) {
+                label.setText(pressedButton.getText());
+            } else {
+                label.setText("No buttons are pressed");
+            }
+        });
+
+Tulemus:
+
+.. image:: images/Togglegroup.PNG
 
 Radio button
 ============
