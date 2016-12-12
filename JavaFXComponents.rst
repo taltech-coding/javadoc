@@ -294,7 +294,7 @@ Parooliväli erineb tavalisest tekstiväljast selle poolest, et tema sisu on var
 .. code-block:: java
 
     PasswordField passwordField1 = new PasswordField();
-    passwordField1.setText("Your password here");       // Bad!!!!
+    passwordField1.setText("Your password here");        // Bad!!!!
     PasswordField passwordField2 = new PasswordField();
     passwordField2.setPromptText("Your password");       // Correct
 
