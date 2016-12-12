@@ -106,6 +106,8 @@ Sammud projekti Git'i panemisel:
   
 Repostiooriumi kloonimine enda arvutisse, kus *uniid* tuleb **asendada** enda Uni-ID-ga. Ainekood (iti0011) tuleks asendada vastava aine ainekoodiga.
 
+Kui millegi pärast ei õnnestu repositooriumi kloonimine, siis tuleks kontrollida, kas kasutate ikka **https://** protokolli, mitte http://. Tuleks ka kontrollida, kas olete uniid ja parooli õigesti sisestanud (suur- ja väiketähed on erinevad!).
+
 .. code-block:: git
 
   cd uniid
