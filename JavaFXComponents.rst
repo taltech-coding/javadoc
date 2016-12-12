@@ -133,7 +133,7 @@ Tulemus:
 Radio button
 ============
 
-Raadionupud sarnanevad oma käitumiselt tumblernuppudele – neid kasutatakse samuti grupina, kus kasutaja peab valima vaid ühe. Erinevalt tumblernupust peab üks raadionupp grupis alati valitud olema.
+**Radio button** ehk raadionupp sarnaneb oma käitumiselt tumblernuppudele – neid kasutatakse samuti grupina, kus kasutaja peab valima vaid ühe. Erinevalt tumblernupust peab üks raadionupp grupis alati valitud olema.
 
 .. code-block:: java
 
