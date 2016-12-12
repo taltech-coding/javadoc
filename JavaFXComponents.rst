@@ -2,12 +2,12 @@
 JavaFX: komponendid
 ===================
 
-Kasutajaliidesed koosnevad erinevatest komponentidest nagu tekstiväljad, nupud jne. Vaatame lähemalt põhilisi komponente, mida JavaFX võimaldab kasutada.
+Kasutajaliidesed koosnevad erinevatest komponentidest nagu tekstiväljad, nupud jne. Vaatame lähemalt põhilisi komponente, mida JavaFX võimaldab kasutada. Näidetest on välja jäetud kood, mis hõlmab *layout*'i loomist ja elementide lisamist sellele. Peatüki lõpus on antud suurem kasutajaliidese näide, mis kasutab **GridLayout**'i, ning seda võib soovi korral kasutada mallina.
 
 Label
 =====
 
-**Label** võimaldab kuvada teksti. Erinevalt tekstiväljadest pole Label kasutaja poolt otse muudetav.
+**Label** ehk silt võimaldab kuvada teksti. Erinevalt tekstiväljadest pole silt kasutaja poolt otse muudetav.
 
 .. code-block:: java
 
@@ -43,6 +43,8 @@ Kasulikud meetodid
     label1.setGraphicTextGap(5.5);
     // Position image relative to text
     label1.setContentDisplay(ContentDisplay.TOP);
+
+**NB!** Samu meetodeid on võimalik kasutada ka mitme järgneva komponendi puhul.
 
 Button
 ======
@@ -131,7 +133,7 @@ Tulemus:
 Radio button
 ============
 
-Raadionupud sarnanevad oma käitumiselt tumblernuppudele, kuna neid kasutatakse samuti grupina, kus kasutaja peab valima vaid ühe. Erinevalt tumblernupust peab üks raadionupp grupis alati valitud olema.
+Raadionupud sarnanevad oma käitumiselt tumblernuppudele – neid kasutatakse samuti grupina, kus kasutaja peab valima vaid ühe. Erinevalt tumblernupust peab üks raadionupp grupis alati valitud olema.
 
 .. code-block:: java
 
@@ -142,7 +144,7 @@ Tulemus:
 
 .. image:: images/Radiobutton.PNG
 
-Grupeerimine ja valiku töötlemine käib sarnaselt eelnevale Toggle Group objekti kaudu. Kasutada saab kõiki eelpoolnimetatud meetodeid. Raadionupul pole konstruktorit, millega saab pildi lisada, kuid setGraphic meetodiga saab seda sellegipoolest teha.
+Grupeerimine ja valiku töötlemine käib samuti ToggleGroup objekti kaudu. Kasutada saab kõiki eelpoolnimetatud meetodeid. Raadionupul pole konstruktorit, millega saab pildi lisada, kuid setGraphic meetodiga saab seda sellegipoolest teha.
 
 Checkbox
 ========
@@ -169,7 +171,21 @@ Tulemus:
 
 .. image:: images/Checkbox.PNG
 
-(Kasutamise näide koos nupuga)
+Väärtuse saab kätte, kasutades meetodit **isSelected**:
+
+.. code-block:: java
+
+    CheckBox checkBox = new CheckBox();
+    Button button = new Button("Is the box checked?");
+    Label label = new Label("");
+
+    button.setOnAction((ActionEvent e) -> {
+        if (checkBox.isSelected()) {
+            label.setText("Checked");
+        } else {
+            label.setText("Not checked");
+        }
+    });
 
 Choice box
 ==========
@@ -188,21 +204,42 @@ Choice box
     );
     // Alternatiivne viis elemente lisada
     cb.getItems().addAll(
-        "Option 1",
-        "Option 2",
-        "Option 3"
+        "New Document",
+        "Open ",
+        new Separator(),
+        "Save",
+        "Save as"
     );
 
-Tulemus:
+Kasutamise demonstreerimiseks võib lisada sellise koodijupi:
+
+.. code-block:: java:
+
+    Button button = new Button("What is the value?");
+    Label label = new Label("");
+
+    cb.setItems(FXCollections.observableArrayList(
+            "New Document",
+            "Open ",
+            new Separator(),                            // Valikuline element gruppide eraldamiseks
+            "Save",
+            "Save as")
+    );
+
+    button.setOnAction((ActionEvent e) -> {
+        String chosenValue = cb.getValue().toString();
+        label.setText(chosenValue);
+
+    });
+
+Nupu vajutamisel kuvatakse ekraanil valitud elemendi väärtus.
 
 .. image:: images/Choicebox.PNG
-
-(kasutamise näide)
 
 Combobox
 ========
 
-**Combobox** on samuti valikukast, kuid on pikkade nimekirjade puhul mõistlikum kui choice box. Lisaks on võimalik seadistada Combobox nii, et kasutaja saab ise väärtusi lisada.
+**Combobox** ehk liitboks on samuti valikukast, kuid on pikkade nimekirjade puhul mõistlikum kui ChoiceBox.
 
 .. code-block:: java
 
@@ -214,11 +251,9 @@ Combobox
             "Option 3"
     );
 
-Tulemus 11 elemendi puhul:
+Välimuselt on ChoiceBox ja ComboBox peaaegu identsed. Kui elemente on rohkem, tekib ComboBoxile veoriba:
 
 .. image:: images/Combobox.PNG
-
-(Väärtuste lisamise näide + kasutamise näide)
 
 Text field
 ==========
@@ -258,8 +293,10 @@ Parooliväli erineb tavalisest tekstiväljast selle poolest, et tema sisu on var
 
 .. code-block:: java
 
-    PasswordField passwordField = new PasswordField();
-    passwordField.setPromptText("Your password");
+    PasswordField passwordField1 = new PasswordField();
+    passwordField1.setText("Your password here");       // Bad!!!!
+    PasswordField passwordField2 = new PasswordField();
+    passwordField2.setPromptText("Your password");       // Correct
 
 Tulemus:
 
@@ -296,6 +333,7 @@ Kasutajaliidese näidis (registreerimisvorm)
             stage.setTitle("Registration form example");
             Scene scene = new Scene(root);
 
+            // You can replace these components with the ones in other examples to test them
             TextField textFieldEmail = new TextField();
             PasswordField passwordField1 = new PasswordField();
             PasswordField passwordField2 = new PasswordField();
@@ -316,8 +354,8 @@ Kasutajaliidese näidis (registreerimisvorm)
             GridPane grid = new GridPane();
             grid.setVgap(10);
             grid.setHgap(4);
-            grid.setPadding(new Insets(10, 10, 10, 10));
 
+            // If you replaced any components before, you must also replace the following lines (see JavaFX: Layouts)
             grid.add(new Label("Email: "), 0, 0);
             grid.add(textFieldEmail, 1, 0, 2, 1);
             grid.add(new Label("Password: "), 0, 1);
