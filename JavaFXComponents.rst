@@ -2,7 +2,7 @@
 JavaFX: komponendid
 ===================
 
-Kasutajaliidesed koosnevad erinevatest komponentidest nagu tekstiväljad, nupud jne. Vaatame lähemalt põhilisi komponente, mida JavaFX võimaldab kasutada. Näidetest on välja jäetud kood, mis hõlmab *layout*'i loomist ja elementide lisamist sellele. Peatüki lõpus on antud suurem kasutajaliidese näide, mis kasutab **GridLayout**'i, ning seda võib soovi korral kasutada mallina.
+Kasutajaliidesed koosnevad erinevatest komponentidest nagu tekstiväljad, nupud jne. Vaatame lähemalt põhilisi komponente, mida JavaFX võimaldab kasutada. Näidetest on välja jäetud kood, mis hõlmab *layout*'i loomist ja elementide lisamist sellele. Peatüki lõpus on antud suurem kasutajaliidese näide, mis kasutab **GridPane**'i, ning seda võib soovi korral kasutada mallina.
 
 Label
 =====
@@ -133,7 +133,7 @@ Tulemus:
 Radio button
 ============
 
-Raadionupud sarnanevad oma käitumiselt tumblernuppudele – neid kasutatakse samuti grupina, kus kasutaja peab valima vaid ühe. Erinevalt tumblernupust peab üks raadionupp grupis alati valitud olema.
+**Radio button** ehk raadionupp sarnaneb oma käitumiselt tumblernuppudele – neid kasutatakse samuti grupina, kus kasutaja peab valima vaid ühe. Erinevalt tumblernupust peab üks raadionupp grupis alati valitud olema.
 
 .. code-block:: java
 
