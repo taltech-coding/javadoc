@@ -130,13 +130,13 @@ Konsooli väljundiks on:
 
 Aga nüüd asendame * public static void main(String args[])* sellise koodi:
 
- .. code-block:: java
+.. code-block:: java
 
          Example2 obj2 = new Example2(77);
          System.out.println("var is: "+obj2.getValue());
 
 Konsooli väljundiks on nüüd:
- .. code-block:: java
+.. code-block:: java
 
         var is: 77
 
