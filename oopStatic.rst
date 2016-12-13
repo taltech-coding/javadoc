@@ -158,7 +158,7 @@ Tihti kasutatakse *static*'ut, et luua konstantne väli, mis on seotud klassiga.
    }
    
    
- Samuti puutute kokku sellise mõistega nagu magic number. Magic number on numbrite otsene kasutamine koodis. Näiteks:
+Samuti puutute kokku sellise mõistega nagu magic number. Magic number on numbrite otsene kasutamine koodis. Näiteks:
  
 .. code-block:: java
 
