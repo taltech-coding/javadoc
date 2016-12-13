@@ -7,7 +7,7 @@ Klassid ja objektid
 
 Oleme kursuse raames juba kasutanud objekte. *ArrayList* on näiteks klass, mille järgi luuakse objekte. Selle objekti sisuks on informatsioon, mida ta sisaldab, ning selle objekti funktsionaalsuseks on klassis *ArrayList* olevad meetodid, mille abil saab sisu, ehk olekut muuta. Toome näite, kus on kaks *ArrayList* objekti *cities* ja *countries*.
 
- .. code-block:: java
+.. code-block:: java
 
     public static void main(String[] args) {
         ArrayList<String> cities = new ArrayList<String>();
@@ -35,7 +35,7 @@ Oleme kasutanud võtmesõna **new** juba mitmeid kordi. Näiteks *ArrayList*'i l
 
 Näiteks on erandiks sõne loomine *String* klassist. Seal ei kasuta me tavaliselt **new** võtmesõna, kuigi see on täiesti lubatud.
 
- .. code-block:: Java
+.. code-block:: Java
 
     String text = "some text";
     //Same thing as.
