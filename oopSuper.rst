@@ -22,7 +22,7 @@ Kui teie alamklassis asuv meetod kirjutab üle mõne ülemklassis oleva meetodi 
 
 Samuti on meil olemas alamklass **Subclass**, mis laiendab ülemklassi ning kirjutab üle meetodi *printMethod()*
 
- .. code-block:: java
+.. code-block:: java
     
         public class Subclass extends Superclass {
     
@@ -40,7 +40,7 @@ Samuti on meil olemas alamklass **Subclass**, mis laiendab ülemklassi ning kirj
     
 Alamklassi meetod *printMethod()* kirjutab üle ülemklassi meetodi *printMethod()*. Samas, kui on soov kutsuda välja just ülemklassi meetod *printMethod()*, siis on tarvis kasutada võtmesõna **super**. Konsooli trükitakse:
 
- .. code-block:: java
+.. code-block:: java
     
     Printed in Superclass.
     Printed in Subclass    
@@ -53,7 +53,7 @@ Ehk siis alguses käivitakase ülemklassi meetod **printMethod()** ning siis pö
 
 - NB! Samamoodi on võimalik pääseda ülemklassi välja juurde.
 
- .. code-block:: java
+.. code-block:: java
     
         class Vehicle {
             int speed=50;
@@ -75,7 +75,7 @@ Ehk siis alguses käivitakase ülemklassi meetod **printMethod()** ning siis pö
 
 Kuna kasutatud oli **super.speed**, siis konsooli trükitakse:
 
- .. code-block:: java
+.. code-block:: java
 
         The speed is 50
     
