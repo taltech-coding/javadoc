@@ -124,7 +124,8 @@ Mis on antud koodi väljundiks?
         } 
 
 Konsooli väljundiks on:
- .. code-block:: java
+
+.. code-block:: java
 
         var is: 10
 
@@ -136,6 +137,7 @@ Aga nüüd asendame * public static void main(String args[])* sellise koodi:
          System.out.println("var is: "+obj2.getValue());
 
 Konsooli väljundiks on nüüd:
+
 .. code-block:: java
 
         var is: 77
