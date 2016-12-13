@@ -60,7 +60,7 @@ Antud näites LUUAKSE objekt võtmesõna **new** abil.
 
 Pärast võtmesõna **new** kutsutakse välja konstruktor, kuhu antakse soovi korral parameetrid. Seda illustreerib järgnev näide:
 
- .. code-block:: java
+.. code-block:: java
 
     public class Puppy {
        public Puppy(String name) {
@@ -77,7 +77,7 @@ Pärast võtmesõna **new** kutsutakse välja konstruktor, kuhu antakse soovi ko
 Antud näites me tekitame klassi *Puppy*, mis saab konstruktorisse kaasa argumendi, mis on antud juhul *String name*. Nüüd objekti loomisel *public static void main(String []args)* plokis deklareerime, et loodud objekt on klassist *Puppy*, mille nimeks valime *myPuppy*. 
 Seejärel kasutades **new** võtmesõna loome objekti, mille konstruktor saab sisse parameetri *"Tommy"*, mis on parajasti koera nimi. Nüüd objekti loomisel käivitub ka konstruktor, mis automaatselt käivitab konstruktori kehas oleva koodijupi *System.out.println("Passed Name is: " + name );*. Konsooli prinditakse:
 
- .. code-block:: Java
+.. code-block:: Java
 
     Puppy's name is: Tommy
     
