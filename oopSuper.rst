@@ -84,7 +84,7 @@ Alamklassi konstruktor
 
 Ütleme, et meil on ülemklass **Bicycle** ning alamklass **MountainBike**. Jägmises näites on näha, kuidas alamklassi MountainBike konstruktoris kutsutakse välja ülemklassi konstruktor ning pärast seda seadistatakse veel alamklassile iseloomulik väli *seatHeight*.
 
- .. code-block:: java
+.. code-block:: java
 
         public MountainBike(int startHeight, int startCadence, int startSpeed,  int startGear) {    
             super(startCadence, startSpeed, startGear);
