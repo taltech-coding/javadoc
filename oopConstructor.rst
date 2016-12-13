@@ -20,10 +20,8 @@ Konstruktor on koodi plokk, mis võimaldab tekitada klassidest objekte. Konstruk
 
 .. code-block:: java
 
-    class Demo
-    {
-         public Demo()
-         {
+    class Demo {
+         public Demo() {
          }
     }
 
@@ -34,10 +32,8 @@ Konstruktor on koodi plokk, mis võimaldab tekitada klassidest objekte. Konstruk
 
 .. code-block:: java
 
-    class Demo
-    {
-         public Demo()
-         {
+    class Demo {
+         public Demo() {
             System.out.println("This is a default constructor")
          }
     } 
@@ -50,13 +46,11 @@ Sel juhul antakse konstuktorisse veel eraldi argumendid. Neid võib olla ükskõ
 
 .. code-block:: java
 
-    class Demo
-        {
-              public Demo(int num, String str)
-              {
+    class Demo {
+              public Demo(int num, String str) {
                    System.out.println("This is a parameterized constructor");
               }
-        }
+    }
 
 
 
@@ -110,29 +104,24 @@ Mis on antud koodi väljundiks?
 
 .. code-block:: java
 
-        class Example2
-    {
+        class ExampleTwo {
           private int var;
-          public Example2()
-          {
+          public ExampleTwo() {
                  //code for default one
                  var = 10;
           }
-          public Example2(int num)
-          {
+          public Example2(int num) {
                  //code for parameterized one
                  var = num;
           }
-          public int getValue()
-          {
+          public int getValue() {
                   return var;
           }
-          public static void main(String args[])
-          {
+          public static void main(String args[]) {
                   Example2 obj2 = new Example2();
                   System.out.println("var is: "+obj2.getValue());
           }
-    }
+        } 
 
 Konsooli väljundiks on:
  .. code-block:: java
@@ -161,7 +150,7 @@ Kõige tihedamini kasutatakse *this* võtmesõna, kuna väli on varjatud meetodi
 
 .. code-block:: java
 
-       public class Student {
+      public class Student {
         public int code = 0;
         public int age = 0;
             
@@ -176,7 +165,7 @@ Samas võib seda koodi kirjutada nii
 
 .. code-block:: java
 
-       public class Student {
+    public class Student {
         public int code = 0;
         public int age = 0;
             
