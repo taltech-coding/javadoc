@@ -56,7 +56,7 @@ Meetodite ülekirjutamine on täiesti erinev ülelaadimisest. Kui tegemist on al
 Nüüd on sobilik tuua väike näide, mis illustreerib ülekirjutamist:
 
 
- .. code-block:: java
+.. code-block:: java
 
   public class Parent {
     
