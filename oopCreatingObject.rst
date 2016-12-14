@@ -89,7 +89,7 @@ Seejärel kasutades **new** võtmesõna loome objekti, mille konstruktor saab si
 
 .. code-block:: Java
 
-        public Student {
+        class Student {
 
             public String name;  // Student's name.
             public double test1, test2, test3;   // Grades on three tests.
