@@ -14,17 +14,7 @@ BorderPane
 
 **BorderPane** jaotab akna viieks piirkonnaks, kuhu komponente saab paigutada:
 
-+--------------------------+
-|           Top            |
-+------+-----------+-------+
-|      |           |       |
-|      |           |       |
-| Left |   Center  | Right |
-|      |           |       |
-|      |           |       |
-+------+-----------+-------+
-|          Bottom          |
-+--------------------------+
+.. image:: images/Borderpane.PNG
 
 StackPane
 =========
