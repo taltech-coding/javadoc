@@ -221,7 +221,7 @@ Kasutamise demonstreerimiseks võib lisada sellise koodijupi:
     cb.setItems(FXCollections.observableArrayList(
             "New Document",
             "Open ",
-            new Separator(),                            // Valikuline element gruppide eraldamiseks
+            new Separator(),                            // Optional element for separating groups.
             "Save",
             "Save as")
     );
