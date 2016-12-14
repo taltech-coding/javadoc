@@ -97,9 +97,9 @@ Sisuliselt kompilaator teeb:
   
 Võrdleb kahte tõeväärtust (*boolean*) teineteisega. Tagastusväärtus on täisarv (*integer*). Tagastatakse:
 
-  - 0 kui x == y
-  - -1 kui !x && y
-  - 1 kui x && !y
+- 0 kui x == y
+- -1 kui !x && y
+- 1 kui x && !y
   
 **logicalAnd(boolean a, boolean b)**
 

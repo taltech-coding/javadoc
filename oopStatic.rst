@@ -11,7 +11,7 @@ Staatilised meetodid
 - Saavad kutsuda välja ainult staatilisi meetodeid.
 - Staatilistele meetoditele saab ligi otse läbi klassi nime.
 
- .. code-block:: java
+.. code-block:: java
 
     //Syntax
     <class-name>.<method.name>
@@ -119,7 +119,7 @@ Mitte-staatilised väljad kuuluvad klassi isenditele. Igal isendil (*instance*) 
 Näide staatiliste ja mitte-staatiliste väljade kättesaamisest
 -------------------------------------------------------------
 
- .. code-block:: java
+.. code-block:: java
 
     public class Example {
 
@@ -143,7 +143,7 @@ Konstandid ja Magic number
 
 Tihti kasutatakse *static*'ut, et luua konstantne väli, mis on seotud klassiga. Selleks, et muuta staatiline väli konstandiks, peab lisama võtmesõna *final*. Konstante kirjutatakse java konventsioonis läbiva suurtähega.
 
- .. code-block:: java
+.. code-block:: java
  
    public class Stuff {
    
@@ -158,7 +158,7 @@ Tihti kasutatakse *static*'ut, et luua konstantne väli, mis on seotud klassiga.
    }
    
    
- Samuti puutute kokku sellise mõistega nagu magic number. Magic number on numbrite otsene kasutamine koodis. Näiteks:
+Samuti puutute kokku sellise mõistega nagu magic number. Magic number on numbrite otsene kasutamine koodis. Näiteks:
  
 .. code-block:: java
 

@@ -2,7 +2,7 @@
 JavaFX: Layout
 ==============
 
-**Layout** konteinerid ehk paanid (*panes*) võimaldavad komponente (scene graphi) sees erineval viisil paigutada. Soovitud struktuuri saamiseks võib erinevaid paane üksteise sisse paigutada. Kui akna suurust muudetakse, tegelevad paanid automaatselt komponentide suuruse ja asukoha muutmisega.
+**Layout** konteinerid ehk paanid (*panes*) võimaldavad komponente (scene graphi) sees erineval viisil paigutada. Soovitud struktuuri saamiseks võib erinevaid paane üksteise sisse panna. Kui akna suurust muudetakse, muudavad paanid automaatselt enda komponentide mõõtmeid ja paiknemist.
 
 HBox, VBox
 ==========

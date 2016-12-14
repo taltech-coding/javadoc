@@ -60,7 +60,7 @@ Antud näites LUUAKSE objekt võtmesõna **new** abil.
 
 Pärast võtmesõna **new** kutsutakse välja konstruktor, kuhu antakse soovi korral parameetrid. Seda illustreerib järgnev näide:
 
- .. code-block:: java
+.. code-block:: java
 
     public class Puppy {
        public Puppy(String name) {
@@ -77,7 +77,7 @@ Pärast võtmesõna **new** kutsutakse välja konstruktor, kuhu antakse soovi ko
 Antud näites me tekitame klassi *Puppy*, mis saab konstruktorisse kaasa argumendi, mis on antud juhul *String name*. Nüüd objekti loomisel *public static void main(String []args)* plokis deklareerime, et loodud objekt on klassist *Puppy*, mille nimeks valime *myPuppy*. 
 Seejärel kasutades **new** võtmesõna loome objekti, mille konstruktor saab sisse parameetri *"Tommy"*, mis on parajasti koera nimi. Nüüd objekti loomisel käivitub ka konstruktor, mis automaatselt käivitab konstruktori kehas oleva koodijupi *System.out.println("Passed Name is: " + name );*. Konsooli prinditakse:
 
- .. code-block:: Java
+.. code-block:: Java
 
     Puppy's name is: Tommy
     
@@ -89,32 +89,50 @@ Seejärel kasutades **new** võtmesõna loome objekti, mille konstruktor saab si
 
 .. code-block:: Java
 
-        Student std, std1,       // Declare four variables of
-                  std2, std3;    //   type Student.
+        class Student {
 
-        std = new Student();     // Create a new object belonging
-                                 //   to the class Student, and
-                                 //   store a reference to that
-                                 //   object in the variable std.
+            public String name;  // Student's name.
+            public double test1, test2, test3;   // Grades on three tests.
 
-        std1 = new Student();    // Create a second Student object
-                                 //   and store a reference to
-                                 //   it in the variable std1.
+            public double getAverage() {  // compute average test grade
+                return (test1 + test2 + test3) / 3;
+            }
+        }
 
-        std2 = std1;             // Copy the reference value in std1
-                                 //   into the variable std2.
+        public class StudentExample {
+            public static void main(String[] args) {
+                Student std, std1,       // Declare four variables of
+                          std2, std3;    //   type Student.
 
-        std3 = null;             // Store a null reference in the
-                                 //   variable std3.
+                std = new Student();     // Create a new object belonging
+                                         //   to the class Student, and
+                                         //   store a reference to that
+                                         //   object in the variable std.
 
-        std.name = "John Smith";  // Set values of some instance variables.
-        std1.name = "Mary Jones";
+                std1 = new Student();    // Create a second Student object
+                                         //   and store a reference to
+                                         //   it in the variable std1.
 
-     // (Other instance variables have default
-     //    initial values of zero.)
+                std2 = std1;             // Copy the reference value in std1
+                                         //   into the variable std2.
+
+                std3 = null;             // Store a null reference in the
+                                         //   variable std3.
+
+                std.name = "John Smith";  // Set values of some instance variables.
+                std1.name = "Mary Jones";
+
+                // (Other instance variables have default
+                //    initial values of zero.)
+            }
+        }
         
 Arvuti mälus tomuvat vastavalt näitele illustreerib allolev pilt. Siin on näha, et kaks muutujat viitavad samale objektile.    
 
 .. image:: http://math.hws.edu/javanotes/c5/objects-in-heap.png
 
+Kui muuta :code:`std1.test1 = 100.0`, siis muutub mälus vastav objekt. Kuna *std2* viitab ka samale objektile, siis :code:`std2.test1` väärtus on ka :code:`100.0`.
 
+Sarnaseks visualiseerimiseks võid kasutada: http://www.pythontutor.com/java.html
+
+Kopeeri ülalolev kood koodiaknasse ja vajuta "Visualize Execution". Järgneval lehel saad liikuda nuppudega edasi-tagasi, et näha, milline on seis mälus (muutujate väärtused, objektide olek).

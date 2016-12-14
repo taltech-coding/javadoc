@@ -30,7 +30,7 @@ Klasside nimed kirjutatakse suure algustähega. Kui klassi nimi koosneb mitmest 
 
 	public static void main(String[] args) { 
 	
-See rida kirjeldab ära "main" meetodi. "public static void" osa võib hetkel ignoreerida - sellest räägitakse kursuse jooksul. Oluline on meetodi nimi "main". Faili/klassi käivitamisel pannakse esimesena käima "main" meetod. 
+See rida kirjeldab ära "main" meetodi. :code:`public static void` osa võib hetkel ignoreerida - sellest räägitakse kursuse jooksul. Oluline on meetodi nimi "main". Faili/klassi käivitamisel pannakse esimesena käima "main" meetod. 
 
 .. code-block:: java
 
@@ -43,7 +43,7 @@ See on üherealine kommentaar, mida kompilaator ignoreerib.
 
 	System.out.println("Hello world!"); 
 	
-See on ainuke "main" meetodis sisalduv rida (5. real on "main" meetodi plokki lõpetav } märk). See rida kuvab ekraanile programmeerija poolt määratud teksti. Mida täpsemalt see System.out.println teeb, räägitakse hiljem. Esialgu piisab teadmisest, et selliselt saab teksti ekraanile trükkida: System.out.println("Mingi tekst");. Lisaks sellele meetodile on olemas ka System.out.print("Ilma ln-ta print");. Nende kahe meetodi vahe on, et esimene prindib välja teksti ja lisab lõppu reavahetuse (kursor liigub järgmisele reale, järgmine väljatrükk läheb järgmisele reale). Teine meetod prindib teksti, aga reavahetust ei lisa (kursor jääb prinditud teksti lõppu; järgmine väljatrükk läheb otse prinditud teksti järgi).
+See on ainuke "main" meetodis sisalduv rida (5. real on "main" meetodi plokki lõpetav } märk). See rida kuvab ekraanile programmeerija poolt määratud teksti. Mida täpsemalt see System.out.println teeb, räägitakse hiljem. Esialgu piisab teadmisest, et selliselt saab teksti ekraanile trükkida: :code:`System.out.println("Mingi tekst");`. Lisaks sellele meetodile on olemas ka :code:`System.out.print("Ilma ln-ta print");`. Nende kahe meetodi vahe on, et esimene prindib välja teksti ja lisab lõppu reavahetuse (kursor liigub järgmisele reale, järgmine väljatrükk läheb järgmisele reale). Teine meetod prindib teksti, aga reavahetust ei lisa (kursor jääb prinditud teksti lõppu; järgmine väljatrükk läheb otse prinditud teksti järgi).
 
 5.rea loogeiline sulg } lõpetab "main" meetodi. Kui "main" meetodis tahetakse veel midagi teha, tuleb see kood lisada enne lõpetavat loogelist sulgu. Kogu kood, mis on "main" meetodis { ja } vahel, läheb käivitamisele.
 
