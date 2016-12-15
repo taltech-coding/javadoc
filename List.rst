@@ -64,7 +64,7 @@ Koodi näide kuidas ArrayListi lisada asju ja sellega töödelda.
 Viisid kuidas Listi läbi käija ja sellega töödelda eelmise koodi näite põhjal oli ainult üks välja toodid, tavaline for loop.
 
 
-..code-block:: java
+.. code-block:: java
 
 	// 1) for-each cycle of only values
 	for (Integer value : arraylist) {
@@ -84,7 +84,7 @@ Viisid kuidas Listi läbi käija ja sellega töödelda eelmise koodi näite põh
 
 Listi sorteerimiseks või mudugi ka ise mingi proge kirjutada, kuid see on juba javasse siise ehitatud. Selleks on *Collections.sort(listName)*. Kui tahta alguses mingeid asju listi lisada siis saab kasutada ka *Arrays.asList()*.
 
-..code-block:: java
+.. code-block:: java
 
 	import java.util.ArrayList;
 	import java.util.Collections;
