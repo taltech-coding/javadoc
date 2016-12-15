@@ -10,10 +10,12 @@ Koodi näites on konstructor milles on argumendiks **nimi** ja **id** ning see m
   public class Student {
   	private String name;
   	private int id;
+  	private String tagName;
 
-  	Student(String name, int id) {
-  		this.name = name;	//this.name on classi muutuja nimi ning lihtsalt name on argumendi muutuja
-  		this.id = id;
+  	Student(String name, int id, String tag) {
+  		this.name = name;	//this.name is a private variable specific to the class, while name by it self is an argument.
+  		this.id = id;	// this.id is a private variable specific to the class, while id by it self is an argument.
+  		tagName = tag 	// the argument name tag, does not overlap with the variable name tagName, so there is no need to use this.tagName, however you can use it.
   	}
   }
 
