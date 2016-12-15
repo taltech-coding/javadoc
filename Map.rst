@@ -13,7 +13,7 @@ Olilusemad meetodid:
 * map.size() - võti-väärtus seoste arv (võib mõelda ka kas lihtsalt võtmete arv või väärtuste arv).
 * V map.get(K) - tagastab etteantud võtmega, mille andmetüüp on K, väärtuse, mille andmetüüp on V. K ja V andmetüübid on määratud HashMap'i loomise ajal. 
 
-Üks kindel HashMapi näide tikumängu puhul et leida mitu "1" palli on.
+Üks kindel HashMapi näide.
 
 .. code-block:: java
 	
