@@ -47,6 +47,6 @@ Siis tuleb programm käivitada.
 **Käsureal:** saab Java-faili käivitada käsuga 
 *java failinimi*
 
-.. image :: iamges/javaAdd.PNG
+.. image :: images/javaAdd.PNG
 
 Programm käivitatakse JVM (Java Virtual Machine) sees ning kuna fail koosneb baitkoodist saab igal platvormil (Windows, Linux, Mac) sama faili käivitades sama tulemuse.
