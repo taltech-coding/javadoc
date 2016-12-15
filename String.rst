@@ -164,10 +164,13 @@ Näiteks:
 
 Sellisel juhul ei muudeta sõne :code:`myString` sisu. Esimene rida loob objekti, mille sisuks on "Apple" ja omistab selle viida myString'ile. Teine rida loob uue objekti, mille sisuks on "Orange" ja omistab selle viida myString'ile. Esimene objekt jääb sealjuures alles ega muutu, tema poole ei saa enam lihtsalt pöörduda.
 
+Kui nüüd teha näiteks:
+
 .. code-block:: java
 
-	String s1 = "Hello";
-	String s2 = s1; // s1 and s2 now point at the same string - "Hello"
+	myString += " juice"
+	
+Selle asemel, et "Orange" muutuks, luuakse täiesti uus sõne objekt sisuga "Orange juice", millel on uus viit.	
 
 -------
 
