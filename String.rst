@@ -86,7 +86,7 @@ Kasutada on võimalik ka kahe argumendiga meetodit. Teine argument näitab ära 
 
 **replace**
 
-Sellel meetodil on kaks argumenti, millest esimene on vana sümbol ja teine uus sümbol. Tagastab sõne, kus on kõik vana sümbol instantsid asendatud uue sümboliga.
+Sellel meetodil on kaks argumenti, millest esimene on vana sümbol ja teine uus sümbol. Tagastab sõne, kus on kõik vana sümboli instantsid asendatud uue sümboliga.
 
 .. code-block:: java
 
@@ -106,7 +106,7 @@ Tagastab sõne, kus kõik tähemärgid on muudetud väiketähtedeks.
 
 Sõnede võrdlemine
 -----------------
-Sõnede puhul ei saa kasutada == võrdlust. See võrdleb objektide puhul seda, kas nad on täpselt sama instants. Meid huvitab aga, kas sisu (ehk väärtus) on sama. Selleks kasutatakse meetodit *equals*. Tagastab true/false.
+Sõnede puhul ei saa kasutada == võrdlust. See võrdleb objektide puhul seda, kas nad on täpselt sama instants. Meid huvitab aga, kas sisu (ehk väärtus) on sama. Selleks kasutatakse meetodit *equals*. Tagastusväärtus on true/false.
 
 .. code-block:: java
   
@@ -118,7 +118,7 @@ null väärtus
 ------------
 
 Objektide (ka sõne) puhul on **null** eriline "väärtus". Sisuliselt tähendab see seda, et väärtus on määramata. Kui muidu objekti andmetüüp viitab lihtsustatult mäluaadressile, kus objekti sisu/väärtus salvestatud, siis null tähendab seda, et mälus pole selle objekti kohta (veel) andmeid.
-null "väärtusega" objekti puhul ei saa ühtegi meetodit kasutada. Ehk siis määramata sõne puhul s.length(); tuleks viga "NullPointerException". Kuna s on null, siis meil objekti (sõne) ennast polegi. Seega, kõik pöördumised s poole annavad tulemuseks 'null'.
+null "väärtusega" objekti puhul ei saa ühtegi meetodit kasutada. Ehk siis määramata sõne puhul :code:`s.length();` tuleks viga "NullPointerException". Kuna s on null, siis meil objekti (sõne) ennast polegi. Seega, kõik pöördumised s poole annavad tulemuseks 'null'.
 Kui kirjutada selline kontroll:
 
 .. code-block:: java
@@ -148,6 +148,27 @@ Teine võimalus juhul kui meid huvitab, kas kaks sõne on võrdsed, saab kirjuta
 	
 "yes" on eelmise näite puhul samamoodi sõne ehk objekt. Kuna see objekt ei ole null, võib seda kasutada kontrollimise puhul esimesel kohal. Kui kaks sõne on sama sisuga, siis ei ole vahet, kumba kummaga kontrollime - mõlemal juhul peaks *equals* meetod tagastama *true*.
 Järelikult selle näite puhul, isegi kui s on null, ei teki viga sest ei kutsuta selle muutuja kaudu meetodeid välja.
+
+Sõne muutmine
+--------------
+
+Sõne on Javas muutumatu - tema sisu ei saa muuta.
+
+Näiteks:
+
+.. code-block:: java
+
+	String s1 = "Hello";
+	String s2 = s1; // s1 and s2 now point at the same string - "Hello"
+	
+Mõlemad objektid 
+
+.. code-block:: java
+	String myString = "Apple";
+	myString = "Orange";
+
+
+Sellisel juhul ei muudeta sõne :code:`myString` sisu. Esimene rida loob objekti, mille sisuks on "Apple" ja omistab selle viida myString'ile. Teine rida loob uue objekti, mille sisuks on "Orange" ja omistab selle viida myString'ile. Esimene objekt jääb sealjuures alles ega muutu, tema poole ei saa enam lihtsalt pöörduda.
 
 -------
 
