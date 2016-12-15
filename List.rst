@@ -64,20 +64,24 @@ Koodi näide kuidas ArrayListi lisada asju ja sellega töödelda.
 Viisid kuidas Listi läbi käija ja sellega töödelda eelmise koodi näite põhjal oli ainult üks välja toodid, tavaline for loop.
 
 ..code-block:: java
+	
+	public class ArrayExample {
+		ArrayList<Integer> arraylist = new Arraylist<>();
+		
+		// 1) for-each cycle of only values
+		for (Integer value : arraylist) {
+			System.out.println(value);
+		}
 
-	// 1) for-each cycle of only values
-	for (Integer value : arraylist) {
-		System.out.println(value);
-	}
+		// 2) Lambda, only usable in Java 8 or newer
+		map.forEach(integer -> System.out.println(integer));
 
-	// 2) Lambda, only usable in Java 8 or newer
-	map.forEach(integer -> System.out.println(integer));
-
-	// iterator, needs to import java.util.Iterator
-    Iterator<Integer> iterator = arrayList.iterator();
-    while (iterator.hasNext()) {
-        Integer integer = iterator.next();
-        System.out.println(integer);
+		// iterator, needs to import java.util.Iterator
+    	Iterator<Integer> iterator = arrayList.iterator();
+    	while (iterator.hasNext()) {
+    	    Integer integer = iterator.next();
+    	    System.out.println(integer);
+    	}
     }
 
 Listi sorteerimiseks või mudugi ka ise mingi proge kirjutada, kuid see on juba javasse siise ehitatud. Selleks on *Collections.sort(listName)*. Kui tahta alguses mingeid asju listi lisada siis saab kasutada ka *Arrays.asList()*.
