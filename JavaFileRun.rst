@@ -2,7 +2,7 @@
 Java-faili kompileerimine ja käivitamine
 ========================================
 
-Java programm kirjutatakse inimloetavas Java keeles ning salvestatakse java-failina.
+Java programm kirjutatakse inimloetava Java koodina ning salvestatakse java-failina.
 
 Koodinäide:
 
