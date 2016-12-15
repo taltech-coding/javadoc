@@ -60,6 +60,7 @@ Sel juhul antakse konstuktorisse veel eraldi argumendid. Neid võib olla ükskõ
 Konstruktor võimaldab anda klassi väljadele algväärtusi, kui objekt luuakse. Ütleme, et meil on klass *Actor*, millel on väljad *fistName* ja *lastName*. Loome konstruktori *Actor* klassile.
 
 .. code-block:: java
+
    public class Actor() {
         String firstName;
         String lastName;
@@ -88,6 +89,7 @@ Seega on loodud uus klassi Actor objekt, mille viiteks on *arnold*, ning mille v
 Ühel klassil võib olla mitu konstruktorit, juhul kui igal konstruktoril on unikaalne signatuur. Tekitame uue konstruktori klassi *Actor*
 
 .. code-block:: java
+
    public class Actor() {
         String firstName;
         String lastName;
@@ -103,6 +105,7 @@ Seega on loodud uus klassi Actor objekt, mille viiteks on *arnold*, ning mille v
 Ning loome vastava objekti
     
 .. code-block:: java
+
         public static void main(String args[]) {
             Actor a = new Actor("Arnold", "Schwarzenegger", false);
         }
