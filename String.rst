@@ -154,21 +154,20 @@ Sõne muutmine
 
 Sõne on Javas muutumatu - tema sisu ei saa muuta.
 
-Näiteks:
+Näiteks:	
 
 .. code-block:: java
 
-	String s1 = "Hello";
-	String s2 = s1; // s1 and s2 now point at the same string - "Hello"
-	
-Mõlemad objektid 
-
-.. code-block:: java
 	String myString = "Apple";
 	myString = "Orange";
 
 
 Sellisel juhul ei muudeta sõne :code:`myString` sisu. Esimene rida loob objekti, mille sisuks on "Apple" ja omistab selle viida myString'ile. Teine rida loob uue objekti, mille sisuks on "Orange" ja omistab selle viida myString'ile. Esimene objekt jääb sealjuures alles ega muutu, tema poole ei saa enam lihtsalt pöörduda.
+
+.. code-block:: java
+
+	String s1 = "Hello";
+	String s2 = s1; // s1 and s2 now point at the same string - "Hello"
 
 -------
 
