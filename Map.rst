@@ -66,6 +66,7 @@ Olilusemad meetodid:
 			balls.put(1, count + 1); // overwriting the current value with a new one.
 	 
 			// in order to get all values we have to cycle through the map and add all values together
+			// this again can be done on all the previously mentioned ways.
 			int sum = 0;
 			for (Entry<Integer, Integer> entry : balls.entrySet()) {
 				sum += entry.getValue();
