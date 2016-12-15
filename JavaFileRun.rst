@@ -37,12 +37,12 @@ Programm käivitatakse JVM (Java Virtual Machine) sees ning kuna fail koosneb ba
 
 Java-faili saab käivitada käsurealt (command line). Selleks tuleb fail kõigepealt kompileerida ning siis käivitada. IDE'd (nagu näiteks IntelliJ) teevad kogu selle töö ise ära, kui vajutada Run nuppu.
 
-**Käsureal:** tuleb liikuda õigesse foldrisse ning siis saab Java-faili kompileerida käsuga
+**Käsureal:** tuleb liikuda õigesse kausta ning siis saab Java-faili kompileerida käsuga
 *javac failinimi.java*
 
 .. image :: images/Javac.PNG
 
-Alternatiivselt ei pea faili kompileerimiseks liikuma sinna kausta, vaid võib kasutada faili pathi. Sellisel juhul peab failis package'i ära defineerima.
+Alternatiivselt ei pea faili kompileerimiseks liikuma sinna kausta, vaid võib kasutada faili pathi. Sellisel juhul peab failis paki ära defineerima.
 Näiteks kui faili path on *src/maths/mathsoperations/Add.java* peab faili algusesse kirjutama
 
 .. code-block:: java
@@ -59,7 +59,7 @@ Siis tuleb programm käivitada.
 
 .. image :: images/JavaAdd.PNG
 
-Kui kompileerisid faili package'i sees, pead faili käivitamisel kasutama failinimena *package1.package2.Main*.
+Kui kompileerisid faili paki sees, pead faili käivitamisel kasutama failinimena *package1.package2.Main*.
 
 Näiteks:
 
