@@ -3,7 +3,7 @@ Tingimuslause
 
 Tingimuslaused on laused, mis käivitavad koodi vastavalt tingimusele. Vabas vormis võib tingimuslauset esitada "kui <tingimus>, siis <väide>". See tähendab, et kui <tingimus> on täidetud, siis <väide> kehtib.
 
-Tingimus (*condition*) on boolean-tüüpi väärtus (true/false). Javas on kahte liiki tingimuslauseid:
+Tingimus (*condition*) on boolean-tüüpi väärtus (*true*/*false*). Javas on kahte liiki tingimuslauseid:
 
 - *if*-lause, et valida kahe valiku vahel;
 - *switch*-lause, et valida mitme alternatiivi vahel.
