@@ -3,7 +3,7 @@ Võtmesõna this
 ==============
 Object orienteeritud programeerimises võib olla sama nimega muutujaid rohkem kui üks, ja tavaliselt ongi. Selleks on selline asi nagu *this.variableName* mis määrab kindlaks, et tegemist on just selle classi muutujaga.
 
-Koodi näites on konstructor milles on argumendiks **nimi** ja **id** ning see määrab klass muutujad mille nimed on samuti **name** ja **id** nendeks, mis oli ette antud.
+Koodi näites on konstructor milles on argumendiks **nimi**, **id** ja õpilase **tag** ning see määrab klass muutujad mille nimed on samuti **name** ja **id**, lisaks on klassi muutuja mille nimi ei kattu argumendi muutujaga, millele ei ole vaja ette panna *this.* kuid võib panna.
 
 .. code-block:: java
 
