@@ -16,7 +16,7 @@ Konstruktor on koodi plokk, mis võimaldab tekitada klassidest objekte. Konstruk
 
 1. **Default konstruktor**
 
-    Kui klassis ei ole eraldi deklareeritud konstruktorit, siis java deklareerib seda automaatselt nii, et seda ei olegi füüsiliselt koodis näha. Igal klassil on seega olemas konstruktor.
+Kui klassis ei ole eraldi deklareeritud konstruktorit, siis java deklareerib ise automaatselt sellise *default* konstruktori, mida ei ole füüsiliselt koodis näha. Igal klassil on seega olemas konstruktor.
 
 .. code-block:: java
 
@@ -25,7 +25,7 @@ Konstruktor on koodi plokk, mis võimaldab tekitada klassidest objekte. Konstruk
          }
     }
 
-**NB!** Nii näeb välja default constructor klassis *Demo*, kuid kuna me oleme selle ise kirja pannud, siis ei loeta seda enam default konstruktoriks. Default on siis, kui seda ei kirjutata välja!
+**NB!** Nii näeb välja *default* konstruktor klassis *Demo*, kuid kuna me oleme selle ise kirja pannud, siis ei loeta seda enam *default* konstruktoriks. *Default* on siis, kui seda ei kirjutata välja!
  
 
 2. **Argumendita konstruktor**
@@ -38,7 +38,7 @@ Konstruktor on koodi plokk, mis võimaldab tekitada klassidest objekte. Konstruk
          }
     } 
 
-Argumendita konstruktor sarnaneb signatuurilt default konstuktoriga, kuid koodi keha võib teha ükskõik mida. Antud juhul objekti loomisel trükitakse konsooli: "This is a default constructor".
+Argumendita konstruktor sarnaneb signatuurilt *default* konstuktoriga, kuid koodi keha võib teha ükskõik mida. Antud juhul objekti loomisel trükitakse konsooli: "This is a default constructor".
 
 3. **Argumentidega konstruktor**
 
@@ -47,9 +47,9 @@ Sel juhul antakse konstuktorisse veel eraldi argumendid. Neid võib olla ükskõ
 .. code-block:: java
 
     class Demo {
-              public Demo(int num, String str) {
-                   System.out.println("This is a parameterized constructor");
-              }
+          public Demo(int num, String str) {
+               System.out.println("This is a parameterized constructor");
+          }
     }
 
 
@@ -105,22 +105,26 @@ Mis on antud koodi väljundiks?
 .. code-block:: java
 
         class ExampleTwo {
-          private int var;
-          public ExampleTwo() {
-                 //code for default one
-                 var = 10;
-          }
-          public Example2(int num) {
-                 //code for parameterized one
-                 var = num;
-          }
-          public int getValue() {
-                  return var;
-          }
-          public static void main(String args[]) {
-                  Example2 obj2 = new Example2();
-                  System.out.println("var is: "+obj2.getValue());
-          }
+            private int var;
+            
+            public ExampleTwo() {
+                //code for default one
+                var = 10;
+            }
+            
+            public ExampleTwo(int num) {
+                //code for parameterized one
+                var = num;
+            }
+            
+            public int getValue() {
+                return var;
+            }
+            
+            public static void main(String args[]) {
+                ExampleTwo obj2 = new ExampleTwo();
+                System.out.println("var is: "+obj2.getValue());
+            }
         } 
 
 Konsooli väljundiks on:
@@ -129,11 +133,11 @@ Konsooli väljundiks on:
 
         var is: 10
 
-Aga nüüd asendame * public static void main(String args[])* sellise koodi:
+Aga nüüd kasutame main-meetodis hoopis sellist koodi:
 
 .. code-block:: java
 
-         Example2 obj2 = new Example2(77);
+         ExampleTwo obj2 = new ExampleTwo(77);
          System.out.println("var is: "+obj2.getValue());
 
 Konsooli väljundiks on nüüd:
@@ -143,7 +147,7 @@ Konsooli väljundiks on nüüd:
         var is: 77
 
 
-Teisel juhul andsime me konstruktorisse parameetri 77 ning seetõttu käima läks just argumendiga konstruktor, mitte default. 
+Teisel juhul andsime me konstruktorisse parameetri 77 ning seetõttu käima läks just argumendiga konstruktor, mitte *default*. 
 
 *this. kasutamine väljal* 
 -----------------------------
@@ -153,14 +157,14 @@ Kõige tihedamini kasutatakse *this* võtmesõna, kuna väli on varjatud meetodi
 .. code-block:: java
 
       public class Student {
-        public int code = 0;
-        public int age = 0;
+          public int code = 0;
+          public int age = 0;
             
-        //constructor
-        public Student(int a, int b) {
-            code = a;
-            age = b;
-        }
+          //constructor
+          public Student(int a, int b) {
+              code = a;
+              age = b;
+          }
       }
 
 Samas võib seda koodi kirjutada nii
@@ -178,4 +182,4 @@ Samas võib seda koodi kirjutada nii
         }
     }
 
-Nüüd seatakse klassivälja *code*, *name* väärtuseks konstruktorisse antud argumentide väärtused.
+Nüüd seatakse objekti väljade *code* ja *name* väärtuseks konstruktorisse antud argumentide väärtused.
