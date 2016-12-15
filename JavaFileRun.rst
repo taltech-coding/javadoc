@@ -3,6 +3,8 @@ Java-faili kompileerimine ja käivitamine
 ========================================
 
 Java programm kirjutatakse inimloetava Java koodina ning salvestatakse java-failina.
+Java-faili kompileeritakse class-faili, mis koosneb Java baitkoodist ja on seetõttu platvormist sõltumatu.
+Programm käivitatakse JVM (Java Virtual Machine) sees ning kuna fail koosneb baitkoodist saab igal platvormil (Windows, Linux, Mac) sama faili käivitades sama tulemuse.
 
 **Koodinäide:**
 
@@ -40,7 +42,15 @@ Java-faili saab käivitada käsurealt (command line). Selleks tuleb fail kõigep
 
 .. image :: images/Javac.PNG
 
-Java-faili kompileeritakse class-faili, mis koosneb Java baitkoodist ja on seetõttu platvormist sõltumatu.
+Alternatiivselt ei pea faili kompileerimiseks liikuma sinna kausta, vaid võib kasutada faili pathi. Sellisel juhul peab failis package'i ära defineerima.
+Näiteks kui faili path on *src/maths/mathsoperations/Add.java* peab faili algusesse kirjutama
+
+.. code-block:: java
+    package maths.mathsoperations;
+
+Siis saab faili kompileerida
+
+.. image :: images/JavacPackage.PNG
 
 Siis tuleb programm käivitada.
 
@@ -49,4 +59,8 @@ Siis tuleb programm käivitada.
 
 .. image :: images/JavaAdd.PNG
 
-Programm käivitatakse JVM (Java Virtual Machine) sees ning kuna fail koosneb baitkoodist saab igal platvormil (Windows, Linux, Mac) sama faili käivitades sama tulemuse.
+Kui kompileerisid faili package'i sees, pead faili käivitamisel kasutama failinimena *package1.package2.Main*.
+
+Näiteks:
+
+.. image :: images/JavaAddPackage.PNG
