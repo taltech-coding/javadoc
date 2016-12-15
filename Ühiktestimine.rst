@@ -12,7 +12,7 @@ Test klassi loomine
 -------------------
 - IntelliJ-s on võimalik autogenereerida testklass kui vajutada *alt+enter* klassi nime peal.
 - Uuest aknast saab valida kuhu tehakse Test Class ning milliseid meetodeid testitakse.
-- Tavaliselt on vaja lisada ka Dependency vastavale testing versioonile, olgu selleks JUnit 5 või mõni muu.
+- Tavaliselt on vaja lisada ka Dependency vastavale testing versioonile, olgu selleks TestNG, JUnit5 või mõni muu.
 - Seda saab kergelt teha kui vajutada *fix* nuppu ja valida esimene variant.
 - Teine võimalus dependency lisamiseks on File -> Project Setting -> Modules, sealt valida moodul, millele testi library külge panna, seejärel valida paremalt poolt Dependencies ja rohelise nuppuga lisada testi library.
 
