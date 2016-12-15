@@ -47,6 +47,10 @@ Olilusemad meetodid:
 			for (Entry<Integer, Integer> entry : balls.entrySet()) {
 				System.out.println(entry.getKey() + ": " + entry.getValue());
 			}
+
+			// 2.5) Lambda, only usable in Java 8 or newer
+			// There in no need to create an Entry<>
+			map.forEach( (k, v) -> System.out.println("Key: " + k + " : Value: " + v));
 	 
 			// iterator
 			Iterator<Entry<Integer, Integer>> it = balls.entrySet().iterator();
