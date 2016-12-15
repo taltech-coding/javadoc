@@ -38,7 +38,7 @@ Java-faili saab käivitada käsurealt (command line). Selleks tuleb fail kõigep
 **Käsureal:** tuleb liikuda õigesse foldrisse ning siis saab Java-faili kompileerida käsuga
 *javac failinimi.java*
 
-.. image :: images/javac.PNG
+.. image :: images/Javac.PNG
 
 Java-faili kompileeritakse class-faili, mis koosneb Java baitkoodist ja on seetõttu platvormist sõltumatu.
 
@@ -47,6 +47,6 @@ Siis tuleb programm käivitada.
 **Käsureal:** saab Java-faili käivitada käsuga 
 *java failinimi*
 
-.. image :: images/javaAdd.PNG
+.. image :: images/JavaAdd.PNG
 
 Programm käivitatakse JVM (Java Virtual Machine) sees ning kuna fail koosneb baitkoodist saab igal platvormil (Windows, Linux, Mac) sama faili käivitades sama tulemuse.
