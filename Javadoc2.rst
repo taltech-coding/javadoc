@@ -40,8 +40,9 @@ Samuti tuleb iga meetodi ette panna Javadoci kommentaar. Meetodi kommentaaris on
     }
 
 Erinevaid tage on veel mitmeid, mida saab kasutada olenevalt vajadusele. (Näiteks @exception, @see, @version)
-Oracle'i dokumentatsioonis_ on nimekiri kõikidest tagidest ning mis järjekorras neid kasutada.
-.. _dokumentatsioonis: http://www.oracle.com/technetwork/articles/java/index-137868.html
+`Oracle'i dokumentatsioonis`_ on nimekiri kõikidest tagidest ning mis järjekorras neid kasutada.
+
+.. _`Oracle'i dokumentatsioonis`: http://www.oracle.com/technetwork/articles/java/index-137868.html
 
 IDE-des on enamasti võimalik kommentaare genereerida automaatselt.
 
