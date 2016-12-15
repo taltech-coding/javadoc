@@ -85,9 +85,9 @@ Seega on loodud uus klassi Actor objekt, mille viiteks on *arnold*, ning mille v
 .. code-block:: java
 
         public Actor(String first, String last, boolean good) {
-        firstName = first;
-        lastName = last;
-        goodActor = good;
+            firstName = first;
+            lastName = last;
+            goodActor = good;
     }
 
 Ning loome vastava objekti
