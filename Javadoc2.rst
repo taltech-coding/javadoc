@@ -61,7 +61,7 @@ Javadoci dokumentatsiooni genereerimine
 ---------------------------------------
 
 Dokumentatsiooni genereerimiseks tuleb kasutada käsurida.
-Kõigepealt tuleb liikuda õigesse foldrisse.
+Kõigepealt tuleb liikuda õigesse kausta.
 
 .. image:: images/cd.png
 
@@ -69,6 +69,6 @@ Siis saab Javadoci genereerida käsuga *javadoc*.
 
 .. image:: images/javadoc.png
 
-Javadoc genereerib samasse foldrisse vajalikud HTML, JavaScript ja CSS failid. Dokumentatsiooni saab vaadata avades lehe index.html
+Javadoc genereerib samasse kausta vajalikud HTML, JavaScript ja CSS failid. Dokumentatsiooni saab vaadata, avades lehe index.html
 
 .. image:: images/boardingpass.png
