@@ -15,12 +15,9 @@ Javas võib sisend-väljud näha keeruline, kuid see pole halb. Sellega saavutat
 	import java.util.Scanner;
 	 
 	public class ReadFile {
-	 
-	/**
-	 * Filename to be read. 
-	 */
-	public static final String FILENAME = "test.txt";
- 
+		// Filename to be read. 
+		public static final String FILENAME = "test.txt";
+ 			
 		public static void main(String[] args) {
 			// Files.readAllLines
 			try {
@@ -30,38 +27,28 @@ Javas võib sisend-väljud näha keeruline, kuid see pole halb. Sellega saavutat
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
+
 			// BufferedReader
 			try {
 				System.out.println(readFileBuffered(FILENAME));
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
- 	
+ 			
 			// Scanner
 			try {
 				System.out.println(readFileScanner(FILENAME));
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
- 	
-		/**
-		 * Reads (a small) file and returns list of lines (strings).
-		 * @param filename Filename to be read.
-		 * @return List of lines.
-		 * @throws IOException
-		 */
+		}
+		
 		public static List<String> readSmallFile(String filename) throws IOException {
 			Path path = Paths.get(filename);
 			List<String> lines = Files.readAllLines(path);
 			return lines;
 		}
- 	
-		/**
-		 * Reads file using Scanner.
-		 * @param filename filename to be read.
-		 * @return The contents of the file as one string.
-		 * @throws IOException
-		 */
+ 		
 		public static String readFileScanner(String filename) throws IOException {
 			String finalString = "";
 			Path path = Paths.get(filename);
@@ -73,12 +60,7 @@ Javas võib sisend-väljud näha keeruline, kuid see pole halb. Sellega saavutat
 			scanner.close();
 			return finalString;
 		}
-		/**
-		 * Read file using BufferedReader.
-		 * @param filename Filename to be read.
-		 * @return The contents of the file as one string.
-		 * @throws IOException
-		 */
+		
 		public static String readFileBuffered(String filename) throws IOException {
 			String finalString = "";
 			Path path = Paths.get(filename);
@@ -89,5 +71,5 @@ Javas võib sisend-väljud näha keeruline, kuid see pole halb. Sellega saavutat
 			}
 			reader.close();
 			return finalString;
-		}	
+		}
 	}
