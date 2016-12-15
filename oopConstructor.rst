@@ -34,7 +34,7 @@ Kui klassis ei ole eraldi deklareeritud konstruktorit, siis java deklareerib ise
 
     class Demo {
          public Demo() {
-            System.out.println("This is a default constructor")
+            System.out.println("This is a constructor without parameters!")
          }
     } 
 
@@ -60,18 +60,23 @@ Sel juhul antakse konstuktorisse veel eraldi argumendid. Neid võib olla ükskõ
 Konstruktor võimaldab anda klassi väljadele algväärtusi, kui objekt luuakse. Ütleme, et meil on klass *Actor*, millel on väljad *fistName* ja *lastName*. Loome konstruktori *Actor* klassile.
 
 .. code-block:: java
-
+   public class Actor() {
+        String firstName;
+        String lastName;
+   
     public Actor(String first, String last) {
         firstName = first;
         lastName = last;
     }
+   }
 
 Nüüd loome antud klassi jaoks objekti.
     
 .. code-block:: java
 
-   
-        Actor arnold = new Actor("Arnold", " Schwarzenegger");
+       public static void main(String args[]) {
+           Actor arnold = new Actor("Arnold", " Schwarzenegger");
+       }
 
 
 Seega on loodud uus klassi Actor objekt, mille viiteks on *arnold*, ning mille väljad *firstName = "Arnold"*, *lastName = "Schwarzenegger"*.
@@ -83,18 +88,24 @@ Seega on loodud uus klassi Actor objekt, mille viiteks on *arnold*, ning mille v
 Ühel klassil võib olla mitu konstruktorit, juhul kui igal konstruktoril on unikaalne signatuur. Tekitame uue konstruktori klassi *Actor*
 
 .. code-block:: java
+   public class Actor() {
+        String firstName;
+        String lastName;
+        boolean goodActor;
 
         public Actor(String first, String last, boolean good) {
             firstName = first;
             lastName = last;
             goodActor = good;
-    }
+        }
+   }
 
 Ning loome vastava objekti
     
 .. code-block:: java
-
-        Actor a = new Actor("Arnold", "Schwarzenegger", false);
+        public static void main(String args[]) {
+            Actor a = new Actor("Arnold", "Schwarzenegger", false);
+        }
 
 
 Veel üks näide 
@@ -108,7 +119,7 @@ Mis on antud koodi väljundiks?
             private int var;
             
             public ExampleTwo() {
-                //code for default one
+                //code for constructor without parameters!
                 var = 10;
             }
             
