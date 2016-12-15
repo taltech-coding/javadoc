@@ -7,7 +7,8 @@ Javas on kasutusel 6 primitiivset numbrilist andmetüüpi:
 - Täisarvud: byte, short, int, long
 - Ujukomaarvud: float, double
 
-Üldjuhul on soovitatav murdarvude esitamiseks kasutada andmetüüpi **double**, kuna see on täpsem kui float. Ujukomaarvude hoidmine mälus ning nende võimalikud väärtused on üleüldse veidi keerulisem teema, millega tuleks iseseisvalt põhjalikumalt tutvuda. (lisada paar linki)
+Üldjuhul on soovitatav murdarvude esitamiseks kasutada andmetüüpi **double**, kuna see on täpsem kui float. Ujukomaarvude hoidmine mälus ning nende võimalikud väärtused on veidi keerulisem teema ning seetõttu pole siin tabelis neid välja toodud. Soovi korral võib lugeda näiteks vastavat teemat `Java spetsifikatsioonis
+<http://docs.oracle.com/javase/specs/jls/se8/html/jls-4.html#jls-4.2.3>`_.
 
 ==========  ====================  ==================  ==================
 Tüübi nimi  Suurus                Väärtused           Näide
@@ -28,34 +29,33 @@ Numbriliste väärtuste esitamiseks on Javas mitmeid erinevaid võimalusi.
 Täisarvutüübid
 --------------
 
-Lisaks kümnendsüsteemile on võimaik täisarvude esitamiseks kasutada kahendsüsteemi
- ning kuueteistkümnendsüsteemi. Sel juhul kasutatakse eristamiseks vastavaid eesliiteid **0b** ning **0x**.
+Lisaks kümnendsüsteemile on võimaik täisarvude esitamiseks kasutada kahendsüsteemi ning kuueteistkümnendsüsteemi. Sel juhul kasutatakse eristamiseks vastavaid eesliiteid **0b** ning **0x**.
 
 .. code-block:: java
 
     int a;
-    a = 26;      // numbrina
-    a = 0x1a;    // kuueteistkümnendsüsteemis (hexadecimal)
-    a = 0b11010; // kahendsüsteemis (binary)
+    a = 26;      // Decimal value
+    a = 0x1a;    // Hexadecimal value
+    a = 0b11010; // Binary value
 
 Ujukomatüübid
 -------------
 
-Ujukomaarvude esitamisel tuleks kindlasti anda kaasa vähemalt üks komakoht, sest vastasel juhul tõlgendatakse neid algul täisarvuna ning programm tööle lisandub teisendamise aeg.
+Ujukomaarvude esitamisel tuleks kindlasti anda kaasa vähemalt üks komakoht, sest vastasel juhul tõlgendatakse neid algul täisarvuna ning programmi töö muutub aeglasemaks aja võrra, mis kulub teisenduste tegemisele.
 
 .. code-block:: java
 
-    double d1 = 55.0; // hea
-    double d2 = 55; // halb
+    double d1 = 55.0; // good
+    double d2 = 55;   // bad
 
-Float tüüpi arvude eristamiseks tuleb neile lisada täht **f** (pole oluline, kas suur või väike täht). Samamoodi on võimalik double arve tähistada d-tähega, kuid see pole kohustuslik – vaikimisi on komakohtadega arvu andmetüübiks double. Mõlemat tüüpi ujukomaarvude puhul saab kasutada ka teaduslikku notatsiooni, mis kasutab korrutamist kümne astmetega.
+Float tüüpi arvude eristamiseks tuleb neile lisada täht **f** või **F** (pole oluline, kas suur või väike täht). Samamoodi on võimalik double arve tähistada d-tähega, kuid see pole kohustuslik – vaikimisi on komakohtadega arvu andmetüübiks double. Mõlemat tüüpi ujukomaarvude puhul saab kasutada ka teaduslikku notatsiooni, mis kasutab korrutamist kümne astmetega.
 
 .. code-block:: java
 
     double d1 = 123.4;
-    double d2 = 123.4d;  // d või D pole kohustuslik
-    double d3 = 1.234e2; // teaduslikus notatsioonis (e2 -> *10^2)
-    float f = 123.4f     // f või F on kohustuslik!!!
+    double d2 = 123.4d;  // Adding d or D is optional
+    double d3 = 1.234e2; // Scientific notation (e2 -> *10^2)
+    float f = 123.4f     // f or F must be added!
 
 Alakriipsude kasutamine
 -----------------------
@@ -85,34 +85,56 @@ Aritmeetilised operatsioonid
 Javas on põhiliste aritmeetiliste operatsioonide jaoks defineetitud järgnevad operaatorid:
 
 +---+-------------+
-| + | Liitmine    |
+|\+ | Liitmine    |
 +---+-------------+
-| - | Lahutamine  |
+|\- | Lahutamine  |
 +---+-------------+
-| * | Korrutamine |
+|\* | Korrutamine |
 +---+-------------+
 | / | Jagamine    |
 +---+-------------+
 | % | Jääk        |
 +---+-------------+
 
-(näited)
+Näide:
+
+.. code-block:: java
+
+    int result = 5 + 2;
+    System.out.println(result); // 7
+
+    result = result + 3;
+    System.out.println(result); // 10
 
 Lisaks on olemas unaarsed operaatorid, mis kasutavad vaid ühte operandi. Operaatorit **+** üldjuhul ei kasutata, kuna numbrid on vaikimisi positiivsed.
 
-+---+--------------------------------------+
-| + | Positiivne väärtus                   |
-+---+--------------------------------------+
-| - | Numbrilise väärtuse inverteerimine   |
-+---+--------------------------------------+
++----+-------------------------------------+
+| \+ | Positiivne väärtus                  |
++----+-------------------------------------+
+| \- | Numbrilise väärtuse inverteerimine  |
++----+-------------------------------------+
 | ++ | Suurendamine ühe võrra              |
-+---+--------------------------------------+
++----+-------------------------------------+
 | -- | Vähendamine ühe võrra               |
-+---+--------------------------------------+
-| ! | Loogikaväärtuse inverteerimine       |
-+---+--------------------------------------+
++----+-------------------------------------+
+| !  | Loogikaväärtuse inverteerimine      |
++----+-------------------------------------+
 
-(näited)
+Ühe võrra suurendamise või vähendamise korral on võimalik valida, kas soovime operatsiooni läbi viia enne või peale väärtuse kasutamist.
+
+.. code-block:: java
+
+    int result = 5;
+
+    result++;
+    System.out.println(result);   // 6
+
+    System.out.println(result++); // Still 6, because value is read before incrementing
+    System.out.println(result);   // Now it is 7
+
+    System.out.println(++result); // 8, because value is incremented before reading
+    System.out.println(result);   // Still 8, because nothing changed after reading
+
 
 Võrdlemine
 ----------
@@ -130,19 +152,29 @@ Võrdlemine
 | <= | väiksem või võrdne |
 +----+--------------------+
 
-(viide tõeväärtustüüpide teemale või tingimuslausetele? näited?)
+Näide:
+
+.. code-block:: java
+
+    double first = 2.567;
+    double second = 5.654;
+
+    System.out.println(first > second); // false
+    System.out.println(first < second); // true
+
+Võrdlusi saab kasutada näiteks tingimuslausetes või tsüklites programmi töö juhtimiseks.
 
 Operatsioonid bittidega
 -----------------------
 
-(Seletada nihete erinevust ja seda, et kõike tehakse iga biti jaoks eraldi)
+Järgnevaid operatsioone tehakse väärtuse iga bitiga eraldi. Neid kasutatakse harva, kuid sellegipoolest on oluline teada, et selline võimalus on olemas.
 
 +-----+-----------------------+
 | >>  | märgiga nihe paremale |
 +-----+-----------------------+
-| <<  | nihe vasakule         |
+| <<  | märgiga nihe vasakule |
 +-----+-----------------------+
-| >>> | nihe paremale         |
+|\>>> | nihe paremale         |
 +-----+-----------------------+
 | <<< | nihe vasakule         |
 +-----+-----------------------+
@@ -155,6 +187,16 @@ Operatsioonid bittidega
 | ^   | välistav VÕI (XOR)    |
 +-----+-----------------------+
 
+Näide:
+
+.. code-block:: java
+
+    int a = 5;                  // 101
+    int b = 6;                  // 110
+
+    int result = a & b;         // 100
+    System.out.println(result); // Printed as a decimal (4)
+
 Ületäide
 ========
 
@@ -164,13 +206,13 @@ Juhul kui muutuja väärtustamisel antakse väärtus, mis on väljaspool andmet�
 
 .. code-block:: java
 
-    byte b = 127; // Maksimaalne väärtus byte andmetüübi jaoks
-    b++;          // Uus väärtus on -128 ehk minimaalne väärtus
+    byte b = 127; // Largest possible byte value
+    b++;          // New value -128 (smallest possible)
 
 Numbriklassid
 =============
 
-Iga primitiivse andmetüübi jaoks on Javas olemas klass (ing k *Wrapper* ehk pakend), mis sisaldavad erinevaid kasulikke meetodeid ja konstante. Toome siinkohal välja vaid paar sellist, mida teil kindlasti vaja läheb. Lisaks neile võib tutvuda vastavate osadega Java dokumentatsioonist, näiteks `Integer klassi väljad ja meetodid
+Iga primitiivse andmetüübi jaoks on Javas olemas klass (ing k *Wrapper* ehk pakend), mis sisaldab erinevaid kasulikke meetodeid ja konstante. Toome siinkohal välja vaid paar sellist, mida teil kindlasti vaja läheb. Lisaks neile võib tutvuda vastavate osadega Java dokumentatsioonis, näiteks `Integer klassi väljad ja meetodid
 <https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html>`_.
 
 MAX_VALUE, MIN_VALUE
@@ -181,43 +223,47 @@ Konstandid MAX_VALUE ja MIN_VALUE sisaldavad valitud andmetüübi maksimaalset j
 .. code-block:: java
 
     int i = Integer.MAX_VALUE;
-    System.out.println(i); // 2147483647
+    System.out.println(i);     // 2147483647
+
     byte b = Byte.MIN_VALUE;
-    System.out.println(b); // -128
+    System.out.println(b);     // -128
 
-parseInt(), parseDouble(), ...
-------------------------------
+parseInt(), parseDouble() jt
+----------------------------
 
-Kasutatakse sõne numbriks teisendamisel.
+Kasutatakse sõne numbriks teisendamisel. Integer klassi puhul on meetodi nimi parseInt, Float klassil parseFloat jne.
 
 .. code-block:: java
 
     int i = 4;
     String number = "56";
+
     int j = Integer.parseInt(number);
     int sum = i + j;
-    System.out.println(sum); // 60
+    System.out.println(sum);          // 60
 
 Tehted numbriklassidega
 -----------------------
 
-Numbriklasse saab kasutada primitiivsete andmetüüpide asendamiseks, kuid kuna luuakse objektid, tuleb operandide asemel kasutada neile vastavaid funktsioone. Väärtuse kättesaamiseks saab kasutada funktsioone intValue() ja toString().
+Numbriklasse saab kasutada primitiivsete andmetüüpide asendamiseks, kuid kuna luuakse objektid, tuleb operandide asemel kasutada neile vastavaid meetodeid. Väärtuse kättesaamiseks saab kasutada erinevaid meetodeid nagu intValue(), longValue(), toString() jne.
 
 .. code-block:: java
 
     Integer i = new Integer(45);
     Integer j = new Integer(60);
+
     Integer sum = Integer.sum(i, j);
-    System.out.println(sum.intValue()); // 105
+    System.out.println(sum.intValue());  // 105
 
 BigInteger ja BigDecimal klassid
 -------------------------------
 
-Lisaks tavalistele klassidele (Byte, Short, Long, Integer, Float, Double) on olemas ka klassid **BigInteger** ja **BigDecimal**. Neid saab kasutada väga suurte väärtuste hoidmiseks.
+Lisaks põhilistele numbriklassidele (Byte, Short, Long, Integer, Float, Double) on olemas ka klassid **BigInteger** ja **BigDecimal**. Neid saab kasutada väga suurte väärtuste hoidmiseks.
 
 .. code-block:: java
 
-    BigInteger i = BigInteger.valueOf(Integer.MAX_VALUE); // suurim võimalik int väärtus (2147483647)
+    BigInteger i = BigInteger.valueOf(Integer.MAX_VALUE); // Largest int value (2147483647)
     BigInteger j = BigInteger.valueOf(1);
+'
     BigInteger sum = i.add(j);
-    System.out.println(sum.toString());                   // tulemus on 2147483648
+    System.out.println(sum.toString());                   // Result is 2147483648

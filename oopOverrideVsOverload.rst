@@ -1,25 +1,25 @@
 Overload ja Override
 ================================================
 
-Tavaliselt tekitavad antud terminid segadust, kuid nendesse natuke süvenedes on arusaadav, et terminite taga olevad kontseptsioonid on piisavalt lihtsad.
+Tavaliselt tekitavad antud terminid segadust, kuid nendesse natuke süvenedes on arusaadav, et terminite taga olevad kontseptsioonid on üpris lihtsad.
 
 *Overload* 
 ----------------------
 
-Tegemist on meetodi overloadiga Javas, kui kahel või rohkemal meetodil **samas klassis** on sama meetodi nimi, kuid erinevad sisestatud argumendid. Overloading toimub kompileerimise ajal. 
+Tegemist on meetodi ülelaadimisega Javas, kui kahel või rohkemal meetodil **samas klassis** on sama meetodi nimi, kuid erinevad sisestatavad argumendid. Ülelaadimine toimub kompileerimise ajal. 
 
-Meetodi overload on korrektne siis, kui täidetud on üks või mõlemad tingimused:
+Meetodi ülelaadimine on korrektne siis, kui täidetud on üks või mõlemad tingimused:
 
     1. Sisestatud argumentide **arv** meetoditesse on erinev.
 
     2. Argumentide **tüübid** on erinevad. (nt. enne oli int, nüüd on float)
 
 
-Tegemist **ei ole** overloadiga, ning kood tekitab komppilatsioonivea, kui:
+Tegemist **ei ole** ülelaadimisega, ning kood tekitab kompilatsioonivea, kui:
 
-    1. Meetodite nimed on samad, argumentide nimed ja tüübid on samad, nende arv on sama, kuid tagastustüüp (return type) on erinev.
+    1. Meetodite nimed on samad, argumentide nimed ja tüübid on samad, nende arv on sama, kuid tagastustüüp (*return type*) on erinev.
     
-    2. Erinevad on ainult meetodisse sistatud argumentide nimed.
+    2. Erinevad on ainult meetodisse sisestatud argumentide nimed.
 
 
 .. code-block:: java
@@ -51,12 +51,12 @@ Tegemist **ei ole** overloadiga, ning kood tekitab komppilatsioonivea, kui:
 *Override* 
 ----------------------
 
-Meetodite override on täiesti erinev overload'ist. Kui tegemist on alam ja ülemklasiga, ning mõlemas klassis esineb **täiesti sama** meetodi nimega, tagastustüübiga, parameetrite arvuga ning tüüpidega meetod, kuid ainaks erinevuseks on meetodi sisu, siis on tegemist override-ga. Override tekib koodi töö ajal, mitte kompilatsiooni ajal nagu Overload'i puhul.
+Meetodite ülekirjutamine on täiesti erinev ülelaadimisest. Kui tegemist on alam- ja ülemklassiga, ning mõlemas klassis esineb **täiesti sama** nime, tagastustüübi (või tagastustüüp on originaaltüübi alamtüüp), parameetrite arvu ning tüüpidega meetod, kuid ainsaks erinevuseks on meetodi sisu, siis on tegemist ülekirjutamisega. Ülekirjutamine tekib koodi töö ajal, mitte kompilatsiooni ajal nagu ülelaadimise puhul.
 
-Nüüd on sobilik tuua väike näide, mis illustreerib override't.
+Nüüd on sobilik tuua väike näide, mis illustreerib ülekirjutamist:
 
 
- .. code-block:: java
+.. code-block:: java
 
   public class Parent {
     
@@ -68,10 +68,10 @@ Nüüd on sobilik tuua väike näide, mis illustreerib override't.
     
   public class Child extends Parent{
     
-     @Override
-     public int someMethod() {
-        return 4;
-        }
+    @Override
+    public int someMethod() {
+       return 4;
+       }
     }
 
 Kui ülemklassis tagastab meetod *someMethod()* numbri 3, siis alamklassis tagastab täpselt samasugune meetod numbri 4. 

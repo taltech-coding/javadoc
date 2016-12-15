@@ -27,23 +27,32 @@ OOP: nähtavus (private, protected, public, tühi)
 ---------
 
 Meetoditele, muutujatele ning konstruktoritele, mis on määratud kui *private*, saab ligi ainult samast klassist.
-*Private* ligipääs on kõige piiravam ligipääs ning *klassid* ja *liidesed* (interface) ei saa olla *private*. Muutujatele, mis on deklareeritud, kui *private* saab ligi teistest klassidest, kui on klassis on olemas *getterid* ja *setterid*. Kasutades *private* nähtavust on võimalik olla kindel, et objekt peidab oma infot muust maailmast.
+*Private* ligipääs on kõige piiravam ligipääs ning *klassid* ja *liidesed* (*interface*) ei saa olla privaatsed. Muutujatele, mis on deklareeritud kui *private*, saab ligi teistest klassidest, kui nendes on olemas *getter*'id ja *setter*'id. Kasutades *private* nähtavust on võimalik olla kindel, et objekt peidab oma infot  välismaailma eest.
 
 .. code-block:: java
 
   public class Student {
-   private String name;
+      private String name;
 
-   public String getName() {
-      return this.name;
-   }
+      public String getName() {
+          return this.name;
+      }
 
-   public void setName(String name) {
-      this.name = name;
-   }}
+      public void setName(String name) {
+         this.name = name;
+      }
+  }
 
-Kuna me ei saaks teistest klassidest *Student* klassile ligi, siis kasutame kahte *public* meetodit, *getName()*
-ja *setName(String name)*, et tagastada *name* väärtus, või soovi korral seada see väärtus.
+Kuna me ei saa teistest klassidest *Student* klassile ligi, siis kasutame kahte *public* meetodit, *getName()*
+ja *setName(String name)*, et tagastada *name* väärtus või soovi korral seada see väärtus.
+
+.. code-block:: java
+
+  private void privateMethod() {
+      System.out.println("Tere! Olen privaatne meetod!");
+  }
+    
+Samuti saab ka meetod olla privaatne. Sel juhul tuleb arvestada sellega, et antud meetodit saab välja kutsuda ainult samas klassis, kus see meetod deklareeritud on.  
 
 *no modifier* 
 -------------
@@ -51,43 +60,69 @@ ja *setName(String name)*, et tagastada *name* väärtus, või soovi korral sead
 Kui ei ole eraldi deklareeritud, mis on antud meetodi, klassi või välja nähtavus, siis on nad kättesaadavad igast klassist, mis asub **samas** paketis. 
 
 .. code-block:: java
-
+ 
+ class NoModifierExample {
+ 
     String version = "1.7";
 
     boolean processStudents() {
        return true;
     }
-    
+ } 
+ 
 *protected* 
 -----------
 
-Muutujad, meetoid ja konstruktorid, mis on deklareeritud, kui *protected* on kättesaadavad kõikidele klassidele samas paketis, või teise paketi klassidele, **juhul, kui nad laienduvad sinna klassi**. Allolev koodiplokk näitab just seda laiendumise juhtu!
+Muutujad, meetodid ja konstruktorid, mis on deklareeritud kui *protected*, on kättesaadavad kõikidele klassidele samas paketis või teise paketi klassidele, **juhul, kui nad laienduvad sinna klassi**. Allolev koodiplokk näitab just seda laiendumise juhtu!
 
 - Klassid ning liidesed ei saa olla *protected*.
 
 .. code-block:: java
 
-         class AudioPlayer {
-         
-       protected boolean openSpeaker(Speaker sp) {
-          // implementatsiooni detailid
-       }
+  public class AudioPlayer {
+   ....
+    public void playMusic() {
+       chooseChannel();
+       openSpeaker();
     }
+
+   protected void chooseChannel() {}
+   protected void openSpeaker() {}
+  }
+
+  public class StreamingAudioPlayer extends AudioPlayer {
+     @Override
+     protected void chooseChannel() {
+       // for example choose streaming channel
+     }
+  }   
     
-        class StreamingAudioPlayer extends AudioPlayer {
-        
-        @Override
-        boolean openSpeaker(Speaker sp) {
-              // implementatsiooni detailid
-           }
-        }
     
-Klassil *AudioPlayer* on meetod *openSpeaker()*, mida ta lubab oma alamklassil üle kirjutada. Kui *openSpeaker()* oleks *public*, siis saaks sellele ligi **kõik, kes soovivad**  või, kui oleks *private*, siis saaks sellele ligi ainult *AudioPlayer* klass. Meie eesmärgiks on aga teha meetod nähtavaks **ainult** alamklassile.
+Klassil *AudioPlayer* on meetod *playMusic()*, mida jagatakse alamülesanneteks. Ei oleks ilus terve *playMusic()* ümber kirjutada, kui on vajadus ainult ühte osa kuidagi muuta. Antud juhul tohib alamklass ümber kirjutada *chooseChannel()* ning seetõttu näeb kood korrektne välja.  Ei ole mõtet neid alamülesaneid *public* teha, kuna kasutajal ei ole vajadust neid otse välja kutsuda ning arvatavasti tihti ei tohigi. 
+
 
 *public* 
 --------
 
-Klass, meetod, konstruktor, liides jne, mis on deklareeritud, kui *public* on kättesaadav igast teisest klassist. Kui *private* oli kõige piiravam nähtavusaste, siis *public* on vastupidiselt kõige avatum.
+Klass, meetod, konstruktor, liides jne, mis on deklareeritud kui *public*, on kättesaadav igast teisest klassist. Kui *private* oli kõige piiravam nähtavusaste, siis *public* on vastupidiselt kõige avatum.
+
+
+
+.. code-block:: java
+
+  public class Student {
+      private String name;
+
+      public String getName() {
+          return this.name;
+      }
+
+      public void setName(String name) {
+          this.name = name;
+      }
+  }
+   
+Selleks, et saada kätte privaatne väli *name*, kasutatakse *public* nähtavusega getName() ja setName(). Neid meetodeid on näha igast teisest klassist vaatamata paketist. 
 
 
 .. code-block:: java
@@ -96,4 +131,4 @@ Klass, meetod, konstruktor, liides jne, mis on deklareeritud, kui *public* on k�
        // ...
     }
 
-*main()* meetod peab olema *public*, kuna vastasel juhul ei saaks Java interpretaator teda välja kutsuda, et klass tööle panna.
+*main()* meetod peab olema *public*, kuna vastasel juhul ei saaks Java interpretaator teda välja kutsuda, et klass tööle panna. *Public* visibility **EI** tähenda, et kindlasti peab olema ka võtmesõna *static*.

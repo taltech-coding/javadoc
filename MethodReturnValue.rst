@@ -26,7 +26,7 @@ Näide
         return a - b;
     }
 
-**3) String - tagastab string-tüüpi väärtuse (kaotab ette antud ssõnast ära esimese tähe)**
+**3) String - tagastab string-tüüpi väärtuse (kaotab ette antud sõnast ära esimese tähe)**
 
 .. code-block:: java
 
