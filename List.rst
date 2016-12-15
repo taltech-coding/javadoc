@@ -63,11 +63,12 @@ Koodi näide kuidas ArrayListi lisada asju ja sellega töödelda.
 
 Viisid kuidas Listi läbi käija ja sellega töödelda eelmise koodi näite põhjal oli ainult üks välja toodid, tavaline for loop.
 
+
 ..code-block:: java
 	
 	public class ArrayExample {
 		ArrayList<Integer> arraylist = new Arraylist<>();
-		
+
 		// 1) for-each cycle of only values
 		for (Integer value : arraylist) {
 			System.out.println(value);
