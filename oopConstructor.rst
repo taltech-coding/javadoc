@@ -161,7 +161,7 @@ Konsooli väljundiks on nüüd:
         var is: 77
 
 
-Teisel juhul andsime me konstruktorisse parameetri 77 ning seetõttu käima läks just argumendiga konstruktor, mitte *default*. 
+Teisel juhul andsime me konstruktorisse parameetri 77 ning seetõttu käima läks just argumendiga konstruktor. 
 
 *this. kasutamine väljal* 
 -----------------------------
