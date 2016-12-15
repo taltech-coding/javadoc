@@ -4,7 +4,7 @@ Java-faili kompileerimine ja käivitamine
 
 Java programm kirjutatakse inimloetava Java koodina ning salvestatakse java-failina.
 
-Koodinäide:
+**Koodinäide:**
 
 .. code-block:: java
 
