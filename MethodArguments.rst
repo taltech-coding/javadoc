@@ -9,40 +9,38 @@ Meetodi argumendid on parameetrid, mis meetodile ette antakse. Neid parameetreid
 
 Näide
 -----
-
-**Siin on meetodi argumentideks 2 integer-tüüpi väärtust:**
-
+    
 .. code-block:: java
+    
+    public class Example {
 
-        public int addTwoNumbers(int a, int b) {
+        // The arguments given to the method are 2 int-type values (a & b).
+        public static int addTwoNumbers(int a, int b) {
             return a + b;
         }
-        
-**Seda meetodit kutsume välja niimoodi:**
 
-.. code-block:: java
-
-        public static void main(String[] args) {
-            addTwoNumbers(1, 2); // -> 3
-            addTwoNumbers(5, 7); // -> 12
-            addTwoNumbers("a", 2.5); // -> error, kuna meetodis on sisendväärtused deklareeritud
-                                     // int-tüübina, aga üritame ette anda String ning double tüüpi väärtuseid.
+        // Argument given to the method is a String-type value (word).
+        public static String loseFirst(String word) {
+            return word.substring(1);
         }
 
-**Siin on meetodi argumendiks string-tüüpi väärtus:**
+        private static int a = 1;
 
-.. code-block:: java
+        // This method doesn't need an arguments, it uses the variable 'a'.
+        public static int getA() {
+            return a;
+        }
 
-    public String loseFirst(String word) {
-        return word.substring(1, word.length());
-    }
+        // Here we call the methods.
+        public static void main(String[] args) {
+            System.out.println(addTwoNumbers(1, 2)); // -> 3
+            System.out.println(addTwoNumbers(5, 7)); // -> 12
+            addTwoNumbers("a", 2.5); // -> error, because we're giving a 
+                                     //    different type of value then set in the method declaration.
+            System.out.println(addTwoNumbers(4 * 2, 2 * 3)); // -> 14
 
-**Selles meetodis ei anta ette argumenti:**
+            System.out.println(loseFirst("Word")); // -> "ord"
 
-.. code-block:: java
-
-    private int a = 1;
-    
-    public int getA() {
-        return a;
+            System.out.println(getA()); // -> 1
+        }
     }
