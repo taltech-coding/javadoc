@@ -32,6 +32,6 @@ https://www.jetbrains.com/help/idea/2016.3/running-applications.html <- saab tä
 Kasulikke linke
 ---------------
 
-https://www.jetbrains.com/student/ <- info IntelliJ Ultimate litsentsi kohta
-https://www.jetbrains.com/help/idea/2016.3/keyboard-shortcuts-you-cannot-miss.html <- mõningaid kasulikke keyboard shortcut'e
+https://www.jetbrains.com/student/ <- info IntelliJ Ultimate litsentsi kohta<br>
+https://www.jetbrains.com/help/idea/2016.3/keyboard-shortcuts-you-cannot-miss.html <- mõningaid kasulikke keyboard shortcut'e<br>
 https://www.jetbrains.com/help/idea/2016.3/guided-tour-around-the-user-interface.html <- saab kasutajaliidese kohta lähemalt lugeda
