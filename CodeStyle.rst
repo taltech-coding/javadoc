@@ -119,7 +119,7 @@ Iga lause on eraldi real, lauset pole vaja ilma põhjuseta poolitada.
     someValue;
 
   // Good example
-    final String value = someValue;
+  final String value = someValue;
     
 **Ridade murdmine**
 
