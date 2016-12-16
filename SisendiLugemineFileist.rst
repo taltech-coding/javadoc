@@ -29,32 +29,33 @@ Javas võib sisend-väljud näha keeruline, kuid see pole halb. Sellega saavutat
         	        		fileContents += letter;
         	    		}
         		} catch (IOException e) {
-        	    	e.printStackTrace();
+        	    		e.printStackTrace();
         		} finally {
-        	    	System.out.println(fileContents);
+        	    		System.out.println(fileContents);
         		}
 			
-		// Files.readAllLines
-		try {
-			for (String line : readSmallFile(FILENAME)) {
-				System.out.println(line);
+			// Files.readAllLines
+			try {
+				for (String line : readSmallFile(FILENAME)) {
+					System.out.println(line);
+				}
+			} catch (IOException e) {
+				e.printStackTrace();
 			}
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
 
-		// BufferedReader
-		try {
-			System.out.println(readFileBuffered(FILENAME));
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+			// BufferedReader
+			try {
+				System.out.println(readFileBuffered(FILENAME));
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
  			
-		// Scanner
-		try {
-			System.out.println(readFileScanner(FILENAME));
-		} catch (IOException e) {
-			e.printStackTrace();
+			// Scanner
+			try {
+				System.out.println(readFileScanner(FILENAME));
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
 		}
 				
 		public static List<String> readSmallFile(String filename) throws IOException {
