@@ -12,16 +12,16 @@
 .. code-block:: java
 
   public class SetExamples {
-  
-    public static void main(String[] args) {
     
-      Set<Integer> exampleSet1 = new HashSet<>();
+        public static void main(String[] args) {
+    
+            Set<Integer> exampleSet1 = new HashSet<>();
       
-      //or
+            //or
       
-      HashSet<String> exampleSet2 = new HashSet<>();
+            HashSet<String> exampleSet2 = new HashSet<>();
         
-    }
+        }
   }
   
   
@@ -32,33 +32,33 @@
 
   public class SetExamples {
   
-    public static void main(String[] args) {
+        public static void main(String[] args) {
       
-      HashSet<Integer> exampleSet = new HashSet<>();
+            HashSet<Integer> exampleSet = new HashSet<>();
       
-      //adds 6 to exampleSet
-      exampleSet.add(6);
+            //adds 6 to exampleSet
+            exampleSet.add(6);
       
-      //removes all elements from exampleSet
-      exampleSet.clear();
+            //removes all elements from exampleSet
+            exampleSet.clear();
       
-      //returns false because exampleSet is empty
-      boolean containsSix = exampleSet.contains(6);
+            //returns false because exampleSet is empty
+            boolean containsSix = exampleSet.contains(6);
       
-      //returns true because exampleSet is empty
-      boolean empty = exampleSet.isEmpty();
+            //returns true because exampleSet is empty
+            boolean empty = exampleSet.isEmpty();
       
-       exampleSet.add(1);
-       exampleSet.add(6);
-       exampleSet.add(666);
+            exampleSet.add(1);
+            exampleSet.add(6);
+            exampleSet.add(666);
        
-       //removes 1 from exampleSet
-       exampleSet.remove(1);
+            //removes 1 from exampleSet
+            exampleSet.remove(1);
        
-       //length is equal to 2
-       int length = exampleSet.size();
+            //length is equal to 2
+            int length = exampleSet.size();
           
-    }
+        }
   }
   
 *LinkedHashSet*
