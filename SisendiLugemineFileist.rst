@@ -16,7 +16,7 @@ Javas võib sisend-väljud näha keeruline, kuid see pole halb. Sellega saavutat
 	public class ReadFile {
 		// Filename to be read. 
 		public static final String FILENAME = "test.txt";
-	    public static final File FILE = new File(FILENAME);
+		public static final File FILE = new File(FILENAME);
  			
 		public static void main(String[] args) {
 		    //  Try with resources
