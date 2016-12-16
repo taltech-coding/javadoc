@@ -9,7 +9,7 @@ Kõige lihtsam Java fail koosneb paketi deklaratsioonist (valikuline), import la
 
 Näites on klassi definitsioon *public class Example*. Faili nimi tuleneb klassi nimest. Kui klassi nimi on *Example*, siis faili nimi peab olema *Example.java*.
 
-
+.. image:: http://etutorials.org/shared/images/tutorials/tutorial_161/02fig02.gif
 
 Näitena toodud koodis on vaid üks funktsioon ning see liidab kokku 2 ette antud numbrit.
 Main meetodis kutsume välja funktsioone, mida soovime käima panna (antud juhul addNumbers). 
@@ -21,12 +21,17 @@ Näide
 
 .. code-block:: java
 
+    // Here are the imports, if there are any.
+    
+    // Class definition.
     public class Example {
         
+        // Function.
         public static int addNumbers(int firstNumber, int secondNumber) {
             return firstNumber + secondNumber;
         }
     
+        // Main method used to run the code.
         public static void main(String[] args) {
             System.out.println(addNumbers(1, 2));
         }
