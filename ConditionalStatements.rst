@@ -208,8 +208,49 @@ Mis on samaväärne sellega:
 *Switch*-lause
 -----------
 
-TODO
+Erinevalt *it-them* ja *if-then-else* lausetest, *switch*-lausel saab olla palju võimalikke valikuid.
 
+Järgnevas näide *Example* deklareeritakse täisarv nimega "month", mille väärtus kirjeldab kuud. Kood annab väljundiks kuu nime vastavalt selle väärtusele, kasutades *switch*-lauset.
+
+.. code-block:: java
+
+  public class Example {
+      public static void main(String[] args) {
+
+          int month = 8;
+          String monthAsString;
+          
+          switch (month) {
+              case 1:  monthAsString = "January";
+                       break;
+              case 2:  monthAsString = "February";
+                       break;
+              case 3:  monthAsString = "March";
+                       break;
+              case 4:  monthAsString = "April";
+                       break;
+              case 5:  monthAsString = "May";
+                       break;
+              case 6:  monthAsString = "June";
+                       break;
+              case 7:  monthAsString = "July";
+                       break;
+              case 8:  monthAsString = "August";
+                       break;
+              case 9:  monthAsString = "September";
+                       break;
+              case 10: monthAsString = "October";
+                       break;
+              case 11: monthAsString = "November";
+                       break;
+              case 12: monthAsString = "December";
+                       break;
+              default: monthAsString = "Invalid month";
+                       break;
+          }
+          System.out.println(monthAsString);
+      }
+  }
 
 ------
 
