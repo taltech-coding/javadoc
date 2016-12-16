@@ -73,20 +73,21 @@ Näide:
 .. code-block:: java
 
   public class MyClass() {
+
     public static void method() {
-      if (condition()) {
-        try {
-          something();
-        } catch (ProblemException e) {
-          recover();
+        if (condition()) {
+            try {
+                something();
+            } catch (ProblemException e) {
+                recover();
+            }
+        } else if (otherCondition()) {
+            somethingElse();
+        } else {
+            lastThing();
         }
-      } else if (otherCondition()) {
-        somethingElse();
-     } else {
-        lastThing();
-      }
     }
-  };
+};
 
 **Tühjad blokid**
 
@@ -103,7 +104,7 @@ Tühjad blokid võivad olla lühikesed. Bloki võib sulgeda ( **{}** ) samal rea
   
   // This is not acceptable: No concise empty blocks in a multi-block statement
   try {
-    doSomething();
+      doSomething();
   } catch (Exception e) {}
 
 **Koodi treppimine**
@@ -116,7 +117,7 @@ Iga lause on eraldi real, lauset pole vaja ilma põhjuseta poolitada.
 
   // Bad example
   final String value =
-    someValue;
+      someValue;
 
   // Good example
   final String value = someValue;
@@ -149,12 +150,12 @@ Komadele ja semikoolonitele järgeb alati tühik. *if, while, for, switch* ja *c
 
   // Bad example
   while(condition) {
-    statements;
+      statements;
   }
   
   // Good example
   while (condition) {
-    statements;
+      statements;
   }
 
 Matemaatiliste operaatorite ümber tuleks kasutada tühikuid. Tühikud ei peaks eraldama juurdekasvu (++) ja alandamist (--) nende operandist.
