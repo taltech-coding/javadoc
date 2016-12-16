@@ -12,7 +12,7 @@ Koodi näites on konstructor milles on argumendiks **nimi**, **id** ja õpilase 
   	private int id;
   	private String tagName;
   	private int grade;
-  	private boolean enRolled;
+  	private boolean enRolled = false;
 
   	Student(String name, int id, Strking tag, int grade) {
   		this.name = name;	//this.name is a private variable specific to the class, while name by it self is an argument.
