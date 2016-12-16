@@ -10,6 +10,7 @@ Pakk (ehk package) deklareerib, kuhu paketti klass kuulub.
 Näide
 -----
 
+.. image:: https://www.upload.ee/thumb/6456096/pakidteegidRst.PNG
 Kuna klass kuulub paketti "example", siis deklareerime selle kohe klassi alguses.
 
 .. code-block:: java
