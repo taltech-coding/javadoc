@@ -19,7 +19,7 @@ Javas võib sisend-väljud näha keeruline, kuid see pole halb. Sellega saavutat
 		public static final File FILE = new File(FILENAME);
  			
 		public static void main(String[] args) {
-				//  Try with resources
+			//  Try with resources
         		String fileContents = "";
         		try (InputStream inputStream = new FileInputStream(FILE)) {
         	    		int intValueOfLetter;
