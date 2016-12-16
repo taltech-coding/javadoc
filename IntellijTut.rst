@@ -27,3 +27,11 @@ Kasutamine
 Üleval paremal nurgas asub roheline play-nupp. Seda vajutades üritab Intellij koodi kompileerida ning selle õnnestudes paneb koodi tööle. 
 Samuti saab selle nupu kõrvalt valida, millist klassi tööle panna. Kui soovitud faili nimekirjas pole, siis saab selle avada, 
 ning ülevalt avatud failide ribalt teha vastava faili peal parem klikk ning valida "Run".
+https://www.jetbrains.com/help/idea/2016.3/running-applications.html <- saab täpsemalt lugeda
+
+Kasulikke linke
+---------------
+
+https://www.jetbrains.com/student/ <- info IntelliJ Ultimate litsentsi kohta
+https://www.jetbrains.com/help/idea/2016.3/keyboard-shortcuts-you-cannot-miss.html <- mõningaid kasulikke keyboard shortcut'e
+https://www.jetbrains.com/help/idea/2016.3/guided-tour-around-the-user-interface.html <- saab kasutajaliidese kohta lähemalt lugeda
