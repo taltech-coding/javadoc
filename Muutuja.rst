@@ -2,6 +2,7 @@
 Muutuja
 =======
 
+Iga muutuja ees peab olema deklareeritud andmetüüp (näiteks int, double jne).
 Muutujaid kasutatakse erinevate vajalike väärtuste hoidmiseks. Näiteks :code:`int MAX_WIDTH = 10;` hoiab endas soovitud asja maksimaalset laiust.
 Muutujanimed kirjutatakse jälgides **camelCase** tehnikat (s.t algab väikese tähega ning iga järgmine sõna algab suure algustähega).
 
