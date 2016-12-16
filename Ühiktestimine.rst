@@ -20,7 +20,7 @@ Test klassi loomine
 
 Assert'imine
 -----------
-Hea oleks kui kasutada koodi alguses *@BeforeEach* meetodit, mis setup'ib kõik vajaliku. *@BeforeEach*'i tehakse enne igat testi, niimodi saab kindel olla, et testid üksteist ei mõjuta.
+Hea oleks kui kasutada koodi alguses *@BeforeMethod* meetodit, mis setup'ib kõik vajaliku. *@BeforeMethod*'i tehakse enne igat testi, niimodi saab kindel olla, et testid üksteist ei mõjuta.
 
 Vastuste võrdlemiseks on mitu erinevat võimalust:
 
