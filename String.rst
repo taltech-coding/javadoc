@@ -111,7 +111,7 @@ Sõnede puhul ei saa kasutada == võrdlust. See võrdleb objektide puhul seda, k
 .. code-block:: java
   
   if (s.equals("hello")) {
-    // do something
+      // do something
   }
   
 null väärtus
@@ -124,7 +124,7 @@ Kui kirjutada selline kontroll:
 .. code-block:: java
 
 	if (s.equals("yes")) {
-     		// do something if user entered "yes"
+     	    // do something if user entered "yes"
 	}
 	
 Kui mingil põhjusel s on null, annab programm veateate. Eelnevalt tuleks kontrollida kas s on väärtustatud:
@@ -132,10 +132,10 @@ Kui mingil põhjusel s on null, annab programm veateate. Eelnevalt tuleks kontro
 .. code-block:: java
 
 	if (s == null) {
-    		// here s is null
+    	    // here s is null
 	} else {
-    		// here s is not null, we can use string methods
-    		System.out.println(s.length());
+    	    // here s is not null, we can use string methods
+    	    System.out.println(s.length());
 	}
 	
 Teine võimalus juhul kui meid huvitab, kas kaks sõne on võrdsed, saab kirjutada nii:
@@ -143,7 +143,7 @@ Teine võimalus juhul kui meid huvitab, kas kaks sõne on võrdsed, saab kirjuta
 .. code-block:: java
 
 	if ("yes".equals(s)) {
-    		// checks if s value is "yes"
+    	    // checks if s value is "yes"
 	}
 	
 "yes" on eelmise näite puhul samamoodi sõne ehk objekt. Kuna see objekt ei ole null, võib seda kasutada kontrollimise puhul esimesel kohal. Kui kaks sõne on sama sisuga, siis ei ole vahet, kumba kummaga kontrollime - mõlemal juhul peaks *equals* meetod tagastama *true*.
