@@ -2,7 +2,7 @@
 Erilised meetodid
 =================
 
-Kõik objektid pärivad automaatselt **Object** klassilt hulga meetodeid, mida võib soovi korral kasutada või üle kirjutada (*override*). Object klassist otse pärituna need meetodid midagi huvitavat ei tee, kuid paljudel klassidel nagu HashMap ja ArrayList on sobivad implementatsioonid olemas. Enda klasside jaoks tuleb need ise kirjutada.
+Kõik objektid pärivad automaatselt **Object** klassilt hulga meetodeid, mida võib soovi korral kasutada või üle kirjutada (*override*). **Object** klassist otse pärituna need meetodid midagi huvitavat ei tee, kuid paljudel klassidel nagu HashMap ja ArrayList on sobivad implementatsioonid olemas. Enda klasside jaoks tuleb need ise kirjutada.
 
 Implementatsiooni näidetes kasutame klassi **Point**, mille täielik kood on leitav peatükis *Objekt muutujana*.
 
@@ -36,7 +36,7 @@ Kui me loome ise mõne klassi ning ei kirjuta üle toString meetodit, pole tulem
     Point p = new Point(5, 9);
     System.out.println(p);
 
-Konsooli trükitakse selle tulemusena midagi taolist::
+Konsooli trükitakse selle tulemusena midagi taolist:
 
     examples.Point@2a139a55
 
