@@ -2,6 +2,14 @@
 Muutuja
 =======
 
+Muutujaid kasutatakse erinevate vajalike väärtuste hoidmiseks. Näiteks :code:`int MAX_WIDTH = 10;` hoiab endas soovitud asja maksimaalset laiust.
+Muutujanimed kirjutatakse jälgides **camelCase** tehnikat (s.t algab väikese tähega ning iga järgmine sõna algab suure algustähega).
+
+Samuti on Javas *primitiivsed* andmetüübid ning *objekti* muutujad. Erinevus on hästi kirjeldatud siin_.
+
+.. _siin: http://stackoverflow.com/questions/8660691/what-is-the-difference-between-integer-and-int-in-java
+
+
 Kirjeldus
 ---------
 
