@@ -19,45 +19,44 @@ Javas võib sisend-väljud näha keeruline, kuid see pole halb. Sellega saavutat
 		public static final File FILE = new File(FILENAME);
  			
 		public static void main(String[] args) {
-		    //  Try with resources
-        	String fileContents = "";
-        	try (InputStream inputStream = new FileInputStream(FILE)) {
-        	    int intValueOfLetter;
-        	    char letter;
-        	    while ((intValueOfLetter = inputStream.read()) != -1) {
-        	        letter = (char) intValueOfLetter;
-        	        fileContents += letter;
-        	    }
-        	} catch (IOException e) {
-        	    e.printStackTrace();
-        	} finally {
-        	    System.out.println(fileContents);
-        	}
+				//  Try with resources
+        		String fileContents = "";
+        		try (InputStream inputStream = new FileInputStream(FILE)) {
+        	    		int intValueOfLetter;
+        	    		char letter;
+        	    		while ((intValueOfLetter = inputStream.read()) != -1) {
+        	        		letter = (char) intValueOfLetter;
+        	        		fileContents += letter;
+        	    		}
+        		} catch (IOException e) {
+        	    	e.printStackTrace();
+        		} finally {
+        	    	System.out.println(fileContents);
+        		}
 			
-			// Files.readAllLines
-			try {
-				for (String line : readSmallFile(FILENAME)) {
-					System.out.println(line);
-				}
-			} catch (IOException e) {
-				e.printStackTrace();
+		// Files.readAllLines
+		try {
+			for (String line : readSmallFile(FILENAME)) {
+				System.out.println(line);
 			}
-
-			// BufferedReader
-			try {
-				System.out.println(readFileBuffered(FILENAME));
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
- 			
-			// Scanner
-			try {
-				System.out.println(readFileScanner(FILENAME));
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
-		
+
+		// BufferedReader
+		try {
+			System.out.println(readFileBuffered(FILENAME));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+ 			
+		// Scanner
+		try {
+			System.out.println(readFileScanner(FILENAME));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+				
 		public static List<String> readSmallFile(String filename) throws IOException {
 			Path path = Paths.get(filename);
 			List<String> lines = Files.readAllLines(path);
