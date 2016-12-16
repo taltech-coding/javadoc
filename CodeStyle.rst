@@ -87,7 +87,7 @@ Näide:
             lastThing();
         }
     }
-};
+ };
 
 **Tühjad blokid**
 
