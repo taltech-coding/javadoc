@@ -10,7 +10,7 @@ Meetodi tagastustüüp määrab, millist tüüpi väärtuse meetod tagastab.
 Näide
 -----
 
-**1) Integer - tagastab integer-tüüpi väärtuse (kahe numbri summa)**
+**1) int - tagastab integer-tüüpi väärtuse (kahe numbri summa)**
 
 .. code-block:: java
 
@@ -18,7 +18,7 @@ Näide
             return a + b;
         }
 
-**2) Double - tagastab double-tüüpi väärtuse (kahe numbri vahe arvestades ka komakohti)**
+**2) double - tagastab double-tüüpi väärtuse (kahe numbri vahe arvestades ka komakohti)**
 
 .. code-block:: java
 
@@ -35,7 +35,7 @@ Näide
     }
 
 
-**4) Boolean - tagastab boolean-tüüpi väärtuse (kas esimene arv on suurem kui teine)**
+**4) boolean - tagastab boolean-tüüpi väärtuse (kas esimene arv on suurem kui teine)**
 
 .. code-block:: java
 
