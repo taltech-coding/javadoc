@@ -4,6 +4,8 @@ JavaFX: Layout
 
 **Layout** konteinerid ehk paanid (*panes*) võimaldavad komponente (scene graphi) sees erineval viisil paigutada. Soovitud struktuuri saamiseks võib erinevaid paane üksteise sisse panna. Kui akna suurust muudetakse, muudavad paanid automaatselt enda komponentide mõõtmeid ja paiknemist.
 
+(Näiteid üldiste layouti meetodite kohta nagu setpadding jms)
+
 HBox, VBox
 ==========
 
@@ -13,16 +15,25 @@ HBox, VBox
 
     Label sudokuLabel = new Label("Sudoku");
     Button startButton = new Button("Start");
-
     startButton.setPrefWidth(150);
     sudokuLabel.setFont(new Font("SegoeUI", 20));
 
     HBox hbox = new HBox();
-    // Hbox hbox = new HBox(sudokuLabel, startButton);
-    hbox.getChildren().addAll(sudokuLabel, startButton);
+    Hbox hbox = new HBox(sudokuLabel, startButton);
 
     hbox.setPadding(new Insets(10, 10, 10, 10));
     hbox.setSpacing(15);
+
+Kui me ei soovi HBoxi loomisel kohe komponente kaasa anda, võime hiljem pöörduda otse järglaste nimekirja poole, kasutades meetodit **getChildren**. Selline meetod on olemas kõikidel Layout'idel. Kuna tagastatakse List-tüüpi objekt, võime kasutada kõiki Listi meetodeid.
+
+.. code-block:: java
+    // Add one at a time
+    hbox.getChildren().add(sudokuLabel);
+    hbox.getChildren().add(startButton);
+    // Add both at once
+    hbox.getChildren().addAll(sudokuLabel, startButton);
+
+Tulemus:
 
 .. image:: images/Hbox.PNG
 
@@ -30,7 +41,6 @@ HBox, VBox
 
     Label crosswordsLabel = new Label("Crosswords");
     Label memoryLabel = new Label("Memory");
-
     crosswordsLabel.setFont(new Font("SegoeUI", 15));
     memoryLabel.setFont(new Font("SegoeUI", 15));
 
@@ -42,7 +52,7 @@ HBox, VBox
 
     vbox.setAlignment(Pos.CENTER);
 
-    group.getChildren().add(vbox);
+Tulemus:
 
 .. image:: images/Vbox.PNG
 
@@ -56,17 +66,17 @@ GridPane
     Label highScoreLabel = new Label("High scores");
     highScoreLabel.setFont(new Font("SegoeUI", 20));
 
-    HashMap<String, Integer> times = new HashMap<>();
-    times.put("Peeter Paan", 390);
-    times.put("Pipi Pikksukk", 235);
-
     GridPane gridPane = new GridPane();
     gridPane.setPadding(new Insets(10, 10, 10, 10));
     gridPane.setVgap(5);
     gridPane.setHgap(10);
 
     gridPane.add(highScoreLabel, 0, 0, 2, 1);
-
+    // Create a map of players and their scores
+    HashMap<String, Integer> times = new HashMap<>();
+    times.put("Peeter Paan", 390);
+    times.put("Pipi Pikksukk", 235);
+    // Add the scores to the grid as labels
     int row = 1;
     for (String name: times.keySet()) {
         gridPane.add(new Label(name), 0, row);
@@ -75,19 +85,22 @@ GridPane
         row++;
     }
 
+Tulemus:
+
 .. image:: images/Gridpane.PNG
 
 
 FlowPane
 ========
 
-**FlowPane** sarnaneb Hbox'i ja VBox'iga – ka seal paigutatakse elemente järjestikku kas horisontaalselt või vertikaalselt sõltuvalt paani orientatsioonist. Vahe on selles, et kui elemendid ei mahu kõik järjestikku, jätkab FlowPane nende paigutamist uuelt realt (või uuest veerust).
+**FlowPane** sarnaneb Hbox'i ja VBox'iga – ka seal paigutatakse elemente järjestikku kas horisontaalselt või vertikaalselt sõltuvalt paani orientatsioonist. Vahe on selles, et kui elemendid ei mahu kõik järjestikku, jätkab FlowPane nende paigutamist uuelt realt (või uuest veerust). Eelistatu tulpade või veergude arvu saab määrata meetodite **setPrefColumns** ja **setPrefRows** abil.
 
 .. code-block:: java
 
     FlowPane flowPane = new FlowPane();
+    // Set a width that's small enough to create an overflow of components
     flowPane.setPrefWidth(200);
-    // Add some images
+    // Add two different types of images, 9 of both.
     for (int i = 0; i < 9; i++) {
         ImageView img = new ImageView(new Image(getClass().getResourceAsStream("smallyellowbox.png")));
         flowPane.getChildren().add(img);
@@ -95,7 +108,15 @@ FlowPane
         flowPane.getChildren().add(img2);
     }
 
+Lisatud kujundid paigutatakse vahetult teineteise järgi ning ruumi täitumisel jätkatakse järgmiselt realt.
+
 .. image:: images/Flowpane.PNG
+
+Vaikimisi on orientatsioon horisontaalne. Orientatsiooni muutmiseks saab kasutada meetodit **setOrientation**:
+
+.. code-block:: java
+
+    flowPane.setOrientation(Orientation.VERTICAL);
 
 TilePane
 ========
@@ -105,13 +126,8 @@ TilePane
 .. code-block:: java
 
     TilePane tilePane = new TilePane();
-
-   //tilePane.setPrefTileHeight(50);
-   //tilePane.setPrefTileWidth(50);
-
     tilePane.setPrefWidth(200);
-
-
+    // Add same components as in the previous example
     for (int i = 0; i < 9; i++) {
         ImageView img = new ImageView(new Image(getClass().getResourceAsStream("smallyellowbox.png")));
         tilePane.getChildren().add(img);
@@ -119,7 +135,7 @@ TilePane
         tilePane.getChildren().add(img2);
     }
 
-   // tilePane.setPrefColumns(3);
+Tulemus:
 
 .. image:: images/Tilepane.PNG
 
@@ -130,16 +146,17 @@ StackPane
 
 .. code-block:: java
 
-    StackPane stackPane = new StackPane();
     // Smiley icon
     ImageView icon = new ImageView(new Image(getClass().getResourceAsStream("icon.png")));
-    // Use yellow box image as the background
+    // Use yellow box image as the background.
     ImageView iconBackground = new ImageView(new Image(getClass().getResourceAsStream("smallyellowbox.png")));
+
+    StackPane stackPane = new StackPane();
+    stackPane.setPadding(new Insets(10, 10, 10, 10));
     // Add background first because otherwise the smiley will be hidden underneath it
     stackPane.getChildren().addAll(iconBackground, icon);
-    stackPane.setPadding(new Insets(10, 10, 10, 10));
 
-    group.getChildren().addAll(stackPane);
+Tulemus:
 
 .. image:: images/Stackpane.PNG
 
@@ -154,11 +171,14 @@ AnchorPane
     timeLabel.setFont(new Font("SegoeUI", 12));
 
     AnchorPane anchorPane = new AnchorPane();
+    // Set a size big enough to notice the position of the anchored label
     anchorPane.setPrefSize(300, 200);
     anchorPane.getChildren().add(timeLabel);
-
+    // Anchor label to the bottom right of the layout
     AnchorPane.setBottomAnchor(timeLabel, 8.0);
     AnchorPane.setRightAnchor(timeLabel, 8.0);
+
+Tulemus:
 
 .. image:: images/Anchorpane.PNG
 
@@ -171,9 +191,7 @@ BorderPane
 
 Lisada võib nii komponente (Label, Button jne) kui ka Layout objekte.
 
-Kasutame BorderPane'i, et ühendada mõned eelnevalt loodud Layout'id ühtseks kasutajaliideseks.
-
-.. image:: images/Smileysweeper.PNG
+Kasutame BorderPane'i, et ühendada mõned eelnevalt loodud Layout'id ühtseks kasutajaliideseks. Kõige alumise piirkonna jätame seekord kasutamata ning teeme mõned väiksed muudatused eelnevates näidetes. Iga Layout tüüp luuakse eraldi funktsioonis, et kood oleks loetavam. BorderPane ise tehakse valmis  **start**-meetodis.
 
 .. code-block:: java
 
@@ -231,7 +249,7 @@ Kasutame BorderPane'i, et ühendada mõned eelnevalt loodud Layout'id ühtseks k
             gridPane.setHgap(10); // Horizontal gap between components
             // Add the label to the grid.
             gridPane.add(highScoreLabel, 0, 0, 2, 1);
-            // Create a map of players and their scores
+            // Create a map of players and their scores.
             HashMap<String, Integer> times = new HashMap<>();
             times.put("Peeter Paan", 390);
             times.put("Pipi Pikksukk", 235);
@@ -315,10 +333,10 @@ Kasutame BorderPane'i, et ühendada mõned eelnevalt loodud Layout'id ühtseks k
                 // Use StackPanes as tiles
                 StackPane tile = createStackPane();
                 // If the tile is clicked, show or hide the smiley image.
+                // The smiley is the second element in the StackPane.
                 ImageView smiley = (ImageView) tile.getChildren().get(1);
                 smiley.setVisible(false); // Hidden by default
                 tile.setOnMouseClicked(e -> {
-                    // The smiley is the second element in the StackPane
                     if (smiley.isVisible()) {
                         smiley.setVisible(false);
                     } else {
@@ -346,3 +364,11 @@ Kasutame BorderPane'i, et ühendada mõned eelnevalt loodud Layout'id ühtseks k
         }
 
     }
+
+Tulemus:
+
+.. image:: images/Smileysweeper.PNG
+
+Kuna me kasutasime näites ruudustiku loomiseks TilePane'i, muutub akna suuruse muutmisel ka ruudukeste paigutus. Reaalselt sellise mängu loomisel oleks GridPane mõistlikum valik.
+
+Antud näites pole mängu ennast realiseeritud, põhirõhk on välimusel. Ruudukesed on tehtud StackPane'idena ning reageerivad vajutusele, et oleks võimalik demonstreerida üht StackPane'i kasutusvõimalust.
