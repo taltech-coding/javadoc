@@ -48,6 +48,7 @@ Primitiivsed andmetüübid on väikese algustähega ja objektid suure algustähe
 .. code-block:: java
 
     boolean b = true;
+    boolean b = false;
     
 * **char** – 16-bitiline Unicode karakter, miiniumväärtus on '\\u0000' (või 0) ja maksimumväärtus on '\\uffff' (või 65,535). Vaikeväärtus on '\\u0000'. 
 
