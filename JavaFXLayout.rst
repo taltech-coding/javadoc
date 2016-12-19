@@ -163,7 +163,7 @@ StackPane
     // Add background first because otherwise the smiley will be hidden underneath it
     stackPane.getChildren().addAll(iconBackground, icon);
 
-Akna suuruse muutmisel püsib Label alati alumises nurgas, kui aken on piisavalt suur, et teda ära mahutada.
+Tulemus:
 
 .. image:: images/Stackpane.PNG
 
@@ -185,7 +185,7 @@ AnchorPane
     AnchorPane.setBottomAnchor(timeLabel, 8.0);
     AnchorPane.setRightAnchor(timeLabel, 8.0);
 
-Tulemus:
+Akna suuruse muutmisel püsib Label alati alumises nurgas, kui aken on piisavalt suur, et teda ära mahutada.
 
 .. image:: images/Anchorpane.PNG
 
