@@ -172,3 +172,5 @@ BorderPane
 Lisada võib nii komponente (Label, Button jne) kui ka Layout objekte.
 
 Kasutame BorderPane'i, et ühendada mõned eelnevalt loodud Layout'id ühtseks kasutajaliideseks.
+
+.. image:: images/Smileysweeper.PNG
