@@ -2,7 +2,7 @@
 Muutuja
 =======
 
-Iga muutuja ees peab olema deklareeritud andmetüüp (näiteks int, double jne).
+Java on tüübikindel keel, mis tähendab, et iga muutuja ees peab olema deklareeritud andmetüüp (näiteks int, double jne).
 Muutujaid kasutatakse erinevate vajalike väärtuste hoidmiseks. Näiteks :code:`int MAX_WIDTH = 10;` hoiab endas soovitud asja maksimaalset laiust.
 Muutujanimed kirjutatakse jälgides **camelCase** tehnikat (s.t algab väikese tähega ning iga järgmine sõna algab suure algustähega).
 
@@ -14,24 +14,24 @@ Samuti on Javas *primitiivsed* andmetüübid ning *objekti* muutujad. Erinevus o
 Kirjeldus
 ---------
 
-- Integer-tüüpi muutuja on täisarvuline number.
-- Double-tüüpi muutuja on komakohaga.
-- Byte-tüüpi muutuja minimaalne väärtus on -128 (-2^7) ning maksimaalne väärtus 127 (2^7-1).
-- Character-tüüpi muutuja koosneb ühest Unicode tähest.
-- String-tüüpi muutuja on kas täht, sõna või tekst.
-- Boolean-tüüpi muutuja on kas "true" või "false".
+- integer-tüüpi muutuja on täisarvuline number.
+- double-tüüpi muutuja on komakohaga.
+- byte-tüüpi muutuja minimaalne väärtus on -128 (-2^7) ning maksimaalne väärtus 127 (2^7-1).
+- character-tüüpi muutuja koosneb ühest Unicode tähest.
+- string-tüüpi muutuja on kas täht, sõna või tekst.
+- boolean-tüüpi muutuja on kas "true" või "false".
 
 Muutuja võib olla lokaalne või globaalne.
 
-Näide
+Näited
 -----
 
 **Muutujad:**
 
 .. code-block:: java
 
-    int a, b, c;         // Deklareerib 3 integeri: a, b ja c
-    int d = 10, e = 10;  // Initsialiseerimine
+    int a, b, c;         // declare 3 integers: a, b and c
+    int d = 10, e = 10;  // initializing
     byte F = 22;
     double pi = 3.14159;
     char g = 'g';
