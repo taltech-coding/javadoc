@@ -46,21 +46,21 @@ Stiil
 
 Kehv stiil on võrrelda tingimust *false* või *true*'ga:
 
-+--------------------------------------------------+--------------------------------------------------+
-|          Kehv stiil                              |                 Parem stiil                      |
-+==================================================+==================================================+
-| .. code-block:: java                             | .. code-block:: java                             |
-|                                                  |                                                  |
-|   if (isHappy == true) {                         |   if (isHappy) {                                 |
-|     System.out.println("This is poor style.");   |     System.out.println("This is better style."); |
-|   }                                              |   }                                              |
-+--------------------------------------------------+--------------------------------------------------+
-| .. code-block:: java                             | .. code-block:: java                             |
-|                                                  |                                                  |
-|   if (isHappy == false) {                        |   if (!isHappy) {                                |
-|     System.out.println("This is poor style.");   |     System.out.println("This is better style."); |
-|   }                                              |   }                                              |
-+--------------------------------------------------+--------------------------------------------------+
++----------------------------------------------------+-----------------------------------------------------+
+|          Kehv stiil                                |                 Parem stiil                         |
++====================================================+=====================================================+
+| .. code-block:: java                               | .. code-block:: java                                |
+|                                                    |                                                     |
+|   if (isHappy == true) {                           |   if (isHappy) {                                    |
+|       System.out.println("This is poor style.");   |       System.out.println("This is better style.");  |
+|   }                                                |   }                                                 |
++----------------------------------------------------+-----------------------------------------------------+
+| .. code-block:: java                               | .. code-block:: java                                |
+|                                                    |                                                     |
+|   if (isHappy == false) {                          |   if (!isHappy) {                                   |
+|       System.out.println("This is poor style.");   |       System.out.println("This is better style.");  |
+|   }                                                |   }                                                 |
++----------------------------------------------------+-----------------------------------------------------+
 
 Tingimuslaused
 ---------------
@@ -69,7 +69,7 @@ Tingimuslaused
 .. code-block:: java
 
  if (score < 0 || score > 100) {
-    System.out.println("Score has an illegal value.");
+     System.out.println("Score has an illegal value.");
  } 
   
 Meetodid
