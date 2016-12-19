@@ -43,13 +43,13 @@ Näide
         return a > b;
     }
 
-**5) List - tagastab integer list tüüpi väärtuse (paneb ette antud arvud listi)**
+**5) array - tagastab integer array tüüpi väärtuse (paneb ette antud arvud massiivi)**
 
 .. code-block:: java
 
-    public int[] intToList(int a, int b) {
-        int[] intList = new int[2];
-        intList[0] = a;
-        intList[1] = b;
-        return intList;
+    public int[] intToArray(int a, int b) {
+        int[] intArray = new int[2];
+        intArray[0] = a;
+        intArray[1] = b;
+        return intArray;
     }
