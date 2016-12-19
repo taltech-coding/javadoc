@@ -27,6 +27,7 @@ HBox, VBox
 Kui me ei soovi HBoxi loomisel kohe komponente kaasa anda, võime hiljem pöörduda otse järglaste nimekirja poole, kasutades meetodit **getChildren**. Selline meetod on olemas kõikidel Layout'idel. Kuna tagastatakse List-tüüpi objekt, võime kasutada kõiki Listi meetodeid.
 
 .. code-block:: java
+
     // Add one at a time
     hbox.getChildren().add(sudokuLabel);
     hbox.getChildren().add(startButton);
