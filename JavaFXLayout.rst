@@ -4,7 +4,7 @@ JavaFX: Layout
 
 **Layout** konteinerid ehk paanid (*panes*) võimaldavad komponente (scene graphi) sees erineval viisil paigutada. Soovitud struktuuri saamiseks võib erinevaid paane üksteise sisse panna. Kui akna suurust muudetakse, muudavad paanid automaatselt enda komponentide mõõtmeid ja paiknemist.
 
-(Näiteid üldiste layouti meetodite kohta nagu setpadding jms)
+Paanidel on hulk erinevaid meetodeid, millega saab teha väikeseid muudatusi nende välimuses (laius, pikkus, vahe komponentide vahel jne) või lisada funktsioone, mis käivituvad erinevate sündmuste puhul. Mõningaid neist on mõnes järgnevas näites kasutatud ning neid saab täpselt samamoodi kasutada kõigi paanide puhul ning tegelikult ka komponentide puhul, kuna need päritakse ühistelt ülemklassidelt **Node** ja **Region**.
 
 HBox, VBox
 ==========
@@ -22,16 +22,17 @@ HBox, VBox
     Hbox hbox = new HBox(sudokuLabel, startButton);
 
     hbox.setPadding(new Insets(10, 10, 10, 10));
+    // Add some space between components
     hbox.setSpacing(15);
 
-Kui me ei soovi HBoxi loomisel kohe komponente kaasa anda, võime hiljem pöörduda otse järglaste nimekirja poole, kasutades meetodit **getChildren**. Selline meetod on olemas kõikidel Layout'idel. Kuna tagastatakse List-tüüpi objekt, võime kasutada kõiki Listi meetodeid.
+Kui me ei soovi HBoxi loomisel kohe komponente kaasa anda, võime hiljem pöörduda otse järglaste nimekirja poole, kasutades meetodit **getChildren**. Kuna tagastatakse List-tüüpi objekt, võime kasutada kõiki Listi meetodeid. **getChildren** meetod on olemas kõikidel paanidel.
 
 .. code-block:: java
 
-    // Add one at a time
+    // Add one at a time.
     hbox.getChildren().add(sudokuLabel);
     hbox.getChildren().add(startButton);
-    // Add both at once
+    // Add both at once.
     hbox.getChildren().addAll(sudokuLabel, startButton);
 
 Tulemus:
@@ -48,6 +49,7 @@ Tulemus:
     VBox vbox = new VBox(crosswordsLabel, memoryLabel);
 
     vbox.setPadding(new Insets(10, 10, 10, 10));
+    // Add a preferred width. This can change when the window is resized.
     vbox.setPrefWidth(150);
     vbox.setSpacing(5);
 
@@ -69,6 +71,7 @@ GridPane
 
     GridPane gridPane = new GridPane();
     gridPane.setPadding(new Insets(10, 10, 10, 10));
+    // Set different vertical and horizontal gaps between elements.
     gridPane.setVgap(5);
     gridPane.setHgap(10);
 
@@ -122,7 +125,7 @@ Vaikimisi on orientatsioon horisontaalne. Orientatsiooni muutmiseks saab kasutad
 TilePane
 ========
 
-**TilePane** toimib samamoodi nagu FlowPane, kuid elemendid paigutatakse ruudustikku, kus kõik ruudud on võrdse suurusega. Ruudu suurus on vaikimisi suurima elemendi suurus, kuid seda saab eraldi määrata ka meetodi **setPrefTileWidth** abil.
+**TilePane** toimib samamoodi nagu FlowPane, kuid elemendid paigutatakse ruudustikku, kus kõik ruudud on võrdse suurusega. Ruudu suurus on vaikimisi suurima elemendi suurus, kuid seda saab eraldi määrata ka meetodite **setPrefTileWidth** ja **setPrefTileHeight** abil.
 
 .. code-block:: java
 
@@ -135,8 +138,11 @@ TilePane
         ImageView img2 = new ImageView(new Image(getClass().getResourceAsStream("bigredbox.png")));
         tilePane.getChildren().add(img2);
     }
+    // Uncomment following lines to use bigger tiles
+    // tilePane.setPrefTileWidth(50);
+    // tilePane.setPrefTileHeight(50);
 
-Tulemus:
+Koodi käivitamisel näeme, et on tekkinud väikesed vahed, kuna suur punane ristkülik on veidi laiem kui väike kollane. Kontrollimiseks võib lisada juurde ka teistsuguseid elemente, näiteks Labeleid.
 
 .. image:: images/Tilepane.PNG
 
@@ -157,7 +163,7 @@ StackPane
     // Add background first because otherwise the smiley will be hidden underneath it
     stackPane.getChildren().addAll(iconBackground, icon);
 
-Tulemus:
+Akna suuruse muutmisel püsib Label alati alumises nurgas, kui aken on piisavalt suur, et teda ära mahutada.
 
 .. image:: images/Stackpane.PNG
 
@@ -190,9 +196,14 @@ BorderPane
 
 .. image:: images/Borderpane.PNG
 
-Lisada võib nii komponente (Label, Button jne) kui ka Layout objekte.
+Lisada võib nii komponente (Label, Button jne) kui ka paane.
 
-Kasutame BorderPane'i, et ühendada mõned eelnevalt loodud Layout'id ühtseks kasutajaliideseks. Kõige alumise piirkonna jätame seekord kasutamata ning teeme mõned väiksed muudatused eelnevates näidetes. Iga Layout tüüp luuakse eraldi funktsioonis, et kood oleks loetavam. BorderPane ise tehakse valmis  **start**-meetodis.
+.. code-block:: java
+
+    BorderPane borderPane = new BorderPane();
+    borderPane.setTop(new Label("Hello World");
+
+Kasutame BorderPane'i, et ühendada mõned eelnevalt loodud paanid ühtseks kasutajaliideseks. Kõige alumise piirkonna jätame seekord kasutamata ning teeme mõned väiksed muudatused eelnevates näidetes. Iga paan luuakse eraldi funktsioonis, et kood oleks loetavam. BorderPane ise tehakse valmis  **start**-meetodis.
 
 .. code-block:: java
 
