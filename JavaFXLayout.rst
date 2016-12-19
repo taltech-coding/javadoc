@@ -89,7 +89,7 @@ GridPane
         row++;
     }
 
-Tulemus:
+Tulemus, esimesel pildil on abijooned nähtavaks pandud:
 
 .. image:: images/Gridpane.PNG
 
