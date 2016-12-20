@@ -53,35 +53,45 @@ Kirjutame näiteklassi, mille main-meetodis loome kaks **Point** objekti, ja lis
             pointList.add(p2);
 
             // Print coordinates
-            System.out.println("Coordinates before change:");
+            System.out.println("Coordinates of p1 and p2 before change:");
             for (Point point: pointList) {
-                System.out.println(point.getX() + ", " + point.getY());
+                printCoordinates(point);
             }
 
             // Create new variable which refers to p1
             Point pp = p1;
             System.out.println("Coordinates of pp, which refers to p1:");
-            System.out.println(pp.getX() + ", " + pp.getY());
+            printCoordinates(pp);
 
             // Change coordinates of p1
             p1.setX(9);
-            p2.setY(10);
+            p1.setY(10);
 
             // Print again
-            System.out.println("Coordinates after change:");
+            System.out.println("Coordinates of p1 and p2 after change:");
             for (Point point: pointList) {
-                System.out.println(point.getX() + ", " + point.getY());
+                printCoordinates(point);
             }
 
-            System.out.println("Coordinates of pp, which refers to p1:");
-            System.out.println(pp.getX() + ", " + pp.getY());
-
-            System.out.println("Coordinates of p1 directly:");
-            System.out.println(p1.getX() + ", " + p1.getY());
+            System.out.println("Coordinates of pp after change:");
+            printCoordinates(pp);
         }
     }
 
-Koodi käivitamisel näeme, et eelpool kirjeldatud käitumine vastab tõele.
+Koodi käivitamisel näeme, et p1 muutmisel muutusid tõepoolest ka pp koordinaadid ning võime järeldada, et pp viitab p1-le::
+
+    Coordinates of p1 and p2 before change:
+    (0, 0)
+    (3, 8)
+    Coordinates of pp, which refers to p1:
+    (0, 0)
+    Coordinates of p1 and p2 after change:
+    (9, 10)
+    (3, 8)
+    Coordinates of pp after change:
+    (9, 10)
+    Coordinates of p1 directly:
+    (9, 10)
 
 Kui me tahaksime koodi ümber teha nii, et ühe muutuja kaudu objektis tehtud muudatus ei mõjutaks teisi, tuleb meil teha sellest objektist koopia. Selle jaoks on olemas spetsiaalne meetod nimega **clone**, mille kohta saab lähemalt lugeda näiteks eriliste meetodite peatükis siinsamas juhendis.
 
@@ -105,7 +115,7 @@ Teeme oma näiteklassi ümber nii, et punkti koordinaatide printimine toimuks er
             pointList.add(p2);
 
             // Print coordinates
-            System.out.println("Coordinates before change:");
+            System.out.println("Coordinates of p1 and p2 before change:");
             for (Point point: pointList) {
                 printCoordinates(point);
             }
@@ -117,25 +127,31 @@ Teeme oma näiteklassi ümber nii, et punkti koordinaatide printimine toimuks er
 
             // Change coordinates of p1
             p1.setX(9);
-            p2.setY(10);
+            p1.setY(10);
 
             // Print again
-            System.out.println("Coordinates after change:");
+            System.out.println("Coordinates of p1 and p2 after change:");
             for (Point point: pointList) {
                 printCoordinates(point);
             }
 
-            System.out.println("Coordinates of pp, which refers to p1:");
+            System.out.println("Coordinates of pp after change:");
             printCoordinates(pp);
-
-            System.out.println("Coordinates of p1 directly:");
-            printCoordinates(p1);
-        }
-
-        private static void printCoordinates(Point p) {
-            System.out.println("(" + p.getX() + ", " + p.getY() + ")");
         }
     }
+    
+Tulemus on identne eelmisega::
+
+    Coordinates of p1 and p2 before change:
+    (0, 0)
+    (3, 8)
+    Coordinates of pp, which refers to p1:
+    (0, 0)
+    Coordinates of p1 and p2 after change:
+    (9, 10)
+    (3, 8)
+    Coordinates of pp after change:
+    (9, 10)
 
 Taaskord tuleb meeles pidada, et kaasa ei anta mitte koopiat objektist, vaid viide. See tähendab, et kui funktsiooni sees meie objekti kuidagi muudetakse, siis need muudatused on püsivad.
 
