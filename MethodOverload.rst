@@ -45,47 +45,47 @@ Näite käivitamisel trükitakse konsooli selline väljund::
 
 Kui muutujaid on sama palju ning nende tüübid on samad, siis ülelaadimine ei õnnestu, kuna kompilaator ei suuda neid eristada. Seetõttu ei piisa ka sellest, kui tagastatav andmetüüp on erinev.
 
-Õige või vale?
-==============
+Meetodi ülelaadimine: kas õnnestub?
+====================================
 
 .. code-block:: java
 
     String fullName(String firstName, String lastName) {}
     String fullname(String firstName, String lastName, String middleName) {}
     
-Vastus: Õige. Ülelaadimine on võimalik, kuna argumentide arv on erinev.
+Vastus: Jah. Ülelaadimine on võimalik, kuna argumentide arv on erinev.
 
 .. code-block:: java
 
     String fullName(String firstName, String lastName) {}
     String fullname(String lastName, String firstName) {}
     
-Vastus: Vale! Kuigi muutujate nimed on teises järjekorras, on argumentide nimekirjad identsed – vaadatakse vaid andmetüüpe (String, String).
+Vastus: Ei õnnestu. Kuigi muutujate nimed on teises järjekorras, on argumentide nimekirjad identsed – vaadatakse vaid andmetüüpe (String, String).
 
 .. code-block:: java
 
     double sum(int a, double b) {}
     double sum(int x, double y) {}
     
-Vastus: Samuti vale. Taaskord vaadatakse ainult andmetüüpe ning nende järjekorda (int, double).
+Vastus: Samuti ei toimi. Taaskord vaadatakse ainult andmetüüpe ning nende järjekorda (int, double).
 
 .. code-block:: java
 
     double sum(double a, int b) {}
     double sum(int a, double b) {}
     
-Vastus: Õige! Andmetüüpide järjekord on erinev (double, int; int, double).
+Vastus: Töötab! Andmetüüpide järjekord on erinev (double, int; int, double).
 
 .. code-block:: java
 
     double sum(int a, int b) {}
     double sum(double a, double b) {}
     
-Vastus: Õige! Andmetüübid on erinevad.
+Vastus: Samuti õige lahendus. Andmetüübid on erinevad.
 
 .. code-block:: java
 
     double sum(int a, double b) {}
     float sum(int a, double b) {}
 
-Vastus: Vale. Tagastustüübi muutmisest ei piisa, vaid ka argumentide nimekirjad peavad erinema.
+Vastus: Ei õnnestu. Tagastustüübi muutmisest ei piisa, vaid ka argumentide nimekirjad peavad erinema.
