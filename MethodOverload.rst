@@ -48,12 +48,14 @@ Kui muutujaid on sama palju ning nende tüübid on samad, siis ülelaadimine ei 
 Meetodi ülelaadimine: kas õnnestub?
 ====================================
 
+Toodud on mõned näited meetodi ülelaadimise kohta. Kas selliste näidete puhul meetodi ülelaadimine õnnestub või tekib kompileerimisel viga?
+
 .. code-block:: java
 
     String fullName(String firstName, String lastName) {}
     String fullname(String firstName, String lastName, String middleName) {}
     
-Vastus: Jah. Ülelaadimine on võimalik, kuna argumentide arv on erinev.
+Vastus: Õnnestub. Ülelaadimine on võimalik, kuna argumentide arv on erinev.
 
 .. code-block:: java
 
