@@ -51,7 +51,7 @@ Kui muutujaid on sama palju ning nende tüübid on samad, siis ülelaadimine ei 
 .. code-block:: java
 
     String fullName(String firstName, String lastName) {}
-    String fullname(String firstName, String middleName, String lastName) {}
+    String fullname(String firstName, String lastName, String middleName) {}
     
 Vastus: Õige. Ülelaadimine on võimalik, kuna argumentide arv on erinev.
 
