@@ -10,6 +10,7 @@ Kõikidel klassidel peale *Object*-tüüpi klassi on olemas oma üks ja ainus ü
 
 Javas on kõik klassid üht- või teistpidi tuletatud *Object* klassist.
 
+Seega, kui pöördutakse mõne meetodi poole *someObject.someMethod()*,  siis otsitakse seda kõigepealt someObject instantsist. Kui seal ei ole, siis selle ülemklassis jne. Kuni *Object* klassini välja.
 
 Alamklass Javas pärib omadusi ülemklassist. Tänu pärimisele lisavad alamklassid spetsiifilist käitumist üldistatud ülemklassile. Püüame seda näite abil selgitada.
 
@@ -68,7 +69,7 @@ Näide alamklassidest ja ülemklassist
 
       public class Animal {
 
-          public static void hide() {
+          public void hide() {
               System.out.println("The hide method in Animal.");
           }
       }
@@ -76,7 +77,7 @@ Näide alamklassidest ja ülemklassist
       public class Cat extends Animal {
       
           @Override
-          public static void hide() {
+          public void hide() {
               System.out.println("The hide method in Cat.");
            }
        
@@ -92,7 +93,7 @@ Kuna loodud objekt on Cat tüüpi, siis loogiline on, et prinditakse *"The hide 
 
       public class Animal {
 
-          public static void hide() {
+          public static hide() {
               System.out.println("The hide method in Animal.");
           }
       }
