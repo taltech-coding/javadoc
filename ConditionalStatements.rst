@@ -11,7 +11,7 @@ Tingimus (*condition*) on boolean-tüüpi väärtus (*true*/*false*). Javas on k
 *if*-lause
 --------------
 
-*if*-lause (tingimusdirektiiv) on kõige lihtsam tingimuslause. See ütleb programmile, et täida mingit käsku ainult siis, kui tingimus vastab tõele. *if*-lause algab sõnaga *if*, millele järgneb ümarsulgudes loogiline avaldis (avaldis mille väärtus saab olla tõene või väär) ja sellele omakorda järgneb direktiiv, mis täidetakse siis, kui avaldis on tõene. Sõnale *else* aga järgneb direktiiv, mis täidetakse siis, kui loogiline avaldis on väär. *else*-osa võib ka puududa.
+*if*-lause (tingimusdirektiiv) on kõige lihtsam tingimuslause. See ütleb programmile, et täida mingit käsku ainult siis, kui tingimus vastab tõele. *if*-lause algab sõnaga :code:`if`, millele järgneb ümarsulgudes loogiline avaldis (avaldis mille väärtus saab olla tõene või väär) ja sellele omakorda järgneb direktiiv, mis täidetakse siis, kui avaldis on tõene. Sõnale *else* aga järgneb direktiiv, mis täidetakse siis, kui loogiline avaldis on väär. *else*-osa võib ka puududa.
 
 Süntaks:
 
@@ -145,7 +145,7 @@ Disjunktsiooni saab asendada *else if*-lausega:
       System.out.println("x is different from 1 and from 2");
   }
   
-  Sellisel juhul tuleb dubleerida else-haru.
+Sellisel juhul tuleb dubleerida else-haru.
   
 Tingavaldis
 -----------
