@@ -13,8 +13,10 @@ Label
 
     // Empty Label
     Label label1 = new Label();
+    
     // Label with text
     Label label2 = new Label("Hello World");
+    
     // Label with text and icon
     Image image = new Image(getClass().getResourceAsStream("search.png"));
     Label label3 = new Label("Search", new ImageView(image));
@@ -30,17 +32,23 @@ Kasulikud meetodid
 
     // Change text
     label1.setText("Hello World");
+    
     // Change color
     label1.setTextFill(Color.BLUE);
+    
     // Change font
     label1.setFont(new Font("Arial", 25));
+    
     // Wrap text
     label1.setWrapText(true);
+    
     // Add image
     Image img = new Image(getClass().getResourceAsStream("search.png"));
     label1.setGraphic(new ImageView(img));
+    
     // Change gap between image and text
     label1.setGraphicTextGap(5.5);
+    
     // Position image relative to text
     label1.setContentDisplay(ContentDisplay.TOP);
 
@@ -104,6 +112,7 @@ Nuppude grupi puhul saab juhtida programmi tööd vastavalt sellele, milline nup
 
         ToggleButton tb1 = new ToggleButton("Button A");
         tb1.setToggleGroup(group);
+        
         // Make button selected by default
         tb1.setSelected(true);
 
@@ -202,6 +211,7 @@ Choice box
         "Save",
         "Save as")
     );
+    
     // Alternatiivne viis elemente lisada
     cb.getItems().addAll(
         "New Document",
@@ -263,6 +273,7 @@ Tekstiväli võimaldab küsida kasutajalt sisendit tekstina.
 .. code-block:: java
 
     TextField textField = new TextField();
+    
     // Text field with predetermined content. Will be returned by the getText method even if user doesn't change it.
     TextField textField2 = new TextField("Your text here");
 
@@ -273,12 +284,16 @@ Kasulikud meetodid
 
     // Get field content
     String userText = textField.getText();
+    
     // Change field content
     textField.setText("Your text here");
+    
     // Clear the field
     textField.clear();
+    
     // Change font
     textField.setFont("Arial", 30);
+    
     // Add prompt text. This text is not returned by the getText method and disappears when user starts typing.
     textField.setPromptText("Enter your first name.");
 
