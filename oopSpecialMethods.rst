@@ -89,9 +89,15 @@ Levinumates IDE-des on olemas võimalus neid meetodeid automaatselt genereerida.
 
 Üks rida tuleks meie näite puhul välja kommenteerida. See rida on mõeldud klassidele, mis laiendavad mõnda muud klassi. Antud juhul on ülemklassiks Object, mille equals meetod kontrollib, kas tegu on täpselt sama objektiga, ning seetõttu saaksime selle rea kasutamisel vale tulemuse.
 
+Samuti tuleks hashCode'is samal põhjusel esimene rida ära muuta: super.hashCode() tuleks asendada mingi täisarvulise väärtusega. Esialgne arv ei tohi kindlasti olla 0, kuid muud täisarvud sobivad. Valime näiteks arvu 17.
+
 .. code-block:: java
 
     if (!super.equals(object)) return false; // should comment out
+    
+    // ...
+    
+    int result = super.hashCode();          // should replace
 
 Tulemus:
 
@@ -110,14 +116,46 @@ Tulemus:
             return true;
         }
 
-        public int hashCode() {
-            int result = super.hashCode();
-            result = 31 * result + x;
-            result = 31 * result + y;
-            return result;
-        }
+    public int hashCode() {
+        int result = 17;
+        result = 31 * result + x;
+        result = 31 * result + y;
+        return result;
+    }
 
-Kui soovite hiljem näiteks equals meetodit muuta, tuleks sellega koos genereerida ka uus hashCode.
+Kui soovite hiljem näiteks equals meetodit muuta, tuleks sellega koos luua ka uus hashCode.
+
+Kuid mis siis ikkagi juhtub, kui jätame näiteks hashCode'i implementeerimata? Oletame, et tegime valmis ainult equals meetodi ning proovime kasutada oma klassi võtmena HashMapis.
+
+.. code-block:: java
+
+    HashMap<Point, Integer> pointNumbers = new HashMap<>();
+    
+    Point point1 = new Point(0, 9);
+    Point point2 = new Point(0, 9);
+    Point point3 = new Point(9, 0);
+    
+    pointNumbers.put(point1, 1);
+    
+    System.out.println(pointNumbers.get(point1));
+    System.out.println(pointNumbers.get(point2));
+    System.out.println(pointNumbers.get(point3));
+    
+Tulemus, kui implementeeritud on ainult equals::
+
+    1
+    null
+    null
+    
+Kuigi equals meetodi põhjal on point1 ja point2 võrdsed, ei kohelda neid HashMapis võrdsetena ning võtmena saab kasutada ainult täpselt sama objekti, mlle väärtuse lisamisel võtmeks määrasime.
+
+Tulemus, kui implementeeritud on equals ja hashCode::
+
+    1
+    1
+    null
+    
+Selline näeb välja korrektne tulemus. Kuna point1 ja point2 on võrdsed, saab neid mõlemaid kasutada HashMapi poole pöördumisel. Kolmas rida peabki olema null, kuna point3 erineb teisest kahest ning sellise võtmega väärtust me HashMap'i lisanud ei ole.
 
 clone
 =====
