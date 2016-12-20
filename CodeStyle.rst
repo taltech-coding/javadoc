@@ -11,13 +11,15 @@ Koodistiili juures on osa reegleid, mis ei sõltu programmeerimiskeelest, teine 
 
 Checkstyle
 ------------
+Checkstyle automatiseerib Java koodi kontrollimist, et tuua esile stiilivead.
+
 Checkstyle plugina lisamine IntelliJ-le:
 
 Esmalt ava IntelliJ ning *settings* (Windows ctrl-alt-s või Mac OS X ⌘,). Seadete alt vali *plugins* ning alt *Browse repositories*. Kirjuta otsingusse "checkstyle" ja vali *checkstyle-IDEA*. Vali paremalt *install* ning *restart IntelliJ IDEA*. 
 
-Mõnel kursusel on oma stiilinõuded, Java põhikursusel näiteks iti0011.xml.
+Mõnel kursusel on oma stiilinõuete konfiguratsioon, Java põhikursusel näiteks iti0011.xml.
 
-Peale restarti avada uuesti *settings* ning sealt *other settings* ning *checkstyle*. Paremal ääres on roheline "+" ja sealt määrata xml faili asukoht. Seejärel panna lisatud konfiguratsiooni ette linnuke.
+Peale restarti avada uuesti *settings* ning sealt *other settings* ning *checkstyle*. Paremal ääres on roheline "+" ja sealt määrata xml faili asukoht. Seejärel panna lisatud konfiguratsiooni ette linnuke, et muuta see aktiivseks.
 
 Nimetamine
 -------------
