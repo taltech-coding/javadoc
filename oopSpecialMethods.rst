@@ -247,3 +247,5 @@ Kuna punktide sisuks on primitiivsed andmetüübid, võime Point klassi hetkel m
     }
 
 Erinevalt eelnevalt demonstreeritud ArrayListist, võime julgelt muuta esialgse joone punktide koordinaate nii, et kloonitud joone punktid jäävad samaks. See ongi *deep copy* põhimõte.
+
+**Soovituslik lisalugemine eriliste meetodite teemal:** Joshua Bloch's Effective Java Item 7, Item 8 (chapter 3)
