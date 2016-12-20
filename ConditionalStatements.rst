@@ -8,33 +8,10 @@ Tingimus (*condition*) on boolean-tüüpi väärtus (*true*/*false*). Javas on k
 - *if*-lause, et valida kahe valiku vahel;
 - *switch*-lause, et valida mitme alternatiivi vahel.
 
-*if-then* lause
+*if*-lause
 --------------
 
-*if-then* lause on kõige lihtsam tingimuslause. See ütleb programmile, et täida mingit käsku ainult siis, kui tingimus vastab tõele. Juhul kui tingimus ei vasta tõele, siis läheb programm kohe *if-then* lause lõppu. 
-
-Süntaks:
-
-.. code-block:: java
-
-  if (condition) {
-      then-statement;
-  }
-  
-Näide:
-  
-.. code-block:: java
-
-  int x = 6;
-
-  if (x < 5) {
-      System.out.println("x is smaller than 5"); // Program excecutes this line only when x is smaller than 5
-  }
- 
-*if-then-else* lause
-------------------
-
-if-then-else lause annab veel täiendava valiku käivitamiseks, kui tingimus ei vasta tõele. Kui esimene tingimus ei vasta tõele, siis täidetakse *else*-käsk. 
+*if*-lause (tingimusdirektiiv) on kõige lihtsam tingimuslause. See ütleb programmile, et täida mingit käsku ainult siis, kui tingimus vastab tõele. *if*-lause algab sõnaga *if*, millele järgneb ümarsulgudes loogiline avaldis (avaldis mille väärtus saab olla tõene või väär) ja sellele omakorda järgneb direktiiv, mis täidetakse siis, kui avaldis on tõene. Sõnale *else* aga järgneb direktiiv, mis täidetakse siis, kui loogiline avaldis on väär. *else*-osa võib ka puududa.
 
 Süntaks:
 
@@ -47,7 +24,7 @@ Süntaks:
   } else {
       else-statement;
   }
-  
+
 Näide:
 
 .. code-block:: java
@@ -75,7 +52,7 @@ Näide:
 
 Programmi väljund on: :code:`Grade = C`
 
-Programmis on näha, et testScore võib korraga täita mitut tingimust: 78 >= 70 ja 78 >= 60. Kui üks tingimus on täidetud, siis programm ei vaata enam järgmisi tingimusi.
+Programmis on näha, et testScore võib korraga täita mitut tingimust: 78 >= 70 ja 78 >= 60. Kui üks tingimus on täidetud, siis programm ei vaata enam järgmisi tingimusi ja läheb if-lause lõppu.
 
 
 Tingimus *if*-lauses
@@ -190,7 +167,7 @@ Näide:
    int a = 5;
    int b = 3;
    
-   System.out.println("Bigger value is: " + (a > b) ? a : b); //Prints "Bigger value is: 5" to the console
+   System.out.println("Bigger value is: " + (a > b) ? a : b); // Prints "Bigger value is: 5" to the console
 
 Mis on samaväärne sellega:
 
@@ -208,15 +185,29 @@ Mis on samaväärne sellega:
 *Switch*-lause
 -----------
 
-Erinevalt *it-them* ja *if-then-else* lausetest, *switch*-lausel saab olla palju võimalikke valikuid.
+Erinevalt *if-then* ja *if-then-else* lausetest, saab *switch*-lausel (lülitidirektiivil) olla palju võimalikke valikuid. 
 
-Järgnevas näide *Example* deklareeritakse täisarv nimega "month", mille väärtus kirjeldab kuud. Kood annab väljundiks kuu nime vastavalt selle väärtusele, kasutades *switch*-lauset.
+Süntaks:
+
+.. code-block:: java
+
+    switch (expression) {
+        case possibleValue-1: statements-1;
+        break;
+        ...
+        case possibleValue-n: statements-n;
+        break;
+        default: default-statements;
+    }
+    
+*default* väärtus on valikuline, ning selle direktiivid on juhuks kui ühtegi muud varianti ei kasutata.
+
+Järgnevas näites *Example* deklareeritakse täisarv nimega "month", mille väärtus kirjeldab kuud. Kood annab väljundiks kuu nime vastavalt selle väärtusele, kasutades *switch*-lauset.
 
 .. code-block:: java
 
   public class Example {
       public static void main(String[] args) {
-
           int month = 8;
           String monthAsString;
           
@@ -251,7 +242,35 @@ Järgnevas näide *Example* deklareeritakse täisarv nimega "month", mille vää
           System.out.println(monthAsString);
       }
   }
+  
+Järgnevas näites *AnotherExample* deklareeritakse täisarvud nimega "month" ja "daysOfMonth", mille väärtused kirjeldavad kuud ja selles sisalduvate päevade arvu. Kood annab väljundiks lause vastavalt väärtusele.
+
+.. code-block:: java
+
+  public class AnotherExample {
+      public static void main(String[] args) {
+          int month, daysOfMonth;
+          
+          switch (month) {
+          case 4: case 6: case 9: case 11:
+              daysOfMonth = 30;
+              break;
+          case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+              daysOfMonth = 31;
+              break;
+          case 2:
+              daysOfMonth = 28;
+              break;
+          default:
+              daysOfMonth = 0;
+              System.out.println("Month is not valid");
+          }
+          System.out.println("Days: " + daysOfMonth);      
+      }
+  }
 
 ------
 
 https://docs.oracle.com/javase/tutorial/java/nutsandbolts/if.html
+
+https://docs.oracle.com/javase/tutorial/java/nutsandbolts/switch.html
