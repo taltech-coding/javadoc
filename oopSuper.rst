@@ -62,11 +62,11 @@ Ehk siis alguses käivitakase ülemklassi meetod **printMethod()** ning siis pö
             void displaySpeed() {
                 System.out.println("Vehicle speed is " + speed);
             }
+        }    
         
         class Ferrari extends Vehicle {
         
             int speed = 100;
-
 
             void displaySuperSpeed() {
                 System.out.println("The superlcass speed is " + super.speed);
@@ -75,8 +75,7 @@ Ehk siis alguses käivitakase ülemklassi meetod **printMethod()** ning siis pö
             void displaySpeed() {
                 System.out.println("Ferrari speed is " + speed);
             }
-        }
-
+            
             public static void main(String[] args) {
 
                 Vehicle a = new Vehicle();
@@ -87,7 +86,8 @@ Ehk siis alguses käivitakase ülemklassi meetod **printMethod()** ning siis pö
 
                 b.displaySuperSpeed();
                 b.displaySpeed();
-         }
+            }
+        }
 
 
 
