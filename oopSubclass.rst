@@ -93,7 +93,7 @@ Kuna loodud objekt on Cat tüüpi, siis loogiline on, et prinditakse *"The hide 
 
       public class Animal {
 
-          public static hide() {
+          public void hide() {
               System.out.println("The hide method in Animal.");
           }
       }
