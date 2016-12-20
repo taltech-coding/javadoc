@@ -74,7 +74,22 @@ Nüüd on sobilik tuua väike näide, mis illustreerib ülekirjutamist:
        }
     }
 
-Kui ülemklassis tagastab meetod *someMethod()* numbri 3, siis alamklassis tagastab täpselt samasugune meetod numbri 4. 
+.. code-block:: java
+
+    public class Main {
+
+        public static void main(String[] args) {
+
+            Parent parent = new Parent();
+            Child child = new Child();
+
+            System.out.println(parent.someMethod());
+            System.out.println(child.someMethod());
+
+        }
+    }
+
+Tekitame *main* meetodi, kus võib koodi testida. Kui ülemklassi objekt *parent* tagastab meetodis *someMethod()* numbri 3, siis alamklassis *child* tagastab täpselt samasugune meetod numbri 4. 
 
 
 
