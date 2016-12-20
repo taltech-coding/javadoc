@@ -91,3 +91,5 @@ Vastus: Samuti õige lahendus. Andmetüübid on erinevad.
     float sum(int a, double b) {}
 
 Vastus: Ei õnnestu. Tagastustüübi muutmisest ei piisa, vaid ka argumentide nimekirjad peavad erinema.
+
+**Lisalugemist:** Joshua Bloch's Effective Java 2nd edition Item 41 (chapter 7).
