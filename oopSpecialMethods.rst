@@ -52,6 +52,8 @@ Tegemist on sõnega, mis koosneb klassi nimest, @-märgist ning objekti hashCode
 Antud koodi lisamisel Point klassi on tulemus järgmine::
 
     Point(5, 9)
+    
+**Lisalugemist:** Joshua Bloch's Effective Java 2nd edition Item 10 (chapter 3)
 
 equals ja hashCode
 ==================
@@ -157,6 +159,8 @@ Tulemus, kui implementeeritud on equals ja hashCode::
     
 Selline näeb välja korrektne tulemus. Kuna point1 ja point2 on võrdsed, saab neid mõlemaid kasutada HashMapi poole pöördumisel. Kolmas rida peabki olema null, kuna point3 erineb teisest kahest ning sellise võtmega väärtust me HashMap'i lisanud ei ole.
 
+**Lisalugemist:** Joshua Bloch's Effective Java 2nd edition Item 8, Item 9 (chapter 3)
+
 clone
 =====
 
@@ -247,5 +251,3 @@ Kuna punktide sisuks on primitiivsed andmetüübid, võime Point klassi hetkel m
     }
 
 Erinevalt eelnevalt demonstreeritud ArrayListist, võime julgelt muuta esialgse joone punktide koordinaate nii, et kloonitud joone punktid jäävad samaks. See ongi *deep copy* põhimõte.
-
-**Soovituslik lisalugemine eriliste meetodite teemal:** Joshua Bloch's Effective Java Item 7, Item 8 (chapter 3)
