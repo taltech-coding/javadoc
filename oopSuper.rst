@@ -49,35 +49,57 @@ Alamklassi meetod *printMethod()* kirjutab üle ülemklassi meetodi *printMethod
 Ehk siis alguses käivitakase ülemklassi meetod **printMethod()** ning siis pöördutakse tagasi alamklassi System.out.println() poole, et trükkida *"Printed in Subclass"*.
 
 
-
-
 - NB! Samamoodi on võimalik pääseda ülemklassi välja juurde.
+
+
 
 .. code-block:: java
     
         class Vehicle {
-            int speed=50;
-        }
+        
+            int speed = 50;
+
+            void displaySpeed() {
+                System.out.println("Vehicle speed is " + speed);
+            }
         
         class Ferrari extends Vehicle {
-            int speed=100;
-            
-            void display(){
-                System.out.println("The speed is " + super.speed);
+        
+            int speed = 100;
+
+
+            void displaySuperSpeed() {
+                System.out.println("The superlcass speed is " + super.speed);
             }
 
-            public static void main(String args[]) {
+            void displaySpeed() {
+                System.out.println("Ferrari speed is " + speed);
+            }
+        }
+
+            public static void main(String[] args) {
+
+                Vehicle a = new Vehicle();
+
+                a.displaySpeed();
+
                 Ferrari b = new Ferrari();
-                b.display();
-            }
-        }        
+
+                b.displaySuperSpeed();
+                b.displaySpeed();
+         }
 
 
-Kuna kasutatud oli **super.speed**, siis konsooli trükitakse:
+
+
+Ülaltoodud näites on meil kaks klassi. *Ferrari* laiendab *Vehicle* klassi. Mõlemal klassil on olemas väli *speed*, mida hakkame välja kutsuma. Alguses teeme *Vehicle* klassi objekti ning kutsume välja *displaySpeed()*, saame konsooli trükitud numbri **50**, kuna see on antud välja väärtus selles klassis. *Ferrari* klassis aga on oma *speed*, mis peidab ära *speed* välja ülemklassis. Seepärast, kui me kasutame **.super** võtmesõna, saame kätte ülemklassi *speed* väärtuse, aga tavajuhul saame kätte just *ferrari* klassis oleva välja *speed* väärtuse.
 
 .. code-block:: java
 
-        The speed is 50
+       Vehicle speed is 50
+       The superlcass speed is 50
+       Ferrari speed is 100
+
     
 Alamklassi konstruktor
 ----------------------
@@ -86,10 +108,63 @@ Alamklassi konstruktor
 
 .. code-block:: java
 
-        public MountainBike(int startHeight, int startCadence, int startSpeed,  int startGear) {    
+    public class Bicycle {
+
+        // the Bicycle class has
+        // three fields
+        public int cadence;
+        public int gear;
+        public int speed;
+
+        // the Bicycle class has
+        // one constructor
+        public Bicycle(int startCadence, int startSpeed, int startGear) {
+            gear = startGear;
+            cadence = startCadence;
+            speed = startSpeed;
+        }
+
+        // the Bicycle class has
+        // four methods
+        public void setCadence(int newValue) {
+            cadence = newValue;
+        }
+
+        public void setGear(int newValue) {
+            gear = newValue;
+        }
+
+        public void applyBrake(int decrement) {
+            speed -= decrement;
+        }
+
+        public void speedUp(int increment) {
+            speed += increment;
+        }
+
+    }
+
+
+    public class MountainBike extends Bicycle {
+
+        // the MountainBike subclass has
+        // one field
+        public int seatHeight;
+
+        // the MountainBike subclass has
+        // one constructor
+        public MountainBike(int startHeight, int startCadence,
+                            int startSpeed, int startGear) {
             super(startCadence, startSpeed, startGear);
             seatHeight = startHeight;
-        }       
+        }   
+
+        // the MountainBike subclass has
+        // one method
+        public void setHeight(int newValue) {
+            seatHeight = newValue;
+        }   
+    }
 
 
 Kui almaklassi konstruktoris kutsutakse välja meetod super(), siis käivitub ülemklassi argumendita konstruktor. Kui kutsutakse välja super(*argumentide list*), siis käivitub vastavate argumentidega ülemklassi konstruktor.
