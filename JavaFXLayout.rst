@@ -1,15 +1,15 @@
 ==============
-JavaFX: Layout
+*JavaFX: Layout*
 ==============
 
-**Layout** konteinerid ehk paanid (*panes*) võimaldavad komponente (scene graphi) sees erineval viisil paigutada. Soovitud struktuuri saamiseks võib erinevaid paane üksteise sisse panna. Kui akna suurust muudetakse, muudavad paanid automaatselt enda komponentide mõõtmeid ja paiknemist.
+**Layout** konteinerid ehk paanid (*panes*) võimaldavad komponente (*scene graph*'i) sees erineval viisil paigutada. Soovitud struktuuri saamiseks võib erinevaid paane üksteise sisse panna. Kui akna suurust muudetakse, muudavad paanid automaatselt enda komponentide mõõtmeid ja paiknemist.
 
-Paanidel on hulk erinevaid meetodeid, millega saab teha väikeseid muudatusi nende välimuses (laius, pikkus, vahe komponentide vahel jne) või lisada funktsioone, mis käivituvad erinevate sündmuste puhul. Mõningaid neist on mõnes järgnevas näites kasutatud ning neid saab täpselt samamoodi kasutada kõigi paanide puhul ning tegelikult ka komponentide puhul, kuna need päritakse ühistelt ülemklassidelt **Node** ja **Region**.
+Paanidel on hulk erinevaid meetodeid, millega saab teha väikeseid muudatusi nende välimuses (laius, pikkus, vahe komponentide vahel jne) või lisada funktsioone, mis käivituvad erinevate sündmuste puhul. Mõningaid neist on mõnes järgnevas näites kasutatud, ning neid saab täpselt samamoodi kasutada kõigi paanide puhul ning tegelikult ka komponentide puhul, kuna need päritakse ühistelt ülemklassidelt **Node** ja **Region**.
 
-HBox, VBox
+*HBox, VBox*
 ==========
 
-**Hbox** ja **VBox** võimaldavad komponente paigutada üksteise kõrvale (Hbox) või üksteise alla (VBox).
+**Hbox** ja **VBox** võimaldavad komponente paigutada üksteise kõrvale (*Hbox*) või üksteise alla (*VBox*).
 
 .. code-block:: java
 
@@ -26,7 +26,7 @@ HBox, VBox
     // Add some space between components
     hbox.setSpacing(15);
 
-Kui me ei soovi HBoxi loomisel kohe komponente kaasa anda, võime hiljem pöörduda otse järglaste nimekirja poole, kasutades meetodit **getChildren**. Kuna tagastatakse List-tüüpi objekt, võime kasutada kõiki Listi meetodeid. **getChildren** meetod on olemas kõikidel paanidel.
+Kui me ei soovi *HBoxi* loomisel kohe komponente kaasa anda, võime hiljem pöörduda otse järglaste nimekirja poole, kasutades meetodit **getChildren**. Kuna tagastatakse *List*-tüüpi objekt, võime kasutada kõiki *List*'i meetodeid. **getChildren** meetod on olemas kõikidel paanidel.
 
 .. code-block:: java
 
@@ -62,7 +62,7 @@ Tulemus:
 
 .. image:: images/Vbox.PNG
 
-GridPane
+*GridPane*
 ========
 
 **GridPane** loob ruudustiku, mille ruutudesse komponente paigutatakse. Meetodi **setGridLinesVisible** abil saab kuvada abijooni, mis aitavad hinnata, kas ruudustiku abil üles ehitatud paigutus näeb korrektne välja.
@@ -100,10 +100,10 @@ Tulemus, esimesel pildil on abijooned nähtavaks pandud:
 .. image:: images/Gridpane.PNG
 
 
-FlowPane
+*FlowPane*
 ========
 
-**FlowPane** sarnaneb Hbox'i ja VBox'iga – ka seal paigutatakse elemente järjestikku kas horisontaalselt või vertikaalselt sõltuvalt paani orientatsioonist. Vahe on selles, et kui elemendid ei mahu kõik järjestikku, jätkab FlowPane nende paigutamist uuelt realt (või uuest veerust). Eelistatu tulpade või veergude arvu saab määrata meetodite **setPrefColumns** ja **setPrefRows** abil.
+**FlowPane** sarnaneb *Hbox*'i ja *VBox*'iga – ka seal paigutatakse elemente järjestikku kas horisontaalselt või vertikaalselt sõltuvalt paani orientatsioonist. Vahe on selles, et kui elemendid ei mahu kõik järjestikku, jätkab *FlowPane* nende paigutamist uuelt realt (või uuest veerust). Eelistatud tulpade või veergude arvu saab määrata meetodite **setPrefColumns** ja **setPrefRows** abil.
 
 .. code-block:: java
 
@@ -130,10 +130,10 @@ Vaikimisi on orientatsioon horisontaalne. Orientatsiooni muutmiseks saab kasutad
 
     flowPane.setOrientation(Orientation.VERTICAL);
 
-TilePane
+*TilePane*
 ========
 
-**TilePane** toimib samamoodi nagu FlowPane, kuid elemendid paigutatakse ruudustikku, kus kõik ruudud on võrdse suurusega. Ruudu suurus on vaikimisi suurima elemendi suurus, kuid seda saab eraldi määrata ka meetodite **setPrefTileWidth** ja **setPrefTileHeight** abil.
+**TilePane** toimib samamoodi nagu *FlowPane*, kuid elemendid paigutatakse ruudustikku, kus kõik ruudud on võrdse suurusega. Ruudu suurus on vaikimisi suurima elemendi suurus, kuid seda saab eraldi määrata ka meetodite **setPrefTileWidth** ja **setPrefTileHeight** abil.
 
 .. code-block:: java
 
@@ -152,11 +152,11 @@ TilePane
     // tilePane.setPrefTileWidth(50);
     // tilePane.setPrefTileHeight(50);
 
-Koodi käivitamisel näeme, et on tekkinud väikesed vahed, kuna suur punane ristkülik on veidi laiem kui väike kollane. Kontrollimiseks võib lisada juurde ka teistsuguseid elemente, näiteks Labeleid.
+Koodi käivitamisel näeme, et on tekkinud väikesed vahed, kuna suur punane ristkülik on veidi laiem kui väike kollane. Kontrollimiseks võib lisada juurde ka teistsuguseid elemente, näiteks *Label*'eid.
 
 .. image:: images/Tilepane.PNG
 
-StackPane
+*StackPane*
 =========
 
 **StackPane** paigutab kõik komponendid üksteise peale. Nii on võimalik näiteks kujunditest ja tekstist kokku panna ikoone.
@@ -179,7 +179,7 @@ Tulemus:
 
 .. image:: images/Stackpane.PNG
 
-AnchorPane
+*AnchorPane*
 ==========
 
 **AnchorPane** võimaldab komponente enda keskele, mõne serva või nurga külge ankurdada.
@@ -210,14 +210,14 @@ BorderPane
 
 .. image:: images/Borderpane.PNG
 
-Lisada võib nii komponente (Label, Button jne) kui ka paane.
+Lisada võib nii komponente (*Label*, *Button* jne) kui ka paane.
 
 .. code-block:: java
 
     BorderPane borderPane = new BorderPane();
     borderPane.setTop(new Label("Hello World");
 
-Kasutame BorderPane'i, et ühendada mõned eelnevalt loodud paanid ühtseks kasutajaliideseks. Kõige alumise piirkonna jätame seekord kasutamata ning teeme mõned väiksed muudatused eelnevates näidetes. Iga paan luuakse eraldi funktsioonis, et kood oleks loetavam. BorderPane ise tehakse valmis  **start**-meetodis.
+Kasutame *BorderPane*'i, et ühendada mõned eelnevalt loodud paanid ühtseks kasutajaliideseks. Kõige alumise piirkonna jätame seekord kasutamata ning teeme mõned väiksed muudatused eelnevates näidetes. Iga paan luuakse eraldi meetodis, et kood oleks loetavam. *BorderPane* ise tehakse valmis  **start**-meetodis.
 
 .. code-block:: java
 
@@ -424,6 +424,6 @@ Tulemus:
 
 .. image:: images/Smileysweeper.PNG
 
-Kuna me kasutasime näites ruudustiku loomiseks TilePane'i, muutub akna suuruse muutmisel ka ruudukeste paigutus. Reaalselt sellise mängu loomisel oleks GridPane mõistlikum valik.
+Kuna me kasutasime näites ruudustiku loomiseks *TilePane*'i, muutub akna suuruse muutmisel ka ruudukeste paigutus. Reaalselt sellise mängu loomisel oleks *GridPane* mõistlikum valik.
 
-Antud näites pole mängu ennast realiseeritud, põhirõhk on välimusel. Ruudukesed on tehtud StackPane'idena ning reageerivad vajutusele, et oleks võimalik demonstreerida üht StackPane'i kasutusvõimalust.
+Antud näites pole mängu ennast realiseeritud, põhirõhk on välimusel. Ruudukesed on tehtud *StackPane*'idena ning reageerivad vajutusele, et oleks võimalik demonstreerida üht *StackPane*'i kasutusvõimalust.
