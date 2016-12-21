@@ -1,7 +1,7 @@
 Koodistiil
 ==========
 
-Programmeerijad on kokku leppinud teatud kokkulepete järgimise, et kiiremini aru saada võõrast koodist. Need kokkulepped moodustavad nn koodistiili.
+Programmeerijad on teinud teatud kokkulepped, et kiiremini aru saada võõrast koodist. Need kokkulepped moodustavad nn koodistiili.
 
 Koodistiili juures on osa reegleid, mis ei sõltu programmeerimiskeelest, teine osa on keelespetsiifilised. Üldiste reeglite hulka kuulub näiteks nõue valida muutujate, meetodite, klasside, liideste, failide jt. objektide nimed nii, et need peegeldaksid nende otstarvet, samuti nõue teksti "treppida" jpt.
 
@@ -9,13 +9,13 @@ Koodistiili juures on osa reegleid, mis ei sõltu programmeerimiskeelest, teine 
 
 ----
 
-Checkstyle
+*Checkstyle*
 ------------
-Checkstyle automatiseerib Java koodi kontrollimist, et tuua esile stiilivead.
+*Checkstyle* automatiseerib Java koodi kontrollimist, et tuua esile stiilivead.
 
-Checkstyle plugina lisamine IntelliJ-le:
+*Checkstyle* *plugin*'i lisamine *IntelliJ*-le:
 
-Esmalt ava IntelliJ ning *settings* (Windows ctrl-alt-s või Mac OS X ⌘,). Seadete alt vali *plugins* ning alt *Browse repositories*. Kirjuta otsingusse "checkstyle" ja vali *checkstyle-IDEA*. Vali paremalt *install* ning *restart IntelliJ IDEA*. 
+Esmalt ava *IntelliJ* ning *settings* (*Windows ctrl-alt-s* või *Mac OS X ⌘*,). Seadete alt vali *plugins* ning selle alt *Browse repositories*. Kirjuta otsingusse "*checkstyle*" ja vali *checkstyle-IDEA*. Vali paremalt *install* ning *restart IntelliJ IDEA*. 
 
 Mõnel kursusel on oma stiilinõuete konfiguratsioon, Java põhikursusel näiteks iti0011.xml.
 
