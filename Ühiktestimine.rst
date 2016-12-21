@@ -1,34 +1,34 @@
 ==============================
 Ühiktestimine ehk Unit Testing
 ==============================
-Test Driven Development
+*Test Driven Development*
 -----------------------
 
-Ühiktestimine on seotud Test Driven Development'iga (TDD), mille põhimõtteks on enne kirjutada testid ja pärast seda hakata implementeerima koodi, mis peab läbima kirjutatud testid. Kood on valmis siis, kui ei olda enam suutelised kirjutama uusi teste, millest kood saaks läbi kukkuda. Testklass on eraldi klass.
+Ühiktestimine on seotud *Test Driven Development*'iga (TDD), mille põhimõtteks on enne kirjutada testid ja pärast seda hakata implementeerima koodi, mis peab läbima kirjutatud testid. Kood on valmis siis, kui ei olda enam suutelised kirjutama uusi teste, millest kood saaks läbi kukkuda. Testklass on eraldi klass.
 
 -------------------------
 
-Test klassi loomine
+Testklassi loomine
 -------------------
-- IntelliJ-s on võimalik autogenereerida testklass kui vajutada *alt+enter* klassi nime peal.
-- Uuest aknast saab valida kuhu tehakse Test Class ning milliseid meetodeid testitakse.
-- Tavaliselt on vaja lisada ka Dependency vastavale testing versioonile, olgu selleks TestNG, JUnit5 või mõni muu.
+- *IntelliJ*-s on võimalik autogenereerida testklass kui vajutada *alt+enter* klassi nime peal.
+- Uuest aknast saab valida kuhu tehakse *Test Class* ning milliseid meetodeid testitakse.
+- Tavaliselt on vaja lisada ka *Dependency* vastavale testing versioonile, olgu selleks *TestNG*, *JUnit5* või mõni muu.
 - Seda saab kergelt teha kui vajutada *fix* nuppu ja valida esimene variant.
-- Teine võimalus dependency lisamiseks on File -> Project Setting -> Modules, sealt valida moodul, millele testi library külge panna, seejärel valida paremalt poolt Dependencies ja rohelise nuppuga lisada testi library.
+- Teine võimalus *dependency* lisamiseks on *File* -> *Project Setting* -> *Modules*, sealt valida moodul, millele testi *library* külge panna, seejärel valida paremalt poolt *Dependencies* ja rohelise nuppuga lisada testi *library*.
 
 
 
-Assert'imine
+*Assert*'imine
 -----------
-Hea oleks kui kasutada koodi alguses *@BeforeMethod* meetodit, mis setup'ib kõik vajaliku. *@BeforeMethod*'i tehakse enne igat testi, niimodi saab kindel olla, et testid üksteist ei mõjuta.
+Hea oleks kui kasutada koodi alguses *@BeforeMethod* meetodit, mis *setup*'ib kõik vajaliku. *@BeforeMethod*'i tehakse enne igat testi, niimodi saab kindel olla, et testid üksteist ei mõjuta.
 
 Vastuste võrdlemiseks on mitu erinevat võimalust:
 
-- assertEquals(expected, actual)
-- assertTrue()
-- assertFalse()
+- *assertEquals(expected, actual)*
+- *assertTrue()*
+- *assertFalse()*
 
-All pool on tehtud Ago Junit testi järgi, kuid all olev kood on *TestNG*-ga tehtud.
+All pool on tehtud Ago *Junit* testi järgi, kuid all olev kood on *TestNG*-ga tehtud.
 
 .. code-block:: java
 
@@ -63,7 +63,7 @@ All pool on tehtud Ago Junit testi järgi, kuid all olev kood on *TestNG*-ga teh
       }
   }
 
-Test classis on kasutusel erinevaid viise testimiseks. Seal on kasutusel nii assertTrue, kui ka assertEquals. Lisaks on veel kasutusel assertEquals, kus on ette antud eraldi error message, mida displaytakse kui test failib.
+*Test class*'is on kasutusel erinevaid viise testimiseks. Seal on kasutusel nii *assertTrue*, kui ka *assertEquals*. Lisaks on veel kasutusel *assertEquals*, kus on ette antud eraldi *error message*, mida kuvatakse kui test kukub läbi.
 
 .. code-block:: java
   
