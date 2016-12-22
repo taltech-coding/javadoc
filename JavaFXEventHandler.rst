@@ -1,11 +1,11 @@
 ====================
 JavaFX Event handler
 ====================
-JavaFX-is on iga tegevus mingi notifikatsioon. Kui kasutaba vajutab mingit nuppu, klahve, liigutab hiirt või teeb teisi tegevuse antakse välja *evente*. Event handleritega saab nendele ligi ning lisada mingi klahvile funktsionaalsust. 
+JavaFX-is on iga tegevus mingi notifikatsioon. Kui kasutaja vajutab mingit nuppu, klahvi, liigutab hiirt või teeb teisi tegevusi, antakse välja *evente*. Event handleritega saab nendele ligi ning lisada mingile klahvile funktsionaalsust. 
 
 Event
 -----
-Event kujutab endast midagi huvi pakkuvat programmile, näiteks hiire liigutamist või klahvi vajutamist. JavaFX-is, event on kas *javafx.event.Event* class või mingi selle alamklass. JavaFX-is on suhtelislt palju erinevaid evente näiteks nagu: *DragEvent, KeyEvent, MouseEvent, ScrollEvent* ja palju teisi. On võimalik ka ise enda evente defineerida kui laiendada Event classi.
+Event kujutab endast midagi huvipakkuvat programmile: näiteks hiire liigutamist või klahvi vajutamist. JavaFX-is on event kas *javafx.event.Event* class või mingi selle alamklass. JavaFX-is on suhteliselt palju erinevaid evente, näiteks: *DragEvent, KeyEvent, MouseEvent, ScrollEvent* ja palju teisi. On võimalik ka ise enda evente defineerida kui laiendada Event classi.
 
 Evendi tüüpe on kolm tükki.
 
@@ -13,7 +13,7 @@ Evendi tüüpe on kolm tükki.
 - KEY_RELEASED
 - KEY_TYPED
 
-Koodi näide kus tehakse nupp, mille vajutamisel prindib "Hello World" 
+Koodi näide, kus tehakse nupp, mille vajutamisel prindib "Hello World": 
 
 .. code-block:: java
 
@@ -67,7 +67,7 @@ Seal koodis on pikalt välja kirjutatud .setOnAction ja kuidas see töötab, kui
 	// With Lambda (Lambdas are future)
 	btn.setOnAction(event -> System.out.println("Hello World"));
 
-Lambdadega saab kirjuada ka terveid funktsioone sinna, mitte ainult ühte käsku, nagu järgmises koodi näites on näha. Koodis on tetrise mängu kood, kui vajutada start nuppu.
+Lambdadega saab kirjutada ka terveid funktsioone, mitte ainult ühte käsku, nagu järgmises koodi näites on näha. Koodis on tetrise mängu kood, kui vajutada start nuppu.
 
 .. code-block:: java
 	
