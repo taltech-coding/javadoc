@@ -11,7 +11,7 @@ Tingimus (*condition*) on boolean-tüüpi väärtus (*true*/*false*). Javas on k
 *if*-lause
 --------------
 
-*if*-lause (tingimusdirektiiv) on kõige lihtsam tingimuslause. See ütleb programmile, et täida mingit käsku ainult siis, kui tingimus vastab tõele. *if*-lause algab sõnaga :code:`if`, millele järgneb ümarsulgudes loogiline avaldis (avaldis mille väärtus saab olla tõene või väär) ja sellele omakorda järgneb direktiiv, mis täidetakse siis, kui avaldis on tõene. Sõnale *else* aga järgneb direktiiv, mis täidetakse siis, kui loogiline avaldis on väär. *else*-osa võib ka puududa.
+*if*-lause (tingimusdirektiiv) on kõige lihtsam tingimuslause. See ütleb programmile, et täida mingit käsku ainult siis, kui tingimus vastab tõele. *if*-lause algab sõnaga :code:`if`, millele järgneb ümarsulgudes loogiline avaldis (avaldis mille väärtus saab olla tõene või väär) ja sellele omakorda järgneb direktiiv, mis täidetakse siis, kui avaldis on tõene. Sõnale :code:`else` aga järgneb direktiiv, mis täidetakse siis, kui loogiline avaldis on väär. *else*-osa võib ka puududa.
 
 Süntaks:
 
@@ -30,24 +30,24 @@ Näide:
 .. code-block:: java
 
   class Example {
-    public static void main(String[] args) {
-    
-        int testScore = 78;
-        char grade;
+      public static void main(String[] args) {
+          
+          int testScore = 78;
+          char grade;
 
-        if (testScore >= 90) {
-            grade = 'A';
-        } else if (testScore >= 80) {
-            grade = 'B';
-        } else if (testScore >= 70) {
-            grade = 'C';
-        } else if (testScore >= 60) {
-            grade = 'D';
-        } else {
-            grade = 'F';
-        }
-        System.out.println("Grade = " + grade);
-     } 
+          if (testScore >= 90) {
+              grade = 'A';
+          } else if (testScore >= 80) {
+              grade = 'B';
+          } else if (testScore >= 70) {
+              grade = 'C';
+          } else if (testScore >= 60) {
+              grade = 'D';
+          } else {
+              grade = 'F';
+          }
+          System.out.println("Grade = " + grade);
+       } 
   }
 
 Programmi väljund on: :code:`Grade = C`
@@ -193,10 +193,10 @@ Süntaks:
 
     switch (expression) {
         case possibleValue-1: statements-1;
-        break;
+             break;
         ...
         case possibleValue-n: statements-n;
-        break;
+             break;
         default: default-statements;
     }
     
