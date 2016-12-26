@@ -71,7 +71,7 @@
 *TreeSet*
 ---------
 
-*TreeSet* on hulga tüüp, milles hoiustatakse elemente kasvavas järjekorras, seega on tegu mõistliku valikuga kui on oluine säilitada elementide järjekord nede suurust arvesse võttes.
+*TreeSet* on hulga tüüp, milles hoiustatakse elemente kasvavas järjekorras, seega on tegu mõistliku valikuga kui on oluline säilitada elementide järjekord nende suurust arvesse võttes.
 
 Võrdlev koodinäide
 ------------------
