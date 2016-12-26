@@ -35,6 +35,8 @@
         public static void main(String[] args) {
       
             HashSet<Integer> exampleSet = new HashSet<>();
+            
+            //These methods work on different types of sets
       
             //adds 6 to exampleSet
             exampleSet.add(6);
@@ -62,7 +64,53 @@
   }
   
 *LinkedHashSet*
--------------
+---------------
 
 *LinkedHashSet* on sarnane *HashSet*'iga, kuid erinevalt viimasest sälitab *LinkedHashSet* oma elementide järjekorra.
+
+*TreeSet*
+---------
+
+*TreeSet* on hulga tüüp, milles hoiustatakse elemente kasvavas järjekorras, seega on tegu mõistliku valikuga kui on oluine säilitada elementide järjekord nede suurust arvesse võttes.
+
+Võrdlev koodinäide
+------------------
+
+.. code-block:: java
+
+    import java.util.*;
+
+    public class SetTest {
+
+        public static void main(String[] args) {
+
+            ArrayList<Integer> elements = new ArrayList<>();
+            elements.addAll(Arrays.asList(5, 3, 6, 1, 4, 2));
+
+            HashSet<Integer> hashSet = new HashSet<>(elements);
+            LinkedHashSet<Integer> linkedHashSet = new LinkedHashSet<>(elements);
+            TreeSet<Integer> treeSet = new TreeSet<>(elements);
+
+            // Output: 123456
+
+            for (Integer element : hashSet) {
+                System.out.print(element);
+            }
+            System.out.print("\n");
+
+            // Output: 536142
+
+            for (Integer element : linkedHashSet) {
+                System.out.print(element);
+            }
+            System.out.print("\n");
+
+            // Output: 123456
+
+            for (Integer element : treeSet) {
+                System.out.print(element);
+            }
+        }
+    }
+
   
