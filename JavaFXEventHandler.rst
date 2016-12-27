@@ -67,7 +67,7 @@ Seal koodis on pikalt välja kirjutatud *.setOnAction* ja kuidas see töötab, k
 	// With Lambda (Lambdas are future)
 	btn.setOnAction(event -> System.out.println("Hello World"));
 
-Lambdadega saab kirjutada ka terveid funktsioone, mitte ainult ühte käsku, nagu järgmises koodi näites on näha. Tegemist on tetrise mängu koodijupiga, kui vajutada *start* nuppu käivitatakse mängu *timeline*, juhul kui seda pole juba käivitatud.
+Lambdadega saab kirjutada ka terveid funktsioone, mitte ainult ühte käsku, nagu järgmises koodi näites on näha. Tegemist on tetrise mängu koodijupiga, kui vajutada *start* nuppu käivitatakse mängu *timeline*, juhul kui seda pole juba tehtud.
 
 .. code-block:: java
 	
