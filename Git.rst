@@ -5,7 +5,7 @@ Git on versioonihaldustarkvara, mis võimaldab koodis tehtud muudatusi säilitad
 Git on võimalik alla laadida järgnevalt leheküljelt: https://git-for-windows.github.io/ (kui operatsioonisüsteemiks on Mac OS X, siis pole vaja enamasti Git'i tarvis installeerida, see on juba arvutis vaikimisi olemas koos Xcode'iga. Olemasolu saab kontrollida, kui kirjutada Terminali *git --version*).
 Windows'is on käskude jooksutamiseks *Git Bash*, Mac OS X'is *Terminal*.
 
-.. image:: https://explainxkcd.com/wiki/images/4/4d/git.png
+.. image:: /images/git.png
 
 Esmakordsel *Git Bashi*' käivitamisel tuleb kindlasti seadistada e-posti aadress, kuhu hakatakse *Git*'iga seotud teateid saatma. Lihtsaim moodus on kirjutada käsureale järgnev käsk:
 
@@ -153,7 +153,9 @@ Harud
 ------
 Harusid kasutatakse, et viia paraleelselt sisse muudatusi, mis on teineteisest isoleeritud. *master* haru on vaikimisi haru repositooriumi loomisel. Teisi harusid on mõistlik kasutada arendamiseks ja seejärel *master* haruga ühendamiseks (*merge*), kui arendus on lõpetatud.
 
-.. image:: https://www.atlassian.com/git/images/tutorials/collaborating/using-branches/01.svg
+.. image:: /images/branches.png
+
+Allikas: https://www.atlassian.com/git/images/tutorials/collaborating/using-branches/01.svg
 
 Kõikide repositooriumis olevate harude loetelu saamine:
 
