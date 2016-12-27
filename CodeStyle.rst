@@ -5,7 +5,9 @@ Programmeerijad on teinud teatud kokkulepped, et kiiremini aru saada võõrast k
 
 Koodistiili juures on osa reegleid, mis ei sõltu programmeerimiskeelest, teine osa on keelespetsiifilised. Üldiste reeglite hulka kuulub näiteks nõue valida muutujate, meetodite, klasside, liideste, failide jt. objektide nimed nii, et need peegeldaksid nende otstarvet, samuti nõue teksti "treppida" jpt.
 
-.. image:: https://blog.codinghorror.com/content/images/uploads/2009/02/6a0120a85dcdae970b012877707a45970c-pi.png
+.. image:: /images/cleancode.png
+
+Allikas: https://blog.codinghorror.com/content/images/uploads/2009/02/6a0120a85dcdae970b012877707a45970c-pi.png
 
 ----
 
