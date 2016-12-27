@@ -11,6 +11,8 @@ Näites on klassi definitsioon *public class Example*. Faili nimi tuleneb klassi
 
 .. image:: http://etutorials.org/shared/images/tutorials/tutorial_161/02fig02.gif
 
+.. image:: https://github.com/tutjava/materjalid/blob/master/images/fileStructure.gif
+
 Näitena toodud koodis on vaid üks funktsioon ning see liidab kokku 2 ette antud numbrit.
 Main meetodis kutsume välja funktsioone, mida soovime käima panna (antud juhul addNumbers). 
 
