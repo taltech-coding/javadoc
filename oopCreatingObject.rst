@@ -129,7 +129,7 @@ Seejärel kasutades **new** võtmesõna loome objekti, mille konstruktor saab si
         
 Arvuti mälus tomuvat vastavalt näitele illustreerib allolev pilt. Siin on näha, et kaks muutujat viitavad samale objektile.    
 
-.. image:: http://math.hws.edu/javanotes/c5/objects-in-heap.png
+.. image:: /images/creatingObject.png
 
 Kui muuta :code:`std1.test1 = 100.0`, siis muutub mälus vastav objekt. Kuna *std2* viitab ka samale objektile, siis :code:`std2.test1` väärtus on ka :code:`100.0`.
 
