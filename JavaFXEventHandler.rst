@@ -1,13 +1,13 @@
 ====================
-JavaFX Event handler
+*JavaFX Event handler*
 ====================
-JavaFX-is on iga tegevus mingi notifikatsioon. Kui kasutaja vajutab mingit nuppu, klahvi, liigutab hiirt või teeb teisi tegevusi, antakse välja *evente*. Event handleritega saab nendele ligi ning lisada mingile klahvile funktsionaalsust. 
+JavaFX-is on iga tegevus mingi notifikatsioon. Kui kasutaja vajutab mingit nuppu, klahvi, liigutab hiirt või teeb teisi tegevusi, antakse välja *event*'e. *Event handler*'itega pääseb neile ligi, samuti saab *event handler*'i abil lisada mingile klahvile funktsionaalsusi. 
 
-Event
------
-Event kujutab endast midagi huvipakkuvat programmile: näiteks hiire liigutamist või klahvi vajutamist. JavaFX-is on event kas *javafx.event.Event* class või mingi selle alamklass. JavaFX-is on suhteliselt palju erinevaid evente, näiteks: *DragEvent, KeyEvent, MouseEvent, ScrollEvent* ja palju teisi. On võimalik ka ise enda evente defineerida kui laiendada Event classi.
+*Event*
+-------
+*Event* kujutab endast midagi huvipakkuvat programmile, näiteks hiire liigutamist või klahvi vajutamist. JavaFX-is on event kas *javafx.event.Event* *class* või mingi selle alamklass. JavaFX-is on suhteliselt palju erinevaid evente, näiteks: *DragEvent, KeyEvent, MouseEvent, ScrollEvent* ja palju teisi. On võimalik ka ise enda evente defineerida kui laiendada *Event* klassi.
 
-Evendi tüüpe on kolm tükki.
+*Event*'i tüüpe on kolm tükki.
 
 - KEY_PRESSED
 - KEY_RELEASED
@@ -51,7 +51,7 @@ Koodi näide, kus tehakse nupp, mille vajutamisel prindib "Hello World":
 	    }
 	}
 
-Seal koodis on pikalt välja kirjutatud .setOnAction ja kuidas see töötab, kuid seda on võimalik kirjutada ka lambdaga. 
+Seal koodis on pikalt välja kirjutatud *.setOnAction* ja kuidas see töötab, kuid seda on võimalik kirjutada ka lambdaga. 
 
 .. code-block:: java
 
@@ -67,7 +67,7 @@ Seal koodis on pikalt välja kirjutatud .setOnAction ja kuidas see töötab, kui
 	// With Lambda (Lambdas are future)
 	btn.setOnAction(event -> System.out.println("Hello World"));
 
-Lambdadega saab kirjutada ka terveid funktsioone, mitte ainult ühte käsku, nagu järgmises koodi näites on näha. Koodis on tetrise mängu kood, kui vajutada start nuppu.
+Lambdadega saab kirjutada ka terveid funktsioone, mitte ainult ühte käsku, nagu järgmises koodi näites on näha. Tegemist on tetrise mängu koodijupiga, kui vajutada *start* nuppu käivitatakse mängu *timeline*, juhul kui seda pole juba käivitatud.
 
 .. code-block:: java
 	
@@ -78,5 +78,5 @@ Lambdadega saab kirjutada ka terveid funktsioone, mitte ainult ühte käsku, nag
             }
         });
 
-Event handlerile hea õpetus : http://docs.oracle.com/javafx/2/events/jfxpub-events.htm
-Erinevad evendid : http://docs.oracle.com/javafx/2/events/convenience_methods.htm
+*Event handler*'ile hea õpetus : http://docs.oracle.com/javafx/2/events/jfxpub-events.htm
+Erinevad *event*'id : http://docs.oracle.com/javafx/2/events/convenience_methods.htm
