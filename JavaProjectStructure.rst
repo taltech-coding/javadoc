@@ -10,8 +10,6 @@ Java projekt koonseb tüüpiliselt ühest kaustast, kus asub java lähtekood. Or
 Näide
 -----
 
-.. image:: https://www.upload.ee/thumb/6403090/JavaProjectBuild.PNG
-
 .. image:: https://github.com/tutjava/materjalid/blob/master/images/projectStructure.png
 
 Antud projektis on 2 paketti ja 4 klassi. *Animal* paketis on loomade klassid (sinna saab neid ka lisada) ning *person* paketis asub inimese klass. *Main* klassi kasutame koodi jooksutamiseks.
