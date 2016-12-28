@@ -7,10 +7,8 @@ tegevust saab korrata mitu korda.
 
 .. image:: https://github.com/tutjava/materjalid/blob/master/images/JavaFXHelloWorldUI.png
 
-Oluline on meeles pidada, et klass, mis käivitab *JavaFX* rakenduse laiendab *Application* klassi,
-seega peab selles klassis olema ka *start()* meetod, mis võtab endale sisendiks *Stage* objekti.
-Rakendus käivitatakse *main* meetodis väljakutse *launch(args)* abil.
-
+Koodinäide
+----------
 
 .. code-block:: java
 
@@ -70,7 +68,39 @@ Rakendus käivitatakse *main* meetodis väljakutse *launch(args)* abil.
     }
 
 
+
+Olulised põhitõed
+-----------------
+
+- *JavaFX* rakenduse põhiklass laienadab *javafx.application.Application* klassi.
+- *start()* meetod käivitab rakenduse, tegemist on alguspunktiga kõikides *JavaFX* rakendustes.
+- *JavaFX* rakendustes defineeritakse kasutajaliides *stage*'i ning *scene*'i abil.
+- *stage* klass on *JavaFX*'is kõrgeima astme konteiner/ mahuti.
+- *scene* klass on aga konteiner kogu kasutajaliidese sisule.
+
+Kuidas infot säilitatakse?
+--------------------------
+
+- *JavaFX*'is säilitatakse *scene*'i hierarhilist sisu sõlmedest (*nodes*) koosneva graafina.
+- Antud näites on juursõlmeks ehk *root node*'iks *StackPane* objekt.
+- Juursõlm jälgib seda, kas *stage*'i suurust muudetakse ning muudab oma suurust vastavalt sellele.
+- Antud juhul on *root node*'il üks *child node* - nupp.
+- Nupul on tekst ning *event handler*, mille abil prinditakse tekst konsooli, kui nuppu vajutatakse.
+
+.. image:: https://github.com/tutjava/materjalid/blob/master/images/JavaFXHelloWorldSceneGraph.png
+
+
+JAR fail
+--------
+
+- *JavaFX* rakendus ei vaja *main()* meetodit, kui koodist tehakse JAR fail, mille hulka kuulub ka *javaFX Launcher*.
+- JAR faili loomiseks saab kasutada *JavaFX Packager* tööriista.
+
+Lisainfo
+--------
+
 Teisi kasulikke *JavaFX* näiteid leiab lingilt:
 http://docs.oracle.com/javafx/2/get_started/jfxpub-get_started.htm
+
 
 
