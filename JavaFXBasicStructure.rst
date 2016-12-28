@@ -5,7 +5,7 @@
 Allpool olev kood loob rakenduse, mis kuvab kasutajaliidese, millel on nupp, sellele vajutades prinditakse konsooli "*Hello World*", 
 tegevust saab korrata mitu korda.
 
-.. image:: https://s27.postimg.org/941g09jur/Screenshot_75.png
+.. image:: https://github.com/tutjava/materjalid/blob/master/images/JavaFXHelloWorldUI.png
 
 Oluline on meeles pidada, et klass, mis käivitab *JavaFX* rakenduse laiendab *Application* klassi,
 seega peab selles klassis olema ka *start()* meetod, mis võtab endale sisendiks *Stage* objekti.
