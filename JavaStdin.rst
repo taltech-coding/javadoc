@@ -83,7 +83,7 @@ Väljund:
 
 
 
-*BufferedReader* klass
+BufferedReader klass
 ----------------------
 
 BufferedReaderit saab samuti kasutada erinevate sisendite lugemiseks, kuid see vaid loeb teksti ja tagastab selle.
