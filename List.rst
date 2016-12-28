@@ -63,7 +63,7 @@ Koodinäide, kuidas ArrayListi lisada asju ja sellega töödelda.
 
 
 Eelmises näites käidi List läbi tavalise for-loopiga.
-Veel mõned viisid, kuidas Listi läbi käia ja seda töödelda:
+Siin on veel mõned viisid, kuidas Listi läbi käia ja seda töödelda:
 
 
 .. code-block:: java
