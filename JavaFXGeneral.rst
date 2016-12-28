@@ -10,7 +10,7 @@ samuti on võimalik eraldi luua rakenduse *backend* kasutades Java koodi ning *f
 *JavaFX* kasutajaliideseid saab luua ka koodi kirjutamata, selle jaoks on loodud eraldi rakendus *SceneBuilder*, 
 mis aitab lihtsalt luua kujundust ja rakenduse visuaalset ülesehitust,
 ning aitab kergelt siduda Javas kirjutatud rakenduse loogika (meetodid)
-ning kujunduselemendid (erinavad *JavaFX* objektid). *SeneBuilder* loob ise FXML faili sisu,
+ning kujunduselemendid (erinavad *JavaFX* objektid). *SceneBuilder* loob ise FXML faili sisu,
 rakenduse loojal tuleb ainult vajalikud elemendid ekraanil õigesse kohta panna.
 
 Kust saada *JavaFX*?
