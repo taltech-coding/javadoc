@@ -2,6 +2,7 @@
 Sisendi lugemine standardsisendist
 ==================================
 
+Standardsisend on sisend mida saab programmi sisestada. Kui seda pole mujale suunatud, ootab programm standardsisendit programmi käivitanud klaviatuurilt.
 Kasutaja sisendit saab Javas konsoolist lugeda mitmel viisil.
 
 **NB** Sisendi-väljundiga töötades peab tegelema ka IOExceptioniga.
