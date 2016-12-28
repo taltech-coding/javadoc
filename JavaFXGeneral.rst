@@ -29,7 +29,7 @@ IntelliJ pakub ka võimalust, mis laseb *SceneBuilder*'it kasutada otse koodikir
 *SceneBuilder*'i saab alla laadida järgnevalt lingilt:
 http://gluonhq.com/labs/scene-builder/
 
-.. image:: https://s28.postimg.org/wm7lwnyil/Screenshot_74.png
+.. image:: https://github.com/tutjava/materjalid/blob/master/images/JavaFXSceneBuilder.png
 
 Kuidas luua *JavaFX* projekti?
 ------------------------------
