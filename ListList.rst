@@ -1,9 +1,10 @@
-======================
-Kahemõõtelised kogumid
-======================
+=======================
+Kahemõõtmelised kogumid
+=======================
 
-Peale primitiivsete andmetüüpide ja objektide võib Javas järjend või list koosneda ka teistest järjenditest või listidest.
+Peale primitiivsete andmetüüpide ja objektide võib Javas järjend või massiiv koosneda ka teistest järjenditest või massiividest.
 Neid saab kogumisse lisada, sealt lugeda ja muidu neid kasutada täpselt samamoodi kui teisi andmeid.
+
 **NB** Järjendisse saab lisada massiive (nt *ArrayList<int[]>*), aga massivi ei saa lisada järjendeid.
 
 Kahemõõtmeline massiiv
