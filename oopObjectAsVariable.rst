@@ -76,10 +76,6 @@ Kirjutame näiteklassi, mille main-meetodis loome kaks **Point** objekti, ja lis
             System.out.println("Coordinates of pp after change:");
             System.out.println("(" + pp.getX() + ", " + pp.getY() + ")");
         }
-
-        private static void printCoordinates(Point p) {
-            System.out.println("(" + p.getX() + ", " + p.getY() + ")");
-        }
     }
 
 Koodi käivitamisel näeme, et p1 muutmisel muutusid tõepoolest ka pp koordinaadid ning võime järeldada, et pp viitab p1-le::
@@ -93,8 +89,6 @@ Koodi käivitamisel näeme, et p1 muutmisel muutusid tõepoolest ka pp koordinaa
     (9, 10)
     (3, 8)
     Coordinates of pp after change:
-    (9, 10)
-    Coordinates of p1 directly:
     (9, 10)
 
 Kui me tahaksime koodi ümber teha nii, et ühe muutuja kaudu objektis tehtud muudatus ei mõjutaks teisi, tuleb meil teha sellest objektist koopia. Selle jaoks on olemas spetsiaalne meetod nimega **clone**, mille kohta saab lähemalt lugeda näiteks eriliste meetodite peatükis siinsamas juhendis.
@@ -164,7 +158,7 @@ Tulemus on identne eelmisega::
     (9, 10)
     (3, 8)
     Coordinates of pp after change:
-    (9, 0)
+    (9, 10)
 
 Kui me ei tea täpselt, kuidas funktsioon töötab, ning eesmärgiks pole objekti sisu muuta, oleks mõistlik objekt enne kloonida. Siis saame klooni argumendina kaasa anda ning objekti algne sisu säilib olenemata funktsiooni sisust.
 
