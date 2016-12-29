@@ -55,13 +55,13 @@ Kirjutame näiteklassi, mille main-meetodis loome kaks **Point** objekti, ja lis
             // Print coordinates
             System.out.println("Coordinates of p1 and p2 before change:");
             for (Point point: pointList) {
-                printCoordinates(point);
+                System.out.println("(" + point.getX() + ", " + point.getY() + ")");
             }
 
             // Create new variable which refers to p1
             Point pp = p1;
             System.out.println("Coordinates of pp, which refers to p1:");
-            printCoordinates(pp);
+            System.out.println("(" + pp.getX() + ", " + pp.getY() + ")");
 
             // Change coordinates of p1
             p1.setX(9);
@@ -70,11 +70,15 @@ Kirjutame näiteklassi, mille main-meetodis loome kaks **Point** objekti, ja lis
             // Print again
             System.out.println("Coordinates of p1 and p2 after change:");
             for (Point point: pointList) {
-                printCoordinates(point);
+                System.out.println("(" + point.getX() + ", " + point.getY() + ")");
             }
 
             System.out.println("Coordinates of pp after change:");
-            printCoordinates(pp);
+            System.out.println("(" + pp.getX() + ", " + pp.getY() + ")");
+        }
+
+        private static void printCoordinates(Point p) {
+            System.out.println("(" + p.getX() + ", " + p.getY() + ")");
         }
     }
 
@@ -100,10 +104,15 @@ Objekt argumendina
 
 Nagu teisi muutujaid, saab ka objekte kasutada argumentidena. Tegelikult tegime seda juba eespool, lisades Point objekti **add** meetodi abil ArrayList'i.
 
+Objekti lugemine
+----------------
+
 Teeme oma näiteklassi ümber nii, et punkti koordinaatide printimine toimuks eraldi meetodi **printCoordinates** abil. Väljundi loetavuse huvideks võiks koordinaadid olla ka sulgudega ümbritsetud. Kuna tegime eraldi meetodi, võime seda lihtsasti muuta.
 
 .. code-block:: java
 
+    import java.util.ArrayList;
+    
     class ObjectVariableExample {
         public static void main(String[] args) {
             Point p1 = new Point(0, 0);
@@ -138,6 +147,10 @@ Teeme oma näiteklassi ümber nii, et punkti koordinaatide printimine toimuks er
             System.out.println("Coordinates of pp after change:");
             printCoordinates(pp);
         }
+
+        private static void printCoordinates(Point p) {
+            System.out.println("(" + p.getX() + ", " + p.getY() + ")");
+        }
     }
     
 Tulemus on identne eelmisega::
@@ -151,8 +164,71 @@ Tulemus on identne eelmisega::
     (9, 10)
     (3, 8)
     Coordinates of pp after change:
-    (9, 10)
+    (9, 0)
+
+Kui me ei tea täpselt, kuidas funktsioon töötab, ning eesmärgiks pole objekti sisu muuta, oleks mõistlik objekt enne kloonida. Siis saame klooni argumendina kaasa anda ning objekti algne sisu säilib olenemata funktsiooni sisust.
+
+Objekti muutmine
+----------------
+
+Loome veel ühe meetodi, mille ülesanne on suurendada punkti koordinaate ühe võrra.
+
+.. code-block:: java
+
+    private static void increaseCoordinates(Point p) {
+        p.setX(p.getX() + 1);
+        p.setY(p.getY() + 1);
+    }
+    
+Muudame eelmist näidet nii, et uute koordinaatide määramise asemel suurendame p1 koordinaate ühe võrra. 
+
+.. code-block:: java
+
+    public static void main(String[] args) {
+        Point p1 = new Point(0, 0);
+        Point p2 = new Point(3, 8);
+
+        ArrayList<Point> pointList = new ArrayList<>();
+
+        pointList.add(p1);
+        pointList.add(p2);
+
+        // Print coordinates
+        System.out.println("Coordinates of p1 and p2 before change:");
+        for (Point point: pointList) {
+            printCoordinates(point);
+        }
+
+        // Create new variable which refers to p1
+        Point pp = p1;
+        System.out.println("Coordinates of pp, which refers to p1:");
+        printCoordinates(pp);
+
+        // Increase coordinates of p1 by 1
+        increaseCoordinates(p1);
+
+        // Print again
+        System.out.println("Coordinates of p1 and p2 after change:");
+        for (Point point: pointList) {
+            printCoordinates(point);
+        }
+
+        System.out.println("Coordinates of pp after change:");
+        printCoordinates(pp);
+    }
+    
+Kui algselt olid p1 koordinaadid (0, 0), siis nüüd on koordinaatideks (1, 1)::
+
+    Coordinates of p1 and p2 before change:
+    (0, 0)
+    (3, 8)
+    Coordinates of pp, which refers to p1:
+    (0, 0)
+    Coordinates of p1 and p2 after change:
+    (1, 1)
+    (3, 8)
+    Coordinates of pp after change:
+    (1, 1)
+
 
 Taaskord tuleb meeles pidada, et kaasa ei anta mitte koopiat objektist, vaid viide. See tähendab, et kui funktsiooni sees meie objekti kuidagi muudetakse, siis need muudatused on püsivad.
-
-Kui me ei tea täpselt, kuidas funktsioon töötab, ning eesmärgiks pole objekti sisu muuta, oleks mõistlik eelnevalt objekt kloonida. Siis saame klooni argumendina kaasa anda ning objekti algne sisu säilib olenemata funktsiooni sisust.
