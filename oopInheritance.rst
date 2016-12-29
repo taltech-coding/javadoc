@@ -1,7 +1,7 @@
-*Inheritance* ehk klasside laiendamine
-======================================
+*Inheritance* ehk pärimine
+==========================
 
-Klasside laiendamise ehk *Inheritance*'i abil saab luua ülemklasse ning neile vastavaid alamklasse. 
+Inheritance*'i ehk pärimise abil saab luua ülemklasse ning neile vastavaid alamklasse. 
 Ülemklass on justkui üldisem mõiste, mille alla saavad kuuluda täpsemad sama mõistet kirjeldavad mõisted.
 Näiteks võib üldisemaks mõisteks olla pirukas, omakorda on aga olemas ka magusad ja soolased prirukad,
 soolased pirukad on võimalik jaotada näiteks juustu-, liha-, kapsa- ning porgandipirukateks.
@@ -22,7 +22,8 @@ Klasside laiendamisel kehtivad järgmised reeglid:
 
 Klasse saab muuta alamklassideks kasutades *extends* võtmesõna.
 Oluline on silmas pidada, et klasse laiendades eksisteeriks kahe klassi vahel ülem- ja alamklasse iseloomustav suhe,
-näiteks klassi *Car* alamklassiks ei saa olla *Wheel*, küll aga saab laiendavaks klassiks olla *Hatchback* või *Convertible*.
+näiteks klassi *Car* alamklassiks ei saa olla *Wheel*, küll aga saab laiendavaks klassiks olla *Hatchback* või *Convertible*, juhul kui puudub ülem- ning alamklasse iseloomustav suhe tuleks kasutada hoopis kompositsiooni.
+
 Oletame et on olemas järgnev klass:
 
 .. code-block:: java
@@ -39,9 +40,30 @@ mida soovime laiendada, antud juhul *Pie*.
     public class SavouryPie extends Pie {
        
     }
-    
-    
-Siia tuleb kirjutada veel pärimise kohta
+ 
+
+Meetodid
+--------
+
+Alamklassi objektide kohta saab kutsuda välja ülemklassis defineeritud meetodeid. Alamklassidesse võib aga lisada ka ainult alamklassile omaseid meetodeid, mida ülemklassi objektide kohta välja kutsuda ei saa.
+
+*Override* võtmesõna
+ --------------------
+
+*Override* võtmesõna kasutatakse meetodite ülekirjutamiseks, alamklassis defineeritakse sama nime ning samasuguste argumentidega
+meetod nagu ülemklassis, meetodil peab olema ka sama tagastustüüp või ülemklassi tagastustüübi alamtüüp. Tavaliselt kasutatakse ülekirjutamist, kui alamklassi objektiga
+peab saama teha sarnast tegevust nagu ülemklassi objektidega, kuid on vaja arvesse võtta mõningaid üksikud alamklassile omased tegevusi
+või omadusi, selleks defineeritakse sama nimega meetod, mille sisu erineb pisut ülemklassi samanimelise funktsiooni koodist.
+Täpsemalt selle kohta lugeda OOP *Override* ja *Overload* teema juures: https://github.com/tutjava/materjalid/blob/master/oopOverrideVsOverload.rst
+
+Konstruktorid
+-------------
+
+Uut alamklassi objekti luues kutsutakse kõigepealt alati välja ülemklassi konstruktor. Juhul kui ülemklassis on ainult argumentidega konstruktor ning alamklassi konstrukoris pole kasutatud *super()* võtmesõna abi, et ülemklassi argumentidega konstruktorit välja kutsuda, siis kirjutatud kood ei kompileeru. Kui ülemklassis pole konstruktorit, siis kasutatakse kompileerimisel vaikimisi argumenita konstruktorit, samuti kompileerub kood, kui ülemklassis on olemas argumendita konstruktor.
+Detailsemalt käsitletakse konstruktoreid:
+https://github.com/tutjava/materjalid/blob/master/oopConstructor.rst
+*super* võtmesõna kohta saab lisainfot:
+https://github.com/tutjava/materjalid/blob/master/oopSuper.rst
 
 
 
