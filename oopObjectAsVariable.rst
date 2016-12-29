@@ -101,7 +101,7 @@ Nagu teisi muutujaid, saab ka objekte kasutada argumentidena. Tegelikult tegime 
 Objekti lugemine
 ----------------
 
-Teeme oma näiteklassi ümber nii, et punkti koordinaatide printimine toimuks eraldi meetodi **printCoordinates** abil. Väljundi loetavuse huvideks võiks koordinaadid olla ka sulgudega ümbritsetud. Kuna tegime eraldi meetodi, võime seda lihtsasti muuta.
+Teeme oma näiteklassi ümber nii, et punkti koordinaatide printimine toimuks eraldi meetodi **printCoordinates** abil, millele anname väljatrükitava punkti argumendina kaasa.
 
 .. code-block:: java
 
