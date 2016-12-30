@@ -1,22 +1,22 @@
 ==============
 Loend ehk List
 ==============
-Loend on korrasatud andmekogum, mis tähendab, et see säilitab elementide järjekorra. Kui lisada elemendid loendisse, siis hiljem on nad lugemisel täpselt samas järjekorras kui pärast sisestamist.
+Loend on korrastatud andmekogum, mis tähendab, et see säilitab elementide järjekorra. Kui lisada elemendid loendisse, siis hiljem on nad lugemisel täpselt samas järjekorras kui sisestamisel.
 
 Javas on mitmeid erinevaid loendeid, kuid enim kasutatavad on *Arraylist*  ning *List*.
 
 ArrayList
 ---------
-ArrayList on dünaamiline masiiv. See töötab enamjaolt nagu massiiv, kuid selle pikkus on dünaamiline. Kui massiivis pidi loomisel teadma kui suur ta on, siis *ArrayList*'is ei ole seda tarvis teada. Loend suureneb ise vastavalt vajadusele
+ArrayList on dünaamiline masiiv. See töötab enamjaolt nagu massiiv, kuid selle pikkus on dünaamiline. Kui massiivis peab loomisel teadma, kui suur ta on, siis *ArrayList*'is ei ole seda tarvis teada. Loend suureneb ise vastavalt vajadusele.
 
 ArrayList vs LinkedList
 -----------------------
 
 Nii ArrayList kui ka LinkedList on kaks enimkasutatud listi tüüpi, mõlemal on omad eelised.
-- **ArrayList** - ArrayLististi on parem kasutada kui võtta elemente niivõrd kuivõrd randomilt
-- **LinkedList** - LinkedListi on parem kasutada kui on vaja kiirelt lisada või eemaldada elemente listi lõpust.
+- **ArrayList** - ArrayListi on parem kasutada, kui võtta elemente niivõrd-kuivõrd randomilt
+- **LinkedList** - LinkedListi on parem kasutada, kui on vaja kiirelt lisada või eemaldada elemente listi lõpust.
 
-Koodi näide kuidas ArrayListi lisada asju ja sellega töödelda.
+Koodinäide, kuidas ArrayListi lisada asju ja sellega töödelda.
 
 .. code-block:: java
 
@@ -40,7 +40,7 @@ Koodi näide kuidas ArrayListi lisada asju ja sellega töödelda.
 			// The rest of the list is shifted:
 			// List: 1, 3, 4
 	 	
-			arrayList.add(1, 2); // Adding value 2 into the given index.
+			arrayList.add(1, 2); // Adding value 2 into the index 1.
 			// All elements are again shifted:
 			// List: 1, 2, 3, 4
 	 	
@@ -61,7 +61,9 @@ Koodi näide kuidas ArrayListi lisada asju ja sellega töödelda.
  		}
 	}
 
-Viisid kuidas Listi läbi käija ja sellega töödelda eelmise koodi näite põhjal oli ainult üks välja toodid, tavaline for loop.
+
+Eelmises näites käidi List läbi tavalise for-loopiga.
+Siin on veel mõned viisid, kuidas Listi läbi käia ja seda töödelda:
 
 
 .. code-block:: java
@@ -74,7 +76,7 @@ Viisid kuidas Listi läbi käija ja sellega töödelda eelmise koodi näite põh
 	// 2) Lambda, only usable in Java 8 or newer
 	map.forEach(integer -> System.out.println(integer));
 
-	// iterator, needs to import java.util.Iterator
+	// 3) iterator, needs to import java.util.Iterator
    	Iterator<Integer> iterator = arrayList.iterator();
    	while (iterator.hasNext()) {
    	    Integer integer = iterator.next();
@@ -82,7 +84,7 @@ Viisid kuidas Listi läbi käija ja sellega töödelda eelmise koodi näite põh
    	}
 
 
-Listi sorteerimiseks või mudugi ka ise mingi proge kirjutada, kuid see on juba javasse siise ehitatud. Selleks on *Collections.sort(listName)*. Kui tahta alguses mingeid asju listi lisada siis saab kasutada ka *Arrays.asList()*.
+Listi sorteerimiseks võib muidugi ka ise programmi kirjutada, kuid see on juba Javasse ka sisse ehitatud. Selleks on *Collections.sort(listName)*. Kui tahta alguses mingeid asju listi lisada, saab kasutada ka *Arrays.asList()*.
 
 .. code-block:: java
 
@@ -93,7 +95,7 @@ Listi sorteerimiseks või mudugi ka ise mingi proge kirjutada, kuid see on juba 
 		public static void main (String[] args) {
 			// Creates a list if given Integers
 			ArrayList<Integer> arraylist = new Arraylist<>(Arrays.asList(9,1,8,2,7,3,6,4,5));
-			Collections.sort(arraylist); //This sorts the list in an ascending order
+			Collections.sort(arraylist); // Sorts the list in ascending order
 			System.out.println(arraylist.toString()); // [1, 2, 3, 4, 5, 6, 7, 8, 9]
 		}
 	}

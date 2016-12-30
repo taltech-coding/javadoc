@@ -44,6 +44,8 @@ Tagastustüüp on *String*, seega antud funktsioon tagastab *String*-tüüpi vä
         return word.substring(1);
     }
 
+Kui nähtavust ei ole defineeritud, on see *package-private*.
+
 Kuna nähtavus on *package-private*, siis see funktsioon on nähtav vaid selle paketi klassidele, kus see paikneb.
 Tagastustüüp on *List<Double>*, seega antud funktsioon tagastab *List*-tüüpi väärtuse.
 

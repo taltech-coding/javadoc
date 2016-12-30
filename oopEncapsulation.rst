@@ -16,9 +16,9 @@ Kapseldamiseks on vaja:
 *Getter* ning *Setter* meetodid
 -------------------------------
 
-*Getter* meetodit kasutatakse klassis oleva välja väärtuse teadasaamiseks,
+*Getter* meetodit kasutatakse klassis oleva välja väärtuse teada saamiseks,
 seega ei võta *getter* meetod endale sisendeid ning tagastab muutuja väärtuse.
-*Getter* meetod on *public* nähtavusega, mis tähendab
+*Getter* meetod on *public* nähtavusega, mis tähendab, 
 et klassis olevale väljale on vaatamata *private* nähtavusele võimalik ligi pääseda ka teistest klassidest.
 *Getter* meetodite nimeks on *get* + VäljaNimi + (), erandiks on *boolean* väärtused,
 millel on *getter*'ite asemel nende olekut küsivad meetodid, mille nimetused on kujul *is* + BooleanMuutujaNimi + ().
