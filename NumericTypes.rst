@@ -264,6 +264,5 @@ Lisaks põhilistele numbriklassidele (Byte, Short, Long, Integer, Float, Double)
 
     BigInteger i = BigInteger.valueOf(Integer.MAX_VALUE); // Largest int value (2147483647)
     BigInteger j = BigInteger.valueOf(1);
-'
     BigInteger sum = i.add(j);
     System.out.println(sum.toString());                   // Result is 2147483648
