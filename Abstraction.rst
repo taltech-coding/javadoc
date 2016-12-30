@@ -12,6 +12,7 @@ Abstraktsus on kasulik näiteks juhul, kui sul on meetod, mida kõik alamklassid
 Võtame näiteks ülemklassi Animal:
 
 .. code-block:: java
+
     public abstract class Animal {
         public void eat(Food food) {
             // eat food
@@ -27,6 +28,7 @@ Võtame näiteks ülemklassi Animal:
 Kõik loomad söövad ja magavad ühtemoodi, järelikult need meetodid on ülemklassis implementeeritud. Kõik loomad samuti teevad häält, aga erinevad loomad teevad erinevat häält, nii et makeNoise meetodi peab igas alamklassis erinevalt implementeerima.
 
 .. code-block:: java
+
     public Dog extends Animal {
         public void makeNoise() {
             System.out.println("Woof");
