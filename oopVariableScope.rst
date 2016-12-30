@@ -58,5 +58,8 @@ Samas tsükli sees deklareeritud muutuja kehtib ainult ühe tsükli iteratsiooni
 
     for (int i = 0; i < 10; i++) {
         int j = 2;
-        System.out.println(i + j);
+        System.out.println(j);
+        j++
     }
+
+Antud tsükkel prindib alati :code:`2`, kuna iga iteratsioon deklareeritakse muutuja j uuesti.
