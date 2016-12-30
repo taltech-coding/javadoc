@@ -84,4 +84,4 @@ Järgnev koodinäide kasutab *openStream()* meetodit, et saada sisendvoog URL'is
         }
     }
   
-Kui panna antud kood tööle, peaks nägema konsoolis veebilehe  http://www.oracle.com/ HTML koodi ning tekstilist sisu, juhul kui ei suudeta leida Oracle'i serverit või URL'i lugemisel tekib mõni muu viga kuvatakse terminalis hoopis veateadet.
+Kui panna antud kood tööle, peaks nägema konsoolis veebilehe  http://www.oracle.com/ HTML koodi ning tekstilist sisu; juhul kui ei suudeta leida Oracle'i serverit või URL'i lugemisel tekib mõni muu viga, kuvatakse terminalis hoopis veateadet.
