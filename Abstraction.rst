@@ -7,6 +7,7 @@ Mis on abstraktsioon?
 
 Abstraktne meetod on meetod, mis on deklareeritud, kuid millel pole implementatsiooni, ehk see on olemas kuid ei tee midagi.
 Abstraktne klass on klass, milles on vähemalt üks abstraktne meetod.
+
 Abstraktsus on kasulik näiteks juhul, kui sul on meetod, mida kõik alamklassid peavad realiseerima, aga kõik realiseerivad seda erinevalt.
 
 Võtame näiteks ülemklassi Animal:
@@ -41,8 +42,9 @@ Kõik loomad söövad ja magavad ühtemoodi, järelikult need meetodid on ülemk
         }
     }
 
+Nii Dog kui Cat alamklassis on makeNoise meetod realiseeritud
 
 Miks on abstraktsioon kasulik?
 ------------------------------
 
-Abstraktne klass on ideeliselt segu tavalisest klassist ja interface'ist. Samamoodi saaks Animal klassi deklareerida interface'ina ja lasta Dog ja Cat klassil seda implementeerida, aga siis peaks igas klassis ka eat ja sleep meetodid eraldi implementeerima. Abstraktse klassiga on võimalik osad meetodid ära implementeerida ning jätta osad meetodid abstraktseks. Abstraktset klassi saab kasutada samamoodi kui tavalist klassi.
+Abstraktne klass on ideeliselt segu tavalisest klassist ja interface'ist. Samamoodi saaks Animal klassi deklareerida interface'ina ja lasta Dog ja Cat klassil seda implementeerida, aga siis peaks igas klassis ka eat ja sleep meetodid eraldi implementeerima. Abstraktse klassiga on võimalik osad meetodid ära implementeerida ning jätta osad meetodid abstraktseks ning siis saab abstraktset klassi saab kasutada samamoodi kui tavalist klassi.
