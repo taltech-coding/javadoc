@@ -57,8 +57,8 @@ Tavaliselt kasutatakse ülekirjutamist,
 kui alamklassi objektidega
 peab saama teha sarnast tegevust nagu ülemklassi objektidega, 
 kuid on vaja arvesse võtta mõningaid üksikud alamklassile omased tegevusi
-või omadusi, 
-selleks defineeritakse sama nimega meetod, mille sisu erineb pisut ülemklassi samanimelise funktsiooni koodist. 
+või omadusi.
+Selleks defineeritakse sama nimega meetod, mille sisu erineb pisut ülemklassi samanimelise funktsiooni koodist. 
 
 Täpsemalt on võimalik selle kohta lugeda OOP *Override* ja *Overload* teema juures:
 https://github.com/tutjava/materjalid/blob/master/oopOverrideVsOverload.rst
@@ -69,8 +69,8 @@ Konstruktorid
 Uut alamklassi objekti luues kutsutakse kõigepealt alati välja ülemklassi konstruktor. 
 Juhul kui ülemklassis on ainult argumentidega konstruktor ning alamklassi konstrukoris pole kasutatud *super()* võtmesõna abi, 
 et ülemklassi argumentidega konstruktorit välja kutsuda, siis kirjutatud kood ei kompileeru. 
-Kui ülemklassis pole konstruktorit, siis kasutatakse kompileerimisel vaikimisi argumendita konstruktorit, 
-samuti kompileerub kood, kui ülemklassis on olemas argumendita konstruktor.
+Kui ülemklassis pole konstruktorit, siis kasutatakse kompileerimisel vaikimisi argumendita konstruktorit. 
+Samuti kompileerub kood, kui ülemklassis on olemas argumendita konstruktor.
 
 Detailsemalt käsitletakse konstruktoreid:
 https://github.com/tutjava/materjalid/blob/master/oopConstructor.rst
