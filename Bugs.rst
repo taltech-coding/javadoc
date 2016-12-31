@@ -93,7 +93,7 @@ Programmi väljund:
 
 Kui meetod *m2* sees peaks tekkima viga, siis otsib Java virtuaalmasin veatöötlust, näiteks *try ... catch* blokki. Kui selles meetodis veatöötlus puudub, siis otsitakse seda *m1* meetodist. Kuna aga *m1* blokis see puudub, siis otsitakse omakorda *main* meetodist. Kui aga lõpuks ka *main* meetodis puudub veatöötlus, visatakse veateade.
 
-Näiteks muutes meetodit *m2()*:
+Näiteks muutes meetodit *m2*:
 
 .. code:: java
 
