@@ -40,26 +40,25 @@ kas genereerida *Getter*, *Setter* või suisa mõlemad korraga.
     public class EncapsulationExample {
 
     // All of these fields have private visibility
-    
+
     private int number;
     private boolean state = false;
-    private Dishwasher dishwasher;
-    
-    public Dishwasher getDishwasher() {
+    private ArrayList<Integer> list;
+
+    public ArrayList<Integer> getList() {
 
         //returns the field variable
 
-        return dishwasher;
+        return list;
     }
 
-    public void setDishwasher(Dishwasher dishwasher) {
+    public void setList(ArrayList<Integer> list) {
 
         // The word this refers to the current class
         // in this instance EncapsulationExample
 
-        this.dishwasher = dishwasher;
+        this.list = list;
     }
-
 
     public boolean isState() {
         return state;
@@ -81,13 +80,13 @@ kas genereerida *Getter*, *Setter* või suisa mõlemad korraga.
     public static void main(String[] args) {
 
         // Getter and setter methods can be used in other classes
-        
+
 
         EncapsulationExample example = new EncapsulationExample();
 
 
         // Returns 0 because number doesn't have a value yet
-        example.getNumber();
+        System.out.println(example.getNumber());
 
 
         // This setter gives a value to the variable number
@@ -95,7 +94,7 @@ kas genereerida *Getter*, *Setter* või suisa mõlemad korraga.
 
 
         // Returns false, since it already has a set value
-        example.isState();
+        System.out.println(example.isState());
 
 
         // Changes the value of state to true
@@ -103,22 +102,31 @@ kas genereerida *Getter*, *Setter* või suisa mõlemad korraga.
 
 
         // Now this getter returns true
-        example.isState();
+        System.out.println(example.isState());
 
 
-        // Creates a new dishwasher object
-        Dishwasher dishwasher = new Dishwasher();
+        // Creates a new ArrayList object
+        ArrayList<Integer> list = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5, 6));
 
 
         // Getter and Setter methods can be used with any type of objects
-        example.setDishwasher(dishwasher);
+        example.setList(list);
 
 
-        // Returns the dishwasher object that was created earlier
-        example.getDishwasher();
+        // Returns [1, 2, 3, 4, 5, 6]
+        System.out.println(example.getList().toString());
 
     }
  }
+ 
 
+See koodinäide tagastab:
+
+.. code-block:: java
+
+    0
+    false
+    true
+    [1, 2, 3, 4, 5, 6]
 
 
