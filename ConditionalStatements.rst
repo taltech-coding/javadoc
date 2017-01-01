@@ -57,8 +57,6 @@ Programmis on näha, et testScore võib korraga täita mitut tingimust: 78 >= 70
 Stiil
 ------
 
-.. image:: /images/condition.png
-
 Kehv stiil:
 
 .. code-block:: java
@@ -74,7 +72,10 @@ Parem stiil:
 .. code-block:: java
 
     return booleanExpression;
+    
+.. image:: /images/condition.png
 
+Allikas: http://thecodinglove.com/post/143122431685/that-moment-when
 
 Tingimus *if*-lauses
 -----------------------
