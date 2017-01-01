@@ -33,7 +33,7 @@ Piltlikult öeldes saab antud muutujat kasutada samal ja madalamal tasemel, kui 
     }
     x += 3;
 
-If-lause sees deklareeritud muutujat ei kehti lausest väljas.
+If-lause sees deklareeritud muutujad ei kehti lausest väljas.
 
 .. code-block:: java
 
