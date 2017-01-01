@@ -54,6 +54,27 @@ Programmi väljund on: :code:`Grade = C`
 
 Programmis on näha, et testScore võib korraga täita mitut tingimust: 78 >= 70 ja 78 >= 60. Kui üks tingimus on täidetud, siis programm ei vaata enam järgmisi tingimusi ja läheb if-lause lõppu.
 
+Stiil
+------
+
+.. image:: /images/condition.png
+
+Kehv stiil:
+
+.. code-block:: java
+
+    if (booleanExpression) {
+        return true;
+    } else {
+        return false;
+    }
+
+Parem stiil:
+
+.. code-block:: java
+
+    return booleanExpression;
+
 
 Tingimus *if*-lauses
 -----------------------
