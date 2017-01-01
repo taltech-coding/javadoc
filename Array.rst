@@ -18,7 +18,7 @@ Kui me soovime näiteks luua täisarvude massiivi *someNumbers*, siis saaksime s
     
     int[] someNumbers = new int[10];
 
-Sellisel juhul on massiivi elemendi tüüp int (täisarv). Lisaks määratakse ka massiivi pikkus, milleks on 10 elementi, st reserveeritakse mälu massiivile. Esimene element on :code:`someNumbers[0]`. Esimese elemendi saaks väärtustada nii: :code:`someNumbers[0] = 5;`.
+Sellisel juhul on massiivi elemendi tüüp int (täisarv). Lisaks määratakse ka massiivi pikkus, milleks on 10 elementi, st reserveeritakse mälu massiivile. Esimene element on :code:`someNumbers[0]`. Esimese elemendi saaks väärtustada nii: :code:`someNumbers[0] = 5;`
 
 Peale täisarvude (*int*) massiivi on võimalik on deklareerida ka teisi tüüpi massiive:
 
