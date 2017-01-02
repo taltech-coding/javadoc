@@ -17,7 +17,7 @@ Kasutaja defineeritud erindi näide:
         
         @Override
         public String toString() {
-            return customMessage;
+            return "CustomException message: " + customMessage;
         }
     }
 
@@ -35,7 +35,7 @@ CustomExceptioni kasutamine:
 
 .. code::
 
-    This is a user defined exception.
+    CustomException message: This is a user defined exception.
 
 Kui erind laiendab Exception klassi, on see *checked* erind. *Unchecked* erindi tegemiseks tuleb laiendada RuntimeException klassi.
 
