@@ -50,12 +50,16 @@ Meetodi ülelaadimine: kas õnnestub?
 
 Toodud on mõned näited meetodi ülelaadimise kohta. Kas selliste näidete puhul meetodi ülelaadimine õnnestub või tekib kompileerimisel viga?
 
+**Näide 1**
+
 .. code-block:: java
 
     String fullName(String firstName, String lastName) {}
     String fullname(String firstName, String lastName, String middleName) {}
     
 Vastus: Õnnestub. Ülelaadimine on võimalik, kuna argumentide arv on erinev.
+
+**Näide 2**
 
 .. code-block:: java
 
@@ -64,12 +68,16 @@ Vastus: Õnnestub. Ülelaadimine on võimalik, kuna argumentide arv on erinev.
     
 Vastus: Ei õnnestu. Kuigi muutujate nimed on teises järjekorras, on argumentide nimekirjad identsed – vaadatakse vaid andmetüüpe (String, String).
 
+**Näide 3**
+
 .. code-block:: java
 
     double sum(int a, double b) {}
     double sum(int x, double y) {}
     
 Vastus: Samuti ei toimi. Taaskord vaadatakse ainult andmetüüpe ning nende järjekorda (int, double).
+
+**Näide 4**
 
 .. code-block:: java
 
@@ -78,12 +86,16 @@ Vastus: Samuti ei toimi. Taaskord vaadatakse ainult andmetüüpe ning nende jär
     
 Vastus: Töötab! Andmetüüpide järjekord on erinev (double, int; int, double).
 
+**Näide 5**
+
 .. code-block:: java
 
     double sum(int a, int b) {}
     double sum(double a, double b) {}
     
 Vastus: Samuti õige lahendus. Andmetüübid on erinevad.
+
+**Näide 6**
 
 .. code-block:: java
 
