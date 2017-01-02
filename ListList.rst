@@ -24,6 +24,7 @@ Mitmemõõtmelist massiivi initsialiseerides peab määrama kõikide massiivide 
     row2[2] = 5;
     row2[3] = 100;
 
+    // ridade lisamine maatriksisse
     matrix[0] = row1;
     matrix[1] = row2;
 
@@ -34,6 +35,10 @@ Mitmemõõtmelist massiivi initsialiseerides peab määrama kõikide massiivide 
         }
         System.out.println();
     }
+    
+    // massiivi elemendi muutmine
+    matrix[1][2] = 42;
+    System.out.println("\n" + matrix[1][2]);
 
 Antud kood trükib konsooli:
 
@@ -50,6 +55,8 @@ Antud kood trükib konsooli:
     11
     5
     100
+    
+    42
 
 
 Kahemõõtmeline järjend
@@ -71,6 +78,7 @@ Kahemõõtmeline järjend
     secondList.add("another");
     secondList.add("list");
 
+    // järjendite lisamine listOfListsi
     listOfLists.add(firstList);
     listOfLists.add(secondList);
 
@@ -79,6 +87,16 @@ Kahemõõtmeline järjend
             System.out.println(word);
         }
         System.out.println();
+    }
+    
+    // secondListi elemendi muutmine
+    secondList.set(1, "was");
+    // listOfListsi element indeksiga 1 asendatakse secondListiga
+    listOfLists.set(1, secondList);
+    
+    System.out.println();
+    for (String word : listOfLists.get(1)) {
+        System.out.println(word);
     }
 
 See kood prindib konsooli:
@@ -94,5 +112,8 @@ See kood prindib konsooli:
     is
     another
     list
-
     
+    this
+    was
+    another
+    list
