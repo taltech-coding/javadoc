@@ -48,12 +48,12 @@ Scanner klass
 ---------------
 
 Mugavam viis sisendit lugeda on kasutada Scanner klassi.
-Scanner saab lugeda erinevaid sisendeid. Standardsisendist lugemiseks tuleb talle kaasa anda System.in
-Üks Scanneri suuri eeliseid on see, et sellega saab sisendit otse *parse*-ida. Scanner klassil on palju erinevaid meetodeid, näiteks *nextInt*, *hasNext*, *findInLine*, jne, millega saab sisendi lugemist kontrollida.
+Scanner saab lugeda erinevaid sisendeid. Standardsisendist lugemiseks tuleb talle kaasa anda *System.in*.
+Üks Scanneri suuri eeliseid on see, et sellega saab sisendit otse *parse*-ida. Scanner klassil on palju erinevaid meetodeid, näiteks *nextInt*, *hasNext*, *findInLine* jne, millega saab sisendi lugemist kontrollida.
 
 Scanner *parse*-ib teksti tokeniteks, ehk tühikutega eraldatud sõnad.
 
-*hastNext* meetodid tagastavad booleani, kas järgmine token eksisteerib/on vastav väärtus.
+*hasNext* meetodid tagastavad booleani, kas järgmine token eksisteerib/on vastav väärtus.
 *next* meetodi *parse*-ivad järgmise tokeni antud tüübiks ja tagastavad selle.
 
 Kood:
