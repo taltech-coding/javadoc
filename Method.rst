@@ -10,15 +10,15 @@ Meetod täidab ideaalis ainult ühte funktsionaalsust (näiteks antakse ette 2 n
 Meetodi ülesehitus
 -----
 
-modifier − defineerib nähtavuse ning selle kasutamine on valikuline (nt public).
+*modifier* − defineerib nähtavuse ning selle kasutamine on valikuline (nt *public*).
 
-returnType − meetodi tagastustüüp (void ei tagasta midagi).
+*returnType* − meetodi tagastustüüp (*void* ei tagasta midagi).
 
-nameOfMethod − meetodi nimi. 
+*nameOfMethod* − meetodi nimi. 
 
-Parameters − parameetrid, mis meetodile ette antakse. Võib ka tühjaks jätta, kui ei soovi midagi ette anda.
+*Parameters* − parameetrid, mis meetodile ette antakse. Võib ka tühjaks jätta, kui ei soovi midagi ette anda.
 
-method body − kogu loogika, mida see meetod teeb.
+*method body* − kogu loogika, mida see meetod teeb.
 
 .. code-block:: java
 
