@@ -38,7 +38,7 @@ Kui klassis ei ole eraldi deklareeritud konstruktorit, siis java deklareerib ise
          }
     } 
 
-Argumendita konstruktor sarnaneb signatuurilt *default* konstuktoriga, kuid koodi keha võib teha ükskõik mida. Antud juhul objekti loomisel trükitakse konsooli: "This is a default constructor".
+Argumendita konstruktor sarnaneb signatuurilt *default* konstuktoriga, kuid koodi keha võib teha ükskõik mida. Antud juhul objekti loomisel trükitakse konsooli: "This is a constructor without parameters!".
 
 3. **Argumentidega konstruktor**
 
@@ -57,19 +57,55 @@ Sel juhul antakse konstuktorisse veel eraldi argumendid. Neid võib olla ükskõ
 *Konstruktorite roll objektide loomises* 
 -----------------------------------------
 
-Konstruktor võimaldab anda klassi väljadele algväärtusi, kui objekt luuakse. Ütleme, et meil on klass *Actor*, millel on väljad *fistName* ja *lastName*. Loome konstruktori *Actor* klassile.
+Konstruktor võimaldab anda klassi väljadele algväärtusi, kui objekt luuakse. Ütleme, et meil on klass *Actor*, millel on väljad *fistName* ja *lastName*. 
 
 .. code-block:: java
 
-   public class Actor() {
+    public class Actor {
         String firstName;
         String lastName;
-   
-    public Actor(String first, String last) {
-        firstName = first;
-        lastName = last;
+
+        public String getFirstName() {
+            return firstName;
+        }
+
+        public void setFirstName(String firstName) {
+            this.firstName = firstName;
+        }
+
+        public String getLastName() {
+            return lastName;
+        }
+
+        public void setLastName(String lastName) {
+            this.lastName = lastName;
+        }
     }
-   }
+
+Kui tahame luua uue objekti, siis saame seda teha nii:
+
+.. code-block:: java
+
+       public static void main(String args[]) {
+           Actor actor = new Actor();
+           actor.setFirstName("Arnold");
+           actor.setLastName("Schwarzenegger");
+       }
+
+Eelnevas koodis *new Actor()* kutsub välja Actor klassi konstruktori. Kuna me seda eraldi defineerinud ei ole, siis kasutatakse *default* konstruktorit. Sellisel kujul on objekte tüütu luua. Kuna arvatavasti igal objektil on eesnimi ja perenimi, loome mugavama konstruktori (*getter* ja *setter* meetodid on koodist välja jäätud).
+
+.. code-block:: java
+
+    public class Actor {
+   
+        public Actor(String first, String last) {
+            this.firstName = first;
+            this.lastName = last;
+        }
+        
+        // getters and setters follow
+        // ...
+    }
 
 Nüüd loome antud klassi jaoks objekti.
     
@@ -82,6 +118,8 @@ Nüüd loome antud klassi jaoks objekti.
 
 Seega on loodud uus klassi Actor objekt, mille viiteks on *arnold*, ning mille väljad *firstName = "Arnold"*, *lastName = "Schwarzenegger"*.
 
+Tuleb tähele panna, et kui klassile kirjeldatakse ära konstruktor, siis *default* konstruktor enam ei tööta. Ehk siis antud juhul me ei saa enam luua *Actor* objekti ilma argumentideta. Kui see vajadus on olemas, tuleb selline konstruktor eraldi kirjeldada (*public Actor() {}*).
+
 
 *Konstruktorite ülelaadimine* 
 -----------------------------
@@ -90,16 +128,24 @@ Seega on loodud uus klassi Actor objekt, mille viiteks on *arnold*, ning mille v
 
 .. code-block:: java
 
-   public class Actor() {
+   public class Actor {
         String firstName;
         String lastName;
-        boolean goodActor;
+        boolean goodActor = true;
 
         public Actor(String first, String last, boolean good) {
             firstName = first;
             lastName = last;
             goodActor = good;
         }
+        
+        public Actor(String first, String last) {
+            this.firstName = first;
+            this.lastName = last;
+        }
+        
+        // getters and setters follow
+        // ...
    }
 
 Ning loome vastava objekti
@@ -109,6 +155,8 @@ Ning loome vastava objekti
         public static void main(String args[]) {
             Actor a = new Actor("Arnold", "Schwarzenegger", false);
         }
+
+Töötab ka konstruktor kahe argumendiga (ees- ja perenimi). Sellisel juhul *goodActor* muutuja väärtust ei muudeta ja see jääb loodud objektil väärtusega *true*.
 
 
 Veel üks näide 
@@ -137,7 +185,7 @@ Mis on antud koodi väljundiks?
             
             public static void main(String args[]) {
                 ExampleTwo obj2 = new ExampleTwo();
-                System.out.println("var is: "+obj2.getValue());
+                System.out.println("var is: " + obj2.getValue());
             }
         } 
 
@@ -152,7 +200,7 @@ Aga nüüd kasutame main-meetodis hoopis sellist koodi:
 .. code-block:: java
 
          ExampleTwo obj2 = new ExampleTwo(77);
-         System.out.println("var is: "+obj2.getValue());
+         System.out.println("var is: " + obj2.getValue());
 
 Konsooli väljundiks on nüüd:
 
