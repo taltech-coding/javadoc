@@ -43,7 +43,7 @@ Meetoditele, muutujatele ning konstruktoritele, mis on määratud kui *private*,
       }
   }
 
-Kuna me ei saa teistest klassidest *Student* klassile ligi, siis kasutame kahte *public* meetodit, *getName()*
+Kuna me ei saa teistest klassidest *Student* klassi muutuja(te)le ligi, siis kasutame kahte *public* meetodit, *getName()*
 ja *setName(String name)*, et tagastada *name* väärtus või soovi korral seada see väärtus.
 
 .. code-block:: java
@@ -52,7 +52,7 @@ ja *setName(String name)*, et tagastada *name* väärtus või soovi korral seada
       System.out.println("Tere! Olen privaatne meetod!");
   }
     
-Samuti saab ka meetod olla privaatne. Sel juhul tuleb arvestada sellega, et antud meetodit saab välja kutsuda ainult samas klassis, kus see meetod deklareeritud on.  
+Samuti saab ka meetod olla privaatne. Sel juhul tuleb arvestada sellega, et antud meetodit saab välja kutsuda ainult samas klassis, kus see meetod deklareeritud on.
 
 *no modifier* 
 -------------
@@ -73,7 +73,7 @@ Kui ei ole eraldi deklareeritud, mis on antud meetodi, klassi või välja nähta
 *protected* 
 -----------
 
-Muutujad, meetodid ja konstruktorid, mis on deklareeritud kui *protected*, on kättesaadavad kõikidele klassidele samas paketis või teise paketi klassidele, **juhul, kui nad laienduvad sinna klassi**. Allolev koodiplokk näitab just seda laiendumise juhtu!
+Muutujad, meetodid ja konstruktorid, mis on deklareeritud kui *protected*, on kättesaadavad kõikidele klassidele samas paketis või teise paketi klassidele, **juhul, kui nad laiendavad seda klassi**. Allolev koodiplokk näitab just seda laiendamise juhtu!
 
 - Klassid ning liidesed ei saa olla *protected*.
 
@@ -98,7 +98,9 @@ Muutujad, meetodid ja konstruktorid, mis on deklareeritud kui *protected*, on k�
   }   
     
     
-Klassil *AudioPlayer* on meetod *playMusic()*, mida jagatakse alamülesanneteks. Ei oleks ilus terve *playMusic()* ümber kirjutada, kui on vajadus ainult ühte osa kuidagi muuta. Antud juhul tohib alamklass ümber kirjutada *chooseChannel()* ning seetõttu näeb kood korrektne välja.  Ei ole mõtet neid alamülesaneid *public* teha, kuna kasutajal ei ole vajadust neid otse välja kutsuda ning arvatavasti tihti ei tohigi. 
+Klassil *AudioPlayer* on meetod *playMusic()*, mis jagatakse alamülesanneteks (*chooseChannel()* ja *openSpeaker()*). Ei oleks mõistlik terve *playMusic()* ümber kirjutada, kui on vajadus ainult ühte osa kuidagi muuta. Antud juhul tohib alamklass ümber kirjutada *chooseChannel()* ning seetõttu näeb kood korrektne välja.  Ei ole mõtet neid alamülesaneid *public* teha, kuna kasutajal ei ole vajadust neid otse välja kutsuda ning arvatavasti tihti ei tohigi. 
+
+Kui eelneva näite korral käivitatakse *playMusic()* meetod *StreamingAudioPlayer*-tüüpi objektil, siis *chooseChannel()* käivitatakse *StreamingAudioPlayer* klassist, *openSpeaker()* aga *AudioPlayer* klassist.
 
 
 *public* 
