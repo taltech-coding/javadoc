@@ -63,7 +63,7 @@ All pool on tehtud Ago *Junit* testi järgi, kuid all olev kood on *TestNG*-ga t
       }
   }
 
-*Test class*'is on kasutusel erinevaid viise testimiseks. Seal on kasutusel nii *assertTrue*, kui ka *assertEquals*. Lisaks on veel kasutusel *assertEquals*, kus on ette antud eraldi *error message*, mida kuvatakse kui test kukub läbi.
+*Test klassis* on kasutusel erinevaid viise testimiseks. Seal on kasutusel nii *assertTrue*, kui ka *assertEquals*. Lisaks on veel kasutusel *assertEquals*, kus on ette antud eraldi *error message*, mida kuvatakse kui test kukub läbi.
 
 .. code-block:: java
   
@@ -142,6 +142,9 @@ All pool on tehtud Ago *Junit* testi järgi, kuid all olev kood on *TestNG*-ga t
           assertEquals(false, dateValidator.isValidDate("1:1"));
       }
   }
+  
+.. image:: /images/unitTesting.png
+
 
 **Test NG Documentatsioon** http://testng.org/doc/documentation-main.html
 **Kas unit testimine on väärt seda** http://stackoverflow.com/questions/67299/is-unit-testing-worth-the-effort
