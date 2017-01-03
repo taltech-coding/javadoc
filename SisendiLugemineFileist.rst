@@ -100,7 +100,6 @@ Kasutades Try with meetodit ei ole vaja manuaalselt lugemis meetodit kinni panna
 Siin on koodi näide kuidas readerit manuaalselt kinni panna.
 
 ..code-block:: java
-
     try {
         BufferedReader reader = Files.newBufferedReader(path);
         try {
