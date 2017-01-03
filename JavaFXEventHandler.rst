@@ -5,7 +5,7 @@ JavaFX-is on iga tegevus mingi notifikatsioon. Kui kasutaja vajutab mingit nuppu
 
 *Event*
 -------
-*Event* kujutab endast midagi huvipakkuvat programmile, näiteks hiire liigutamist või klahvi vajutamist. JavaFX-is on event kas *javafx.event.Event* *class* või mingi selle alamklass. JavaFX-is on suhteliselt palju erinevaid evente, näiteks: *DragEvent, KeyEvent, MouseEvent, ScrollEvent* ja palju teisi. On võimalik ka ise enda evente defineerida kui laiendada *Event* klassi.
+*Event* kujutab endast mingit **sündmust**, näiteks hiire liigutamist või klahvi vajutamist. JavaFX-is on event kas *javafx.event.Event* *class* või mingi selle alamklass. JavaFX-is on suhteliselt palju erinevaid evente, näiteks: *DragEvent, KeyEvent, MouseEvent, ScrollEvent* ja palju teisi. On võimalik ka ise enda evente defineerida kui laiendada *Event* klassi.
 
 *KeyEvent* tüüpe on kolm tükki.
 
@@ -53,7 +53,7 @@ Koodi näide, kus tehakse nupp, mille vajutamisel prindib "Hello World":
 	    }
 	}
 
-Seal koodis on pikalt välja kirjutatud *.setOnAction* ja kuidas see töötab, kuid seda on võimalik kirjutada ka lambdaga. 
+Seal koodis on pikalt välja kirjutatud *.setOnAction* ja kuidas see töötab, kuid seda on võimalik kirjutada ka lambdaga. Allpool koodi näites on tegemist anonüümse klassiga-
 
 .. code-block:: java
 
