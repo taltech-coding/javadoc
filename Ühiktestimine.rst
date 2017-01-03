@@ -20,7 +20,7 @@ Testklassi loomine
 
 *Assert*'imine
 -----------
-Hea oleks kui kasutada koodi alguses *@BeforeMethod* meetodit, mis *setup*'ib kõik vajaliku. *@BeforeMethod*'i tehakse enne igat testi, niimodi saab kindel olla, et testid üksteist ei mõjuta.
+Hea oleks kui kasutada koodi alguses *@BeforeMethod* meetodit, mis *seadistab* kõik vajaliku. *@BeforeMethod*'i tehakse enne igat testi, niimodi saab kindel olla, et testid üksteist ei mõjuta.
 
 Vastuste võrdlemiseks on mitu erinevat võimalust:
 
@@ -143,5 +143,6 @@ All pool on tehtud Ago *Junit* testi järgi, kuid all olev kood on *TestNG*-ga t
       }
   }
 
-
+**Test NG Documentatsioon** http://testng.org/doc/documentation-main.html
+**Kas unit testimine on väärt seda** http://stackoverflow.com/questions/67299/is-unit-testing-worth-the-effort
 **Ago ühiktestimise näide aastast 2016** : https://www.youtube.com/watch?v=dIjtTvc6-ME
