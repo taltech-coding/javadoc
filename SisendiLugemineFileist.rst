@@ -99,20 +99,22 @@ Kasutades Try with meetodit ei ole vaja manuaalselt lugemis meetodit kinni panna
 
 Siin on koodi näide kuidas readerit manuaalselt kinni panna.
 
-..code-block:: java
 
-    try {
-        BufferedReader reader = Files.newBufferedReader(path);
-        try {
-            String finalStringForBufferedReader = "";
-            String line;
-            while ((line = reader.readLine()) != null) {
-                finalStringForBufferedReader += line + "\n";
-            }
-            System.out.println(finalStringForBufferedReader);
-        } finally {
-            reader.close();
-        }
-    } catch (IOException e) {
-        e.printStackTrace();
-    }
+
+.. code-block:: java
+	
+	try {
+	    BufferedReader reader = Files.newBufferedReader(path);
+	    try {
+	        String finalStringForBufferedReader = "";
+	        String line;
+	        while ((line = reader.readLine()) != null) {
+	            finalStringForBufferedReader += line + "\n";
+	        }
+	        System.out.println(finalStringForBufferedReader);
+	    } finally {
+	        reader.close();
+	    }
+	} catch (IOException e) {
+	    e.printStackTrace();
+	}
