@@ -6,6 +6,7 @@ Javas võib sisend-väljud näha keeruline, kuid see pole halb. Sellega saavutat
 Kasutades Try with meetodit ei ole vaja manuaalselt lugemis meetodit kinni pannal. Juhul kui ei kasuta try with resources siis tuleb teha *finally* block kus pannakse lugemis meetod kinni.
 
 .. code-block:: java
+
 	import java.io.*;
 	import java.nio.file.Files;
 	import java.nio.file.Path;
@@ -15,7 +16,7 @@ Kasutades Try with meetodit ei ole vaja manuaalselt lugemis meetodit kinni panna
 	import java.util.stream.Stream;
 
 	public class ReadFile {
-	    // Filename to be read.
+		// Filename to be read.
 	    public static final String FILENAME = "test.txt";
 	    public static final File FILE = new File(FILENAME);
 	    public static final Path path = Paths.get(FILENAME);
