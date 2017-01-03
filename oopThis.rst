@@ -15,16 +15,16 @@ Koodi näites on konstruktor milles on argumendiks **nimi**, **id**, **tag** ja 
   	private boolean enRolled = false;
 
   	Student(String name, int id, String tag, int grade) {
-  		// this.name is a private variable specific to the class, while name by it self is an argument.
+  		// this.name is a private variable specific to the object, while name by it self is an argument.
 		this.name = name;	
-  		// this.id is a private variable specific to the class, while id by it self is an argument.
+  		// this.id is a private variable specific to the object, while id by it self is an argument.
 		this.id = id;
 		// The argument name tag, does not overlap with the variable name tagName, 
 		// 	so there is no need to use this.tagName, however you can use it.
   		tagName = tag 	
-		// We can also use this. on methods to specify that we are using this class methods.
+		// We can also use this. on methods to specify that we are using this objects methods.
   		this.initializegrades(grade); 
-  		// but there are no need use this. in order to use the class method
+  		// but there are no need use this. in order to use the objects methods.
 		enroll(); 
   	}
 
