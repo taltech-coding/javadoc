@@ -22,6 +22,7 @@ public class ReadFile {
 
     public static void main(String[] args) {
 
+    	// Buffered reader with StringBuilder
         try (BufferedReader br = new BufferedReader(new FileReader(FILENAME))) {
             StringBuilder sb = new StringBuilder();
             String line = br.readLine();
@@ -63,7 +64,7 @@ public class ReadFile {
             e.printStackTrace();
         }
 
-        // BufferedReader
+        // BufferedReader with String
         try (BufferedReader reader = Files.newBufferedReader(path)) {
             String finalStringForBufferedReader = "";
             String line;
@@ -83,6 +84,13 @@ public class ReadFile {
                 finalString += scanner.nextLine() + "\n";
                 System.out.println(finalString);
             }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        // Lambda
+        try (Stream<String> stream = Files.lines(path)) {
+            stream.forEach(System.out::println);
         } catch (IOException e) {
             e.printStackTrace();
         }
