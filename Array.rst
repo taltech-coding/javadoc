@@ -54,7 +54,9 @@ Sellisel juhul luuakse uus massiiv, mille pikkus on 6. See on samaväärne selle
 Massiivi pikkus
 ----------------
 
-Massiivi pikkuse leidmiseks saab kasutada: :code:`int len = someNumbers.length;`.
+Massiivi pikkuse leidmiseks saab kasutada: :code:`int len = someNumbers.length;`
+
+Massiiv on objekt, mille avalik *read-only* isendimuutuja nimega *length* sisaldab massiivi pikkust.
 
 .. code:: java
 
@@ -66,7 +68,58 @@ Selle näite korral luuakse massiiv, milles on 5 elementi ning väärtustatakse 
 
 Mitmemõõtmeline massiiv
 ------------------------
+
+Massiivid võivad hoida endas ka mitut tulpa, selliseid massiive nimetatakse mitmemõõtmelisteks. Näiteks kahemõõtmelist massiivi võib ette kujutada kui Exceli tabelit või maatriksit, milles on read ja veerud. 
+
+Mitmemõõtmelist massiivi initsialiseerides peab määrama kõikide massiivide suurused.
+
+**Kahemõõtmeline massiiv**
+
+Kahemõõtmelise massiivi loomine:
+
+.. code:: java
+
+    int[][] numbers = new int[6][5];
     
+See on nagu tabel, milles on 6 rida ning 5 tulpa. 
+
+.. image:: /images/multidimensional.png
+
+Näiteks soovides lisada esimesse ritta väärtusi, saab seda teha nii:
+
+.. code:: java
+
+    numbers[0][0] = 10;
+    numbers[0][1] = 12;
+    numbers[0][2] = 43;
+    numbers[0][3] = 11;
+    numbers[0][4] = 22;
+
+Esimene rida on rida 0. Kolumne on 5 (nullist neljani). Teise ritta saab väärtusi lisada nii:
+
+.. code:: java
+
+    numbers[1][0] = 20;
+    numbers[1][1] = 45;
+    numbers[1][2] = 56;
+    numbers[1][3] = 1;
+    numbers[1][4] = 33;
+
+Tegelikult näiteks luues massiiv :code:`A = new int[3][4]`, siis A viitab massiivile, milles on 3 elementi ning iga element viitab massiivile, milles on 4 täisarvu (*int*).
+
+.. image:: /images/multiarray.png
+
+**Kolmemõõtmeline massiiv**
+
+Seda võib ette kujutada kui massiivi, mis koosneb kahemõõtmelistest massiividest. Initsialiseerimine:
+
+.. code:: java
+
+    int arr[][][];
+    arr = new int[2][4][3];
+  
+Sellisel juhul luuakse massiiv, milles on kaks elementi. Mõlemad viitavad omakorda kahemõõtmelistele massiividele, milles on 4 rida ja 3 veergu.
+
 -------
 
 https://docs.oracle.com/javase/tutorial/java/nutsandbolts/arrays.html
