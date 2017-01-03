@@ -143,7 +143,7 @@ All pool on tehtud Ago *Junit* testi järgi, kuid all olev kood on *TestNG*-ga t
       }
   }
   
-.. image:: /images/unitTesting.png
+.. image:: images/unitTesting.png
 
 
 **Test NG Documentatsioon** http://testng.org/doc/documentation-main.html
