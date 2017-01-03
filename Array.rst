@@ -38,6 +38,7 @@ Massiivi on võimalik luua ka algväärtustatult:
 .. code:: java
     
     int[] someNumbers = {10, 20, 33, 47, 99, 101};
+    String[] someWords = {"Hello", "new", "array"};
     
 Sellisel juhul luuakse uus massiiv, mille pikkus on 6. See on samaväärne sellega:
 
