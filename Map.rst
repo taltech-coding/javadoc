@@ -27,21 +27,24 @@ Olulisemad meetodid:
 			HashMap<Integer, Integer> balls = new HashMap<Integer, Integer>();
 	 
 			// Putting elements into the map where we assign a certain key with a value
-			balls.put(1, 3); // 3 balls with value 1
-			balls.put(2, 12); // 12 balls with value 2
-			balls.put(5, 10); // 10 balls with value 1
+			//	The first argument is the key and second argument is value
+			balls.put(1, 3);
+			balls.put(2, 12);
+			balls.put(5, 10);
+			
+	 		// Prints out the number of keys in the hashmap
+			System.out.println(balls.size());
 	 
-			System.out.println(balls.size()); // prints out the number of keys in the hashmap
-	 
-			System.out.println(balls.get(2)); // prints out the number of values regarded with the key value of 2
-			System.out.println(balls.get(3)); // prints out the number of values regarded with the key valvue of 3
+	 		// Prints out the number of values regarded with the key value of 2
+			System.out.println(balls.get(2)); 
 	 
 			// Printing out all elements
 			// 1) for-each cycle of only values
+			// 	You can't find out the keys this way
 			for (Integer count : balls.values()) {
 				System.out.println(count);
 			}
-	 		// can't find out the keys this way
+	 		
 
 			// 2) for-each cycle of both keys and values
 			for (Entry<Integer, Integer> entry : balls.entrySet()) {
