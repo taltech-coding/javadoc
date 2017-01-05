@@ -3,6 +3,10 @@ Tsükkel
 
 Tsükkel (ik *loop*) võimaldab mingit koodiosa korduvalt jooksutada teatud reeglite alusel. Kui näiteks programm peab väljastama numbrid ühest viieni, võib seda teha 5 reaga. Samas kui programm peaks väljastama numbrid ühest tuhandeni, oleks 1000 rea kirjutamine väga ebapraktiline. 
 
+Tsükli arhitektuur:
+
+.. image:: /images/loop.png
+
 Javas on kolme liiki tsükleid: eelkontrolliga tsükkel (*while*), järelkontrolliga tsükkel (*do-while*) ja kolmikpäisega tsükkel (*for*).
 
 *While*-tsükkel
