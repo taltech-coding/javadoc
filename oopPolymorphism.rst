@@ -41,7 +41,7 @@ Siin koodi näites on välja toodid polümorfismi algelist näidet kasutades eel
 	public class Example() {
 		public static void main(String[] args) {
 			String redColor = "Red";
-			String blueColor = "Blue;
+			String blueColor = "Blue";
 			// Creates a default shape.
 			Shape defaultShape = new Shape();
 			// uses shape method setColor to set it's color to red.
