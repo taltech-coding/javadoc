@@ -10,16 +10,16 @@ Tegemist on meetodi ülelaadimisega Javas, kui kahel või rohkemal meetodil **sa
 
 Meetodi ülelaadimine on korrektne siis, kui täidetud on üks või mõlemad tingimused:
 
-    1. Sisestatud argumentide **arv** meetoditesse on erinev.
+1. Sisestatud argumentide **arv** meetoditesse on erinev.
 
-    2. Argumentide **tüübid** on erinevad. (nt. enne oli int, nüüd on float)
+2. Argumentide **tüübid** on erinevad. (nt. enne oli int, nüüd on float)
 
 
 Tegemist **ei ole** ülelaadimisega, ning kood tekitab kompilatsioonivea, kui:
 
-    1. Meetodite nimed on samad, argumentide nimed ja tüübid on samad, nende arv on sama, kuid tagastustüüp (*return type*) on erinev.
+1. Meetodite nimed on samad, argumentide nimed ja tüübid on samad, nende arv on sama, kuid tagastustüüp (*return type*) on erinev.
     
-    2. Erinevad on ainult meetodisse sisestatud argumentide nimed.
+2. Erinevad on ainult meetodisse sisestatud argumentide nimed.
 
 
 .. code-block:: java
