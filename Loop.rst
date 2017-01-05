@@ -10,7 +10,7 @@ Javas on kolme liiki tsükleid: eelkontrolliga tsükkel (*while*), järelkontrol
 
 *While*-tsüklit saab kasutada, et mingit koodiosa korrata. Tsükli puhul on oluline määrata ära, kui kaua (ehk mis tingimusel) seda korrata tuleb. 
 
-*While*-tsüklit on kahte liiki: eelkontrolliga ja järelkontrolliga. Eelkontrolliga tsüklis kontrollitakse esmaslt, kas tingimus kehtib. Kui kehtib, siis täidetakse tsükli kood ja kontrollitakse tingimust uuesti. Kui tingimus ei kehti, siis väljutakse tsüklist. Järelkontrolliga tsüklis täidetakse kõigepealt kood, seejärel kontrollitakse tingimust. Kui mingimus kehtib, täidetakse kood uuesti, kui mitte, siis väljutakse tsüklist.
+*While*-tsüklit on kahte liiki: eelkontrolliga ja järelkontrolliga. Eelkontrolliga tsüklis kontrollitakse esmalt, kas tingimus kehtib. Kui kehtib, siis täidetakse tsükli kood ja kontrollitakse tingimust uuesti. Kui tingimus ei kehti, siis väljutakse tsüklist. Järelkontrolliga tsüklis täidetakse kõigepealt kood, seejärel kontrollitakse tingimust. Kui tingimus kehtib, täidetakse kood uuesti, kui mitte, siis väljutakse tsüklist.
 
 **Eelkontrolliga tsüklidirektiiv**
 
@@ -63,9 +63,7 @@ Süntaks:
         statement(s);
     } while (condition);
     
-
 Näide:
-
 
 .. code-block:: java
 
@@ -84,11 +82,12 @@ Sellisel juhul on programmi väljundiks:
     Count is: 2
     Count is: 3
     
-    
 *For*-tsükkel
 ------------
 
-**Üldtsüklidirektiiv ehk kolmikpäisega tsükkel ehk *for*-tsükkel.**
+For-tsüklil on Javas kaks erinevat esitust - tavaline for-tsükkel ja for-each ehk for-in tsükkel. For-each tsüklit kasutatakse järjendite ja kollektsioonide korral. 
+
+**Üldtsüklidirektiiv ehk kolmikpäisega tsükkel ehk for-tsükkel.**
 
 Käsk *for* koosneb kolmest osast: 1) kood, mis täidetakse tsükli alguses, 2) tingimuslause, 3) kood, mis täidetakse igal tsükli sammul (iteratsioonil).
 
@@ -100,9 +99,9 @@ Süntaks:
         statement(s);
     }
    
-Tüüpiliselt on eeltegevusteks (*initialization statement*) mingitele muutujatele algväärtuste omistamised. Näiteks: :code:`int i = 0;`. Sellisel juhul kireldatakse täisarvutüüpi muutuja *i*, mis on selle tsükli lokaalne muutujua (st. muutuja *i* väärtus ei ole väljaspool tsüklit kasutatav) ja omistatakse sellele algväärtus 0.
+Tüüpiliselt on eeltegevusteks (*initialization statement*) mingitele muutujatele algväärtuste omistamised. Näiteks: :code:`int i = 0;`. Sellisel juhul kirjeldatakse täisarvutüüpi muutuja *i*, mis on selle tsükli lokaalne muutuja (st. muutuja *i* väärtus ei ole väljaspool tsüklit kasutatav) ja omistatakse sellele algväärtus 0.
 
-Jätkamistingimus (*condition check*) tuleb seada nii, et tsüklit täidetaks täpselt vajalik arv kordi. 
+Jätkamistingimus (*condition check*) tuleb seada nii, et tsüklit täidetaks täpselt vajalik arv kordi. Kuniks tingimus on tõene (*true*), jooksutatakse tsükli sisu.
 
 .. code-block::
 
@@ -141,7 +140,11 @@ Järgnevas näites on kõik kolm osa täitmata. Sellisel juhul on tegemist lõpu
     }
 
 
-**Tsükkel üle kogumi**
+**Tsükkel üle kogumi (for-each tsükkel)**
+
+Seda kasutatakse järjendite ja kollektsioonide korral. Saab kasutada ainult siis, kui ei ole vaja järjendi elemente omavahel võrrelda (indeksid peidetakse programmeerija eest ära aga indeksita ei saa nt eelmist/järgmist elementi kätte), asendada ega eemaldada. Järjendit või kollektsiooni läbitakse ainult kindlas suunas.
+
+Näide:
 
 .. code-block::
     
