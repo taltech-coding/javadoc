@@ -88,7 +88,7 @@ Sellisel juhul on programmi väljundiks:
 *For*-tsükkel
 ------------
 
-Üldtsüklidirektiiv ehk kolmikpäisega tsükkel ehk *for*-tsükkel.
+**Üldtsüklidirektiiv ehk kolmikpäisega tsükkel ehk *for*-tsükkel.**
 
 Käsk *for* koosneb kolmest osast: 1) kood, mis täidetakse tsükli alguses, 2) tingimuslause, 3) kood, mis täidetakse igal tsükli sammul (iteratsioonil).
 
@@ -131,6 +131,39 @@ Sellise näite puhul väljastab *for*-tsükkel viis korda teksti "Hello!".
     for ( ; i < 10; i++) {
         System.out.println(i);
     }
+
+Järgnevas näites on kõik kolm osa täitmata. Sellisel juhul on tegemist lõputu tsükliga:
+
+.. code-block::
+
+    for ( ; ; ) {
+        // your code goes here
+    }
+
+
+**Tsükkel üle kogumi**
+
+.. code-block::
+    
+    class EnhancedForDemo {
+        public static void main(String[] args){
+            int[] numbers = {1,2,3,4,5};
+            
+            for (int item : numbers) {
+                System.out.println("Count is: " + item);
+            }
+        }
+    }
+
+Programmi väljund:
+
+.. code-block::
+
+    Count is: 1
+    Count is: 2
+    Count is: 3
+    Count is: 4
+    Count is: 5
 
 --------------
 
