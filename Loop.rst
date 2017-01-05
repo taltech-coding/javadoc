@@ -1,17 +1,16 @@
 Tsükkel
 ========
 
-Javas on kahte liiki tsükleid: *while*-tsükkel ja *for*-tsükkel.
+Tsükkel (ik *loop*) võimaldab mingit koodiosa korduvalt jooksutada teatud reeglite alusel. Kui näiteks programm peab väljastama numbrid ühest viieni, võib seda teha 5 reaga. Samas kui programm peaks väljastama numbrid ühest tuhandeni, oleks 1000 rea kirjutamine väga ebapraktiline. 
 
-Tsükkel (ik *loop*) võimaldab mingit koodiosa korrata teatud reeglite alusel. Kui näiteks programm peab väljastama numbrid ühest viieni, võib seda teha 5 reaga. Samas kui programm peaks väljastama numbrid ühest tuhandeni, oleks 1000 rea kirjutamine väga ebapraktiline. Selle jaoks ongi kasutusele võetud tsüklid, et korrata mingit koodiosa.
+Javas on kolme liiki tsükleid: eelkontrolliga tsükkel (*while*), järelkontrolliga tsükkel (*do-while*) ja kolmikpäisega tsükkel (*for*).
 
-
-*While* tsükkel
+*While*-tsükkel
 -------------
 
 *While*-tsüklit saab kasutada, et mingit koodiosa korrata. Tsükli puhul on oluline määrata ära, kui kaua (ehk mis tingimusel) seda korrata tuleb. 
 
-*While*-tsüklit on kahte liiki: eelkontrolliga ja järelkontrolliga. Nende erinevus seisneb selles, et järelkontrolliga tsükkel kontrollib tingimust alles peale 
+*While*-tsüklit on kahte liiki: eelkontrolliga ja järelkontrolliga. Eelkontrolliga tsüklis kontrollitakse esmaslt, kas tingimus kehtib. Kui kehtib, siis täidetakse tsükli kood ja kontrollitakse tingimust uuesti. Kui tingimus ei kehti, siis väljutakse tsüklist. Järelkontrolliga tsüklis täidetakse kõigepealt kood, seejärel kontrollitakse tingimust. Kui mingimus kehtib, täidetakse kood uuesti, kui mitte, siis väljutakse tsüklist.
 
 **Eelkontrolliga tsüklidirektiiv**
 
@@ -53,6 +52,8 @@ Sellisel juhul on programmi väljundiks:
     4
       
 **Järelkontrolliga tsüklidirektiiv**
+
+Tingimust kontrollitakse alles pärast tsükli sisu läbimist, seega tsükli sisu läbitakse alati vähemalt ühe korra.
  
 Süntaks:
 
@@ -84,12 +85,55 @@ Sellisel juhul on programmi väljundiks:
     Count is: 3
     
     
-*For* tsükkel
+*For*-tsükkel
 ------------
 
+Üldtsüklidirektiiv ehk kolmikpäisega tsükkel ehk *for*-tsükkel.
 
+Käsk *for* koosneb kolmest osast: 1) kood, mis täidetakse tsükli alguses, 2) tingimuslause, 3) kood, mis täidetakse igal tsükli sammul (iteratsioonil).
 
+Süntaks:
+
+.. code-block::
+
+    for (initialization statement; condition check; increment) {
+        statement(s);
+    }
+   
+Tüüpiliselt on eeltegevusteks (*initialization statement*) mingitele muutujatele algväärtuste omistamised. Näiteks: :code:`int i = 0;`. Sellisel juhul kireldatakse täisarvutüüpi muutuja *i*, mis on selle tsükli lokaalne muutujua (st. muutuja *i* väärtus ei ole väljaspool tsüklit kasutatav) ja omistatakse sellele algväärtus 0.
+
+Jätkamistingimus (*condition check*) tuleb seada nii, et tsüklit täidetaks täpselt vajalik arv kordi. 
+
+.. code-block::
+
+    for (int i = 0; i < 3; i++)
+
+Näiteks soovides tsüklit täita kolm korda, võib tsükli lokaalmuutujale (tsükliloendajale) omistada algväärtuseks nulli ja igal sammul liita tsükliloendajale ühe. Pärast tsükli esimest sammu on tsükliloendaja väärtus siis 1, pärast teist sammu 2 ja pärast kolmandat sammu 3. Neljandat sammu me enam lubada ei tohi, seega peaks tsükli lõpetama niipea, kui tsükliloendaja saab võrdseks 3-ga või 3-st suuremaks. Jätkamistingimus on lõpetamistingimuse vastandtingimus, ehk antud juhul võib tsüklit jätkata nii kaua, kuni tsükliloendaja on veel väiksem kolmest. 
+
+Tsükli sammu järeltegevuseks (*increment*) on sageli mingi muutuja väärtuse suurendamine või vähendamine teatud arvu võrra. Näiteks :code:`i = i + 2;` või :code:`k--;`
+
+Näide:
+
+.. code-block::
+
+    for (int i = 0; i < 5; i++) {
+        System.out.println("Hello!");
+    }
+    
+Sellise näite puhul väljastab *for*-tsükkel viis korda teksti "Hello!".
+
+*For*-tsüklit saab kasutada ka selliselt, et mõni (kasvõi kõik) nendest kolmest osast on täitmata. Näiteks:
+
+.. code-block::
+    
+    int i = 0;
+    
+    for ( ; i < 10; i++) {
+        System.out.println(i);
+    }
 
 --------------
 
 https://docs.oracle.com/javase/tutorial/java/nutsandbolts/while.html
+
+https://docs.oracle.com/javase/tutorial/java/nutsandbolts/for.html
