@@ -62,6 +62,7 @@ Objekti tüübi tuvastamine
 Kui hoiad kogumis erinevat tüüpi objekte, võib tekkida vajadus objektide tüüpe tuvastada. Selleks saab kasutada meetodit *getClass* või operaatorit *instanceof*.
 
 *getClass* meetod tagastab antud objekti klassi.
+
 *instanceof* kontrollib, kas objekt on mingit kindla klassi objekt, ja tagastab booleani.
 
 *getClass* näide:
