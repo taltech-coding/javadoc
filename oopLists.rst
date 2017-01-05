@@ -27,7 +27,7 @@ Võtame näiteks klassid Shape, Circle, Rectangle ja Square.
 
 Kogumis saab hoida objekte, mis on kas määratud klassi objektid või siis selle määratud klassi alamklassi (või alamklassi alamklassi jne) objektid.
 
-Näiteks kui teha järjend:
+Näiteks kui teha järjend listOfShapes:
 
 .. code-block:: java
 
@@ -35,7 +35,7 @@ Näiteks kui teha järjend:
 
 Antud listis saab hoida Shape, Circle, Rectangle või Square tüüpi objekte.
 
-Kui teha järjend:
+Kui teha järjend listOfRectangles:
 
 .. code-block:: java
 
@@ -45,11 +45,15 @@ Antud järjendis saab hoida kas Rectangle või Square tüüpi objekte, aga mitte
 
 Kui ei taha järjendile kindlat objektitüüpi määrata, saab selleks määrata lihtsalt Object, kuna kõik teised klassid on Object klassi alamklassid.
 
+.. code-block:: java
+
+    ArrayList<Object> listOfObjects = new ArrayList<>();
+
 Analoogiliselt saab teha ka teisi objektide kogumeid.
 
 Antud klassidel on selline hierarhia:
 
-PICTURE
+.. image:: images/hierarchy.png
 
 
 Objekti tüübi tuvastamine
@@ -88,6 +92,8 @@ Mis prindib konsooli
     if (rec instanceof Rectangle) {
         System.out.println("rec is a rectangle");
     }
+
+Mis prindib konsooli:
 
 .. code-block:: java
 
