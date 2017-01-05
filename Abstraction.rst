@@ -47,4 +47,4 @@ Nii Dog kui Cat alamklassis on makeNoise meetod realiseeritud
 Miks on abstraktsioon kasulik?
 ------------------------------
 
-Abstraktne klass on ideeliselt segu tavalisest klassist ja interface'ist. Samamoodi saaks Animal klassi deklareerida interface'ina ja lasta Dog ja Cat klassil seda implementeerida, aga siis peaks igas klassis ka eat ja sleep meetodid eraldi implementeerima. Abstraktse klassiga on võimalik osad meetodid ära implementeerida ning jätta osad meetodid abstraktseks ning siis saab abstraktset klassi saab kasutada samamoodi kui tavalist klassi.
+Abstraktne klass on ideeliselt segu tavalisest klassist ja liidesest(*interface*). Samamoodi saaks Animal klassi deklareerida liidesena ja lasta Dog ja Cat klassil seda implementeerida, aga siis peaks igas klassis ka eat ja sleep meetodid eraldi implementeerima. Abstraktse klassiga on võimalik osad meetodid ära implementeerida ning jätta osad meetodid abstraktseks ning siis saab abstraktset klassi saab kasutada samamoodi kui tavalist klassi.
