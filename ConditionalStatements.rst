@@ -82,7 +82,7 @@ Tingimus *if*-lauses
 
 Tingimus (*condition*) võib olla näiteks:
 
-- muutuja, mis on boolean-tüüpi:
+- muutuja, mis on *boolean*-tüüpi:
 
 .. code-block:: java
 
@@ -167,12 +167,12 @@ Disjunktsiooni saab asendada *else if*-lausega:
       System.out.println("x is different from 1 and from 2");
   }
   
-Sellisel juhul tuleb dubleerida else-haru.
+Sellisel juhul tuleb dubleerida *else*-haru.
   
 Tingavaldis
 -----------
 
-Tingavaldist (*ternary operator*) saab kasutada, et if-lauset lühemalt kirja panna.
+Tingavaldist (*ternary operator*) saab kasutada, et *if*-lauset lühemalt kirja panna.
 
 Süntaks:
 
