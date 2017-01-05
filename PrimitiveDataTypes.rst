@@ -43,7 +43,7 @@ Primitiivsed andmetüübid on väikese algustähega ja objektid suure algustähe
 
     double d = 65.55;
     
-* **boolean** – kahe võimaliku väärtusega andmetüüp, mille väärtuseks on kas true või false. Vaikeväärtus on false. 
+* **boolean** – kahe võimaliku väärtusega andmetüüp, mille väärtuseks on kas *true* või *false*. Vaikeväärtus on *false*. 
 
 .. code-block:: java
 
@@ -56,8 +56,7 @@ Primitiivsed andmetüübid on väikese algustähega ja objektid suure algustähe
 
     char c = 'a';
 
-Sõned ei ole Java mõttes primitiivid, vaid (klassi String) objektid. Nende jaoks kehtivad mõned lihtsustavad erandid. Näiteks saab sõnesid luua (ilma isendiloome operaatorit *new* kasutamata), pannes vastava teksti jutumärkide(" ") vahele. Erinevalt Pythonist tähistavad ühekordsed (' ') jutumärgid Javas üksikuid tähemärke.
-
+Sõned ei ole Java mõttes primitiivid, vaid (klassi String) objektid. Nende jaoks kehtivad mõned lihtsustavad erandid. Näiteks saab sõnesid luua (ilma isendiloome operaatorit *new* kasutamata), pannes vastava teksti jutumärkide(" ") vahele. Erinevalt Pythonist tähistavad ühekordsed jutumärgid (' ') Javas üksikuid tähemärke.
 
 ----
 
