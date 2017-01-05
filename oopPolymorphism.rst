@@ -3,7 +3,7 @@ Polümorfism
 ===========
 Polümorfismi idee on see, et see kirjeldab endale unikaalset käitumist ning samal ajal jagab ülemklassi mingit funktsionaalsust. Selleks, et polümorfismi saavutada, tuleb kasutada vähemalt ühte ülemklassi meetodit. See lubab kasutada sama koodi ja funktsioone erinevate andmetüüpidega, mille tulemuseks on rohkem üldised ning abstraktsed implementsioonid. 
 
-Vaatame näidet kujundite puhul, kus programm oskab joonistada kujundeid ekraanile. Programm oskab teha ristkülikuid (Rectangle) ja ovaale (Oval). Kujundite joonistamiseks võib kasutada *Rectangle* ja *Oval* klasse. Nendel kõigil on superclass *Shape*, mis on neil kõigil ühis osa. Shape võiks sisaldada kujundi värvi, positsiooni, suurust ja nii edasi koos meetoditega, mis neid väärtusi muudab. 
+Vaatame näidet kujundite puhul, kus programm oskab joonistada kujundeid ekraanile. Programm oskab teha ristkülikuid (Rectangle) ja tavalisi kujundeid. Kujundite joonistamiseks võib kasutada *Rectangle* klasse. Nendel kõigil on superclass *Shape*, mis on neil kõigil ühis osa. Shape võiks sisaldada kujundi värvi, positsiooni, suurust ja nii edasi koos meetoditega, mis neid väärtusi muudab. 
 
 Koodi näites on näha kus *Rectangle* kasutab enda ülemklassi redraw meetodit kus ta joonistab just *Rectangeli*. Kui alamklass kasutab mingit ülemklassi meetodit siis on kasutules @override viidet.
 
