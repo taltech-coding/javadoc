@@ -1,29 +1,28 @@
 ===========
 Polümorfism
 ===========
-Polümorfismi idee on see, et see kirjeldab endale unikalset käitumist ning samal ajal jagab ülemklassi mingit funktsionaalsust. Selleks et polümorfismi saavutada, tuleb kasutada vähemalt ühte ülemklassi meetodit. See lubab kasutada sama koodi ja funktsioone erinevate andmetüüpidega, mille tulemuseks on rohkem üldised ning abstraktsed implementsioonid. 
+Polümorfismi idee on see, et see kirjeldab endale unikaalset käitumist ning samal ajal jagab ülemklassi mingit funktsionaalsust. Selleks, et polümorfismi saavutada, tuleb kasutada vähemalt ühte ülemklassi meetodit. See lubab kasutada sama koodi ja funktsioone erinevate andmetüüpidega, mille tulemuseks on rohkem üldised ning abstraktsed implementsioonid. 
 
-Vaatame näidet kujundite puhul, kus programm oskab joonistada kujundeid ekraanile. Programm oskab teha ristkülikuid (Rectable) ja ovaale (Oval). Kujundite joonistamiseks võib kasutada klasse *Rectangle* ja *Oval* klasse. Nendel kõigil on superclass *Shape*, mis on neil kõigil ühis osa. Shape võiks sisaldada kujuundi värvi, positsiooni, suurust ja nii edasi koos meetoditega, mis neid väärtusi muudab. 
+Vaatame näidet kujundite puhul, kus programm oskab joonistada kujundeid ekraanile. Programm oskab teha ristkülikuid (Rectangle) ja ovaale (Oval). Kujundite joonistamiseks võib kasutada *Rectangle* ja *Oval* klasse. Nendel kõigil on superclass *Shape*, mis on neil kõigil ühis osa. Shape võiks sisaldada kujundi värvi, positsiooni, suurust ja nii edasi koos meetoditega, mis neid väärtusi muudab. 
 
 Koodi näites on näha kus *Rectangle* kasutab enda ülemklassi redraw meetodit kus ta joonistab just *Rectangeli*. Kui alamklass kasutab mingit ülemklassi meetodit siis on kasutules @override viidet.
 
 .. code-block:: java
 
 	public class Shape {
-		// Must be importedfrom java.awt
-		private Color color;
+		private String color;
 
-		public void setColor(Color color) {
-		    this.color = new color;
+		public void setColor(String color) {
+		    this.color = color;
 		    redraw();
 		} 
 
 		void redraw() {
 			// Drawing default state of each shape
 		}
-
-		// more instnce variables and methods
-
+		
+		// more instance variables and methods
+		
 	} // end of class Shape
 
 .. code-block:: java
@@ -39,24 +38,22 @@ Siin koodi näites on välja toodid polümorfismi algelist näidet kasutades eel
 
 .. code-block:: java
 	
-	// Requires Color import
 	public class Example() {
 		public static void main(String[] args) {
-			// Requires imports
-			Color red = new Color(1,0,0);
-			Color blue = new Color(0,1,0);
+			String redColor = "Red";
+			String blueColor = "Blue;
 			// Creates a default shape.
 			Shape defaultShape = new Shape();
 			// uses shape method setColor to set it's color to red.
-			defaultShape.setColor(red);
+			defaultShape.setColor(redColor);
 			// uses shape metod redraw to redraw the object.
 			defaultshape.redraw();
 
-			// Creates a specific shaped object.
+			// Creates a specific shaped object, a rectangle.
 			Rectangle rectangle = new Rectangle();
 			// Uses shape method setColor to set it's color to blue.
 			rectangle.setColor(blue);
-			// Uses rectangle object method to redraw the object.
+			// Uses rectangle object method to redraw the rectangle.
 			rectangle.redraw();
 		}
 	}
