@@ -17,7 +17,7 @@ Allikas: https://blog.codinghorror.com/content/images/uploads/2009/02/6a0120a85d
 
 *Checkstyle* *plugin*'i lisamine *IntelliJ*-le:
 
-Esmalt ava *IntelliJ* ning *settings* (*Windows ctrl-alt-s* või *Mac OS X ⌘*,). Seadete alt vali *plugins* ning selle alt *Browse repositories*. Kirjuta otsingusse "*checkstyle*" ja vali *checkstyle-IDEA*. Vali paremalt *install* ning *restart IntelliJ IDEA*. 
+Esmalt ava *IntelliJ* ning *settings* (*Windows Ctrl-Alt-s* või *Mac OS X ⌘,*). Seadete alt vali *plugins* ning selle alt *Browse repositories*. Kirjuta otsingusse "*checkstyle*" ja vali *checkstyle-IDEA*. Vali paremalt *install* ning *restart IntelliJ IDEA*. 
 
 Mõnel kursusel on oma stiilinõuete konfiguratsioon, Java põhikursusel näiteks iti0011.xml.
 
@@ -26,7 +26,7 @@ Peale restarti avada uuesti *settings* ning sealt *other settings* ning *checkst
 Nimetamine
 -------------
 
-Mitmesõnalistes identifikaatorites kirjutatakse sõnad alates teisest sõnast **suure algustähega (camelCase)**.
+Klasside/meetodite/muutujate nimed peaksid olema kindlasti tähenduslikud. Mitmesõnalistes identifikaatorites kirjutatakse sõnad alates teisest sõnast **suure algustähega (camelCase)**.
 
 **Faili nimetamine** - nimetus tuleneb selles sisalduva klassi nimest. :code:`MyClass.java`
 
@@ -37,7 +37,6 @@ Mitmesõnalistes identifikaatorites kirjutatakse sõnad alates teisest sõnast *
 **Meetodite nimetamine** - nimetus peaks olema tegusõna, mis kirjutatakse väikese algustähega. :code:`doSomething();`
 
 **Muutujate nimetamine** - nimetus algab väikese algustähega. :code:`float myWidth;`
-
 
 **Konstantide nimetamine** - nimedes on kõik tähed suured, sõnad eraldatakse alakriipsuga. :code:`int MIN_WIDTH = 4;`
 
@@ -69,7 +68,7 @@ Fail koosneb:
   }
 
 Vormistus
------
+---------
 
 Looksulge **{}** kasutatakse *if*, *else*, *for*, *do* ja *while* lausetega, isegi kui nende kehad on tühjad või sisaldavad ainult ühte lauset.
 
@@ -124,6 +123,8 @@ Tühjad blokid võivad olla lühikesed. Bloki võib sulgeda ( **{}** ) samal rea
 **Koodi treppimine**
 
 Koodi treppimiseks kasutatakse **tühikuid**, soovitatav (minimaalne) treppimissamm on 2-4 tühikut. Trepitakse kõik juhtimisstruktuurid, klassi sisu klassi päise suhtes, meetodi sisu meetodi päise suhtes. Tabulaatori abil treppimine toob kaasa probleeme lähteteksti viimisel ühelt platvormilt teisele (pikkus võib arvutitel erineda). Treppimine kehtib nii koodile kui ka kommentaaridele blokis.
+
+Taandeid saab koodiformaatoriga üle kontrollida (*Windows Ctrl + Alt + L* või *Mac OS Alt + ⌘ + L*).
 
 Iga lause on eraldi real, lauset pole vaja ilma põhjuseta poolitada.
 
