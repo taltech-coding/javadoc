@@ -19,17 +19,23 @@ Koodi näide, kus tehakse nupp, mille vajutamisel prindib "Hello World":
 
 .. code-block:: java
 
-	// Requires proper imports!
+	import javafx.application.Application;
+	import javafx.event.ActionEvent;
+	import javafx.event.EventHandler;
+	import javafx.scene.Group;
+	import javafx.scene.Scene;
+	import javafx.scene.control.Button;
+	import javafx.stage.Stage;
 
 	public class YourApplication extends Application {
-	 
+
 	    /**
 	     * @param args the command line arguments
 	     */
 	    public static void main(String[] args) {
 	        Application.launch(args);
 	    }
-	    
+
 	    @Override
 	    public void start(Stage primaryStage) {
 	        primaryStage.setTitle("Hello World");
@@ -41,7 +47,7 @@ Koodi näide, kus tehakse nupp, mille vajutamisel prindib "Hello World":
 	        btn.setText("Hello World");
 
 	        btn.setOnAction(new EventHandler<ActionEvent>() {
-	 
+
 	            public void handle(ActionEvent event) {
 	                System.out.println("Hello World");
 	            }
