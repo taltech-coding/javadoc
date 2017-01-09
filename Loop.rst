@@ -171,9 +171,75 @@ Programmi väljund:
     Count is: 3
     Count is: 4
     Count is: 5
+   
+forEach
+---------
+
+Java 8 võimaldab kasutada *forEach*'i, et läbida järjendi või kollektsiooni elemente.
+
+Näiteks listi korral *forEach* kasutamine koos lambdaga:
+
+.. code-block:: java
+
+ List<String> items = new ArrayList<>();
+        items.add("A");
+        items.add("B");
+        items.add("C");
+        items.add("D");
+        items.add("E");
+
+        //lambda
+        items.forEach(item -> System.out.println(item));
+        
+Sellisel juhul on programmi väljundiks:
+
+.. code-block::
+
+    A
+    B
+    C
+    D
+    E
+    
+Voo (*stream*) filtreerimine:
+
+.. code-block::
+
+    items.stream()
+         .filter(s -> s.contains("B"))
+         .forEach(System.out::println); // output: B
+
+
+Kujutise korral forEachi kasutamine koos lambdaga:
+
+.. code-block:: java
+
+    Map<String, Integer> items = new HashMap<>();
+        items.put("A", 10);
+        items.put("B", 20);
+        items.put("C", 30);
+        items.put("D", 40);
+        items.put("E", 50);
+        items.put("F", 60);
+
+        //lambda
+        items.forEach((k, v)->System.out.println("Item : " + k + " Count : " + v));
+        
+Programmi väljund:
+
+.. code-block:: 
+
+    Item : A Count : 10
+    Item : B Count : 20
+    Item : C Count : 30
+    Item : D Count : 40
+    Item : E Count : 50
+    Item : F Count : 60
 
 --------------
 
 https://docs.oracle.com/javase/tutorial/java/nutsandbolts/while.html
 
 https://docs.oracle.com/javase/tutorial/java/nutsandbolts/for.html
+
+https://www.mkyong.com/java8/java-8-foreach-examples/
