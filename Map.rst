@@ -8,6 +8,7 @@ Enimlevinud on HashMap, kuid on ka teisi.
 HashMap kirjeldatakse ära kujul : **HashMap<K, V> hashMap = new HashMap<K, V>();** kus K ja V on andmetüübid.
 
 K - Key
+
 V - Value
 
 Olulisemad meetodid:
@@ -20,7 +21,7 @@ Olulisemad meetodid:
 
 .. code-block:: java
 
-	import java.util.HashMap;
+    import java.util.HashMap;
     import java.util.Iterator;
     import java.util.Map.Entry;
     
