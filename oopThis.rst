@@ -3,7 +3,7 @@ Võtmesõna this
 ==============
 Objektorienteeritud programmeerimises võib olla sama nimega muutujaid rohkem kui üks, ja tavaliselt ongi. Selleks on selline asi nagu *this.variableName* mis määrab kindlaks, et tegemist on just selle klassi muutujaga.
 
-Koodi näites on konstruktor milles on argumendiks **nimi**, **id**, **tag** ja **grade** ning see määrab klassisisesed muutujad, mille nimed on samuti **name** ja **id**, lisaks on klassi muutuja, mille nimi ei kattu argumendi muutujaga, millele ei ole vaja ette panna *this.* kuid seda võib teha. Peale selle kasutatakse argumenti *grade* veel omakorda argumendima klassi meetodis kus väärtustatakse hinne ära.
+Koodinäites on konstruktor, milles on argumentideks **name**, **id**, **tag** ja **grade**, ning see määrab klassisisesed muutujad, mille nimed osaliselt kattuvad (**name** ja **id**). Lisaks on muutuja tagName, mille nimi ei kattu argumendi muutujaga ning järelikult pole vaja selle ette panna *this.*, kuid seda võib teha. Peale selle kasutatakse argumenti *grade* veel omakorda argumendina objekti meetodis, kus väärtustatakse hinne ära.
 
 .. code-block:: java
 
@@ -19,12 +19,12 @@ Koodi näites on konstruktor milles on argumendiks **nimi**, **id**, **tag** ja 
 		this.name = name;	
   		// this.id is a private variable specific to the object, while id by it self is an argument.
 		this.id = id;
-		// The argument name tag, does not overlap with the variable name tagName, 
+		// The argument name tag does not overlap with the variable name tagName, 
 		// 	so there is no need to use this.tagName, however you can use it.
   		tagName = tag 	
 		// We can also use this. on methods to specify that we are using this objects methods.
   		this.initializegrades(grade); 
-  		// but there are no need use this. in order to use the objects methods.
+  		// but there is no need use this in order to use the objects methods.
 		enroll(); 
   	}
 
