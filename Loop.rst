@@ -203,7 +203,7 @@ Sellisel juhul on programmi väljundiks:
     
 Voo (*stream*) filtreerimine:
 
-.. code-block::
+.. code-block:: java
 
     items.stream()
          .filter(s -> s.contains("B"))
@@ -223,7 +223,7 @@ Kujutise korral forEachi kasutamine koos lambdaga:
     items.put("F", 60);
 
     //lambda
-    items.forEach((k, v)->System.out.println("Item : " + k + " Count : " + v));
+    items.forEach((k, v) -> System.out.println("Item : " + k + " Count : " + v));
         
 Programmi väljund:
 
