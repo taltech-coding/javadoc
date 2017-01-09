@@ -3,7 +3,7 @@ Kujutis ehk Map
 ===============
 Map on andmekogum, kus on võtmete hulga igale elemendile vastavuses üks väärtuste hulga element. Kujutis sisaldab kaheosalisi kirjeid, millest esimest komponenti nimetatakse võtmeks ja teist väärtuseks. Ühe võtmega elemente võib olla vaid üks. Seda kasutatakse juhul, kui on vaja kiiresti mingi võtme järgi üles leida teist väärtust. Võti on alati seotud väärtusega.
 
-Enimlevinud on HashMap.
+Enimlevinud on HashMap, kuid on ka teisi.
 
 HashMap kirjeldatakse ära kujul : **HashMap<K, V> hashMap = new HashMap<K, V>();** kus K ja V on andmetüübid.
 
