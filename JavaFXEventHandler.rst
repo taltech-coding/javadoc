@@ -87,4 +87,5 @@ Lambdadega saab kirjutada ka terveid funktsioone, mitte ainult ühte käsku, nag
         });
 
 *Event handler*'ile hea õpetus : http://docs.oracle.com/javafx/2/events/jfxpub-events.htm
+
 Erinevad *event*'id : http://docs.oracle.com/javafx/2/events/convenience_methods.htm
