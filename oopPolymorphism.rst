@@ -1,7 +1,7 @@
 ===========
 Polümorfism
 ===========
-Polümorfismi idee on see, et see kirjeldab endale unikaalset käitumist ning samal ajal jagab ülemklassi mingit funktsionaalsust. Selleks, et polümorfismi saavutada, tuleb kasutada vähemalt ühte ülemklassi meetodit. See lubab kasutada sama koodi ja funktsioone erinevate andmetüüpidega, mille tulemuseks on rohkem üldised ning abstraktsed implementsioonid. 
+Polümorfismi idee on see, et see kirjeldab endale unikaalset käitumist ning samal ajal jagab ülemklassi mingit funktsionaalsust. Selleks, et polümorfismi saavutada, tuleb kasutada vähemalt ühte ülemklassi meetodit. See lubab kasutada sama koodi ja funktsioone erinevate andmetüüpidega, mille tulemuseks on rohkem üldised ning abstraktsed implementatsioonid. 
 
 Vaatame näidet kujundite puhul, kus programm oskab joonistada kujundeid ekraanile. Programm oskab teha ristkülikuid (*rectangle*) ja tavalisi kujundeid. Kujundite joonistamiseks võib kasutada *Rectangle* klasse. Nendel kõigil on superclass *Shape*, mis on nende kõigi ühisosa. Shape võiks sisaldada kujundi värvi, positsiooni, suurust ja nii edasi koos meetoditega, mis neid väärtusi muudab. 
 
