@@ -2,17 +2,8 @@ Sõne
 ====
 Sõned (ingl.k. *string*) on objektid, mis kuuluvad klassi *java.lang.String*. Sõne on sümbolite kogum. Sõnest võib mõelda kui tähtede (või üldisemalt sümbolite) massiivist. 
 Sõne on Java keeles objekt, mis tähendab, et tema kohta kehtivad natuke teised reeglid kui primitiivsete andmetüüpide puhul.
-
-Sõne-tüüpi muutuja loomine:
-
-.. code-block:: java
-
-    String greeting;
-    
-Sellisel juhul pole sõnel väärtust määratud. Vaikeväärtus on **null**. 
-null tähendab objektide puhul seda, et antud objekt on väärtustamata. Kui meie vaadeldava objekti väärtus on null, siis ei ole võimalik tema meetodeid välja kutsuda.
 		
-Muutuja loomisel võib sellele ka sisu anda:
+Sõne-tüüpi muutuja loomine:
 
 .. code-block:: java
 
@@ -26,6 +17,21 @@ Lisaks tekstilisele väärtusele võib väärtuseks olla ka null:
 
   String greeting = null;
   
+null tähendab objektide puhul seda, et antud objekt on väärtustamata. Kui meie vaadeldava objekti väärtus on null, siis ei ole võimalik tema meetodeid välja kutsuda.  
+  
+Võimalik on luua ka initsialiseerimata muutuja:
+
+.. code-block:: java
+
+    String greeting;
+    
+Sellisel juhul pole sõnel väärtust määratud ja ta on initsialiseerimata. Vaikeväärtus on **null**. 
+Kui seda teha lokaalselt (meetodi sees), siis sama muutuja kasutamisel enne sellele väärtuse määramist annab kompilaator vea, näiteks:  
+
+.. code-block:: 
+
+	Error:(4, 23) java: variable greeting might not have been initialized
+
 Meetodid
 --------
 
@@ -86,7 +92,7 @@ Kasutada on võimalik ka kahe argumendiga meetodit. Teine argument näitab ära 
 
 **replace**
 
-Sellel meetodil on kaks argumenti, millest esimene on vana sümbol ja teine uus sümbol. Tagastab sõne, kus on kõik vana sümboli instantsid asendatud uue sümboliga.
+Sellel meetodil on kaks argumenti, millest esimene on vana sümbol ja teine uus sümbol. Tagastab **uue** sõne, kus on kõik vana sümboli instantsid asendatud uue sümboliga.
 
 .. code-block:: java
 
@@ -94,15 +100,15 @@ Sellel meetodil on kaks argumenti, millest esimene on vana sümbol ja teine uus 
   
 **trim()**
 
-Tagastab sõne, millelt on eemaldatud eelnevad ja järgnevad tühikud.
+Tagastab **uue** sõne, millelt on eemaldatud eelnevad ja järgnevad tühikud.
 
 **toUpperCase()**
 
-Tagastab sõne, kus kõik tähemärgid on muudetud suurtähtedeks.
+Tagastab **uue** sõne, kus kõik tähemärgid on muudetud suurtähtedeks.
 
 **toLowerCase()**
 
-Tagastab sõne, kus kõik tähemärgid on muudetud väiketähtedeks.
+Tagastab **uue** sõne, kus kõik tähemärgid on muudetud väiketähtedeks.
 
 Sõnede võrdlemine
 -----------------
@@ -162,7 +168,7 @@ Näiteks:
 	myString = "Orange";
 
 
-Sellisel juhul ei muudeta sõne :code:`myString` sisu. Esimene rida loob objekti, mille sisuks on "Apple" ja omistab selle viida myString'ile. Teine rida loob uue objekti, mille sisuks on "Orange" ja omistab selle viida myString'ile. Esimene objekt jääb sealjuures alles ega muutu, tema poole ei saa enam lihtsalt pöörduda.
+Sellisel juhul ei muudeta sõne :code:`myString` sisu. Esimene rida loob objekti, mille sisuks on "Apple" ja omistab selle viida myString'ile. Teine rida loob uue objekti, mille sisuks on "Orange" ja omistab selle viida myString'ile. 
 
 Kui nüüd teha näiteks:
 
