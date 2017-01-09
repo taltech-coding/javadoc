@@ -82,3 +82,5 @@ Olulisemad meetodid:
             System.out.println("Ingredients total: " + sum);
         }
     }
+
+Java Documentation for HashMap: https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html
