@@ -242,4 +242,4 @@ https://docs.oracle.com/javase/tutorial/java/nutsandbolts/while.html
 
 https://docs.oracle.com/javase/tutorial/java/nutsandbolts/for.html
 
-https://www.mkyong.com/java8/java-8-foreach-examples/
+https://zeroturnaround.com/rebellabs/java-8-explained-applying-lambdas-to-java-collections/
