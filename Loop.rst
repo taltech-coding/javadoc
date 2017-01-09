@@ -175,7 +175,7 @@ Programmi väljund:
 forEach
 ---------
 
-Java 8 võimaldab kasutada *forEach*'i, et läbida järjendi või kollektsiooni elemente.
+Java 8 võimaldab kasutada *forEach*'i, et läbida kollektsiooni elemente.
 
 Näiteks listi korral *forEach* kasutamine koos lambdaga:
 
