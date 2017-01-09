@@ -175,7 +175,7 @@ Programmi väljund:
 forEach
 ---------
 
-Java 8 võimaldab kasutada *forEach*'i, et läbida kollektsiooni elemente.
+Java 8 võimaldab kasutada *forEach*'i, et läbida kollektsiooni elemente. Sellisel juhul on itereerimine viidud väliselt foreach tsüklilt sisemisele, ning argumendiks on *lambda expression*. Kollektsiooni *forEach* meetod on kasulik, kui soovime kollektsiooni itereerida ja tegeleda iga üksiku elemendiga. Kui soovime teha operatsiooni kollektsiooni kui tervikuga, siis loome voo (stream) ja kasutame sealseid meetodeid. 
 
 Näiteks listi korral *forEach* kasutamine koos lambdaga:
 
