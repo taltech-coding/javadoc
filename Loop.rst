@@ -181,15 +181,15 @@ Näiteks listi korral *forEach* kasutamine koos lambdaga:
 
 .. code-block:: java
 
- List<String> items = new ArrayList<>();
-        items.add("A");
-        items.add("B");
-        items.add("C");
-        items.add("D");
-        items.add("E");
+    List<String> items = new ArrayList<>();
+    items.add("A");
+    items.add("B");
+    items.add("C");
+    items.add("D");
+    items.add("E");
 
-        //lambda
-        items.forEach(item -> System.out.println(item));
+    //lambda
+    items.forEach(item -> System.out.println(item));
         
 Sellisel juhul on programmi väljundiks:
 
@@ -215,15 +215,15 @@ Kujutise korral forEachi kasutamine koos lambdaga:
 .. code-block:: java
 
     Map<String, Integer> items = new HashMap<>();
-        items.put("A", 10);
-        items.put("B", 20);
-        items.put("C", 30);
-        items.put("D", 40);
-        items.put("E", 50);
-        items.put("F", 60);
+    items.put("A", 10);
+    items.put("B", 20);
+    items.put("C", 30);
+    items.put("D", 40);
+    items.put("E", 50);
+    items.put("F", 60);
 
-        //lambda
-        items.forEach((k, v)->System.out.println("Item : " + k + " Count : " + v));
+    //lambda
+    items.forEach((k, v)->System.out.println("Item : " + k + " Count : " + v));
         
 Programmi väljund:
 
