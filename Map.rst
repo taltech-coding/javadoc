@@ -28,55 +28,55 @@ Olulisemad meetodid:
     public class ReadFile {
     
         public static void main(String[] args) {
-            HashMap<String, Integer> ingrediants = new HashMap<String, Integer>();
+            HashMap<String, Integer> ingredients = new HashMap<String, Integer>();
     
             // Putting elements into the map where we assign a key with a value.
             //      The first argument is key and second argument is the value corresponding to the key.
-            ingrediants.put("Carrots", 100);
-            ingrediants.put("Apple", 60);
-            ingrediants.put("Strawberry", 40);
+            ingredients.put("Carrots", 100);
+            ingredients.put("Apple", 60);
+            ingredients.put("Strawberry", 40);
     
             // Prints out the number of keys in the HashMap.
-            System.out.println("HashMap size: " + ingrediants.size());
+            System.out.println("HashMap size: " + ingredients.size());
     
             // Prints out the value of the given key of Carrots.
-            System.out.println("Amount of Carrots: " + ingrediants.get("Carrots"));
+            System.out.println("Amount of Carrots: " + ingredients.get("Carrots"));
     
     
             // Printing out all elements.
             // 1) for-each cycle of only values. You cannot get the keys this way.
-            for (Integer amount : ingrediants.values()) {
+            for (Integer amount : ingredients.values()) {
                 System.out.println(amount);
             }
     
             // 2) for-each cycle of both keys and values
-            for (Entry<String, Integer> entry : ingrediants.entrySet()) {
+            for (Entry<String, Integer> entry : ingredients.entrySet()) {
                 System.out.println(entry.getKey() + " : " + entry.getValue());
             }
     
             // 3) Lambda, only usable in Java 8 or newer
-            ingrediants.forEach((k, v) -> System.out.println("Key: " + k + " : Value: " + v));
+            ingredients.forEach((k, v) -> System.out.println("Key: " + k + " : Value: " + v));
     
             // 4) Iterator
-            Iterator<Entry<String, Integer>> iterator = ingrediants.entrySet().iterator();
+            Iterator<Entry<String, Integer>> iterator = ingredients.entrySet().iterator();
             while (iterator.hasNext()) {
                 Entry<String, Integer> entry = iterator.next();
                 System.out.println(entry.getKey() + " : " + entry.getValue());
             }
     
             // Adding new ingredient which has yet to be added.
-            ingrediants.put("Pear", 20);
+            ingredients.put("Pear", 20);
             // Increasing the amount of values;
-            int oldAmount = ingrediants.get("Pear");
+            int oldAmount = ingredients.get("Pear");
             int newAmount = oldAmount + 20;
-            ingrediants.replace("Pear", newAmount);
-            System.out.println("Pear : " + ingrediants.get("Pear"));
+            ingredients.replace("Pear", newAmount);
+            System.out.println("Pear : " + ingredients.get("Pear"));
     
             // In order to get the total amount of ingredients we have to cycle through the list
             //      and add all values together.
             // This can be done in any of the previously mentioned ways.
             int sum = 0;
-            for (Entry<String, Integer> entry : ingrediants.entrySet()) {
+            for (Entry<String, Integer> entry : ingredients.entrySet()) {
                 sum += entry.getValue();
             }
             System.out.println("Ingredients total: " + sum);
