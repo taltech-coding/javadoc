@@ -43,7 +43,7 @@ Mitmemõõtmelist massiivi initsialiseerides peab määrama kõikide massiivide 
 
 Antud kood trükib konsooli:
 
-.. code-block::
+.. code-block:: console
 
     Row 0
     1
@@ -103,7 +103,7 @@ Kahemõõtmeline järjend
 
 See kood prindib konsooli:
 
-.. code-block::
+.. code-block:: console
 
     this
     is

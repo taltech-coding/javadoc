@@ -46,6 +46,7 @@ Alternatiivselt ei pea faili kompileerimiseks liikuma sinna kausta, vaid võib k
 Näiteks kui faili path on *src/maths/mathsoperations/Add.java* peab faili algusesse kirjutama
 
 .. code-block:: java
+
     package maths.mathsoperations;
 
 Siis saab faili kompileerida

@@ -10,7 +10,7 @@ Tsükli arhitektuur:
 Javas on kolme liiki tsükleid: eelkontrolliga tsükkel (*while*), järelkontrolliga tsükkel (*do-while*) ja kolmikpäisega tsükkel (*for*).
 
 *While*-tsükkel
--------------
+----------------
 
 *While*-tsüklit saab kasutada, et mingit koodiosa korrata. Tsükli puhul on oluline määrata ära, kui kaua (ehk mis tingimusel) seda korrata tuleb. 
 
@@ -47,7 +47,7 @@ Näide:
     
 Sellisel juhul on programmi väljundiks:
 
-.. code-block::
+.. code-block:: console
 
     0
     1
@@ -80,14 +80,14 @@ Näide:
     
 Sellisel juhul on programmi väljundiks:
 
-.. code-block::
+.. code-block:: console
 
     Count is: 1
     Count is: 2
     Count is: 3
     
 *For*-tsükkel
-------------
+-------------
 
 For-tsüklil on Javas kaks erinevat esitust - tavaline for-tsükkel ja for-each ehk for-in tsükkel. For-each tsüklit kasutatakse järjendite ja kollektsioonide korral. 
 
@@ -97,7 +97,7 @@ Käsk *for* koosneb kolmest osast: 1) kood, mis täidetakse tsükli alguses, 2) 
 
 Süntaks:
 
-.. code-block::
+.. code-block:: console
 
     for (initialization statement; condition check; increment) {
         statement(s);
@@ -107,7 +107,7 @@ Tüüpiliselt on eeltegevusteks (*initialization statement*) mingitele muutujate
 
 Jätkamistingimus (*condition check*) tuleb seada nii, et tsüklit täidetaks täpselt vajalik arv kordi. Kuniks tingimus on tõene (*true*), jooksutatakse tsükli sisu.
 
-.. code-block::
+.. code-block:: java
 
     for (int i = 0; i < 3; i++)
 
@@ -117,7 +117,7 @@ Tsükli sammu järeltegevuseks (*increment*) on sageli mingi muutuja väärtuse 
 
 Näide:
 
-.. code-block::
+.. code-block:: java
 
     for (int i = 0; i < 5; i++) {
         System.out.println("Hello!");
@@ -127,7 +127,7 @@ Sellise näite puhul väljastab *for*-tsükkel viis korda teksti "Hello!".
 
 *For*-tsüklit saab kasutada ka selliselt, et mõni (kasvõi kõik) nendest kolmest osast on täitmata. Näiteks:
 
-.. code-block::
+.. code-block:: java
     
     int i = 0;
     
@@ -137,7 +137,7 @@ Sellise näite puhul väljastab *for*-tsükkel viis korda teksti "Hello!".
 
 Järgnevas näites on kõik kolm osa täitmata. Sellisel juhul on tegemist lõputu tsükliga:
 
-.. code-block::
+.. code-block:: java
 
     for ( ; ; ) {
         // your code goes here
@@ -150,7 +150,7 @@ Seda kasutatakse järjendite ja kollektsioonide korral. Saab kasutada ainult sii
 
 Näide:
 
-.. code-block::
+.. code-block:: java
     
     class EnhancedForDemo {
         public static void main(String[] args){
@@ -164,7 +164,7 @@ Näide:
 
 Programmi väljund:
 
-.. code-block::
+.. code-block:: console
 
     Count is: 1
     Count is: 2
@@ -193,7 +193,7 @@ Näiteks listi korral *forEach* kasutamine koos lambdaga:
         
 Sellisel juhul on programmi väljundiks:
 
-.. code-block::
+.. code-block:: console
 
     A
     B
@@ -227,7 +227,7 @@ Kujutise korral forEachi kasutamine koos lambdaga:
         
 Programmi väljund:
 
-.. code-block:: 
+.. code-block:: console
 
     Item : A Count : 10
     Item : B Count : 20

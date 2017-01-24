@@ -24,7 +24,7 @@ Kirjeldus
 Muutuja võib olla lokaalne või globaalne.
 
 Näited
------
+------
 
 **Muutujad:**
 

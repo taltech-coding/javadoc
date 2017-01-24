@@ -207,7 +207,7 @@ Mis on samaväärne sellega:
   }
 
 *Switch*-lause
------------
+---------------
 
 Erinevalt *if-then* ja *if-then-else* lausetest, saab *switch*-lausel (lülitidirektiivil) olla palju võimalikke valikuid. 
 

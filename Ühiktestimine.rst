@@ -2,7 +2,7 @@
 Ühiktestimine ehk Unit Testing
 ==============================
 *Test Driven Development*
------------------------
+-------------------------
 
 Ühiktestimine on seotud *Test Driven Development*'iga (TDD), mille põhimõtteks on enne kirjutada testid ja pärast seda hakata implementeerima koodi, mis peab läbima kirjutatud testid. Kood on valmis siis, kui ei olda enam suutelised kirjutama uusi teste, millest kood saaks läbi kukkuda. Testklass on eraldi klass.
 
@@ -19,7 +19,7 @@ Testklassi loomine
 
 
 *Assert*'imine
------------
+---------------
 Hea oleks kui kasutada koodi alguses *@BeforeMethod* meetodit, mis *seadistab* kõik vajaliku. *@BeforeMethod*'i tehakse enne igat testi, niimodi saab kindel olla, et testid üksteist ei mõjuta.
 
 Vastuste võrdlemiseks on mitu erinevat võimalust:

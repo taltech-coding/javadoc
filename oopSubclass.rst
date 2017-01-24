@@ -17,11 +17,12 @@ Alamklass Javas pärib omadusi ülemklassist. Tänu pärimisele lisavad alamklas
 Ütleme, et *koer* on *loom*. Seepärast on loogiline luua klass *loom* ning panna *koer* pärima sealt. Sel juhul on alamklassiks *koer* ning ülemklassiks *loom*.
 
  .. code-block:: java
- public class Animal {
- }
  
- public class Dog extends Animal{
- }
+    public class Animal {
+    }
+    
+    public class Dog extends Animal{
+    }
 
 
 

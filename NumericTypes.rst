@@ -256,7 +256,7 @@ Numbriklasse saab kasutada primitiivsete andmetüüpide asendamiseks, kuid kuna 
     System.out.println(sum.intValue());  // 105
 
 BigInteger ja BigDecimal klassid
--------------------------------
+---------------------------------
 
 Lisaks põhilistele numbriklassidele (Byte, Short, Long, Integer, Float, Double) on olemas ka klassid **BigInteger** ja **BigDecimal**. Neid saab kasutada väga suurte väärtuste hoidmiseks.
 

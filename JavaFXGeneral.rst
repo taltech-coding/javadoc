@@ -1,5 +1,5 @@
 *JavaFX*
-=======
+========
 
 *JavaFX* on graafika- ning meediapakettide teek (*library*), mis võimaldab arendajatel luua erinevaid desktop-rakendusi või
 *rich internet application*'e (RIA) ehk installeeritavaid internetirakendusi, milleks võivad olla näiteks brauseri pluginad.
@@ -14,13 +14,13 @@ ja kujunduselemendid (erinavad *JavaFX* objektid). *SceneBuilder* loob ise FXML 
 rakenduse loojal tuleb ainult vajalikud elemendid ekraanil õigesse kohta panna.
 
 Kust saada *JavaFX*?
-------------------
+--------------------
 
 *JavaFX* API on *Java Runtime Environment*'i (JRE) ning *Java Development Kit*'i (JDK) osaks,
 seega pole seda tarvis eraldi alla tõmmata.
 
 Kust saada *SceneBuilder*?
--------------------------
+--------------------------
 
 Nagu eelnevalt mainitud, pole *SceneBuilder*'it otseselt tarvis, et luua *JavaFX* rakendusi,
 kuid alustuseks on seda märksa mugavam (ning võib-olla ka lõbusam) kasutada.
@@ -29,7 +29,7 @@ IntelliJ pakub ka võimalust, mis laseb *SceneBuilder*'it kasutada otse koodikir
 *SceneBuilder*'i saab alla laadida järgnevalt lingilt:
 http://gluonhq.com/labs/scene-builder/
 
-.. image:: https://github.com/tutjava/materjalid/blob/master/images/JavaFXSceneBuilder.png
+.. image:: images/JavaFXSceneBuilder.png
 
 Kuidas luua *JavaFX* projekti?
 ------------------------------

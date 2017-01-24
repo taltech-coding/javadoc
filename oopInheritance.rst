@@ -76,4 +76,4 @@ Detailsemalt käsitletakse konstruktoreid:
 https://github.com/tutjava/materjalid/blob/master/oopConstructor.rst
 
 *super* võtmesõna kohta saab lisainfot: 
-https://github.com/tutjava/materjalid/blob/master/oopSuper.rst
+`super <oopSuper.html>`__

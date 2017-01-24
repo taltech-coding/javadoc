@@ -14,7 +14,7 @@ Nii *Timeline* kui ka *Transition* on *javafx.animation.Animation* klassi alamkl
 Üleminekud annavad võimaluse animatsioonide loomisel kasutada *JavaFX* sisest *timeline*'i. Üleminekute abil on võimalik luua mitmeid animatsioone, mis võivad oma loomult olla käivitatavad, kas paralleelselt või järjestikuliselt. 
 
 *Fade*'i ehk hajumisega üleminek
-------------------------------
+---------------------------------
 
 *Fade* üleminek muudab etteantud aja vältel ühe *node*'i läbipaistmatust. Antud näites luuakse punane ristkülik,
 millele rakendatakse hajumisega üleminekut. Loodav *FadeTransition* kestab 3 sekundit ehk 3000 millisekundit. Selle aja vältel muudetakse meetodite *setFromValue* ning *setToValue* abil *opacity* väärtust 1 kuni 0.1. Meetod *setCycleCount* määrab mitu korda animatsiooni korratakse, antud näites tehakse seda lõpmatu arv kordi, *setAutoReverse* aga mängib animatsiooni kõigepealt nii, nagu see koodi on kirjutatud, kuid enne sama animatsiooni kordamist, tehakse läbi ka sellele üleminekule vastupidine animatsioon. Lõpuks käivitatakse *fade transition* *play()* meetodiga.
@@ -35,9 +35,9 @@ millele rakendatakse hajumisega üleminekut. Loodav *FadeTransition* kestab 3 se
 
 
 *Path*'iga ehk teekonnaga üleminek
-------------------------------
+-----------------------------------
 
-.. image:: https://github.com/tutjava/materjalid/blob/master/images/JavaFXPathTransition.png
+.. image:: images/JavaFXPathTransition.png
 
 *Path*'iga üleminek liigutab graafi sõlme mööda määratud teed ühest otsast teise etteantud aja vältel. Järgnev kood liigutab oranži ümarate nurkadega ristkülikut, mööda loodud teed.
 
@@ -74,7 +74,7 @@ setNode() abil oranž ristkülik. Meetod *setOrientation* määrab kuidas riskü
 Paralleelne üleminek
 --------------------
 
-.. image:: https://github.com/tutjava/materjalid/blob/master/images/JavaFXParallelTransition.png
+.. image:: images/JavaFXParallelTransition.png
 
 Paralleelne üleminek paneb tööle mitu *transition*'it samaaegselt.
 Meetoditega *setTranslateX()* ning *setTranslateY()* antakse tumesinisele ristkülikule ette esialgsed koordinaadid. Antud näites pannakse korraga tööle tervelt neli erinevat üleminekut, mille hulgas on ka eelnevalt vaadeldud *FadeTransition*. Lisaks sellele luuakse ka üleminekutel põhinevad animatsioonid, mis muudavad risküliku suurust (*ScaleTransition*),  asukohta (*TranslateTransition*) ning
@@ -192,7 +192,7 @@ Järjestikuse ehk *sequential* ülemineku korral pannakse mitu erinevat animatsi
 *Timeline* animatsioonid
 ------------------------
 
-.. image:: https://github.com/tutjava/materjalid/blob/master/images/JavaFXTimeline.png
+.. image:: images/JavaFXTimeline.png
 
 Animatsioone iseloomustab objektide omaduste, näiteks suuruse, asukoha ning värvi muutumine ajas. *Timeline*'i abil saab neid omadusi muuta erinevatel ajahetkedel vastavalt enda soovidele. *JavaFX* toetab ka *key frame* animatsiooni, mis lubab määrata alg- ning lõppkaadri, millel on kindlad ajahetked, nende kahe staadiumi vahele jäävaid olulisi kaadreid on samuti võimalik deklareerida, selle alusel saab automaatselt kuvada animatsioone, mida võib vastavalt enda tahtele, kas peatada, uuesti käivitada, panna tööle vastupidises suunas või korrata.
 Järgnevas koodinäites on *timeline*, mille abil animeeritakse punase ristküliku liikumist kahesaja piksli võrra paremale, animatsiooni kestuseks on 500 millisekundit.

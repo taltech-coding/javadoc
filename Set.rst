@@ -1,10 +1,10 @@
 *Set* ehk hulk
-============
+==============
 
 *Set* ehk hulk on kollektsioon või kogum elementidest, milles ükski liige ei kordu. Javas on *Set* tegelikult *interface* ehk liides. *Interface*'i kohta leiab rohkem informatsiooni objektorienteeritud koodi kirjutamist käsitlevate teemade juures. Javas on mitmeid erinevaid hulga tüüpe nt *HashSet*, *AbstractSet*, *LinkedHashSet*, *TreeSet*, *ConcurrentSkipListSet*, *EnumSet* jt. Objektorienteeritud mõttes implementeerivad nad kõik *Set* liidest. Sisuliselt on aga kõigil neil hulkadel sarnased algsed omadused (see, et üksiki liige ei kordu) ning erinevat tüüpi *Set*'ide kohta saab kutsuda välja sarnsaeid meetodeid.
 
 *HashSet*
--------
+----------
 
 Üks võimalik hulga tüüpidest on *HashSet<E>*. *HashSet* ei hoia meeles sinna paigutatud elementide järjekorda, erinevalt mõnest teisest hulgast on võimalik *HashSet*'is hoida ka null elementi. Seda on saab luua nõnda:
 

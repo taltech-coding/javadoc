@@ -28,7 +28,7 @@ Võimalik on luua ka initsialiseerimata muutuja:
 Sellisel juhul pole sõnel väärtust määratud ja ta on initsialiseerimata. Vaikeväärtus on **null**. 
 Kui seda teha lokaalselt (meetodi sees), siis sama muutuja kasutamisel enne sellele väärtuse määramist annab kompilaator vea, näiteks:  
 
-.. code-block:: 
+.. code-block:: console
 
 	Error:(4, 23) java: variable greeting might not have been initialized
 

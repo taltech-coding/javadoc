@@ -9,7 +9,7 @@ Kõige lihtsam Java fail koosneb paketi deklaratsioonist (valikuline), import la
 
 Näites on klassi definitsioon *public class Example*. Faili nimi tuleneb klassi nimest. Kui klassi nimi on *Example*, siis faili nimi peab olema *Example.java*.
 
-.. image:: https://github.com/tutjava/materjalid/blob/master/images/fileStructure.gif
+.. image:: images/fileStructure.gif
 
 Näitena toodud koodis on vaid üks funktsioon ning see liidab kokku 2 ette antud numbrit.
 Main meetodis kutsume välja funktsioone, mida soovime käima panna (antud juhul addNumbers). 

@@ -1,5 +1,5 @@
 Primitiivsed andmetüübid
-========
+========================
 
 Andmetüübid Javas jagunevad kahte suuremasse klassi: primitiivsed andmetüübid ja objektid. Primitiivsete andmetüüpide korral kehtib reegel, et muutujal on konkreetne väärtus. Andmetüüp määrab ära, milliseid väärtuseid see võib sisaldada ning milliseid toiminguid sellega läbi võib viia. Javas on 8 erinevat primitiivset andmetüüpi.
 

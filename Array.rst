@@ -10,7 +10,7 @@ Iga element massiivis on nummerdatud. Esimese elemendi indeks on 0, teise elemen
 Massiivil on kindel pikkus, st kui mitu elementi massiivi maksimaalselt mahub. Massiivi pikkust ei saa muuta.
 
 Massiivi loomine
----------------
+----------------
 
 Kui me soovime näiteks luua täisarvude massiivi *someNumbers*, siis saaksime selle deklareerida nii: 
 

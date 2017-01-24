@@ -1,5 +1,5 @@
 Java installeerimine
-========
+====================
 
 Enne kui saab luua ja muuta Java programme, tuleb endale installeerida JDK (Java Software Development Kit). Selle saab alla laadida leheküljelt: http://www.oracle.com/technetwork/java/javase/downloads/index.html.
 Sealt lehelt tuleks valida *Download*, mis asub *JDK* all. Järgmisena tuleks valida sobiv versioon oma arvutile (tuleks võtta viimane stabiilne versioon, sageli on saadaval rohkem kui üks versioon).
@@ -29,7 +29,7 @@ Kui installeerimine oli edukas, peaksid nüüd nägema installeeritud JDK versio
 
 
 Mis on JRE ja JDK vahe?
---------
+------------------------
 JRE: Java Runtime Environment. See on Java virtuaalmasin, mille peal jooksevad Java aplikatsioonid. See sisaldab ka brauseri pluginaid aplettide jooksutamiseks.
 
 JDK: Java Software Development Kit. Sisaldab endas JRE-d, kompilaatorit ja vahendeid näiteks silumiseks, et luua ja kompileerida Java programme.

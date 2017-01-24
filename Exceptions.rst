@@ -7,7 +7,7 @@ Erind (*exception*) on mingi probleem, mis programmi töö jooksul ilmneb, ning 
 Üldiselt on kaks erinevat tüüpi erindit.
 
 *Checked* erind
--------------
+----------------
 
 *Checked* erind ilmneb programmi kompileerimisel. Neid erindeid peab kindlasti programmis töötlema. Siia alla käib näiteks *FileNotFoundException*, mis juhtub siis, kui üritakse lugeda mingit faili, mida ei eksisteeri.
 
@@ -45,7 +45,7 @@ Teine viis erindit töödelda on see meetodist välja visata (*throw*). Niimoodi
     }
 
 *Unchecked* erind
----------------
+------------------
 
 *Unchecked* erind ilmneb programmi käivitamisel, seetõttu kutsutakse neid ka *runtime* erinditeks. Nende erindite põhjus on enamasti mingi loogiline viga programmikoodis (*bug*). Neid erindeid nö "valmis" programmi töös ei tohiks esineda, ehk kõik sellised loogilised vead tuleks programmis ära parandada enne programmi kasutamist.
 

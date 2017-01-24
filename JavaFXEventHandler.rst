@@ -1,6 +1,6 @@
-====================
+======================
 *JavaFX Event handler*
-====================
+======================
 JavaFX-is on iga tegevus mingi notifikatsioon. Kui kasutaja vajutab mingit nuppu, klahvi, liigutab hiirt või teeb teisi tegevusi, antakse välja *event*'e. *Event handler*'itega pääseb neile ligi, samuti saab *event handler*'i abil lisada mingile klahvile funktsionaalsusi. 
 
 *Event*

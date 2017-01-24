@@ -1,13 +1,13 @@
-==============
+================
 *JavaFX: Layout*
-==============
+================
 
 **Layout** konteinerid ehk paanid (*panes*) võimaldavad komponente (*scene graph*'i) sees erineval viisil paigutada. Soovitud struktuuri saamiseks võib erinevaid paane üksteise sisse panna. Kui akna suurust muudetakse, muudavad paanid automaatselt enda komponentide mõõtmeid ja paiknemist.
 
 Paanidel on hulk erinevaid meetodeid, millega saab teha väikeseid muudatusi nende välimuses (laius, pikkus, vahe komponentide vahel jne) või lisada funktsioone, mis käivituvad erinevate sündmuste puhul. Mõningaid neist on mõnes järgnevas näites kasutatud, ning neid saab täpselt samamoodi kasutada kõigi paanide puhul ning tegelikult ka komponentide puhul, kuna need päritakse ühistelt ülemklassidelt **Node** ja **Region**.
 
 *HBox, VBox*
-==========
+============
 
 **Hbox** ja **VBox** võimaldavad komponente paigutada üksteise kõrvale (*Hbox*) või üksteise alla (*VBox*).
 
@@ -63,7 +63,7 @@ Tulemus:
 .. image:: images/Vbox.PNG
 
 *GridPane*
-========
+==========
 
 **GridPane** loob ruudustiku, mille ruutudesse komponente paigutatakse. Meetodi **setGridLinesVisible** abil saab kuvada abijooni, mis aitavad hinnata, kas ruudustiku abil üles ehitatud paigutus näeb korrektne välja.
 
@@ -101,7 +101,7 @@ Tulemus, esimesel pildil on abijooned nähtavaks pandud:
 
 
 *FlowPane*
-========
+==========
 
 **FlowPane** sarnaneb *Hbox*'i ja *VBox*'iga – ka seal paigutatakse elemente järjestikku kas horisontaalselt või vertikaalselt sõltuvalt paani orientatsioonist. Vahe on selles, et kui elemendid ei mahu kõik järjestikku, jätkab *FlowPane* nende paigutamist uuelt realt (või uuest veerust). Eelistatud tulpade või veergude arvu saab määrata meetodite **setPrefColumns** ja **setPrefRows** abil.
 
@@ -131,7 +131,7 @@ Vaikimisi on orientatsioon horisontaalne. Orientatsiooni muutmiseks saab kasutad
     flowPane.setOrientation(Orientation.VERTICAL);
 
 *TilePane*
-========
+==========
 
 **TilePane** toimib samamoodi nagu *FlowPane*, kuid elemendid paigutatakse ruudustikku, kus kõik ruudud on võrdse suurusega. Ruudu suurus on vaikimisi suurima elemendi suurus, kuid seda saab eraldi määrata ka meetodite **setPrefTileWidth** ja **setPrefTileHeight** abil.
 
@@ -157,7 +157,7 @@ Koodi käivitamisel näeme, et on tekkinud väikesed vahed, kuna suur punane ris
 .. image:: images/Tilepane.PNG
 
 *StackPane*
-=========
+===========
 
 **StackPane** paigutab kõik komponendid üksteise peale. Nii on võimalik näiteks kujunditest ja tekstist kokku panna ikoone.
 
@@ -180,7 +180,7 @@ Tulemus:
 .. image:: images/Stackpane.PNG
 
 *AnchorPane*
-==========
+============
 
 **AnchorPane** võimaldab komponente enda keskele, mõne serva või nurga külge ankurdada.
 

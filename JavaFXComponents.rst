@@ -223,7 +223,7 @@ Choice box
 
 Kasutamise demonstreerimiseks võib lisada sellise koodijupi:
 
-.. code-block:: java:
+.. code-block:: java
 
     Button button = new Button("What is the value?");
     Label label = new Label("");
