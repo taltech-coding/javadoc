@@ -2,7 +2,8 @@ Java installeerimine
 ====================
 
 Enne kui saab luua ja muuta Java programme, tuleb endale installeerida JDK (Java Software Development Kit). Selle saab alla laadida leheküljelt: http://www.oracle.com/technetwork/java/javase/downloads/index.html.
-Sealt lehelt tuleks valida *Download*, mis asub *JDK* all. Järgmisena tuleks valida sobiv versioon oma arvutile (tuleks võtta viimane stabiilne versioon, sageli on saadaval rohkem kui üks versioon).
+Sealt lehelt tuleks valida *Download*, mis asub *JDK* all (peaks avanema leht "Java SE Development Kit 8 Downloads").
+Järgmisena tuleks valida sobiv versioon oma arvutile (tuleks võtta viimane stabiilne versioon, sageli on saadaval rohkem kui üks versioon).
 
 Windows
 --------
