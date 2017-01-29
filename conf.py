@@ -34,8 +34,9 @@ sys.path.insert(0, os.path.abspath('_ext'))
 extensions = ['sphinx.ext.intersphinx',
     'sphinx.ext.todo',
     'sphinx.ext.mathjax',
-    'hieroglyph',
-    'edit_on_github']
+#    'hieroglyph',
+#    'edit_on_github'
+]
     
 edit_on_github_project = 'tutjava/materjalid'
 edit_on_github_branch = 'master'
