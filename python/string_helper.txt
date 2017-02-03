@@ -1,0 +1,153 @@
+Python
+===
+Java
+===
+**Sõne loomine**
+---
+---
+Pythonis on sõne loomiseks mitu võimalust:
+
+.. code-block:: python
+
+    s = "tere" # kahekordsed jutumärgid
+    s = 'tere' # ühekordsed jutumärgid
+    # kolm jutumärki
+    s = """tere"""
+    s = '''tere'''
+    s = str("tere")
+    
+Kõik annavad sama tulemuse.
+
+Kolme jutumärgiga eraldatud sõne |br|
+korral saab sõnes kasutada ka reavahetusi.
+
+.. code-block:: python
+
+    s = """tere
+    siin
+    on 
+    reavahetused"""
+    
+---
+
+Javas saab sõne luua vaid jutumärkide abil.
+
+.. code-block:: java
+
+    String s = "tere";
+    String s2 = new String();
+    
+Reavahetust saab kasutada järgmiselt:
+
+.. code-block:: java
+
+    String s3 = "tere\bsiin\non\reavahetused";
+
+---
+**Sõne ühendamine**
+---
+---
+Pythonis sõne muuta ei saa. |br|
+"Muutmiseks" tuleb teha uus sõne. |br|
+Sõnede ühendamiseks saab kasutada liitmist:
+
+.. code-block:: python
+
+    s = "üks" + "teine"
+    s = "üks" + " " + "teine"
+
+Sõne ühendamine teist tüüpi väärtusega:
+
+.. code-block:: python
+
+    s = "number:" + str(nr)
+    
+---
+Javas ei saa sõne samuti muuta.
+
+Sõnede ühendamine:
+
+.. code-block:: java
+
+    String s = "tere" + "tulemast";
+    String s2 = "tere " + "tulemast";
+    
+Javas saab sõnele numbreid liita mugavamalt:
+
+.. code-block:: java
+
+    int nr = 3;
+    String s = "Number: " + nr;
+    
+---
+**Sõne funktsioonid**
+---
+---
+
+.. code-block:: python
+
+    s = "teretulemast"
+    len(s) # 12
+---
+.. code-block:: java
+
+    String s = "teretulemast";
+    s.substring(s.length());
+---
+.. code-block:: python
+
+    s = "teretulemast"
+    s[4:] # tulemast
+    s[:4] # tere
+    s[5:7] # ul
+    s[-3:] # ast
+    
+---
+
+.. code-block:: java
+
+    String s = "teretulemast";
+    s.substring(4);
+    s.substring(0, 4);
+    s.substring(5, 7);
+    s.substring(s.length() - 3);
+---
+Pythonis üks sümbol sõnest on sõne |br|
+(mille pikkus on 1):
+
+.. code-block:: python
+
+    s = "tere"
+    first = s[0] # "t"
+    c = 'a' # just a string
+    
+---
+
+Javas on üks sümbol sõnest *char* tüüpi. |br|
+char tüüpi väärtus kirjutatakse ühekordsete |br|
+jutumärkide (ülakomad) vahele.
+
+.. code-block:: java
+
+    String s = "tere";
+    char first = s.charAt(0); // 't'
+    char c = 'a';
+---
+
+.. code-block:: python
+
+    s = "teretulemast"
+    s.find("tere") # 0
+    s.find("e") # 1
+    s.find("e", 4) # 7
+    s.find("o") # -1
+---
+
+.. code-block:: java
+
+    String s = "teretulemast";
+    s.indexOf("tere");
+    s.indexOf("e");
+    s.indexOf("e", 4);
+    s.indexOf("o");
+---.

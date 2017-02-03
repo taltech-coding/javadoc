@@ -16,7 +16,7 @@ Sellelt lehelt leiad Javaga seonduvad õppematerjalid.
    Javadoc2
    Muutuja
    PrimitiveDataTypes
-   NumbericTypes
+   NumericTypes
    BooleanDataType
    ConditionalStatements
    Loop

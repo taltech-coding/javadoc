@@ -9,4 +9,4 @@ See võib aidata neid, kes on eelnevalt Pythoniga kokku puutunud ning tahaksid n
    :caption: Teemad:
    
    hello_world
-   *
+   string
