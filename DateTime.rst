@@ -2,14 +2,14 @@
 Kuupäevad ja kellaajad
 ======================
 
-Java 8 puhul tuleks kasutada kuupäevade ja kellaaegade säilitamiseks klasse paketist **java.time**, mille kohta oleks mõistlik lähemalt uurida `oracle Java juhendist <https://docs.oracle.com/javase/tutorial/datetime/iso/index.html>`_.
+Java 8 puhul tuleks kasutada kuupäevade ja kellaaegade säilitamiseks paketti **java.time**, mille klasside kohta tasub lähemalt uurida `Oracle Java juhendist <https://docs.oracle.com/javase/tutorial/datetime/iso/index.html>`_.
 
-Lisaks java.time klassidele on olemas hulk klasse nagu *Calendar*, *Time* ja *Date*. Nii mõnigi meetod nendes klassides pole enam kasutusel, millele viitab märgistus *(deprecated)*. Neid kasutati java varasemates versioonides ning seetõttu leiab internetist väga palju näiteid nende kohta. Järgnevates näidetes neid ei kasutata ning ka enda töös oleks mõistlik neid vältida.
+Lisaks eelpoolnimetatule on olemas java.util klassid, näiteks *Calendar*, *Time* ja *Date*. Nii mõnigi meetod neis pole enam kasutusel, millele viitab ka märgistus *(deprecated)*. Java varasemates versioonides olid olemas ainult need klassid ning seetõttu leiab internetist väga palju näiteid nende kohta. Järgnevates näidetes kasutame kaasaegsemat java.time paketti ning ka enda töös oleks mõistlik eelistada seal paiknevaid klasse.
 
 Kasulikud näited
 ================
 
-Juhul kui meile on olulised ainult kuu ja aasta number, võime kasutata klassi **YearMonth**.
+Juhul kui meile on olulised ainult kuu ja aasta number, võime kasutata **YearMonth** objekte.
 
 .. code-block:: java
 
