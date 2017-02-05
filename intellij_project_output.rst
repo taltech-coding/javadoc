@@ -38,3 +38,10 @@ Seejärel kirjutage "Project compiler output" lahtrisse juurde "/out". Ehk siis 
 .. image:: /images/intellij/project_output_4_set_out.png
 
 Kui vastav väli on määratud, vajutada "OK". Nüüd peaks seadistused korrektsed olema ja koodi saab käivitada.
+
+Kui programm endiselt ei käivitud
+-----------------------------------
+
+Vaata, et ühegi mooduli all ei oleks mingit imelikku seadistust. Kõige mõistlikum oleks teha nii, et iga mooduli juures oleks märgitud, et ta kasutab projekti üldisi seaditusi. Selleks võta moodul ja *paths* saki alt määra "Inherit project compile output path":
+
+.. image:: /images/intellij/project_output_5_module_paths.png
