@@ -10,7 +10,7 @@ Sellelt lehelt leiad Javaga seonduvad õppematerjalid.
    InstallingJava
    HelloWorld
    GitTtu
-   IntellijTut
+   intellij
    python/index
    CodeStyle
    Javadoc2
