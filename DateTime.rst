@@ -35,4 +35,6 @@ Selleks, et saada kuupäev soovitud formaati, saab kasutada meetodit **format**,
 
 DateTimeFormatter dokumentatsioon: https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html
 
+Huvitav video ajatsoonidest ja programmeerimisest: https://www.youtube.com/watch?v=-5wpm-gesOY
+
 (Leht on täiendamisel)
