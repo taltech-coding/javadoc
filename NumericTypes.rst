@@ -57,6 +57,64 @@ Float tüüpi arvude eristamiseks tuleb neile lisada täht **f** või **F** (pol
     double d3 = 1.234e2; // Scientific notation (e2 -> *10^2)
     float f = 123.4f     // f or F must be added!
 
+Erilised ujukomaarvud
+---------------------
+
+Kuigi üldiselt primitiivsete andmetüüpide puhul me saame neile anda vaid konkreetseid väärtusi vastavast andmetüübist, siis **double** võimaldab lisaks "tavalistele" väärtustele hoida ka järgmisi väärtusi:
+
+- Not-a-Number. Sellega saab tähistada olukoda, kus **double** tüüpi muutujas salvestatakse mitte-arvulist väärtust.
+- Lõpmatus. Java defineerib nii positiivse kui negatiivse lõpmatuse. Positiivne lõpmatus on kõikidest **double** tüüpi väärtustest suurem, negatiivne jälle kõikidest väiksem.
+
+**Not-a-Number**
+
+*Not-a-Number* väärtuse jaoks kasutatakse konstanti :code:`Double.NaN`. Täpsemalt on NaN defineeritud järgmiselt 
+
+.. code-block:: java
+
+    /** 
+     * A constant holding a Not-a-Number (NaN) value of type
+     * {@code double}. It is equivalent to the value returned by
+     * {@code Double.longBitsToDouble(0x7ff8000000000000L)}.
+     */
+    public static final double NaN = 0.0d / 0.0;
+    
+Lisaks kehtib NaN väärtuse puhul järgmine tingimus (ainsana arvudest): :code:`x != x`, kus :code:`x` on NaN. 
+
+Üldisemalt, kõik operatsioonid, milles osaleb vähemalt üks NaN väärtus, annavad tulemuseks NaN. Kui võrdluses osaleb üks või kaks NaN väärtust, siis tulemus on alati :code:`false`. Erandiks on :code:`!=` võrdlus, milles osaleb vähemalt üks NaN, mille tulemus on alati :code:`true`, seal hugas ülaltoodud :code:`x != x` näide, kus :code:`x` on NaN.
+
+Selleks, et kontrollida, kas väärtus on NaN, tuleks kasutada järgmist meetodit:
+
+.. code-block:: java
+
+    if (Double.isNaN(x)) {
+        // x value is NaN
+    }
+
+**Lõpmatus**
+
+Lõpmatuse tähistamiseks saab kasutada konstante :code:`Double.POSITIVE_INFINITY` ja :code:`Double.NEGATIVE_INFINITY`. 
+
+.. code-block:: java
+
+    public static final double NEGATIVE_INFINITY = -1.0d / 0.0;
+    public static final double POSITIVE_INFINITY = 1.0d / 0.0;
+    
+Lõpmatusega seotud tehteid vaata `IEEE 754 standardist <http://steve.hollasch.net/cgindex/coding/ieeefloat.html>`_. Näiteks järgmised read on kõik tõesed:
+
+.. code-block:: java
+
+    boolean b1 = Double.POSITIVE_INFINITY + 11 == Double.POSITIVE_INFINITY;
+    boolean b2 = Double.POSITIVE_INFINITY * 2 == Double.POSITIVE_INFINITY;
+    boolean b3 = Double.isNaN(Double.POSITIVE_INFINITY + Double.NEGATIVE_INFINITY);
+
+Vaata lisaks:
+
+`Java Language Specification, Floating-Point Types <https://docs.oracle.com/javase/specs/jls/se8/html/jls-4.html#jls-4.2.3>`_
+
+`IEEE Standard 754 Floating Point Numbers <http://steve.hollasch.net/cgindex/coding/ieeefloat.html>`_
+
+`IEEE Floating Point Standard Group <http://grouper.ieee.org/groups/754/>`_
+
 Alakriipsude kasutamine
 -----------------------
 
