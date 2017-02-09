@@ -25,3 +25,4 @@ Sellelt lehelt leiad Javaga seonduvad õppematerjalid.
    MethodArguments
    MethodReturnValue
    String
+   input
