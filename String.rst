@@ -88,7 +88,7 @@ Kasutada on võimalik ka kahe argumendiga meetodit. Teine argument näitab ära 
   System.out.println("hello".indexOf("h", 0)); // prints "0"
   System.out.println("hello".indexOf("h", 1)); // prints "-1", because there is no "h" found when you start looking from position 1 (from second letter)
   System.out.println("hello".indexOf("e", 1)); // prints "1"
-  System.out.println("hello".indexOf("l", 2)); // prints "3"
+  System.out.println("hello".indexOf("l", 2)); // prints "2"
 
 **replace**
 
