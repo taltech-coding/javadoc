@@ -199,7 +199,32 @@ Väljund:
 
 Nagu näha, tuvastab kood ilusti ära, et kasutaja on sisestanud ebakorrektse arvu. Programm loeb kasutaja ebakorrektse sisendi *next* meetodiga "ära". Järgmisel korral seda sisendit enam ei loeta. Antud koodinäites on *next* tulemus salvestatud muutujasse selleks, et seda saaks välja näidata. Kui seda välja pole vaja näidata, ei ole seda mõtet ka muutujasse lugeda. Piisab lihtsalt :code:`scanner.next();`.
 
-Tegelikult on viimases näites veel üks probleem. Nimelt võib juhtuda, et sisend saab varem otsa. Näiteks kui sisend oleks lihtsalt "a", siis loetakse sealt "a", seejärel saab sisend tühjaks. Meie näites aga *while*-tsükkel jätkab tööd. Kui programm jõuab if-lauseni, on see väär (kuna järgmist double-tüüpi väärtust me sisendist ei leia), käivitub else-plokk. Seal aga saab meie programm vea, kuna :code:`scanner.next();` ei suuda midagi lugeda (antakse :code:`NoSuchElementException`). Seega, me peaksime lisama kontrolli, kas üldse midagi sisendis on. Kui sisend on tühi, siis lõpetame while-tsükli ära.
+.. _scanner_no_such_element_exception:
+
+Tegelikult on viimases näites veel üks probleem. Nimelt võib juhtuda, et sisend saab varem otsa. Näiteks kui sisend oleks lihtsalt "a", siis loetakse sealt "a", seejärel saab sisend tühjaks. Meie näites aga *while*-tsükkel jätkab tööd. Kui programm jõuab if-lauseni, on see väär (kuna järgmist double-tüüpi väärtust me sisendist ei leia), käivitub else-plokk. Seal aga saab meie programm vea, kuna :code:`scanner.next();` ei suuda midagi lugeda (antakse :code:`NoSuchElementException`). Siin on lihtsustatud näide:
+
+.. code-block:: java
+
+        Scanner scanner = new Scanner("a b");
+        while (true) {
+            String token = scanner.next();
+            System.out.println("Got:" + token);
+        }
+
+Tulemus:
+
+.. code-block:: console
+
+    Got:a
+    Got:b
+    Exception in thread "main" java.util.NoSuchElementException
+        at java.util.Scanner.throwFor(Scanner.java:862)
+        at java.util.Scanner.next(Scanner.java:1371)
+        ....
+        
+Kuigi loeme andmetüübi mõttes turvaliselt :code:`next()`, tekib probleem sellega, et scanner'i sisend saab läbi (antud juhul sõne). :code:`Standard.in`'iga seda nii lihtsalt ei juhtu (kuigi on võimalik, et see suletakse mingil põhjusel). Nagu näha, tekib viga "NoSuchElementException". 
+
+Seega, me peaksime lisama kontrolli, kas midagi üldse on sisendis. Kui sisend on tühi, siis lõpetame while-tsükli ära.
 
 Tavaliselt tuleb sisendit valideerida ka lähtuvalt sisust (seni vaatasime vaid andmetüübi probleemi). Oletame, et meil on koodis defineeritud meetod *isValid*, mis saab argumendiks arvu ja tagastab tõeväärtuse, kas argument on sobiv. Näiteks võib *isValid* kontrollida, kas sisend on korrektne aastaarv (sobivad näiteks arvud 2017 - 2050), inimese pikkus cm (sobivad 90.0 - 200.0), palga suurus (>= 0) jne. Kui sisestatud arv ei vasta nõuetele, tuleb see uuesti küsida. Selleks lisame kontrolli, kas sisestatud arv on korrektne.
 
