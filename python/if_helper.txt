@@ -1,0 +1,96 @@
+Tingimuslause
+==============
+
+Tingimuslausega saab kontrollida, kas mingit osa koodist käivitatakse.
+
+
+.---
+Python
+===
+Java
+===
+Lihtne tingimuslause
+---
+---
+
+.. code-block:: python
+
+    if boolean_condition:
+        do_something_if_true()
+        
+        
+---
+
+.. code-block:: java
+
+    if (booleanContidion) {
+        doSomethingIfTrue();
+    }
+    
+---
+if-else
+--
+---
+
+.. code-block:: python
+
+    if boolean_condition:
+        do_something_if_true()
+    else:
+        do_something_else()
+        
+        
+---
+
+.. code-block:: java
+
+    if (booleanContidion) {
+        doSomethingIfTrue();
+    } else {
+        doSomethingElse();
+    }
+    
+---
+if-elseif-else
+--
+---
+
+.. code-block:: python
+
+    if boolean_condition:
+        do_something_if_true()
+    elif bome_other_condition:
+        do_some_other_stuff()
+    else:
+        do_something_else()
+        
+        
+---
+
+.. code-block:: java
+
+    if (booleanContidion) {
+        doSomethingIfTrue();
+    } else if (otherCondition) {
+        doSomeOtherThing();
+    } else {
+        doSomethingElse();
+    }
+    
+---
+Tingimus
+--
+---
+:code:`a and b`
+---
+:code:`a && b`
+---
+:code:`a or b`
+---
+:code:`a || b`
+---
+:code:`not a`
+---
+:code:`!a`
+---.
+
