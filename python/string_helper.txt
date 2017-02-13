@@ -1,9 +1,19 @@
+.. |br| raw:: html
+
+   <br />
+
+Sõned
+============
+
+Sõnede võrdlus kahes keeles.
+
+.---
 Python
 ===
 Java
 ===
 **Sõne loomine**
----
+--
 ---
 Pythonis on sõne loomiseks mitu võimalust:
 
@@ -41,11 +51,11 @@ Reavahetust saab kasutada järgmiselt:
 
 .. code-block:: java
 
-    String s3 = "tere\bsiin\non\reavahetused";
+    String s3 = "tere\nsiin\non\reavahetused";
 
 ---
 **Sõne ühendamine**
----
+--
 ---
 Pythonis sõne muuta ei saa. |br|
 "Muutmiseks" tuleb teha uus sõne. |br|
@@ -80,8 +90,77 @@ Javas saab sõnele numbreid liita mugavamalt:
     String s = "Number: " + nr;
     
 ---
-**Sõne funktsioonid**
+**Sõnede võrdlemine**
+--
 ---
+
+Pythonis saab sõnesid võrrelda |br|
+tavapärast võrldlusoperaatoriga (==).
+
+.. code-block:: python
+
+    if str1 == str2:
+        print("str == str2")
+        
+---
+
+Javas annab objektide (String on objekt) |br|
+võrdlemine võrdlusoperaatoriga (==) |br|
+tulemuseks selle, kas kaks objekti on täpselt samad. |br|
+Üldiselt me pigem tahame võrrelda, |br|
+kas sõnede sisud on samad. |br|
+Selleks kasutame sõne meetodit "equals".
+
+.. code-block:: java
+
+    if (str1.equals(str2)) {
+        System.out.println("str1 and str2 are equal");
+    }
+
+Võrdluseks järgmine kood:
+
+.. code-block:: java
+    
+    String s1 = new String("aa");
+    String s2 = new String("aa");
+    if (s1 == s2) {
+        System.out.println("s1 == s2");
+    }
+    
+Siin tingimus :code:`s1 == s2` ei kehti.
+
+---
+
+Pythonis saab võrdlusoperatooritega (<, <=, >=, >) |br|
+kontrollida, kas üks sõne on teisest tähestikus eespool.
+
+.. code-block:: python
+
+    s1 = "abc"
+    s2 = "bc"
+    if s1 < s2:
+        print("s1 < s2")
+        
+---
+
+Javas saab sarnaselt kontrollida:
+
+.. code-block:: java
+
+    String s1 = "abc";
+    String s2 = "bc";
+    if (s1.compareTo(s2) < 0) {
+        System.out.println("s1 < s2");
+    }
+    
+:code:`compareTo` tagastab negatiivse arvu, |br|
+kui sõne, millest meetod välja kutsuti (näites s1), |br|
+eelneb tähestikus sõnele, mis on argumendiks |br|
+(näites s2).
+
+---
+**Sõne funktsioonid**
+--
 ---
 
 .. code-block:: python
@@ -146,8 +225,10 @@ jutumärkide (ülakomad) vahele.
 .. code-block:: java
 
     String s = "teretulemast";
-    s.indexOf("tere");
-    s.indexOf("e");
-    s.indexOf("e", 4);
-    s.indexOf("o");
+    s.indexOf("tere"); // 0
+    s.indexOf("e"); // 1
+    s.indexOf("e", 4); // 7
+    s.indexOf("o"); // -1
 ---.
+
+Vaata sõnede kohta: :doc:`../String`

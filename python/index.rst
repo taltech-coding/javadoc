@@ -11,3 +11,4 @@ See võib aidata neid, kes on eelnevalt Pythoniga kokku puutunud ning tahaksid n
    hello_world
    string
    if
+   array

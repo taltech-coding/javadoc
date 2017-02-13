@@ -119,13 +119,29 @@ if __name__ == '__main__':
         print("   {} input_file [> output_file]".format(sys.argv[0]))
         print("         input_file - input file to be parsed")
         exit()
-        
-    comment = '.. generated using "python3 {} {}"'.format(sys.argv[0], sys.argv[1])
+
+    brdir = """.. |br| raw:: html
+
+   <br />
+
+   """
+   
+    target = ''
+    if len(sys.argv) > 2:
+        target = ' {}'.format(sys.argv[2])
+    comment = '.. generated using "python3 {} {}{}"'.format(sys.argv[0], sys.argv[1], target)
     
-    with open(sys.argv[1]) as f:
+    with open(sys.argv[1], encoding='utf-8') as f:
         input_contents = f.read()
         result = replace_tables(input_contents)
         
+        if '|br|' in result:
+            result = brdir + result
+        
         result += "\n\n" + comment
-        print(result)
+        if len(sys.argv) > 2:
+            with open(sys.argv[2], 'w', encoding='utf-8') as fout:
+                fout.write(result)
+        else:
+            print(result)
     
