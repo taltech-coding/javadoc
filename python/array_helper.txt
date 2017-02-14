@@ -127,11 +127,11 @@ Javas saab küsida massiivi pikkust:
 .. code-block:: java
 
     int[] lst = new int[10];
-    System.out.println(lst.length); # 10
+    System.out.println(lst.length); // 10
     lst[0] = 1;
     lst[1] = 2;
     lst[2] = 3;
-    System.out.println(lst.length); # 10
+    System.out.println(lst.length); // 10
     
 Sõltumata sellest, mitu elementi massiivis |br|
 on väärtustatud, massiivi pikkus on alati sama |br|

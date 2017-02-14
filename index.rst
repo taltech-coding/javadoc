@@ -37,13 +37,14 @@ Sellelt lehelt leiad Javaga seonduvad õppematerjalid.
    oopGeneral
    oopClassesAndObjects
    oopVariableScope
-   oopCreatingObjects
+   oopCreatingObject
    oopConstructor
    oopStatic
    oopThis
    oopObjectAsVariable
    oopVisibility
    oopEncapsulation
+   Abstraction
    oopSubclass
    oopPolymorphism
    oopSuper

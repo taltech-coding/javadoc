@@ -76,10 +76,11 @@ Järjend, massiiv
 | .. code-block:: python                                   | .. code-block:: java                                        |
 |                                                          |                                                             |
 |     lst = []                                             |     int[] lst = new int[10];                                |
+|     print(len(lst)) # 0                                  |     System.out.println(lst.length); // 10                   |
 |     lst.append(1)                                        |     lst[0] = 1;                                             |
 |     lst.append(2)                                        |     lst[1] = 2;                                             |
 |     lst.append(3)                                        |     lst[2] = 3;                                             |
-|     print(len(lst)) # 3                                  |     System.out.println(lst.length); # 10                    |
+|     print(len(lst)) # 3                                  |     System.out.println(lst.length); // 10                   |
 |                                                          |                                                             |
 |                                                          | Sõltumata sellest, mitu elementi massiivis |br|             |
 |                                                          | on väärtustatud, massiivi pikkus on alati sama |br|         |
