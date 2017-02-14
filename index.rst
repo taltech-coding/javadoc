@@ -9,14 +9,17 @@ Sellelt lehelt leiad Javaga seonduvad õppematerjalid.
    
    InstallingJava
    HelloWorld
+   JavaFileStructure
    GitTtu
    intellij
    python/index
    CodeStyle
+   CodeModularity
    Javadoc2
    Muutuja
    PrimitiveDataTypes
    NumericTypes
+   DateTime
    BooleanDataType
    ConditionalStatements
    Loop
@@ -24,5 +27,28 @@ Sellelt lehelt leiad Javaga seonduvad õppematerjalid.
    VoidMethod
    MethodArguments
    MethodReturnValue
+   MethodOverload
    String
    input
+   Array
+   List
+   ListList
+   Package
+   oopGeneral
+   oopClassesAndObjects
+   oopVariableScope
+   oopCreatingObjects
+   oopConstructor
+   oopStatic
+   oopThis
+   oopObjectAsVariable
+   oopVisibility
+   oopEncapsulation
+   oopSubclass
+   oopPolymorphism
+   oopSuper
+   oopOverrideVsOverload
+   oopLists
+   oopSpecialMethods
+   oopInheritance
+   oopUserExceptions.rst
