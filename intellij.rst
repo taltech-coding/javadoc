@@ -20,3 +20,4 @@ Lisaks IntelliJ-le erinevaid IDE-sid, millega võib Javat kirjutada:
    intellij_git
    intellij_checkstyle
    intellij_project_output
+   intellij_testing
