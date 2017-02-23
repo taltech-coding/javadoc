@@ -52,4 +52,5 @@ Sellelt lehelt leiad Javaga seonduvad õppematerjalid.
    oopLists
    oopSpecialMethods
    oopInheritance
-   oopUserExceptions.rst
+   oopUserExceptions
+   unit_testing

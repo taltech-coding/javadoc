@@ -49,6 +49,8 @@ Eclipse'is projekti loomise juures on abiks:
 http://docs.oracle.com/javafx/scenebuilder/1/use_java_ides/sb-with-eclipse.htm
 
 
+Viiteid:
 
+https://dzone.com/refcardz/javafx-8-1
 
 
