@@ -111,7 +111,7 @@ Testimise näide instantsi puhul
 --------------------------------
 Eelmine näide oli staatilise meetodi kohta. Toome teise näite, kus testime objekti (mitte staatilist) meetodit. Selleks, et me saaksime välja kutsuda objekti meetodit, peame kõigepealt looma objekti.
 
-Hea oleks kui kasutada koodi alguses *@BeforeMethod* meetodit, mis *seadistab* kõik vajaliku. *@BeforeMethod*'i tehakse enne igat testi, niimodi saab kindel olla, et testid üksteist ei mõjuta.
+Hea oleks kui kasutada koodi alguses *@BeforeMethod* meetodit, mis seadistab kõik vajaliku. *@BeforeMethod* käivitatakse enne igat testi. Seega saab sellega mugavalt luua näiteks vajaliku instantsi.
 
 Vastuste võrdlemiseks on mitu erinevat võimalust:
 
@@ -119,7 +119,7 @@ Vastuste võrdlemiseks on mitu erinevat võimalust:
 - *assertTrue()*
 - *assertFalse()*
 
-All pool on tehtud Ago *Junit* testi järgi, kuid all olev kood on *TestNG*-ga tehtud.
+Siin on näide ühest klassist, mille meetodit :code:`isValid` me tahame testida. See pole 100% korrektne lahendus.
 
 .. code-block:: java
 
@@ -154,7 +154,7 @@ All pool on tehtud Ago *Junit* testi järgi, kuid all olev kood on *TestNG*-ga t
       }
   }
 
-*Test klassis* on kasutusel erinevaid viise testimiseks. Seal on kasutusel nii *assertTrue*, kui ka *assertEquals*. Lisaks on veel kasutusel *assertEquals*, kus on ette antud eraldi *error message*, mida kuvatakse kui test kukub läbi.
+Allpool olev testklassis kasutatakse *TestNG* raamistikku (kuigi ka *JUnit* võimaldab kõike seda sama ja 90% koodist on täpselt sama).
 
 .. code-block:: java
   
@@ -234,6 +234,10 @@ All pool on tehtud Ago *Junit* testi järgi, kuid all olev kood on *TestNG*-ga t
       }
   }
   
+:code:`BeforeMethod` (JUnitis on :code:`Before`) annotatsiooniga meetod loob meile uue instantsi :code:`DateValidator` klassist. Seega me ei pea igas testmeetodis seda tegema.
+
+Eelnevas koodinäites on kasutatud mitmes kohas *assertEquals* koos true/false võrdlusega. Õigem oleks kasutada kohe kas *assertTure* või *assertFalse* (paaris kohas on seda tehtud ka).
+  
 .. image:: images/unitTesting.png
 
 
@@ -241,4 +245,4 @@ All pool on tehtud Ago *Junit* testi järgi, kuid all olev kood on *TestNG*-ga t
 
 **Kas unit testimine on väärt seda** http://stackoverflow.com/questions/67299/is-unit-testing-worth-the-effort
 
-**Ago ühiktestimise näide aastast 2016** : https://www.youtube.com/watch?v=dIjtTvc6-ME
+**Ühiktestimise näide aastast 2016** : https://www.youtube.com/watch?v=dIjtTvc6-ME
