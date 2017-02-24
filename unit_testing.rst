@@ -66,7 +66,7 @@ Toome näite, kus testitav meetod :code:`solve` on :code:`QuadraticEquationSolve
                 return null;
             }
         }
-}
+    }
 
 
 Järgnev on terivlik koodinäide junit4 raamistikuga testimise jaoks:

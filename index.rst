@@ -54,3 +54,4 @@ Sellelt lehelt leiad Javaga seonduvad õppematerjalid.
    oopInheritance
    oopUserExceptions
    unit_testing
+   javafx
