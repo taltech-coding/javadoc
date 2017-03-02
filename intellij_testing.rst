@@ -5,6 +5,8 @@
 
 .. image:: /images/intellij/testing_2_new_class.png
 
+Testi loomise valiku nägemiseks tuleb liikuda klassi nime peale ning vajutada ALT+ENTER.
+
 .. image:: /images/intellij/testing_3_create_test.png
 
 .. image:: /images/intellij/testing_4_new_test_dialog.png
