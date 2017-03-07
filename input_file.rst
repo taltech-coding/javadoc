@@ -5,6 +5,106 @@ Javas võib sisend-väljud näha keeruline, kuid see pole halb. Sellega saavutat
 
 Kasutades Try with meetodit ei ole vaja manuaalselt lugemis meetodit kinni pannal. Juhul kui ei kasuta try with resources siis tuleb teha **finally** block kus pannakse lugemis meetod kinni. All pool on ka sellest näide.
 
+BufferedReader
+--------------
+
+.. code-block:: java
+
+    import java.io.BufferedReader;
+    import java.io.IOException;
+    import java.nio.file.Files;
+    import java.nio.file.Path;
+    import java.nio.file.Paths;
+
+    /**
+     * BufferedReader usage example.
+     */
+    public class BufferedReaderExampleJava8 {
+        public static void main(String[] args) {
+            Path path = Paths.get("path", "to", "file.txt");
+            try (BufferedReader reader = Files.newBufferedReader(path)) {
+                while (true) {
+                    String line = reader.readLine();
+                    if (line == null) break;
+                }
+            } catch (IOException e) {
+                System.out.println("Error reading file:" + e.getMessage());
+                e.printStackTrace();
+            }
+        }
+    }
+
+Files.readAllLines(Path)
+------------------------
+
+:code:`Files.readAllLines(Path)` annab võimaluse ühe reaga saada kätte järjend failis olevatest ridadest.
+
+.. code-block:: java
+
+    import java.io.IOException;
+    import java.nio.file.Files;
+    import java.nio.file.Path;
+    import java.nio.file.Paths;
+    import java.util.List;
+
+    /**
+     * Files.readAllLines(Path) usage example.
+     */
+    public class FilesExample {
+        public static void main(String[] args) {
+            Path path = Paths.get("path", "to", "file.txt");
+            try {
+                List<String> lines = Files.readAllLines(path);
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+Scanner
+-------
+
+Scanner võib olla tuttav standardsisendi lugemisest. Scanner (nagu ka teised voogudega tegelevad objektid) on võimalikult abstraktne ning lubab infot lugeda nii standardsisendist (klaviatuurilt) kui ka failist.
+
+Järgev koodinäide loeb sisenfailist arve. Kuna :code:`Scanner` objektil on olemas meetod arvude tuvastamiseks (:code:`hasNextInt()`) ja lugemiseks (:code:`nextInt()`), saab sellega väikse vaevaga arvud failist kätte.
+
+.. code-block:: java
+
+    import java.io.IOException;
+    import java.nio.file.Path;
+    import java.nio.file.Paths;
+    import java.util.Scanner;
+
+    /**
+     * Scanner usage example.
+     */
+    public class ScannerExample {
+        public static void main(String[] args) {
+
+            Path path = Paths.get("path", "to", "numbers.txt");
+            try (Scanner scanner = new Scanner(path)) {
+                while (scanner.hasNext()) {
+                    if (scanner.hasNextInt()) {
+                        System.out.println("Got a number:" + scanner.nextInt());
+                    } else {
+                        System.out.println("Not a number:" + scanner.next());
+                    }
+                }
+            } catch (IOException e) {
+                System.out.println("Error reading file:" + e.getMessage());
+                e.printStackTrace();
+            }
+        }
+    }
+
+    
+Erinevaid näiteid
+------------------
+
+
+Erinevad näited kombineeritud ühte faili:
+
 .. code-block:: java
 
 	import java.io.*;

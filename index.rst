@@ -32,6 +32,7 @@ Sellelt lehelt leiad Javaga seonduvad õppematerjalid.
    Exceptions
    input
    input_file
+   output_file
    Array
    List
    ListList
