@@ -57,9 +57,9 @@ Enne Java 7-t:
 
 .. code-block:: java
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
+    import java.io.BufferedWriter;
+    import java.io.FileWriter;
+    import java.io.IOException;
 
     /**
      * BufferedWriter usage example.
