@@ -29,7 +29,9 @@ Sellelt lehelt leiad Javaga seonduvad õppematerjalid.
    MethodReturnValue
    MethodOverload
    String
+   Exceptions
    input
+   input_file
    Array
    List
    ListList
@@ -52,6 +54,5 @@ Sellelt lehelt leiad Javaga seonduvad õppematerjalid.
    oopLists
    oopSpecialMethods
    oopInheritance
-   oopUserExceptions
    unit_testing
    javafx

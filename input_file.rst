@@ -3,7 +3,7 @@ Sisendi lugemine failist
 ========================
 Javas võib sisend-väljud näha keeruline, kuid see pole halb. Sellega saavutatakse seda, et nii klaviatuurilt kui ka failist saab andmeid lugeda kõrgema kihi objektidega nagu BufferedReader või Scanner. Lisaks sellele on veel täiendav võimalus Files.readAllLines().
 
-Kasutades Try with meetodit ei ole vaja manuaalselt lugemis meetodit kinni pannal. Juhul kui ei kasuta try with resources siis tuleb teha *finally* block kus pannakse lugemis meetod kinni. All pool on ka sellest näide.
+Kasutades Try with meetodit ei ole vaja manuaalselt lugemis meetodit kinni pannal. Juhul kui ei kasuta try with resources siis tuleb teha **finally** block kus pannakse lugemis meetod kinni. All pool on ka sellest näide.
 
 .. code-block:: java
 
