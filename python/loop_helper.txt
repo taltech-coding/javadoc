@@ -1,0 +1,137 @@
+
+
+Tsüklid
+================
+
+.---
+Python
+===
+Java
+===
+
+.. code-block:: python
+
+    for i in range(10):
+        print(i)
+
+---
+
+.. code-block:: java
+
+    for (int i = 0; i < 10; i++) {
+        System.out.println(i);
+    }
+    
+Või kasutades *stream*'i:
+
+.. code-block:: java
+
+    IntStream.range(0, 10).forEach(System.out::println);
+     
+
+---
+
+.. code-block:: python
+
+    i = 0
+    while i < 10:
+        print(i)
+        i += 1
+
+---
+
+.. code-block:: java
+
+    int i = 0;
+    while (i < 10) {
+        System.out.println(i++);
+        // i++ -> prints out the current value 
+        // of i, then increments it by 1
+    }
+
+---
+
+.. code-block:: python
+
+    lst = [1, 2, 3]
+    for x in lst:
+        print(x)
+
+---
+
+.. code-block:: java
+
+    List<Integer> list = new ArrayList<>();
+    list.add(1); list.add(2); list.add(3);
+    //List<Integer> list = new ArrayList<>(
+    //    Arrays.asList(new Integer[] {1, 2, 3}));
+    for (Integer x : list) {
+        System.out.println(x);
+    }
+    
+Või kasutades *stream*'i:
+
+.. code-block:: java
+
+    List<Integer> list = new ArrayList<>(
+            Arrays.asList(new Integer[] {1, 2, 3})
+    );
+    list.stream().forEach(System.out::println);
+    
+---
+
+.. code-block:: python
+
+    for x in range(10, 0, -2):
+        print(x)
+
+---
+
+.. code-block:: java
+
+    for (int i = 10; i > 0; i -= 2) {
+        System.out.println(i);
+    }
+
+---
+Paarisarvude summa
+--
+---
+
+.. code-block:: python
+
+    even_sum = 0
+    for x in range(10):
+        if x % 2 == 0: even_sum += x
+
+    print(even_sum)
+
+Või kasutades lambdat:
+
+.. code-block:: python
+
+    print(sum([x for x in range(10) if x % 2 == 0]))
+
+---
+
+.. code-block:: java
+
+    int evenSum = 0;
+    for (int i = 0; i < 10; i++) {
+        if (i % 2 == 0) evenSum += i;
+    }
+    System.out.println(evenSum);
+
+Või kasutades *stream*'i/lambdat:
+
+.. code-block:: java
+
+    System.out.println(
+            IntStream.range(0, 10)
+            .filter(x -> x % 2 == 0)
+            .sum()
+    );
+        
+---.
+
+Loe tsüklite kohta siit: :doc:`../Loop`.
