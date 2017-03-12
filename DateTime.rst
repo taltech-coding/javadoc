@@ -32,9 +32,34 @@ Selleks, et saada kuupäev soovitud formaati, saab kasutada meetodit **format**,
     DateTimeFormatter dtf = DateTimeFormatter.ofPattern("MM.yyyy");
     String nextDecemberFormatted = nextDecember.format(dtf);
     System.out.println(nextDecemberFormatted);  // 12.2018
+    
+Kuupäeva objekti saamine tekstist ja selle vormindamine:
+
+.. code-block:: java
+
+    import java.time.LocalDate;
+    import java.time.format.DateTimeFormatter;
+
+    /**
+     * LocalDate parsing and formatting example.
+     */
+    public class LocalDateExamples {
+        public static void main(String[] args) {
+
+            String inputDate = "2016/07/13";
+            DateTimeFormatter dtfin = DateTimeFormatter.ofPattern("yyyy/MM/dd");
+            LocalDate localDate = LocalDate.parse(inputDate, dtfin);
+            System.out.println(localDate); // 2016-07-13
+            localDate = localDate.plusDays(20); // add 20 days
+
+            DateTimeFormatter dtfout = DateTimeFormatter.ofPattern("dd.MM.yyyy");
+            System.out.println(localDate.format(dtfout)); // 08.08.2016
+        }
+
+    }
+
 
 DateTimeFormatter dokumentatsioon: https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html
 
 Huvitav video ajatsoonidest ja programmeerimisest: https://www.youtube.com/watch?v=-5wpm-gesOY
 
-(Leht on täiendamisel)
