@@ -23,11 +23,6 @@ Sellelt lehelt leiad Javaga seonduvad õppematerjalid.
    BooleanDataType
    ConditionalStatements
    Loop
-   Method
-   VoidMethod
-   MethodArguments
-   MethodReturnValue
-   MethodOverload
    String
    Exceptions
    input
@@ -37,23 +32,6 @@ Sellelt lehelt leiad Javaga seonduvad õppematerjalid.
    List
    ListList
    Package
-   oopGeneral
-   oopClassesAndObjects
-   oopVariableScope
-   oopCreatingObject
-   oopConstructor
-   oopStatic
-   oopThis
-   oopObjectAsVariable
-   oopVisibility
-   oopEncapsulation
-   Abstraction
-   oopSubclass
-   oopPolymorphism
-   oopSuper
-   oopOverrideVsOverload
-   oopLists
-   oopSpecialMethods
-   oopInheritance
+   oop
    unit_testing
    javafx

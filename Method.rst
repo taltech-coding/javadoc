@@ -54,3 +54,12 @@ Tagastustüüp on *List<Double>*, seega antud funktsioon tagastab *List*-tüüpi
     List<Double> turnIntoList(double a, double b) {
         return Arrays.asList(a, b);
     }
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Alamteemad:
+   
+   VoidMethod
+   MethodArguments
+   MethodReturnValue
+   MethodOverload
