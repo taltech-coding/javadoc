@@ -23,6 +23,7 @@ Sellelt lehelt leiad Javaga seonduvad õppematerjalid.
    BooleanDataType
    ConditionalStatements
    Loop
+   Method
    String
    Exceptions
    input
