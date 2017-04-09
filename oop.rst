@@ -25,3 +25,4 @@ See leht koondab objekt-orienteeritud programmeerimisega seonduvad materjalid
    oopLists
    oopSpecialMethods
    oopInheritance
+   oop_enum
