@@ -41,7 +41,7 @@ Kasutamine koodis
 Allpool kasutame *switch*'i.
 
 *enum* näide - nädalapäevad
--------------------------
+----------------------------
 
 Kirjeldame *enum*'i:
 

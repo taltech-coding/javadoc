@@ -30,9 +30,9 @@ Sellelt lehelt leiad Javaga seonduvad õppematerjalid.
    input_file
    output_file
    Array
-   List
-   ListList
+   collections
    Package
    oop
    unit_testing
    javafx
+   rekursioon
