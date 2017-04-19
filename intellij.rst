@@ -17,6 +17,7 @@ Lisaks IntelliJ-le erinevaid IDE-sid, millega võib Javat kirjutada:
    :caption: Teemad:
    
    intellij_tutorial
+   intellij_shortcuts
    intellij_git
    intellij_checkstyle
    intellij_project_output
