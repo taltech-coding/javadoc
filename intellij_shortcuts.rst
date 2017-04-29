@@ -25,6 +25,8 @@ Koodis ringi liikumine
 
 :code:`ctrl` + :code:`N` - saab otsida klasse nime järgi.
 
+:code:`ctrl` + :code:`shift` + :code:`N` - saab otsida faili nime järgi. Kui otsingus kirjutada nime järgi "/", otsitakse kaustu. Näiteks saab otsida moodulit EX10, kui kirjutada "EX10/". Samamoodi pakette, näiteks "EX10/src/".
+
 :code:`shift`, :code:`shift` (kaks korda) - avab otsingu, mis otsib kõikjalt. Lisaks klassidele otsitakse faili nimedest, muutujaid jms.
 
 :code:`alt` + :code:`F7` - leiab koodist kõik muutuja/meetodi/klassi kasutuskohad.
