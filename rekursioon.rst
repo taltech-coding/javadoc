@@ -49,6 +49,80 @@ Sellise meetodi saaks analoogselt kirjutada for-tsükliga:
     
 Kahes viimases näites on tähtedega A - D märgistatud koodiosad, mis sisuliselt kokku langevad.
 
+Mõned näited
+-------------
+
+Minimaalne kood, mis kasutab rekursiivset väljakutset:
+
+.. code-block:: java
+
+    public class Example1 {
+        public static void f() {
+            f();
+        }
+
+        public static void main(String[] args) {
+            f();
+        }
+    }
+    
+Kood sisaldab lõputut tsüklit - meetod f() kutsub ennast lõputult välja. Käivitades saame :code:`StackOverflowError`'i. See tuleneb sellest, et iga meetodi olek jäätakse meelde. Kui kõigepealt kutsutakse välja f(), siis jääb main() meetodi olek meelde. Esimene rekursiivne väljakutse jätab välimise f() meetodi oleku meelde jne. Kuigi antud näites olek on minimaalne (muutujaid jms ei sisalda), siis sellegipoolest saab mingi hetk pinu (*stack*) täis.
+
+.. code-block:: java
+
+    public class Example2 {
+        public static void f(int n) {
+            if (n < 1) {
+                System.out.println("Takeoff!");
+            } else {
+                System.out.println("T:" + n);
+                f(n - 1);
+            }
+        }
+
+        public static void main(String[] args) {
+            f(3);
+        }
+    }
+
+Käivitamisel annab tulemuse:
+
+.. code-block:: console
+
+    T:3
+    T:2
+    T:1
+    Takeoff!
+
+Kui muudame koodis kahe rea asukoha omavahel (*else* lauses):
+
+.. code-block:: java
+
+    public class Example3 {
+        public static void f(int n) {
+            if (n < 1) {
+                System.out.println("Takeoff!");
+            } else {
+                f(n - 1);
+                System.out.println("T:" + n);
+            }
+        }
+
+        public static void main(String[] args) {
+            f(3);
+        }
+    }
+    
+Saame tulemuseks vastupidise:
+
+.. code-block:: console
+
+    Takeoff!
+    T:1
+    T:2
+    T:3
+    
+    
 Faktoriaali näide
 -----------------
 
@@ -73,12 +147,30 @@ Võttes arvesse eelnevat definitsiooni, proovime arvutada 4!. :code:`4! = (4-1)!
        =       (2!  * 3)  * 4 = 
        =       2!     * 3 * 4 = 
        =   (1!  * 2)  * 3 * 4 = 
-       =   1!     * 2 * 3 * 4 = 
+       =    1!    * 2 * 3 * 4 = 
        = (0! * 1) * 2 * 3 * 4 = 
-       = 1 * 1 * 2 * 3 * 4 = 24
+       =  1  * 1  * 2 * 3 * 4 = 24
        
+Koodinäide:
 
+.. code-block:: java
 
+    public class Factorial {
+        public static int f(int n) {
+            if (n == 0) return 1;
+            return f(n - 1) * n;
+        }
+
+        public static void main(String[] args) {
+            System.out.println(f(6));
+        }
+    }
+
+Annab tulemuseks:
+
+.. code-block:: console
+
+    720
    
 Fibonacci jada
 --------------
@@ -92,6 +184,10 @@ Fibonacci jada
 Esimesed arvud: 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ...
 
 Kasutatakse ka varianti, kus esimene element on 0 ja teine 1: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ...
+
+
+Rekursiivne lahendus
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Rekursiivne lahendus:
   
@@ -154,6 +250,10 @@ Selleks, et proovida leida 50. elementi, peame muutma andmetüübi long-iks:
     call count: 25 172 538 049 
     time: 47.16 s
     
+    
+Iteratiivne lahendus
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 Kui võrdleme iteratiivse lahendusega:
 
 .. code-block:: java
@@ -184,10 +284,40 @@ Saame tulemuseks:
     time: 0 ms
     
 Tsüklite arv: 48
-
-
     
+Efektiivsem rekursiivne lahendus
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+Kasutame sama loogikat mis iteratiivse lahenduse puhul.
+
+.. code-block:: java
+
+    public class FiboTail {
+        public static long fibo(int n, long fib, long prev) {
+            if (n == 1) return prev;
+            return fibo(n - 1, fib + prev, fib);
+        }
+
+        public static void main(String[] args) {
+            long start = System.currentTimeMillis();
+            System.out.println(fibo(50, 1, 1));
+            System.out.println(String.format("%d ms", (System.currentTimeMillis() - start)));
+        }
+    }
+    
+Selle käivitamisel saame:
+
+.. code-block:: console
+
+    12586269025
+    time 1 ms
+
+:code:`fibo` väljakutsete arv: 50 (vt järgnevat seletust).
+
+Viimase koodinäidet täpsemalt vaadeldes võime mõelda nii:
+
+* igas väljakutses me vähendame :code:`n` väärtust. Kui alustatakse 50-ga, siis järgmise väljakutsega on :code:`n` väärtus 49 jne. Seega :code:`fibo` meetodit kutsutakse välja 50 korda. See on sama, mida saavutame :code:`for` tsükliga (:code:`for (int n = 50; n >= 1; n--)`).
+* iga sammu korral antakse meetodi väljakutsesse uued väärtused. Võime mõelda nii: :code:`fib = fib + prev` ja :code:`prev = fib`. Need on üldiselt samad mis iteratiivse väljakutse puhul. Iteratiivse väljakutse puhul :code:`prev` väärtustamisel on kood natuke erinev. Seda seetõttu, et eelnevalt on :code:`fib` väärtus juba ära muudetud (see on :code:`prev` võrra suurem). Siin rekursiivse väljakutse korral toimub väärtustamine samal hetkel, seetõttu ei pea :code:`prev` väärtust maha lahutama.
 
 Linke
 ------
