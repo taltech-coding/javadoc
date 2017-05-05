@@ -28,7 +28,7 @@ Nagu on näha, ei pea looma uusi väljundid (fields) - nagu width või height - 
 juba olemasolevaid superklassist.
 
 Kui see on tehtud, siis saab hakkata ülesannet lahendama.
-Antud ülesandes on vaja tagastada pakettid kindlas järjekorras, lähtudes nende prioriteedist.
+Antud ülesandes on vaja tagastada pakkid kindlas järjekorras, lähtudes nende prioriteedist.
 Ehk, teiste sõnadega, programmi tsentraalne meetod on:
 
 .. code-block:: java
