@@ -41,8 +41,8 @@ kui tavalistel, esialgu vaatame, kas meil on üldse premium paketid olemas:
 
     if (!listOfPremiumPackages.isEmpty()) {}
 
-Ja kui ei ole, siis hakkame otsima kõige suurema prioriteediga paketti. Meil
-on 2 prioriteedi tüüpi:
+Ja kui on, siis hakkame otsima kõige suurema prioriteediga premium paketti. Premium paketti korral meile
+on ette antud 2 prioriteedi tüüpi:
 1) Üldine, mille järgi kõigepealt võrreldakse;
 2) Sender + Receiver prioriteet, mille järgi võrdleme juhul, kui üldised prioriteedid on võrdsed.
 
@@ -73,7 +73,7 @@ Niiet, võiks kirjutada midagi sellist:
                 // Kui üldised prioriteedid on samad ja lisaprioriteet on suurem, kui viimasel pakkil oli
                 } else if (totalPriority == initialPriority && additionalPriority > additionalCheck) {
                     ... 
-                    Sama asi lisaprioriteedi puhul (võiks teha eraldi funktsioon...)
+                    Sama asi lisaprioriteedi puhul
                     ...
                 }
             }
@@ -81,31 +81,24 @@ Niiet, võiks kirjutada midagi sellist:
         } else {
             ...
             Hakkame tsüklima tavaliste pakettide listi peal samal moel
+            Kuid siin prioriteet on ainult ühte tüüpi - Sender + Receiver prioriteet
             ...
         }
         return result;
-    }
-    
-.. code-block:: java
-
-    @Override
-    public Package getNextPackage() {
-         Package result;
-        // Väärtus prioriteetide võrdlemiseks üldprioriteedi puhul
-        int initialPriority;
-        // Väärtus prioriteetide võrdlemiseks lisaprioriteedi puhul
-        int additionalCheck;
     }
 
 Esialgu paneme paika nn initial väärtused, ehk meie juhul initialPriority ja 
 additionalCheck - nende järgi me filtreerime paketid, ja kui leidub üks, mille
 prioriteet on suurem, mis eelmisel oli, siis salvestame seda muutuja result
-sisse. Ja siis pärast tagastame seda lihtsalt.
+sisse. Ja siis pärast tagastame seda lihtsalt. Kui premium pakette pole, siis teeme 
+põhimõtteliselt sama asja, lihtsalt sel korral pole rohkem vaja üldprioriteeti
+arvestama - tavalistel pakettidel on ainult Sender + Receiver prioriteet.
+
 
 ***Boonusosa***
 
-Boonusosa on väga lihtne. Nüüd oleks vaja lihtsalt kontrollida kõike Package 
-klassile kuuluvaid asju. Sellest pole väga palju rääkida vaja, pakuks teha kolm
+Boonusosa (OrderedPackageFilter) on väga lihtne. Nüüd oleks vaja lihtsalt kontrollida kõike 
+Package klassile kuuluvaid asju. Sellest pole väga palju rääkida vaja, pakuks teha kolm
 meetodit:
 
 .. code-block:: java
