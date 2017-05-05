@@ -1,4 +1,4 @@
-***Antud lahendamise meetod on kõige lihtsim, ehk siin ei kasutata TreeSet või
+***Antud lahendamise meetod on kõige lihtsaim, ehk siin ei kasutata TreeSet või
 komparaatoreid.***
 
 Enne ülesande lahendamisega hakkamist tuleb implementeerida ette antud liidetest
@@ -44,8 +44,8 @@ kui tavalistel, esialgu vaatame, kas meil on üldse premium paketid olemas:
 Ja kui ei ole, siis hakkame otsima kõige suurema prioriteediga paketti. Meil
 on 2 prioriteeti:
 1) Üldine, mille järgi kõigepealt võrreldakse;
-2) Sender + Receiver prioriteet, mille järgi võrdleme siis, kui üldised
-prioriteedid on võrdsed.
+2) Sender + Receiver prioriteet, mille järgi võrdleme siis, kui üldised prioriteedid on võrdsed.
+
 Niiet, võiks kirjutada midagi sellist:
 
 .. code-block:: java
