@@ -1,0 +1,108 @@
+***Antud lahendamise meetod on kõige lihtsim, ehk siin ei kasutata TreeSet või
+komparaatoreid.***
+
+Enne ülesande lahendamisega hakkamist tuleb implementeerida ette antud liidetest
+(interface) meetodeid. Pärast OrderedPackageProvider klassi loomist, tuleb
+lihtsalt kirjutada juurde "implements <liidese nimi>":
+
+.. code-block:: java
+
+    public class OrderedPackageProvider implements PackageProvider {}
+
+Pärast seda vajutage Alt+Enter ja valige "implement methods" ning ongi kõik.
+
+Selleks, et pärast oleks lihtsam pakette sortida, võib kohe listi 
+lisamise ajal neid jagada kaheks erinevaks listiks: tavalised ja premium.
+Siis, meetod addPackage näeks välja:
+
+.. code-block:: java
+
+    @Override
+    public void addPackage(Package packageToAdd) {
+        if (packageToAdd instanceof PremiumPackage) {
+            listOfPremiumPackages.add((PremiumPackage)packageToAdd);
+        } else {
+            listOfJustPackages.add(packageToAdd);
+    }
+
+Nagu näete, kuna argumendiks on instanss Package klassist, siis kui ta on ka 
+PremiumPackage klassi instanss, on vaja teha nn kasti (cast):
+
+.. code-block:: java
+
+    (PremiumPackage) packageToAdd
+
+Nüüd meil on olemas kaks listi. Mis jääbki tegema on lihtsalt tagastada
+paketti kõige suurima prioriteediga. Kuidas siis teeme seda?
+Kuna meil on kaks listi ja eeldus, et premium paketidel on suurem prioriteet 
+kui tavalistel, esialgu vaatame, kas meil on üldse premium paketid olemas:
+
+.. code-block:: java
+
+    if (!listOfPremiumPackages.isEmpty()) {}
+
+Ja kui ei ole, siis hakkame otsima kõige suurema prioriteediga paketti. Meil
+on 2 prioriteeti:
+1) Üldine, mille järgi kõigepealt võrreldakse;
+2) Sender + Receiver prioriteet, mille järgi võrdleme siis, kui üldised
+prioriteedid on võrdsed.
+Niiet, võiks kirjutada midagi sellist:
+
+.. code-block:: java
+
+    @Override
+    public Package getNextPackage() {
+        Package result;
+        int initialPriority = 0;
+        int additionalCheck = 0;
+        if (!listOfPremiumPackages.isEmpty()) {
+            for (PremiumPackage p : listOfPremiumPackages) {
+                int totalPriority = p.getPriority();
+                int additionalPriority = p.getSender().getPriority() + p.getReceiver().getPriority();
+                if (totalPriority > initialPriority) {
+                result = p;
+                initialPriority = totalPriority;
+                } else if (totalPriority == initialPriority ... ja veel mõned kontrollid) {
+                    ... 
+                    Sama asi lisaprioriteedi puhul
+                    ...
+                }
+            }
+            listOfPremiumPackages.remove(p);
+        } else {
+            ...
+            Hakkame tsüklima tavaliste pakettide listi peal
+            ...
+        }
+        return result;
+    }
+
+Esialgu paneme paika nn initial väärtused, ehk meie juhul initialPriority ja 
+additionalCheck - nende järgi me filtreerime paketid, ja kui leidub üks, mille
+prioriteet on suurem, mis eelmisel oli, siis salvestame seda muutuja result
+sisse. Ja siis pärast tagastame seda lihtsalt.
+
+***Boonusosa***
+
+Boonusosa on väga lihtne. Nüüd oleks vaja lihtsalt kontrollida kõike Package 
+klassile kuuluvaid asju. Sellest pole väga palju rääkida vaja, pakuks teha kolm
+meetodit:
+
+.. code-block:: java
+
+    private boolean checkPackage(Package p) {...}
+    // Paketti prioriteet jm kontroll
+    private boolean checkSenderAndReceiver(Package p) {...}
+    // Paketti saatja ja saaja andmete kontroll
+    
+    // Ja siis kutsumine isValid() meetodi sees
+    @Override
+    public boolean isValid(Package p) {
+        return p != null && checkPackage(p) && checkSenderAndReceiver(p);
+    }
+
+Lihtne? Lihtne.
+
+
+
+
