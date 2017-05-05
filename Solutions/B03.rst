@@ -11,11 +11,6 @@ lihtsalt kirjutada juurde "implements <liidese nimi>":
 
 Pärast seda vajutage Alt+Enter ja valige "implement methods" ning ongi kõik.
 
-.. code-block:: java
-
-    @Override
-    public Package getNextPackage() {}
-
 Pakette on kaks tüüpi: Package ja PremiumPackage, mis on Package alamklass. PremiumPackage klass pole ette antud,
 seda tuleb luua. Konstruktoris peavad olema samad argumentid, nagu tavalisel Package-il, ja lisaks nendele ka
 priority, mida tavalisel pakkil pole.
