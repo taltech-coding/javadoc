@@ -20,7 +20,7 @@ Siis, meetod addPackage näeks välja:
     @Override
     public void addPackage(Package packageToAdd) {
         if (packageToAdd instanceof PremiumPackage) {
-            listOfPremiumPackages.add((PremiumPackage)packageToAdd);
+            listOfPremiumPackages.add((PremiumPackage) packageToAdd);
         } else {
             listOfJustPackages.add(packageToAdd);
     }
@@ -42,9 +42,9 @@ kui tavalistel, esialgu vaatame, kas meil on üldse premium paketid olemas:
     if (!listOfPremiumPackages.isEmpty()) {}
 
 Ja kui ei ole, siis hakkame otsima kõige suurema prioriteediga paketti. Meil
-on 2 prioriteeti:
+on 2 prioriteedi tüüpi:
 1) Üldine, mille järgi kõigepealt võrreldakse;
-2) Sender + Receiver prioriteet, mille järgi võrdleme siis, kui üldised prioriteedid on võrdsed.
+2) Sender + Receiver prioriteet, mille järgi võrdleme juhul, kui üldised prioriteedid on võrdsed.
 
 Niiet, võiks kirjutada midagi sellist:
 
@@ -53,8 +53,8 @@ Niiet, võiks kirjutada midagi sellist:
     @Override
     public Package getNextPackage() {
         Package result;
-        int initialPriority = 0;
-        int additionalCheck = 0;
+        int initialPriority;
+        int additionalCheck;
         if (!listOfPremiumPackages.isEmpty()) {
             for (PremiumPackage p : listOfPremiumPackages) {
                 int totalPriority = p.getPriority();
@@ -62,7 +62,7 @@ Niiet, võiks kirjutada midagi sellist:
                 if (totalPriority > initialPriority) {
                 result = p;
                 initialPriority = totalPriority;
-                } else if (totalPriority == initialPriority ... ja veel mõned kontrollid) {
+                } else if (totalPriority == initialPriority && additionalPriority > additionalCheck) {
                     ... 
                     Sama asi lisaprioriteedi puhul
                     ...
