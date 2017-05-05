@@ -25,7 +25,7 @@ Siis, meetod addPackage näeks välja:
             listOfJustPackages.add(packageToAdd);
     }
 
-Nagu näete, kuna argumendiks on instanss Package klassist, siis kui ta on ka 
+Nagu näete, kuna funktsiooni argumendiks on instanss Package klassist, siis kui ta on ka 
 PremiumPackage klassi instanss, on vaja teha nn kasti (cast):
 
 .. code-block:: java
@@ -52,29 +52,49 @@ Niiet, võiks kirjutada midagi sellist:
 
     @Override
     public Package getNextPackage() {
+        // Muutuja paketti kõige suurima prioriteediga hoidmiseks
         Package result;
+        // Muutuja prioriteetide võrdlemiseks üldprioriteedi puhul
         int initialPriority;
+        // Muutuja prioriteetide võrdlemiseks lisaprioriteedi puhul
         int additionalCheck;
+        // Kui meil on premiumpaketid
         if (!listOfPremiumPackages.isEmpty()) {
             for (PremiumPackage p : listOfPremiumPackages) {
+                // Paketti p üldine prioriteet
                 int totalPriority = p.getPriority();
+                // Paketti p lisaprioriteet
                 int additionalPriority = p.getSender().getPriority() + p.getReceiver().getPriority();
+                
                 if (totalPriority > initialPriority) {
-                result = p;
-                initialPriority = totalPriority;
+                    result = p;
+                    initialPriority = totalPriority;
+                    
+                // Kui üldised prioriteedid on samad ja lisaprioriteet on suurem, kui viimasel pakkil oli
                 } else if (totalPriority == initialPriority && additionalPriority > additionalCheck) {
                     ... 
-                    Sama asi lisaprioriteedi puhul
+                    Sama asi lisaprioriteedi puhul (võiks teha eraldi funktsioon...)
                     ...
                 }
             }
             listOfPremiumPackages.remove(p);
         } else {
             ...
-            Hakkame tsüklima tavaliste pakettide listi peal
+            Hakkame tsüklima tavaliste pakettide listi peal samal moel
             ...
         }
         return result;
+    }
+    
+.. code-block:: java
+
+    @Override
+    public Package getNextPackage() {
+         Package result;
+        // Väärtus prioriteetide võrdlemiseks üldprioriteedi puhul
+        int initialPriority;
+        // Väärtus prioriteetide võrdlemiseks lisaprioriteedi puhul
+        int additionalCheck;
     }
 
 Esialgu paneme paika nn initial väärtused, ehk meie juhul initialPriority ja 
@@ -89,16 +109,19 @@ klassile kuuluvaid asju. Sellest pole väga palju rääkida vaja, pakuks teha ko
 meetodit:
 
 .. code-block:: java
-
-    private boolean checkPackage(Package p) {...}
-    // Paketti prioriteet jm kontroll
-    private boolean checkSenderAndReceiver(Package p) {...}
-    // Paketti saatja ja saaja andmete kontroll
+    public class OrderedPackageFilter implements PackageFilter {
     
-    // Ja siis kutsumine isValid() meetodi sees
-    @Override
-    public boolean isValid(Package p) {
-        return p != null && checkPackage(p) && checkSenderAndReceiver(p);
+        // Paketti prioriteet jm kontroll
+        private boolean checkPackage(Package p) {...}
+
+        // Paketti saatja ja saaja andmete kontroll
+        private boolean checkSenderAndReceiver(Package p) {...}
+
+        // Ja siis kutsumine need isValid() meetodi sees
+        @Override
+        public boolean isValid(Package p) {
+            return p != null && checkPackage(p) && checkSenderAndReceiver(p);
+        }
     }
 
 Lihtne? Lihtne.
