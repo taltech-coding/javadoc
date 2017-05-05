@@ -142,7 +142,7 @@ meetodit:
         private boolean checkPackage(Package p) {...}
         // Paketti saatja ja saaja andmete kontroll
         private boolean checkSenderAndReceiver(Package p) {...}
-        // Ja siis kutsumine need isValid() meetodi sees
+        // Ja siis nende kutsumine isValid() meetodi sees
         @Override
         public boolean isValid(Package p) {
             return p != null && checkPackage(p) && checkSenderAndReceiver(p);
