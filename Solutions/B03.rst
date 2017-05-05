@@ -46,7 +46,9 @@ Igal premium paketil on ka atribuut priority, mille järgi neid saab omavahel v�
 meetod peab tagastama suurema prioriteediga paketti. Aga mis teha, kui prioriteedid on võrdsed?
 
 Premium paketti korral meile on ette antud 2 prioriteedi tüüpi:
+
 1. Üldine, mille järgi kõigepealt võrreldakse;
+
 2. Sender + Receiver prioriteet, mille järgi võrdleme juhul, kui üldised prioriteedid on võrdsed.
 
 Tavalistel paketidel on ainult 2. prioriteet.
