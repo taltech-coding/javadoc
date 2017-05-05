@@ -11,6 +11,46 @@ lihtsalt kirjutada juurde "implements <liidese nimi>":
 
 Pärast seda vajutage Alt+Enter ja valige "implement methods" ning ongi kõik.
 
+.. code-block:: java
+
+    @Override
+    public Package getNextPackage() {}
+
+Pakette on kaks tüüpi: Package ja PremiumPackage, mis on Package alamklass. PremiumPackage klass pole ette antud,
+seda tuleb luua. Konstruktoris peavad olema samad argumentid, nagu tavalisel Package-il, ja lisaks nendele ka
+priority, mida tavalisel pakkil pole.
+
+.. code-block:: java
+
+    public PremiumPackage(int priority, String packageNumber, int width, int height) {
+        this.priority = priority;
+        super.packageNumber = packageNumber;
+        super.width = width;
+        super.height = height;
+    }
+
+Nagu on näha, ei pea looma uusi väljundid (fields) - nagu width või height - alamklassi jaoks, saab kasutada
+juba olemasolevaid superklassist.
+
+Kui see on tehtud, siis saab hakkata ülesannet lahendama.
+Antud ülesandes on vaja tagastada pakettid kindlas järjekorras, lähtudes nende prioriteedist.
+Ehk, teiste sõnadega, programmi tsentraalne meetod on:
+
+.. code-block:: java
+
+    @Override
+    public Package getNextPackage() {}
+
+Kui meil on kaks paketti - tavaline ja premium - siis esialgu tagastab meie programm premium paketti (oh really?).
+Igal premium paketil on ka atribuut priority, mille järgi neid saab omavahel võrrelda. Niiet kahest premium paketist meie
+meetod peab tagastama suurema prioriteediga paketti. Aga mis teha, kui prioriteedid on võrdsed?
+
+Premium paketti korral meile on ette antud 2 prioriteedi tüüpi:
+1) Üldine, mille järgi kõigepealt võrreldakse;
+2) Sender + Receiver prioriteet, mille järgi võrdleme juhul, kui üldised prioriteedid on võrdsed.
+
+Tavalistel paketidel on ainult 2) prioriteet.
+
 Selleks, et pärast oleks lihtsam pakette sortida, võib kohe listi 
 lisamise ajal neid jagada kaheks erinevaks listiks: tavalised ja premium.
 Siis, meetod addPackage näeks välja:
@@ -41,10 +81,7 @@ kui tavalistel, esialgu vaatame, kas meil on üldse premium paketid olemas:
 
     if (!listOfPremiumPackages.isEmpty()) {}
 
-Ja kui on, siis hakkame otsima kõige suurema prioriteediga premium paketti. Premium paketti korral meile
-on ette antud 2 prioriteedi tüüpi:
-1) Üldine, mille järgi kõigepealt võrreldakse;
-2) Sender + Receiver prioriteet, mille järgi võrdleme juhul, kui üldised prioriteedid on võrdsed.
+Ja kui on, siis hakkame otsima kõige suurema prioriteediga premium paketti. 
 
 Niiet, võiks kirjutada midagi sellist:
 
