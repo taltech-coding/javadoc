@@ -92,7 +92,7 @@ additionalCheck - nende järgi me filtreerime paketid, ja kui leidub üks, mille
 prioriteet on suurem, mis eelmisel oli, siis salvestame seda muutuja result
 sisse. Ja siis pärast tagastame seda lihtsalt. Kui premium pakette pole, siis teeme 
 põhimõtteliselt sama asja, lihtsalt sel korral pole rohkem vaja üldprioriteeti
-arvestama - tavalistel pakettidel on ainult Sender + Receiver prioriteet.
+arvestada - tavalistel pakettidel on ainult Sender + Receiver prioriteet.
 
 
 ***Boonusosa***
