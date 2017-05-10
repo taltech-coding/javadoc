@@ -74,7 +74,7 @@ Looksulge **{}** kasutatakse *if*, *else*, *for*, *do* ja *while* lausetega, ise
 
 **Reavahetused**
 
-Loogeline avav sulg kirjutatakse reegline rea lõppu, vastav sulgev sulg on joondatud selle rea alguse järgi.
+Loogeline avav sulg kirjutatakse reeglina rea lõppu, vastav sulgev sulg on joondatud selle rea alguse järgi.
 
 - Reavahetust ei toimu enne loogelist alustavat sulgu **{**.
 - Reavahetus toimub peale loogelist alustavat sulgu.
