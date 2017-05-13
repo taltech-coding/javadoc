@@ -37,3 +37,4 @@ Sellelt lehelt leiad Javaga seonduvad õppematerjalid.
    javafx
    jar
    rekursioon
+   solutions/index

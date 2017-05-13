@@ -1,3 +1,6 @@
+B03 lahendus
+============
+
 ***Antud lahendamise meetod on kõige lihtsaim, ehk siin ei kasutata TreeSet või
 komparaatoreid.***
 
