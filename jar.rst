@@ -15,7 +15,7 @@ Selleks, et faile (pildid, helifailid, tekstifailid jms) õigesti lugeda, tuleb 
 JAR-käivitamine käsurealt
 ----------------------------
 
-Üldiselt peaks jar-faili saama käivitada ka selliselt nagu muid programme. Näiteks Windowsis topeltklikk jar-failil. Kui aga faili käivitamine ei õnnestu, siis tavaliselt mingit veateadet ei näiata. Selleks, et näha veateadet, tuleks jar-fail käivitada käsurealt.
+Üldiselt peaks jar-faili saama käivitada selliselt nagu muid programme. Näiteks Windowsis topeltklikk jar-failil. Kui aga faili käivitamine ei õnnestu, siis tavaliselt mingit veateadet ei näiata. Selleks, et näha veateadet, tuleks jar-fail käivitada käsurealt.
 
 Windowsis saate näiteks avada Exploreris jar-faili asukoha (kausta, kuhu IntelliJ genereerib jar-faili). Shift + parem hiire klikk avab menüü, kus on valik "Open command window here". See avab käsurea kohe vastavas kaustas.
 
