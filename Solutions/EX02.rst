@@ -16,7 +16,7 @@ I. Esimese sammuna on soovitatav lõpuni täita kõige lihtsamad meetodid. Antud
 Nagu Te näete mallis, on juba olemas valmis konstandid - Java keeles neid tähistatakse **static final**,
 konstandi nimi on tavaliselt nn. *upper case*'is sõnad, mis on eraldatud *underscore* sümboliga. 
 
-.. code-block::
+.. code-block:: java
 
     public static final double MIN_LOAN_AMOUNT = 1000;
 
@@ -32,7 +32,7 @@ See juurdeminek iga programmeerimisülesannele on kõige loogilisem.
  
 Näiteks siin:
  
- .. code-block::
+.. code-block:: java
 
    public static boolean isValidLoanAmount(double amount) {
 
@@ -59,6 +59,7 @@ c) kui count muutuja väärtus on negatiivne: ei saa negatiivset arvu kordi mida
 
 Nüüd räägime sellest, kuidas stringi korrata. Seda saab teha ühe reana:
 
+.. code-block:: java
 
    *String.join("", Collections.nCopies(count, s));*
 
@@ -68,10 +69,10 @@ Java keel on hea selles mõttes, et on juba olemas palju valmis asju, et neid ka
 
 Kõik kokku:
 
-.. code-block::
+.. code-block:: java
 
- public static String repeat(String s, int count) {
-    try {
+    public static String repeat(String s, int count) {
+        try {
             if (s.isEmpty() || count < 0) {
                 return "";
 
@@ -100,14 +101,14 @@ IV. public static void printRow ja public static void printBottomRow meetodid
 
 Iga rida peaks olema piisavalt lai et mahuks maksimaalselt võimalik väärtus.Tulpide laiused on 7-8-12-16-8. Tulbid on eraldatud tühikutega.
 
-.. code-block::
+.. code-block:: java
 
-  public static void printRow(YearMonth currentDate, double amountLeft, double monthlyPayment, double interestPayment) {
+    public static void printRow(YearMonth currentDate, double amountLeft, double monthlyPayment, double interestPayment) {
 
         System.out.printf("%-7s %-8.2f %-12.2f %-16.2f %-8.2f\n", monthAndYearStringFrom(currentDate) , amountLeft ,
                 monthlyPayment , interestPayment, interestPayment + monthlyPayment);
 
-}
+    }
    
 *System.out.printf* kaudu saab formateerida numbrilist väljundit. Kui panete tähele, siis näete, et pärast punkti tuleb 2f, näiteks siin:
 %-8.2f
@@ -117,18 +118,18 @@ See tähendab, et laius on 8 tühikut, .2f annab väljundiks formateeritud arvu 
 Analoogselt saab kirjutada printBottomRow meetodit:
    
    
-.. code-block::
+.. code-block:: java
    
- public static void printBottomRow(double loanAmount, double interestCost) {
+    public static void printBottomRow(double loanAmount, double interestCost) {
         System.out.printf("%-7s %-8s %-12.2f %-16.2f %-8.2f\n", " ", "Total", loanAmount, interestCost, loanAmount + interestCost);
 
-}
+    }
 
 IV. Laenu väljamaksmise plaan
 
-.. code-block::
+.. code-block:: java
 
- public static void printFixedPaymentPlan(double loanAmount, double period, double yearlyInterestRate) {
+    public static void printFixedPaymentPlan(double loanAmount, double period, double yearlyInterestRate) {
             
             // Kontrollime, kas sisendid on korrektsete väärtustega:
 
@@ -172,7 +173,7 @@ IV. Laenu väljamaksmise plaan
 
         }
 
-}
+    }
 
 V. Programmi käivitamine, sisendi lugemine ja väljundi kirjutamine
 Kui käivitame programmi, siis toimuvad järgmised protsessid samm-sammult:
@@ -188,9 +189,9 @@ Scanner scanner = new Scanner(System.in).useDelimiter("[\\n]+");
 
 4. Kontrollime sisendi väärtuse õigust vastaselt nõuetele, kui andmed ei ole õiged, küsime veelkord
 
-.. code-block::
+.. code-block:: java
 
- public static void main(String[] args) {
+    public static void main(String[] args) {
         double amount = -1;
         double period = -1;
         double interest = -1;

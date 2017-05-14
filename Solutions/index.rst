@@ -4,7 +4,7 @@ Lahendused
 Ülesannete lahendused
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Ülesanded:
 
    EX02
