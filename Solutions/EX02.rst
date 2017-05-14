@@ -61,7 +61,7 @@ Nüüd räägime sellest, kuidas stringi korrata. Seda saab teha ühe reana:
 
 .. code-block:: java
 
-   *String.join("", Collections.nCopies(count, s));*
+   String.join("", Collections.nCopies(count, s));
 
 Kasutate *Collections* framework'i.
 Java keel on hea selles mõttes, et on juba olemas palju valmis asju, et neid kasutada.
