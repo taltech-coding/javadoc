@@ -8,6 +8,7 @@ Sissejuhatus
 Lahendus peab olema rekursiivne, mis tähendab, et meie meetod peab kutsuma ise ennast välja:
 
 .. code-block:: java
+
 	public static int find(String where, String what) {
 		...
 		... find(strA, strB); // strA ja strB on String tüübi muutujad.
@@ -41,6 +42,7 @@ Meetodid
 Selles ülesandes on lubatud kasutada vaid järgmiseid meetodeid:
 
 * str.equals(String str2)
+
 Kontrollib, kas muutujad str ja str2 on sisuliselt võrdsed. 
 Kui jah, siis tagastab true, muul juhul tagastab false.
 
@@ -51,6 +53,7 @@ Kui jah, siis tagastab true, muul juhul tagastab false.
 	2. Olgu String str = "tere", str2 = "tere!". Siis str.equals(str2) => false
 
 * str.length()
+
 Tagastab sõne pikkust.
 
 .. code-block:: console
@@ -60,6 +63,7 @@ Tagastab sõne pikkust.
 	2. "".length() => 0 (str.isEmpty() => true)
 
 * str.substring(int startindex)
+
 Võtab ja tagastab sõnest *str* alamsõne, mis algab positsioonist *startindex*.
 *Lihtsamas keeles võiks öelda, et ta võtab *startindex* sümbolist sõne algusest ära*
 NB! See meetod viskab IndexOutOfBoundsException juhul, kui sellist positsiooni sõnes ei leidu!
@@ -73,6 +77,7 @@ NB! See meetod viskab IndexOutOfBoundsException juhul, kui sellist positsiooni s
 	4. "".substring(1) => IndexOutOfBoundsException
 
 * str.substring(int startindex, int endindex)
+
 Võtab ja tagastab sõnest *str* alamsõne, mis algab positsioonist *startindex* ja lõpeb enne positsiooni *endindex*. Matemaatilises keeles: [startindex; endindex)
 **NB! See meetod viskab IndexOutOfBoundsException juhul, kui sellist positsiooni sõnes ei leidu!**
 
@@ -85,6 +90,7 @@ Võtab ja tagastab sõnest *str* alamsõne, mis algab positsioonist *startindex*
 	4. "aa".substring(1, 4) => IndexOutOfBoundsException
 
 * str.charAt(int pos) 
+
 **Tagastab Character tüübi väärtust!** Tagastab sümbolit, mis asub positsioonil *pos*.
 **NB! See meetod viskab IndexOutOfBoundsException juhul, kui sellist positsiooni sõnes ei leidu!**
 
@@ -96,6 +102,7 @@ Võtab ja tagastab sõnest *str* alamsõne, mis algab positsioonist *startindex*
 	3. " ".charAt(2) => IndexOutOfBoundsException
 
 * str.startsWith(String str2) 
+
 Tagastab true, kui sõne *str* alguses on sõne *str2*, muul juhul tagastab false.
 
 .. code-block:: console
