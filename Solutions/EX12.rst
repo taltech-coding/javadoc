@@ -1,7 +1,8 @@
 EX12 - rekursiivne otsing
+=========================
 
 Sissejuhatus
-============
+------------
 
 Ülesandeks on realiseerida meetod *public static int find(String where, String what)*, mis otsib sõnes *where* sõne *what* ja tagastab esimest positsiooni (index), kus sõne *what* paikneb. Juhul, kui sõnes *where* ei ole sõne *what*, siis tagastada -1. Kui otsitav sõne on tühi, siis tagastada 0.
 
@@ -37,7 +38,7 @@ Tuleb meeles pidada, et sõnes on igal sümbolil oma indeks. Indeksi lugemine al
 	find("aba", "a") => 0
 
 Meetodid
-================
+--------
 
 Selles ülesandes on lubatud kasutada vaid järgmiseid meetodeid:
 
@@ -113,7 +114,7 @@ Tagastab true, kui sõne *str* alguses on sõne *str2*, muul juhul tagastab fals
 	4. Olgu String abc = "def". Siis abc.startsWith("tere") => false.
 
 Lahendus:
-=========
+---------
 
 Rekursiooni kasutades tuleb meetodis määrata tingimusi, kui rekursiooni ei pea kasutama, muidu meetod hakkab kutsuma ise ennast välja lõpmatult palju ja see tekitab StackOverFlowError'i.
 
@@ -347,7 +348,7 @@ Tuli välja selline kood:
 	7. return -1 find("abc", "d") => -1
 
 Boonusosa
-=========
+---------
 
 Tuleb kirjutada sarnane meetod *public static int rfind(String where, String what)*, kuid see meetod tagastab mitte esimest, vaid viimast positiooni, kust see sõne leidub.
 
