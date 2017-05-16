@@ -9,4 +9,5 @@ Lahendused
 
    EX02
    EX09
+   EX12
    B03
