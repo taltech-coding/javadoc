@@ -1,0 +1,224 @@
+EX10 lahendus.
+==============
+
+Üldidee: Jaotame mängu kolmeks osaks:
+-------------------------------------
+- Mängija klass kus me loome mängija objekti ning kontrollime kokkupõrget miiniobjektidega ning liigutame mängijat.
+- Miini klass kus me loome uue miini, mis muutub teatud aja möödudes plahvatuseks ning kus sees oleks punktide arv,
+  mis lisatakse mängija skoorile, kui ta selle ülesse korjab.
+- Main klass kus loome objektid ning kus ühe timeriga uuendame mängu ehk kutsume mängija objekti, samuti saaks siin
+  uuendada Labelit kus sees on info järelejäänud elude kohta ning punktiskoori kohta.
+
+
+Mängija klass
+-------------
+
+**Konstruktor**
+
+Mängija klassi konstruktoris anname mängija objektile kaasa kõik vajalikud elemendid milleks on, Pane kuhu mängija pilt
+lisatakse ning miiniobjektide list. Me teeme uue Imageview ning määrama ära kõik vajalikud väärtused.
+Mängija laiuse, pikkuse, algkoordinaadid ning seejärel lisame selle Imageview mängu Pane-le.
+Mängija klassis peame looma järgnevad meetodid.
+
+**Miiniga kokkupuutumise meetod**
+
+Samuti kuna mängija objektile oleks mõttekas kaasa anda miini list kus kõik miinid on, teeme meetodi mis kontrollib
+kas me puutume mingi miiniga kokku. Siin meetodis on tähtis, et kui me käime miine läbi loobiga
+for(Mine platform : mines) siis me ei tohiks eemaldada loobi sees listist miine. Selleks teeme eraldi listi ja alles
+peale loobi lõppu eemaldame õigest miinilistist miinid millega puutusime kokku.
+
+
+.. code-block:: java
+
+   for (Mine platform : mines) {
+            // Juhul kui playeri pilt põrkub miiniobjekitga ja miini staatus on armed EHK juba plahvatanud
+            // siis me paneme selle pommi eemaldatavatesse pommidesse kuid PANE-lt eemaldame pommi ikka.
+            // Samuti vähendame mängja elusid.
+            if (playerimage.getBoundsInParent().intersects(platform.getMine().getBoundsInParent())
+                        && platform.getStatusArmed()) {
+                removableMines.add(platform);
+                gameRoot.getChildren().remove(platform.getMine());
+                lives --;
+            }
+            // Muul juhul kui player objekt põrkub ning miiniobjekt on veel miinukujul siis eemaldame selle PANE-lt
+            // ja paneme pommi eemaldatavatesse pommidesse. Samuti suurendame mängja punktide arvu.
+            else if (playerimage.getBoundsInParent().intersects(platform.getMine().getBoundsInParent())) {
+                gameRoot.getChildren().remove(platform.getMine());
+                removableMines.add(platform);
+                bombsTaken += platform.getPoints();
+                }
+            }
+        mines.removeAll(removableMines);
+
+Samuti peaks sellises meetodis vaatame, ega pole mängija elud langenud nulli, kui on tuleks
+
+- Nullida ära mängija punktid.
+- Panna mängija alguspunkti tagasi.
+- Panna miinide tekkimise intervall algseks.
+- Elud maksimumi peale
+
+
+**Mängija liikumise meetod**
+
+Samuti peaks mängija klassil olema meetod mis kuulab keyevente. Kui näiteks vajutatakse noolt ← siis peaks mängija pilt
+liikuma vasakule. Juhul kui ← on vajutatud alla vähendame x koordinaadi suurust mingi arvu võrra ning pilt liigubki
+vasakule. Mõni if lause juurde ning mängija püsib akna piires.
+
+.. code-block:: java
+
+    if (pressedDown(KeyCode.LEFT)) {
+        playerimage.setTranslateX(playerimage.getTranslateX() - (value));
+        turnPlayer(false)
+    }
+
+Liikumise tuvastamiseks võime ühe variandina kasutada Hashmapi. Kus sees on Keycode ja boolean kas see on hetkel alla
+vajutatud või mitte. Selleks on vaja player objektile konstruktorisse kaasa anda scene.
+
+.. code-block:: java
+
+     HashMap<KeyCode, Boolean> keys = new HashMap<KeyCode, Boolean>()
+     scene.setOnKeyPressed(event -> keys.put(event.getCode(), true));
+     scene.setOnKeyReleased(event -> keys.put(event.getCode(), false));
+
+Kuna me mängja liikumise meetodis kontrollime ka nuppe mida me võibolla veel pole vajutanud siis on meil vaja teha meetod
+mis tagastaks false juhul kui see keyevent pole veel haspmappi pandud. Selleks on getOrDefault. Juhul kui sellist võtit
+Hashmapis ei eksisteeri tagastatakse default value ehk antudjuhul false.
+
+.. code-block:: java
+
+        return keys.getOrDefault(key, false);
+
+Selleks et veenduda et ka mängija pilt oleks suunatud vasakule, loome globaalse boolean muutuja mis näitab
+kas meie mängija vaatab paremale või mitte. Selleks ← noolt vajutades teame et mängija peaks vaatama vasakule ja anname
+turnPlayer(boolean shouldPlayerSideRight) meetodile kaasa väärtuse false. Juhul kui meie globaalne muutuja ei oma sama
+väärtust keeratakse mängija pilti ümber Y telje 180 kraadi.
+
+.. code-block:: java
+
+    private void turnPlayer(boolean shouldGoatSideRight) {
+            // See meetod vaatab kuhu poole player image vaatab ja kuhu peaks vaatama.
+            // Kui need ei ole samad keerab pildi ümber y telje 180 kraadi ümber.
+            // x ja z telgede väärtusteks on pandud nullid niiet ümber nende telgede ei pöörata.
+            if (rightSided != shouldGoatSideRight) {
+                RotateTransition rotateTransition =
+                        new RotateTransition(Duration.millis(2), playerimage);
+                rotateTransition.setByAngle(180);
+                rotateTransition.setAxis(new Point3D(0, 1, 0));
+                rotateTransition.play();
+            }
+            rightSided = shouldGoatSideRight;
+        }
+
+Miini klass
+-----------
+**Miini konstruktor**
+
+Miini konstruktor. Miini konstruktoris määrame ära vajalikud väärtused,  juhusliku numbri. X ja Y koordinaadiks.
+Imageview suuruse ning seejärel lisame selle pane-le. Pane on main klassist kaasa antud. Miini klassis peaks kindlasti
+olema meetod mis tagastab palju punkte selle miini eest saab ehk „int getPoints()“. Samuti lükkame konstruktoris käima
+Timeline-i mille lõppedes kutsutakse esile miiniklassi meetodit mis muudab pommi plahvatuseks. Samuti käivitame meetodi,
+mis vähendab punkte.
+
+**Punktide vähendamise meetod**
+
+Meetodi loob iga kord uue timeline-i mis lõppedes vähendab punkte ning kutsub välja iseennast.
+Ehk igakord ta vähendab punkte ning alustab uuesti sama meetodit mis lõppedes vähendab jällegi punkte.
+
+.. code-block:: java
+
+    public void deducePoints() {
+        // See timeline kestab ühe korra ming iga sekundi tagant vähendab miini eesti vähendatavaid punkte.
+        Timeline pointsDeduction = new Timeline(new KeyFrame(
+                Duration.seconds(1)));
+        pointsDeduction.setOnFinished(event -> {
+            points--;
+            deducePoints();
+        });
+        pointsDeduction.setCycleCount(1);
+        pointsDeduction.play();
+    }
+
+Ja kui meil on meetod mis tagastab kas objekt on juba muutunud plahvatuseks või mitte siis on mängija objektis väga
+lihtne kontrollida kas mängija puutus plahvatusega kokku.
+
+.. code-block:: java
+
+    if (playerimage.getBoundsInParent().intersects(miin.getNode().getBoundsInParent())
+                        && miin.getStatusArmed()) // <-----------
+
+**Miini plahvatuse meetod**
+
+Kõige lihtsam on ilmselt lihtsalt asendada Imageview sees pomm plahvatuse vastu. this.bombView.setImage(explosionImage);
+Selle teostamiseks määrame boolean väärtuse mis näitab kas miini objekt on plahvatanud tõeseks ning tekitame
+ScaleTransisioni mis suurendab plahvatuse pilti. Scaletransisioni lõpus me eemaldame plahvatuse panelt ning määrame
+sama booleani false-iks. Selleks et, mängija objekt saaks aru kas meie pomm võtaks elusid maha või mitte siis peame
+ka tegema meetodi getArmed() või midagi laadset mis tagastab eelmainitud globaalse muutuja.
+
+.. code-block:: java
+
+        // Me ei vaheta Pane-l olevat imageviewd vaid me vahetame Imagit ehk pilti Imageview sees, ehk objekt jääb samaks.
+        // Seetõttu paneme miini objektile kaasa booleani kas vaadata kas pilt on hetkel pomm või plahvatus.
+            armed = true;
+            this.bombView.setImage(explosionImage);
+
+        // Scaletransition muudab 2 sekundi jooksul plahvatuse pilti kaks korda suuremaks, ning peale kahte sekundit
+        // eemaldame plahvatuse lõplikult.
+            ScaleTransition scaleTransition =
+                    new ScaleTransition(Duration.millis(explosionDuration), bombView);
+            scaleTransition.setToX(2f);
+            scaleTransition.setToY(2f);
+            scaleTransition.setCycleCount(1);
+            scaleTransition.setOnFinished(event -> {
+                pane.getChildren().remove(bombView);
+                armed = false;
+
+            });
+            scaleTransition.play();
+            }
+
+
+Main klass
+----------
+**Start**
+
+Põhi klassis me lihtsalt loome uue kõik vajaliku mängu jaoks(scene, pane jne) ja vajalikud objektid näiteks mängija
+objekt. Samuti on vaja põhi klassis 2 timeline-i, üks mis kutsub esile mängija klassi meetodeid (Mängija liikumise meetod
+ning mängija meetod, miskontollib kokkupõrget miiniga) ja teine mis tekitab miine.
+
+
+**Refresh Timeline**
+
+Selline Timeline uuendab player väärtusi. Kui refereshRate oleks 20 siis uuendatakse mängija andmeid 50 korda sekundis.
+Mängija objekti liikumisväärtused oleks mõistlik seada üsna väikeseks. Suur uuendamiste kord ning väike liikumise suurus
+tagab mängu sujuva liikumise.
+
+.. code-block:: java
+
+  Timeline update = new Timeline(new KeyFrame(Duration.millis(refreshRate),
+                ae -> playerUpdate(player, lives)));
+        update.setCycleCount(Animation.INDEFINITE);
+        update.play();
+
+
+**Miini tekitamise Timeline**
+
+Tehes timeline-i mis lõppedes kutsub välja enda meetodit välja andes uue lühema kestvus aja, õnnestuks meil teha meetod,
+mis tekitaks uusi miine aine suurenevas tempos.
+
+.. code-block:: java
+
+ Timeline minecreation = new Timeline(new KeyFrame(Duration.millis(duration)));
+            minecreation.setOnFinished(event -> {
+                Mine miin = new Mine(appRoot);
+                mines.add(miin);
+                if (duration >= minumumSpawnTime) {
+                    duration -= mineSpawnDurationDecrease;
+                }
+                makeAMine(appRoot);
+            });
+            minecreation.play();
+
+
+Ending
+------
+Gl with exam.
