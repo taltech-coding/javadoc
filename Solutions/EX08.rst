@@ -21,7 +21,7 @@ teeme Square või Board objekti selles samas klassis), ehk:
 Square klassil on kaks konstruktori - üks võtab ette stringi (notation), mis iseloomustab selle ruudu asukohta malelaual. Ehk, notation võiks olla näiteks "c7", "a2" jne. Teine võtab ette malelaua x ja y koordinaate.
 Nagu alati, salvestame konstruktorisse ette antud väärtuse enne loodud välisse (field).
 
- .. code-block:: java
+.. code-block:: java
 
     private String notation;
 
