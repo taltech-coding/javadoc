@@ -1,1 +1,224 @@
+EX08 lahendus
+============
+
+**Backend**
+Antud ülesandes tuleb realiseerida kaks klassi - Square ja Board. Board klass iseloomustab malelauda ning Square klass, omakorda, 
+ühe ruutu antud malelaual.
+Mõlemal klassil on privaatsed konstruktorid, ehk otseselt pole võimalik nendest objekte luua (välja arvatud olukord, kui 
+teeme Square või Board objekti selles samas klassis), ehk:
+
+.. code-block:: java
+    
+    // Viskavad vastavat veateadet: Constructor has private access
+    Square s = new Square("c7");
+    Board b = new Board(8, 8);
+
+
+1. Square
+
+Square klassil on kaks konstruktori - võtab ette stringi, mis iseloomustab selle ruudu asukohta malelaual. Ehk, notation võiks olla näiteks "c7", "a2" jne. Teine võtab ette malelaua x ja y koordinaate.
+Nagu alati, salvestame konstruktorisse antud väärtust enne loodud väli (field) sisse.
+
+ .. code-block:: java
+
+        private String notation;
+        
+        private Square(String notation) { this.notation = notation; }
+        
+        // Sama asi teise konstruktoriga
+
+Nüüd tuleb relaliseerida kaks erinavat staatilist (static) meetodit, mis kutsuvad vastava kontsruktori ja loovad objekti.
+Staatilised meetodid on iseseisvad, mis tähendab see, et nad ei sõltu objektidest ja neid saab kutsuda ilma objekti loomiseta.
+Antud ülesandes oleks võimalik teha erinevad meetodid erineva nimega, ja siis ühte kasutaksime siis, kui on ette antud notation 
+ja teist - kui koordinadid. See näeks välja umbes nii:
+
+.. code-block:: java
+    
+    public Square createSquareByNotation(String notation) {
+        return new Square(notation);
+    }
+    
+    public Square createSquareByXY(int x, int y) {
+        return new Square(x, y);
+    }
+    /*
+    Siis:
+    Square s1 = Square.createSquareByNotation("c7");
+    Square s2 = Square.createSquareByXY(0, 0);
+    */
+
+Kuid see oleks mahukas ja ebapraktiline. Õnneks on Javas selline asi nagu ülelaadimine (method overload) mis võimaldab kasutada sama meetodi, mis võtab ette erinevaid argumente.
+
+.. code-block:: java
+    
+    public Square of(String notation) {
+        return new Square(notation);
+    }
+    
+    public Square of(int x, int y) {
+        return new Square(x, y);
+    }
+   
+    Siis:
+    Square s1 = Square.of("c7");
+    Square s2 = Square.of(0, 0);
+
+Tuleb arvestada ka seda, et Square objektil peavad alati olema notation, x, y. Ehk juhul, kui me loome objekti näiteks notation'i
+kasutades, tuleb sealt ekstraheerida ka x ja y koordinaate:
+
+.. code-block:: java
+
+class Square {
+    /** Konstant, mis iseloomustab inglise alphabeeti stringi kujul. */
+    private static final String LETTERS = "abcdefghijklmnopqrstuvwxyz";
+
+    private int x;
+    private int y;
+
+    public static void main(String[] args) {
+        Square s = Square.of("c7");
+    }
+
+    public Square of(String notation) {
+        // notation = "c7"
+        Square s = new Square(notation);
+        // 'c'
+        char letter = notation.charAt(0);
+        // '7'
+        char digit = notation.charAt(1);
+        // 2
+        s.x = LETTERS.indexOf(letter);
+        // On vaja ühte lahutada, kuna meie x ja y koordinadid algavad 0-st. Malelaual koordinatide arvutamine algab 1-st.
+        // 6
+        s.y = Integer.valueOf(digit) - 1;
+        return s;
+    }
+}
+
+Sellega Square klass on valmis.
+
+2. Board
+
+Board klassi puhul samamoodi kasutame staatilist meetodi objekti loomiseks. Siin pole midagi uut.
+Antud klassil on olemas spetsiaalne väli - knight - mis iseloomustab Square klassi objekti, mille peal praegu asub meie knight.
+Klass Board peab võimaldama lisada juurde ühte ratsut ja ümberpaigutada seda vastavalt malereeglitele. Ratsu alati läheb "Г" tähega.
+
+
+.. code-block:: java
+
+class Board {
+    private int height;
+    private it width;
+    private Square knight;
+
+
+    public boolean addKnight(Square square) {
+        if ( kontrollime, kas ette antud objekt on Board piiride sees ja ei võrdu null-iga ) {
+          knight = square;
+        }
+        // Kui asendus on tehtud, knight võrdub viitega uuele Square objektile
+        return knight != null;
+    }
+
+    public boolean moveKnightTo(Square square) { 
+        // Siin kontrollime, kas ette antud ruut on see, kuhu ratsu saab minna
+        if ( saab küll) {
+            knight = square;
+            return true;
+        // Vastasel juhul
+        return false;
+    }
+}
+
+Ja ongi backend'iga kõik.
+
+**Frontend**
+
+Alustame sellest, et meil on vaja malelauda, kuhu ratsu saaks paigutada. Kõige lihtsam on kasutada selleks JavaFX-ile sisse ehitatud klassi Rectangle. 
+
+Esialgu teeme valmis GridPane: seda tuleks jaotada ristkülikudeks, mille sisse pärast paneme Rectangle objecte. Niiet tuleb välja selline võrk, mis koosneb 8*8 = 64 ristkülikudest. Ma tegin seda SceneBuilderiga, kuid saab ka teha nö elegentsem:
+
+.. code-block:: java
+    
+    int width = 20;
+    Pane pane = new GridPane();
+    
+    for (int i = 0; i < 8; i++) {
+        pane.getRowConstraints().add(new RowConstraints(width));
+        pane.getColumnConstraints().add(new ColumnConstraints(width));
+    }
+
+Nüüd saab lisada tühjadesse ristkülikudesse meie Pane'il Rectangle objekte ja kohe värvida neid ära. Seda on lihtsam jagada kaheks meetodiks.
+Esmese meetodi sees teeme massiivi, mis iseloomustab meie võrgu. Ehk, massiv, milles on sama palju elemente, nagu ristkülikke meie paneelis - 64. Massivi elementideks on ainult ühed ja nullid, kus 1 tähendab, et ristküliku värv on valge ja 0 tähendab, et värv on... hm... Roosa?
+Niiet:
+
+.. code-block:: java
+    
+    public int[] setGrid() {
+        int j = 0;
+        // Meie peame vahetama värvimise järjekorda igas uues reas
+        boolean switchColors = false;
+        int[] grid = new int[width * height];
+
+        for (int i = 0; i < grid.length; i++) {
+            if (switchColors) {
+                if (j % 2 == 0) {
+                    grid[i] = 1;
+                } else {
+                    grid[i] = 0;
+                }
+              } else {
+                 if (j % 2 == 0) {
+                    grid[i] = 0;
+                 } else {
+                    grid[i] = 1;
+            }
+            ++j;
+            // Peame nullima indeksi siis, kui rida lõppeb ja alustada uuesti
+            // Saab teha ka ilma selleta, kuid siis tuleb kasutada kahedimensioonilise massiivi (two-dimensional array): int[][] ja kaks             // for-tsükli.
+            if (j == width) {
+                j = 0;
+                // Iga kord vahetame värvimise järjekorda
+                switchColors = grid[i] % 2 != 0;
+            }
+        }
+        return grid;
+    }
+
+
+Natuke mahukas, eks? Teeme ilusamaks:
+
+.. code-block:: java
+    
+    public int[] setGrid() {
+        int j = 0;
+        boolean switchColors = false;
+        int[] grid = new int[width * height];
+
+        for (int i = 0; i < grid.length; i++) {
+            grid[i] = switchColors ? (j % 2 == 0 ? 1 : 0) : (j % 2 == 0 ? 0 : 1);
+            ++j;
+            if (j == width) {
+                j = 0;
+                switchColors = grid[i] % 2 != 0;
+            }
+        }
+        return grid;
+    }
+
+Nüüd, mis jääbki tegema on lisada meie paneelile vastava värvidega ristkülikke.
+
+...
+
+Will finish tomorrow.
+
+
+
+
+
+
+
+     
+     
+  
 
