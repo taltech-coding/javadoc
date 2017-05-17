@@ -75,32 +75,32 @@ kasutades, tuleb sealt ekstraheerida ka x ja y koordinaate:
 
 .. code-block:: java
 
-class Square {
-    /** Konstant, mis iseloomustab inglise alphabeeti stringi kujul. */
-    private static final String LETTERS = "abcdefghijklmnopqrstuvwxyz";
+    class Square {
+        /** Konstant, mis iseloomustab inglise alphabeeti stringi kujul. */
+        private static final String LETTERS = "abcdefghijklmnopqrstuvwxyz";
 
-    private int x;
-    private int y;
+        private int x;
+        private int y;
 
-    public static void main(String[] args) {
-        Square s = Square.of("c7");
+        public static void main(String[] args) {
+            Square s = Square.of("c7");
+        }
+
+        public Square of(String notation) {
+            // notation = "c7"
+            Square s = new Square(notation);
+            // 'c'
+            char letter = notation.charAt(0);
+            // '7'
+            char digit = notation.charAt(1);
+            // 2
+            s.x = LETTERS.indexOf(letter);
+            // On vaja ühte lahutada, kuna meie x ja y koordinadid algavad 0-st. Malelaual koordinatide arvutamine algab 1-st.
+            // 6
+            s.y = Integer.valueOf(digit) - 1;
+            return s;
+        }
     }
-
-    public Square of(String notation) {
-        // notation = "c7"
-        Square s = new Square(notation);
-        // 'c'
-        char letter = notation.charAt(0);
-        // '7'
-        char digit = notation.charAt(1);
-        // 2
-        s.x = LETTERS.indexOf(letter);
-        // On vaja ühte lahutada, kuna meie x ja y koordinadid algavad 0-st. Malelaual koordinatide arvutamine algab 1-st.
-        // 6
-        s.y = Integer.valueOf(digit) - 1;
-        return s;
-    }
-}
 
 
 Sellega Square klass on valmis.
@@ -115,29 +115,29 @@ Klass Board peab võimaldama lisada juurde ühte ratsut ja paigutada seda ümber
 
 .. code-block:: java
 
-class Board {
-    private int height;
-    private it width;
-    private Square knight;
+    class Board {
+        private int height;
+        private it width;
+        private Square knight;
 
 
-    public boolean addKnight(Square square) {
-        if ( kontrollime, kas ette antud objekt on Board piiride sees ja ei võrdu null-iga ) {
-          knight = square;
+        public boolean addKnight(Square square) {
+            if ( kontrollime, kas ette antud objekt on Board piiride sees ja ei võrdu null-iga ) {
+              knight = square;
+            }
+            // Kui asendus on tehtud, knight võrdub viitega uuele Square objektile
+            return knight != null;
         }
-        // Kui asendus on tehtud, knight võrdub viitega uuele Square objektile
-        return knight != null;
-    }
 
-    public boolean moveKnightTo(Square square) { 
-        // Siin kontrollime, kas ette antud ruut on see, kuhu ratsu saab minna
-        if ( saab küll) {
-            knight = square;
-            return true;
-        // Vastasel juhul
-        return false;
+        public boolean moveKnightTo(Square square) { 
+            // Siin kontrollime, kas ette antud ruut on see, kuhu ratsu saab minna
+            if ( saab küll ) {
+                knight = square;
+                return true;
+            // Vastasel juhul
+            return false;
+        }
     }
-}
 
 
 Ja siis ongi backend'iga kõik.
