@@ -191,7 +191,9 @@ Niiet:
             }
             ++j;
             // Peame nullima indeksi siis, kui rida lõppeb ja alustada uuesti
-            // Saab teha ka ilma selleta (ilma j indeksita), kuid siis tuleb kasutada kahedimensioonilise massiivi (two-dimensional                 // array: int[][]) ja kaks for-tsükli.
+            // Saab teha ka ilma selleta (ilma j indeksita)
+            // Kuid siis tuleb kasutada kahedimensioonilise massiivi (two-dimensionalarray: int[][])
+            // Ja kaks for-tsükli.
             if (j == width) {
                 j = 0;
                 // Iga kord vahetame värvimise järjekorda
