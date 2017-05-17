@@ -23,11 +23,11 @@ Nagu alati, salvestame konstruktorisse antud väärtust enne loodud väli (field
 
  .. code-block:: java
 
-        private String notation;
-        
-        private Square(String notation) { this.notation = notation; }
-        
-        // Sama asi teise konstruktoriga
+    private String notation;
+
+    private Square(String notation) { this.notation = notation; }
+
+    // Sama asi teise konstruktoriga
 
 Nüüd tuleb relaliseerida kaks erinavat staatilist (static) meetodit, mis kutsuvad vastava kontsruktori ja loovad objekti.
 Staatilised meetodid on iseseisvad, mis tähendab see, et nad ei sõltu objektidest ja neid saab kutsuda ilma objekti loomiseta.
@@ -51,7 +51,7 @@ ja teist - kui koordinadid. See näeks välja umbes nii:
     */
 
 
-Kuid see oleks mahukas ja ebapraktiline. Õnneks on Javas selline asi nagu ülelaadimine (method overload) mis võimaldab kasutada sama meetodi, mis võtab ette erinevaid argumente.
+Kuid see oleks mahukas ja ebapraktiline. Õnneks on Javas selline asi nagu ülelaadimine (method overload) mis võimaldab kasutada meetodi sama nimega, mis võtab ette erinevaid argumente.
 
 
 .. code-block:: java
