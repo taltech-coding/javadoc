@@ -18,8 +18,8 @@ teeme Square või Board objekti selles samas klassis), ehk:
 
 1. Square
 
-Square klassil on kaks konstruktori - võtab ette stringi, mis iseloomustab selle ruudu asukohta malelaual. Ehk, notation võiks olla näiteks "c7", "a2" jne. Teine võtab ette malelaua x ja y koordinaate.
-Nagu alati, salvestame konstruktorisse antud väärtust enne loodud väli (field) sisse.
+Square klassil on kaks konstruktori - üks võtab ette stringi (notation), mis iseloomustab selle ruudu asukohta malelaual. Ehk, notation võiks olla näiteks "c7", "a2" jne. Teine võtab ette malelaua x ja y koordinaate.
+Nagu alati, salvestame konstruktorisse ette antud väärtuse enne loodud välisse (field).
 
  .. code-block:: java
 
@@ -105,12 +105,12 @@ class Square {
 
 Sellega Square klass on valmis.
 
+
 2. Board
 
-
-Board klassi puhul samamoodi kasutame staatilist meetodi objekti loomiseks. Siin pole midagi uut.
+Board klassi puhul samamoodi kasutame staatilist meetodit objekti loomiseks. Siin pole midagi uut.
 Antud klassil on olemas spetsiaalne väli - knight - mis iseloomustab Square klassi objekti, mille peal praegu asub meie knight.
-Klass Board peab võimaldama lisada juurde ühte ratsut ja ümberpaigutada seda vastavalt malereeglitele. Ratsu alati läheb "Г" tähega.
+Klass Board peab võimaldama lisada juurde ühte ratsut ja paigutada seda ümber vastavalt malereeglitele (ratsu alati läheb "Г" tähega).
 
 
 .. code-block:: java
@@ -142,15 +142,16 @@ class Board {
 
 Ja siis ongi backend'iga kõik.
 
-**Frontend**
 
+**Frontend**
 
 Alustame sellest, et meil on vaja malelauda, kuhu ratsu saaks paigutada. Kõige lihtsam on kasutada selleks JavaFX-ile sisse ehitatud klassi Rectangle. 
 
-Esialgu teeme valmis GridPane: seda tuleks jaotada ristkülikudeks, mille sisse pärast paneme Rectangle objecte. Niiet tuleb välja selline võrk, mis koosneb 8*8 = 64 ristkülikudest. Ma tegin seda SceneBuilderiga, kuid saab ka teha nö elegentsem:
+Esialgu teeme valmis GridPane: seda tuleks jaotada ristkülikudeks, mille sisse pärast paneme Rectangle objekte. Niiet tuleb välja selline võrk, mis koosneb 8*8 = 64 ristkülikudest. Ma tegin seda SceneBuilderiga, kuid saab ka teha nö elegentsem:
 
 .. code-block:: java
     
+    // Suvaline arv
     int width = 20;
     Pane pane = new GridPane();
     
@@ -160,14 +161,16 @@ Esialgu teeme valmis GridPane: seda tuleks jaotada ristkülikudeks, mille sisse 
     }
 
 
-Nüüd saab lisada tühjadesse ristkülikudesse meie Pane'il Rectangle objekte ja kohe värvida neid ära. Seda on lihtsam jagada kaheks meetodiks.
+Nüüd saab lisada tühjadesse ristkülikudesse meie Pane'il Rectangle objekte ja kohe värvida neid ära. Seda tegevust on lihtsam jagada kaheks meetodiks.
 Esmese meetodi sees teeme massiivi, mis iseloomustab meie võrgu. Ehk, massiv, milles on sama palju elemente, nagu ristkülikke meie paneelis - 64. Massivi elementideks on ainult ühed ja nullid, kus 1 tähendab, et ristküliku värv on valge ja 0 tähendab, et värv on... hm... Roosa?
+
 Niiet:
 
 
 .. code-block:: java
     
     public int[] setGrid() {
+        // Indeks, mille abil määrame ristküliku värvi
         int j = 0;
         // Meie peame vahetama värvimise järjekorda igas uues reas
         boolean switchColors = false;
@@ -188,7 +191,7 @@ Niiet:
             }
             ++j;
             // Peame nullima indeksi siis, kui rida lõppeb ja alustada uuesti
-            // Saab teha ka ilma selleta, kuid siis tuleb kasutada kahedimensioonilise massiivi (two-dimensional array): int[][] ja kaks             // for-tsükli.
+            // Saab teha ka ilma selleta (ilma j indeksita), kuid siis tuleb kasutada kahedimensioonilise massiivi (two-dimensional                 // array: int[][]) ja kaks for-tsükli.
             if (j == width) {
                 j = 0;
                 // Iga kord vahetame värvimise järjekorda
