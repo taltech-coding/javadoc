@@ -2,10 +2,12 @@ EX08 lahendus
 ============
 
 **Backend**
+
 Antud ülesandes tuleb realiseerida kaks klassi - Square ja Board. Board klass iseloomustab malelauda ning Square klass, omakorda, 
 ühe ruutu antud malelaual.
 Mõlemal klassil on privaatsed konstruktorid, ehk otseselt pole võimalik nendest objekte luua (välja arvatud olukord, kui 
 teeme Square või Board objekti selles samas klassis), ehk:
+
 
 .. code-block:: java
     
@@ -32,6 +34,7 @@ Staatilised meetodid on iseseisvad, mis tähendab see, et nad ei sõltu objektid
 Antud ülesandes oleks võimalik teha erinevad meetodid erineva nimega, ja siis ühte kasutaksime siis, kui on ette antud notation 
 ja teist - kui koordinadid. See näeks välja umbes nii:
 
+
 .. code-block:: java
     
     public Square createSquareByNotation(String notation) {
@@ -47,7 +50,9 @@ ja teist - kui koordinadid. See näeks välja umbes nii:
     Square s2 = Square.createSquareByXY(0, 0);
     */
 
+
 Kuid see oleks mahukas ja ebapraktiline. Õnneks on Javas selline asi nagu ülelaadimine (method overload) mis võimaldab kasutada sama meetodi, mis võtab ette erinevaid argumente.
+
 
 .. code-block:: java
     
@@ -63,8 +68,10 @@ Kuid see oleks mahukas ja ebapraktiline. Õnneks on Javas selline asi nagu ülel
     Square s1 = Square.of("c7");
     Square s2 = Square.of(0, 0);
 
+
 Tuleb arvestada ka seda, et Square objektil peavad alati olema notation, x, y. Ehk juhul, kui me loome objekti näiteks notation'i
 kasutades, tuleb sealt ekstraheerida ka x ja y koordinaate:
+
 
 .. code-block:: java
 
@@ -95,9 +102,11 @@ class Square {
     }
 }
 
+
 Sellega Square klass on valmis.
 
 2. Board
+
 
 Board klassi puhul samamoodi kasutame staatilist meetodi objekti loomiseks. Siin pole midagi uut.
 Antud klassil on olemas spetsiaalne väli - knight - mis iseloomustab Square klassi objekti, mille peal praegu asub meie knight.
@@ -130,9 +139,11 @@ class Board {
     }
 }
 
-Ja ongi backend'iga kõik.
+
+Ja siis ongi backend'iga kõik.
 
 **Frontend**
+
 
 Alustame sellest, et meil on vaja malelauda, kuhu ratsu saaks paigutada. Kõige lihtsam on kasutada selleks JavaFX-ile sisse ehitatud klassi Rectangle. 
 
@@ -148,9 +159,11 @@ Esialgu teeme valmis GridPane: seda tuleks jaotada ristkülikudeks, mille sisse 
         pane.getColumnConstraints().add(new ColumnConstraints(width));
     }
 
+
 Nüüd saab lisada tühjadesse ristkülikudesse meie Pane'il Rectangle objekte ja kohe värvida neid ära. Seda on lihtsam jagada kaheks meetodiks.
 Esmese meetodi sees teeme massiivi, mis iseloomustab meie võrgu. Ehk, massiv, milles on sama palju elemente, nagu ristkülikke meie paneelis - 64. Massivi elementideks on ainult ühed ja nullid, kus 1 tähendab, et ristküliku värv on valge ja 0 tähendab, et värv on... hm... Roosa?
 Niiet:
+
 
 .. code-block:: java
     
@@ -188,6 +201,7 @@ Niiet:
 
 Natuke mahukas, eks? Teeme ilusamaks:
 
+
 .. code-block:: java
     
     public int[] setGrid() {
@@ -206,19 +220,11 @@ Natuke mahukas, eks? Teeme ilusamaks:
         return grid;
     }
 
+
 Nüüd, mis jääbki tegema on lisada meie paneelile vastava värvidega ristkülikke.
 
 ...
 
 Will finish tomorrow.
 
-
-
-
-
-
-
-     
-     
-  
 
