@@ -95,7 +95,8 @@ kasutades, tuleb sealt ekstraheerida ka x ja y koordinaate:
             char digit = notation.charAt(1);
             // 2
             s.x = LETTERS.indexOf(letter);
-            // On vaja ühte lahutada, kuna meie x ja y koordinadid algavad 0-st. Malelaual koordinatide arvutamine algab 1-st.
+            // On vaja ühte lahutada, kuna meie x ja y koordinadid algavad 0-st. 
+            // Malelaual koordinatide arvutamine algab 1-st.
             // 6
             s.y = Integer.valueOf(digit) - 1;
             return s;
