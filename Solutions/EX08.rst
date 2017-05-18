@@ -73,7 +73,7 @@ kasutades, tuleb sealt ekstraheerida ka x ja y koordinaate:
 
 .. code-block:: java
 
-    class Square {
+    public class Square {
     
         /** Konstant, mis iseloomustab inglise alphabeeti stringi kujul. */
         private static final String LETTERS = "abcdefghijklmnopqrstuvwxyz";
@@ -85,7 +85,7 @@ kasutades, tuleb sealt ekstraheerida ka x ja y koordinaate:
             Square s = Square.of("c7");
         }
 
-        public Square of(String notation) {
+        public static Square of(String notation) {
         
             // notation = "c7"
             Square s = new Square(notation);
@@ -105,6 +105,7 @@ kasutades, tuleb sealt ekstraheerida ka x ja y koordinaate:
             s.y = Integer.valueOf(digit) - 1;
             return s;
         }
+        // Ja samamoodi teise meetodiga
     }
 
 Sellega Square klass on valmis.
@@ -119,7 +120,7 @@ Klass Board peab võimaldama lisada juurde ühte ratsut ja paigutada seda ümber
 
 .. code-block:: java
 
-    class Board {
+    public class Board {
         private int height;
         private int width;
         private Square knight;
