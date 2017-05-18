@@ -1,0 +1,121 @@
+EX01 lahendus
+=============
+
+Kõigepealt realiseerime repeat meetodi. Midagi keerulist siin pole, parameetriteks on sõne, mida korrata ja count, mitu korda seda teha. Selleks piisab lihtsast for tsüklist:
+
+.. code-block:: java
+
+    public static String repeat(String s, int count) {
+
+        String repeatedString = "";
+
+        if (s == null || s == "") { // nulli checkid
+            return "";
+        }
+
+        for (int i = 0; i < count; i++) {
+            repeatedString += s;
+        }
+
+        return repeatedString;
+
+    }
+    
+
+
+Järgmisena getLineSeparator. Ka siin piirdume ühe lihtsa for tsükliga. Ehk siis lisame return-itavale sõnele sidekriipse nii palju kui meie width lubab(width - 2, kuna otstesse käivad plussid):
+
+.. code-block:: java
+
+    public static String getLineSeparator(int width) {
+
+        String length = "";
+    
+        for (int i = 0; i < width - 2; i++) {
+            length += "-";
+        }
+        return "+" + length + "+";
+
+    }
+    
+Nüüd on järjekord getStringAlignedRight käes. Siin siis peab sõne hoidma paremasse nurka. Algusesse topime siis jälle nulli checkid. Kui ette antud sõne pikkus on suurem kui ette antud rea pikkus, siis kärbime sõnet substring meetodiga. Substring meetod tahab ühte argumenti - indexit, kust kärpimist alustada. Index saame välja arvutada, lahutades sõne pikkusest rea pikkuse. Näiteks ütleme, et meie sõne on pikkusega 13 ja length on 8. Väike lahutamistehe annab meile tulemuseks 5. Kui anname substring meetodile argumendiks 5, on tulemuseks sõne millest on esimesed 5 tähte eemaldatud ja ülejäänud 8 sobivad täpselt meie ritta.
+
+Kui aga ikkagi rea pikkus on sõne pikkusest suurem, siis peame vaatama, palju meil tühja ruumi(whitespace) tuleb. Et arvutada, palju meil whitespace-i vaja on, lahutame lihtsalt rea pikkusest sõne pikkuse. Edasi saame toimetada for tsükliga, tehes ka String muutuja tühja ruumi jaoks ja siis seda suurendada. Lõpuks liidame oma tehtud muutuja ja rea kokku. Just selles järjekorras, muidu hoiaks tekst vasakusse nurka.
+    
+.. code-block:: java
+
+    public static String getStringAlignedRight(String line, int length) {
+
+        String whitespace = "";
+        if (line == null) {
+            line = "";
+        }
+        if (length < 0) {
+            return "";
+        } else if (line.length() >= length) {
+            return line.substring(line.length() - length);
+        }  else {
+                for (int i = 0; i < length - line.length(); i++) {
+                whitespace += " ";
+                }
+        }
+
+        return whitespace + line;
+    }
+    
+Meetod getStringInCenter jagab üsna sarnast loogikat eelmisega. Vahe on selles, et nüüd peaksime vaatama, palju tühja ruumi me mõlemalt poolt vajame. Kõige arusaadavam viis seda teha oleks luua 3 int muutujat, üks mis hoiab tervet tühja ruumi arvu ja teised 2 hoiaks vastavalt parema poole ja vasaku poole oma. Terve tühja ruumi jaoks lahutame etteantud sõne pikkuse etteantud rea laiusest. Tingimus oli, et kui sõne täpselt keskele ei mahu, siis peab ta hoidma rohkem paremale. Seda teades saame parema poole oma välja arvutada, jagades terve tühja ruumi kahega. Vasaku poole saame lahutades tervest tühjast ruumist parema poole tühja ruumi. Javas on nii, et kui arv täpselt ei jagu, siis ümardatakse alati alla. See tagabki, et meil on paremal pool alati vähem tühja ruumi.
+
+
+.. code-block:: java
+
+    public static String getStringInCenter(String text, int width) {
+
+        if (text == null) {
+            text = "";
+        }
+
+        int whitespaceAmount = width - text.length();
+        int whitespaceRight = whitespaceAmount / 2;
+        int whitespaceLeft = whitespaceAmount - whitespaceRight;
+        String s = "";
+
+        if (width < 0) {
+
+            return "";
+
+        } else if (width < text.length()) {
+
+            s = text.substring((text.length() - width) / 2, (text.length() + width) / 2);
+
+        } else {
+
+            for (int i = 0; i < whitespaceLeft; i++) {
+                s += " ";
+            }
+            s += text;
+
+            for (int i = 0; i < whitespaceRight; i++) {
+                s += " ";
+            }
+
+        }
+
+        return s;
+    }
+    
+Meetodi getTable jaoks kasutame eelnevaid meetodeid ja suurendame koguaeg ühte ja sama sõnet:
+
+.. code-block:: java
+
+    public static String getTable(String heading, String content, int width) {
+
+        String table = "";
+
+        table += getLineSeparator(width) + "\n";
+        table += "|" + getStringInCenter(heading, width - 2) + "|\n";
+        table += getLineSeparator(width) + "\n";
+        table += "|" + getStringAlignedRight(content, width - 2) + "|\n";
+        table += getLineSeparator(width) + "\n";
+
+        return table;
+    }
