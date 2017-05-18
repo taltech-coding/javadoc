@@ -8,6 +8,8 @@ Lahendused
    :caption: Ülesanded:
 
    EX02
+   EX07
+   EX08
    EX09
    EX10
    EX12
