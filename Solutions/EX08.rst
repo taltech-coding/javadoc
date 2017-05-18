@@ -37,11 +37,11 @@ ja teist - kui koordinadid. See näeks välja umbes nii:
 
 .. code-block:: java
     
-    public Square createSquareByNotation(String notation) {
+    public static Square createSquareByNotation(String notation) {
         return new Square(notation);
     }
     
-    public Square createSquareByXY(int x, int y) {
+    public static Square createSquareByXY(int x, int y) {
         return new Square(x, y);
     }
     
@@ -55,11 +55,11 @@ Kuid see oleks mahukas ja ebapraktiline. Õnneks on Javas selline asi nagu ülel
 
 .. code-block:: java
     
-    public Square of(String notation) {
+    public static Square of(String notation) {
         return new Square(notation);
     }
     
-    public Square of(int x, int y) {
+    public static Square of(int x, int y) {
         return new Square(x, y);
     }
    
