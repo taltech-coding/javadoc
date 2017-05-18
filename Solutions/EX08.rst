@@ -4,9 +4,9 @@ EX08 lahendus
 **Backend**
 
 Antud ülesandes tuleb realiseerida kaks klassi - Square ja Board. Board klass iseloomustab malelauda ning Square klass, omakorda, 
-ühe ruutu antud malelaual.
+ühte ruutu antud malelaual.
 Mõlemal klassil on privaatsed konstruktorid, ehk otseselt pole võimalik nendest objekte luua (välja arvatud olukord, kui 
-teeme Square või Board objekti selles samas klassis), ehk:
+teeme Square või Board objekti selles samas klassis).
 
 
 .. code-block:: java
@@ -18,7 +18,7 @@ teeme Square või Board objekti selles samas klassis), ehk:
 
 1. Square
 
-Square klassil on kaks konstruktori - üks võtab ette stringi (notation), mis iseloomustab selle ruudu asukohta malelaual. Ehk, notation võiks olla näiteks "c7", "a2" jne. Teine võtab ette malelaua x ja y koordinaate.
+Square klassil on kaks konstruktori - esimene võtab ette stringi (notation), mis iseloomustab selle ruudu asukohta malelaual. Ehk, notation võiks olla näiteks "c7", "a2" jne. Teine võtab ette malelaua x ja y koordinaate.
 Nagu alati, salvestame konstruktorisse ette antud väärtuse enne loodud välisse (field).
 
 .. code-block:: java
@@ -31,7 +31,7 @@ Nagu alati, salvestame konstruktorisse ette antud väärtuse enne loodud väliss
 
 Nüüd tuleb relaliseerida kaks erinavat staatilist (static) meetodit, mis kutsuvad vastava kontsruktori ja loovad objekti.
 Staatilised meetodid on iseseisvad, mis tähendab see, et nad ei sõltu objektidest ja neid saab kutsuda ilma objekti loomiseta.
-Antud ülesandes oleks võimalik teha erinevad meetodid erineva nimega, ja siis ühte kasutaksime siis, kui on ette antud notation 
+Antud ülesandes oleks võimalik teha erinevad meetodid erineva nimega, ja sel korral ühte kasutaksime siis, kui on ette antud notation, 
 ja teist - kui koordinadid. See näeks välja umbes nii:
 
 
@@ -50,8 +50,7 @@ ja teist - kui koordinadid. See näeks välja umbes nii:
     Square s2 = Square.createSquareByXY(0, 0);
     */
 
-
-Kuid see oleks mahukas ja ebapraktiline. Õnneks on Javas selline asi nagu ülelaadimine (method overload) mis võimaldab kasutada meetodi sama nimega, mis võtab ette erinevaid argumente.
+Kuid see oleks mahukas ja ebapraktiline. Õnneks on Javas selline asi nagu ülelaadimine (method overload), mis võimaldab kasutada meetodi sama nimega, mis võtab ette erinevaid argumente.
 
 
 .. code-block:: java
@@ -67,7 +66,6 @@ Kuid see oleks mahukas ja ebapraktiline. Õnneks on Javas selline asi nagu ülel
     Siis:
     Square s1 = Square.of("c7");
     Square s2 = Square.of(0, 0);
-
 
 Tuleb arvestada ka seda, et Square objektil peavad alati olema notation, x, y. Ehk juhul, kui me loome objekti näiteks notation'i
 kasutades, tuleb sealt ekstraheerida ka x ja y koordinaate:
@@ -102,7 +100,6 @@ kasutades, tuleb sealt ekstraheerida ka x ja y koordinaate:
             return s;
         }
     }
-
 
 Sellega Square klass on valmis.
 
@@ -140,7 +137,6 @@ Klass Board peab võimaldama lisada juurde ühte ratsut ja paigutada seda ümber
         }
     }
 
-
 Ja siis ongi backend'iga kõik.
 
 
@@ -153,14 +149,13 @@ Esialgu teeme valmis GridPane: seda tuleks jaotada ristkülikudeks, mille sisse 
 .. code-block:: java
     
     // Suvaline arv
-    int width = 20;
+    int width = 80;
     Pane pane = new GridPane();
     
     for (int i = 0; i < 8; i++) {
         pane.getRowConstraints().add(new RowConstraints(width));
         pane.getColumnConstraints().add(new ColumnConstraints(width));
     }
-
 
 Nüüd saab lisada tühjadesse ristkülikudesse meie Pane'il Rectangle objekte ja kohe värvida neid ära. Seda tegevust on lihtsam jagada kaheks meetodiks.
 Esmese meetodi sees teeme massiivi, mis iseloomustab meie võrgu. Ehk, massiv, milles on sama palju elemente, nagu ristkülikke meie paneelis - 64. Massivi elementideks on ainult ühed ja nullid, kus 1 tähendab, et ristküliku värv on valge ja 0 tähendab, et värv on... hm... Roosa?
@@ -191,10 +186,11 @@ Niiet:
                     grid[i] = 1;
             }
             ++j;
+
             // Peame nullima indeksi siis, kui rida lõppeb ja alustada uuesti
             // Saab teha ka ilma selleta (ilma j indeksita)
-            // Kuid siis tuleb kasutada kahedimensioonilise massiivi (two-dimensionalarray: int[][])
-            // Ja kaks for-tsükli.
+            // Kuid siis tuleb kasutada kahedimensioonilise massiivi (two-dimensional array: int[][])
+            // Ning kaks for-tsükli.
             if (j == width) {
                 j = 0;
                 // Iga kord vahetame värvimise järjekorda
@@ -203,7 +199,6 @@ Niiet:
         }
         return grid;
     }
-
 
 Natuke mahukas, eks? Teeme ilusamaks:
 
@@ -226,11 +221,118 @@ Natuke mahukas, eks? Teeme ilusamaks:
         return grid;
     }
 
-
-Nüüd, mis jääbki tegema on lisada meie paneelile vastava värvidega ristkülikke.
-
-...
-
-Will finish tomorrow.
+Nüüd mis jääbki tegema on lisada meie paneelile vastavate värvidega ristkülikke. Selleks loome lihtsa meetodi:
 
 
+.. code-block:: java
+    
+    private Board b = Board.of(8, 8);
+    
+    private void drawBoard() {
+        
+        int[] grid = b.setGrid();
+        
+        // Koordinaadid
+        int x = 0;
+        int y = b.getHeight() - 1;
+        int squareSize = 80;
+        
+        for (int cell : grid) {
+        
+            // Ristkülik laiusega ja pikkusega 80
+            Rectangle rect = new Rectangle(0, 0, squareSize, squareSize);
+            
+            // Border color
+            rect.setStroke(Color.BLACK);
+            
+            if (cell == 0) {
+                rect.setFill(Color.BLACK);
+            } else {
+                rect.setFill(Color.WHITE);
+            }
+            
+            pane.add(rect, x, y);
+            ++x;
+            if (x == b.getWidth() - 1) {
+                x = 0;
+                --y;
+            }
+        }
+    }
+
+Nüüd meil on malelaud ilusti olemas. Nüüd on vaja teha rakenduse kasutajale võimalikuks ratsut lisada ja paigutada ümber.
+
+
+.. code-block:: java
+
+    private void addKnight() {
+        // Ratsu peab olema lisatud suvalisse kohta
+        int randomX = ThreadLocalRandom.current().nextInt(0, boardSize);
+        int randomY = ThreadLocalRandom.current().nextInt(0, boardSize);
+        // Defineerime pilti
+        ImageView knight = new ImageView(new Image(getClass().getResourceAsStream("knight.png")));
+        
+        // If ratsut veel ei ole, lisame juurde
+        if (b.getKnightSquare() == null) {
+            b.addKnight(Square.of(randomX, randomY));
+            pane.add(knight, randomX, randomY);
+        } else {
+            // If on, võtame maha
+            for (Node image : pane.getChildren()) {
+                if (image instanceof ImageView) {
+                    pane.getChildren().remove(image);
+                    break;
+                }
+            }
+            // Lisame uuesti
+            b.addKnight(Square.of(randomX, randomY));
+            pane.add(knight, randomX, randomY);
+        }
+    }
+ 
+Jääbki ainult üks asi tegemata: juhul, kui kasutaja klikkib malelaua asuvale ruudule peal, peab meie ratsu käiku tegema (kui see vastab malereeglitele). Selleks teeme esialgu funktsiooni, mis kontrollib, kas valitud ruudule saab käiku teha ja kui saab, siis seda tehakse.
+
+
+.. code-block:: java
+
+    private void relocate(int x, int y) {
+        if (b.moveKnightTo(Square.of(x, y))) {
+            for (Node image : pane.getChildren()) {
+                if (image instanceof ImageView) {
+                    pane.getChildren().remove(image);
+                    break;
+                }
+            }
+            // ImageView knight
+            pane.add(knight, x, y);
+        } 
+    }
+    
+    // Ja siis teeme funktsiooni, mis võtab ette klikki koordinaadid
+    // Ja vaatab, mis asukoht paneelil vastab antud ristküliku koordinaatidele, mille peale kasutaja klikkis
+    private void mouseHandler(double boundX, double boundY) {
+        int x = 0;
+        int y = 0;
+        for (Node rect : pane.getChildren()) {
+        
+            // Kui see on Rectangle ja x ja y on selle sees
+            if (rect instanceof Rectangle && rect.getBoundsInParent().contains(boundX, boundY)) {
+            
+                // Saame koordinaadid
+                x = GridPane.getColumnIndex(rect);
+                y = GridPane.getRowIndex(rect);
+                break;
+            }
+        }
+        // Ja siis kutsume relocate() meetodi
+        relocate(x, y);
+    }
+
+Aga ärge unustage, et mouseHandler() peab olma käivitatud iga kord kui kasutaja klikkib paneeli peale:
+
+
+.. code-block:: java
+
+    pane.setOnMouseClicked(ev -> mouseHandler(ev.getX(), ev.getY()));
+
+Sellega ongi kõik. Muidugi on vaja ka lisada nuppu, mille peale vajutades ratsu lisadakse lauale ja ka see, et kui on valitud ruut, kuhu ratsu minna ei saa, siis seda värvidakse punaseks. Aga seda on päris lihne teha.
