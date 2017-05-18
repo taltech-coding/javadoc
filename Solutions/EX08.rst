@@ -121,10 +121,17 @@ Klass Board peab võimaldama lisada juurde ühte ratsut ja paigutada seda ümber
 .. code-block:: java
 
     public class Board {
+    
         private int height;
         private int width;
         private Square knight;
-
+        
+        private Board(int width, int height) {
+            this.width = width;
+            this.height = height;
+        }
+        
+        public static Board of(int width, int height) { ... }
 
         public boolean addKnight(Square square) {
         
