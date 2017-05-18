@@ -121,7 +121,7 @@ Analoogselt luuakse ka subjecte. Pärast igat aine lisamist, kontrollitakse, kas
 valmis ja arvutatakse EAPde kogus. 
 
 
-*Siia tuleb veel pilt*
+.. image:: ../images/ex09.png
   
 
 
