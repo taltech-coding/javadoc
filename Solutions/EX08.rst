@@ -291,6 +291,7 @@ Meil on malelaud ilusti olemas. Nüüd on vaja teha rakenduse kasutajale võimal
 .. code-block:: java
 
     private void addKnight() {
+        int boardSize = 8;
         // Ratsu peab olema lisatud suvalisse kohta
         int randomX = ThreadLocalRandom.current().nextInt(0, boardSize);
         int randomY = ThreadLocalRandom.current().nextInt(0, boardSize);
@@ -298,7 +299,7 @@ Meil on malelaud ilusti olemas. Nüüd on vaja teha rakenduse kasutajale võimal
         // Defineerime pilti
         ImageView knight = new ImageView(new Image(getClass().getResourceAsStream("knight.png")));
         
-        // Kui ratsut veel ei ole, lisame juurde
+        // Kui ratsut malelaual veel ei ole, lisame juurde
         if (b.getKnightSquare() == null) {
             b.addKnight(Square.of(randomX, randomY));
             pane.add(knight, randomX, randomY);
@@ -336,14 +337,14 @@ Jääbki ainult üks asi tegemata: juhul, kui kasutaja klikkib malelaua asuvale 
         } 
     }
     
-    // Siis lisame funktsiooni, mis võtab ette klikki koordinaadid
-    // Ja vaatab, mis asukoht paneelil vastab antud ristküliku koordinaatidele, mille peale kasutaja klikkis
+    // Ja siis lisame ka funktsiooni, mis võtab ette klikki koordinaadid
+    // Ja vaatab, mis asukoht Pane'il vastab antud ristküliku koordinaatidele, mille peale kasutaja klikkis
     private void mouseHandler(double boundX, double boundY) {
         int x = 0;
         int y = 0;
         for (Node rect : pane.getChildren()) {
         
-            // Kui see on Rectangle ja x ja y on selle sees
+            // Kui see on Rectangle ja boundX ja boundY on selle piiride sees
             if (rect instanceof Rectangle && rect.getBoundsInParent().contains(boundX, boundY)) {
             
                 // Saame koordinaadid
