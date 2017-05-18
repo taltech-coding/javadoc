@@ -1,0 +1,127 @@
+B01 lahendus
+=============
+
+Ülesande põhiidee:
+-------------------
+friendbooki loomine
+
+Kõigepealt tuleks luua siis klass Friend. Siia läheb kogu ülesande kood(pärast saab teha klassi Main ka lahenduse kontrollimiseks).
+
+Järgmiseks tuleks välja selgitada, milliseid muutujad Friendil olema peaks. Ülesande kirjeldusest saab välja lugeda, et vaja läheb nime, id-d(mis on final) ja listi sõpradest.
+
+Loome need:
+
+.. code-block:: java
+    
+    private String name;
+    private final int id;
+    private List friends = new ArrayList<Friend>();
+    
+Järgmiseks tuleb realiseerida erinevad meetodid. getName(), setName(), getId() ja getFriends() on tavalised getterid ja setterid, midagi fancyt seal pole.
+
+createFriend() meetodi loomiseks saame piiluda näite main meetodit. Seal seisab, et meetod võtab argumendina sisse nime. Kuna Friend objektil oli lubatud ainult privaatne konstruktor, siis peame uusi Friend objekte tekitama ainult createFriend() meetodis. Selleks loome meetodi sees uue Friend objekti ja väärtustame setName meetodiga talle etteantud nime.
+
+Kõigepealt aga loome Friend objektile privaatse konstruktori, mis saab argumendiks id.
+
+Sõprade id-de jaoks on meil vaja meetodit, mis tagastaks järjest arve. Selleks loome uue globaalse muutuja, mis hoiaks meeles järgmist vaba id-d. Loome ka meetodi getNextFriendId(), mis tagastab järgmise vaba id. Meetodi sisuks piisab lihtsalt äsjaloodud muutuja suurendamisest ühe võrra:
+
+.. code-block:: java
+    
+    private static int idCount;
+            
+    public static int getNextFriendId() {
+        return idCount++;
+    }
+    
+
+Nüüd saame luua createFriend() meetodi:
+
+.. code-block:: java
+
+    public static Friend createFriend(String name) {
+        Friend f = new Friend(getNextFriendId());
+        f.setName(name);
+        return f;
+    }
+    
+Järgmiseks loome addFriend() meetodi. Siin tuleb kõigepealt anda argumendina meetodile ette Friend objekt, mida sõbralisti lisada. Kuna igal Friend objektil on oma sõbralist(List friends, mille ennem tegime) ning sinna listi saab lisada ainult Friend objekte, siis saab kasutada lihtsalt add funktsiooni ja uus sõber listi lisada.
+
+Läbi peaks tegema siin ka nulli checki. Ehk siis kui friend on null, siis teda listi ei lisata. Veel peaks kontrollima, et ega sõber iseennast ei taha listi lisada. Kontrollima peaks ka, et ega lisatav sõber juba listis pole. Kui ükski neist on tõsi, siis peaks meetod töö lõpetama:
+
+.. code-block:: java
+
+    public void addFriend(Friend friend) {
+        if (friend == null || friend.getName().equals(this.getName()) || this.friends.contains(friend)) {
+            return;
+        } else {
+            this.friends.add(friend);
+        }
+    }
+    
+Kuna sõprus(vähemalt virtuaalne) ei ole ühepoolne, siis tasuks lõppu lisada ka lause, mis paneks lisatava sõbra enda sõbralisti ka praeguse Friend objekti:
+
+.. code-block:: java
+    
+    if (!friend.getFriends().contains(this)) {
+        friend.addFriend(this);
+    }
+    
+Meetod getFriendsCount() tagastab lihtsalt sõbralisti suuruse:
+
+.. code-block:: java
+
+    public int getFriendsCount() {
+        return this.friends.size();
+    }
+    
+Meetod getFriendsFriendsCount() on natuke keerukam. Siin on kindlasti lihtsamaid lahendusi, aga mulle isiklikult tundus kõige loogilisem viis olevat järgmine:
+
+Kõigepealt luua 2 Listi kuhu käivad ainult Friend objektid ja 1 HashSet kuhu pärast sorteerid unikaalsed Friendid(nime järgi). Ühte Listi lisad praeguse objekti sõbrad getFriends() meetodiga:
+
+.. code-block:: java
+
+    List<Friend> myFriends = this.getFriends();
+    List<Friend> friendsFriends = new ArrayList<>();
+    Set<String> uniques = new HashSet<>();
+    
+    
+Teise Listi lisad for tsükliga praeguse objekti sõprade sõbrad:
+
+.. code-block:: java
+
+    for (int i = 0; i < myFriends.size(); i++) {
+        friendsFriends.addAll(myFriends.get(i).getFriends());
+    }
+    
+friendsFriends Listi täiendad praeguse objekti sõpradega:
+
+.. code-block:: java
+ 
+    friendsFriends.addAll(myFriends);
+    
+Siis sorteerid oma suure sõprade listi Hash Seti nime järgi(hash setis saavad olla ainult unikaalsed väärtused, kõik duplikaadid visatakse välja):
+
+.. code-block:: java
+
+    for (int i = 0; i < friendsFriends.size(); i++) {
+        uniques.add(friendsFriends.get(i).getName());
+    }
+    
+Kontrollid, kas praegune objekt ise on setis. Kui jah, siis eemaldad:
+
+.. code-block:: java
+
+    if (uniques.contains(this.getName())) {
+        uniques.remove(this.getName());
+    }
+    
+Lõpuks lihtsalt tagastad hash seti suuruse:
+
+.. code-block:: java
+
+    return uniques.size();
+    
+
+
+
+ 
