@@ -29,7 +29,7 @@ Nagu alati, salvestame konstruktorisse ette antud väärtuse enne loodud väliss
 
     // Sama asi teise konstruktoriga
 
-Nüüd tuleb relaliseerida kaks erinavat staatilist (static) meetodit, mis kutsuvad vastava kontsruktori ja loovad objekti.
+Nüüd tuleb relaliseerida kaks erinevat staatilist (static) meetodit, mis kutsuvad vastava kontsruktori ja loovad objekti.
 Staatilised meetodid on iseseisvad, mis tähendab see, et nad ei sõltu objektidest ja neid saab kutsuda ilma objekti loomiseta.
 Antud ülesandes oleks võimalik teha erinevad meetodid erineva nimega, ja sel korral ühte kasutaksime siis, kui on ette antud notation, 
 ja teist - kui koordinadid. See näeks välja umbes nii:
@@ -121,7 +121,7 @@ Klass Board peab võimaldama lisada juurde ühte ratsut ja paigutada seda ümber
 
     class Board {
         private int height;
-        private it width;
+        private int width;
         private Square knight;
 
 
