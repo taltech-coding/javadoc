@@ -25,6 +25,7 @@ konstruktoris kontrollida, et EAP-d ei oleks negatiivsed; kui nad on, tuleb nad 
 panna.
 
 .. code-block:: java
+
 	public class OptionalSubject extends Subject
 
 Lisaks tuleb alamklassides Overrideda ülemklassi meetotid, et neid saaks välja kutsuda:
