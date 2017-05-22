@@ -9,6 +9,7 @@ Lahendused
 
    EX01
    EX02
+   EX05
    EX07
    EX08
    EX09
