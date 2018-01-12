@@ -22,8 +22,12 @@ Sisend üldiselt on tavaline RST. Tabeli lahtrid määratakse järgmiselt:
 ``---.`` tabeli lõpp
 
 Näiteks
+-------
 
-fail example_helper.txt:
+Näited on siinsamas kaustas ``example_helper.txt`` ja ``example.rst``.
+
+``example_helper.txt``:
+
 ::
 
     Lehe päis
