@@ -4,7 +4,9 @@ Pythoni võrdlustabelid
 Selles kasutas on lehed, kus võrreldakse kõrvuti Pythoni ja Java koodi. Kuna RST-formaadis on tabeli tegemine kergelt öeldes ebamugav, 
 siis selleks on kaustas üks skript. Sellele saab ette anda natuke mugavamal kujul tabeli sisu ning see genereerib korrektse RST.
 
-``rst_table.py sisend.txt väljund.rst``
+Käivitamine:
+
+``python3 rst_table.py sisend.txt väljund.rst``
 
 Sisendi kirjeldus
 -----------------
@@ -53,8 +55,9 @@ fail example_helper.txt:
     
     Peale tabelit saab veel mingi teksti panna, näiteks *siin* ja **siin**
     
+Käivitame järgmise käsu:
 
-``rst_table.py example_helper.txt example.rst``
+``python3 rst_table.py example_helper.txt example.rst``
 
 Tulemus. ``example.rst``:
 
