@@ -1,0 +1,28 @@
+Lehe päis
+=========
+
+.---
+Python
+===
+Java
+===
+Pythoni kohta tekst
+---
+Java kohta tekst
+---
+Veel Pythoni kohta tekst
+
+.. code-block:: python
+
+    def fun(tion):
+        return 2
+        
+---
+Java koodinäide
+
+.. code-block:: java
+
+    System.out.println("why so much trouble with print()?");
+---.
+
+Peale tabelit saab veel mingi teksti panna, näiteks *siin* ja **siin**
