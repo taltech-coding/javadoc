@@ -14,7 +14,7 @@ Samuti erinevat moodi võib olla defineeritud sisendi suurus. See võib olla:
 - Sisendparameetriväärtus
 - Sisendparameetrisuurus(bittide/baitidearv)
 
-Kui hakata mõõtma algoritmi keerukust, siis üheks variandiks oleks kirjutada programm, seejärel lasta tal töötada erineva suurusega ja sisuga andmetega ning mõõta programmi täitmiseks kuluvat aega. Samas ei ole selline metoodika efektiivne, kuna vajab väga palju käsitsi tööd.
+Kui hakata mõõtma algoritmi keerukust, siis üheks variandiks oleks kirjutada programm, seejärel lasta tal töötada erineva suurusega ja sisuga andmetega ning mõõta programmi täitmiseks kuluvat aega. Samas ei ole selline metoodika efektiivne, kuna vajab palju käsitsi tööd.
 
 Seetõttu on palju mõistlikum kasutada üldist metoodikat, mis erinevalt eksperimentaalsest lähenemisest:
 
@@ -22,7 +22,7 @@ Seetõttu on palju mõistlikum kasutada üldist metoodikat, mis erinevalt eksper
 - arvestab kõikvõimalikke sisendandmeid
 - võimaldab hinnata algoritmi efektiivsust sõltumatult tark-ja riistvaraplatvormist
 
-Kõige enam kasutatakse keerukuse väljendamiseks asümptootilist keerukust, mille eesmärk on jätta sarnaselt ümardamisele ebaolulised detailid mainimata. See tähendab, et näiteks 1,000,001≈1,000,000
+Kõige enam kasutatakse keerukuse väljendamiseks asümptootilist keerukust, mille eesmärk on jätta sarnaselt ümardamisele ebaolulised detailid mainimata.Näiteks 1,000,001≈1,000,000
 
 
 *Asümptootiline keerukus ja suure O notatsioon* 
@@ -41,7 +41,7 @@ Järgmiseks tähtsaks mõisteks on Suur-O notatsioon, mis on relatiivne algoritm
          :width: 200px
          :height: 100px
 
-Nüüd, kui vaadata eraldi keerukusklasse, siis:
+Kui vaadata eraldi keerukusklasse, siis:
 
 ::
 
@@ -63,7 +63,7 @@ Nüüd, kui vaadata eraldi keerukusklasse, siis:
      Näiteks ühekordse tsükli korral.
      for(i=0 ;i<n; i++){s;}
 
-    O(n^2) on ruutkeerukus
+     O(n^2) on ruutkeerukus
 
      1 item: 1 second
      10 items: 100 seconds
@@ -73,7 +73,7 @@ Nüüd, kui vaadata eraldi keerukusklasse, siis:
      for(j=0; j<n; j++){
       for(k=0; k<n; k++){s;}}
 
-    O(log n) on logaritmiline keerukus
+     O(log n) on logaritmiline keerukus
 
      1 item: 1 second
      10 items: 2 seconds
@@ -142,7 +142,7 @@ Analüüsime ühte koodijuppi ja määrame selle keerukuse
       Välimise tsükli for(i=c; i > 0; i--) keerukus on samuti O(n), kuna miski ei viita kordsele
       itereerimisele või suuremale sammule, kui 1. 
 
-      Kokku on seega selle ploki keerukus O(n)*O(n) = O(n^2).
+      Kokku on seega selle ploki keerukus O(n)*O(n) = O(n^2)
 
 
    3) Nüüd on alles jäänud ainult mõlema ploki keerukus kokku panna, et saada teada meetodi keerukus.
