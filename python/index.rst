@@ -8,7 +8,7 @@ See võib aidata neid, kes on eelnevalt Pythoniga kokku puutunud ning tahaksid n
    :maxdepth: 2
    :caption: Teemad:
    
-   hello_world
+   hello-world
    string
    if
    loop
