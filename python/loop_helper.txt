@@ -102,6 +102,47 @@ Või kasutades *stream*'i:
             .forEach(System.out::println);
 
 ---
+
+.. code-block:: python
+
+    j = 1
+    for i in range(11):
+        print(j)
+        j*=2
+
+---
+
+.. code-block:: java
+
+    for (int i = 0, j = 1; i <= 10; j *= 2, i += 1) {
+        System.out.println(j);
+    }
+
+---
+
+.. code-block:: python
+
+    day = "Monday"
+    for letter in day:
+        print(letter)
+
+---
+
+.. code-block:: java
+
+    String day = "Monday";
+    for (int i = 0; i < day.length(); i++) {
+        System.out.println(day.charAt(i));
+    }
+
+Või kasutades *stream*'i:
+
+.. code-block:: java
+
+    String day = "Monday";
+    day.chars().mapToObj(c -> (char)c).forEach(System.out::println);
+
+---
 Paarisarvude summa
 --
 ---
@@ -114,7 +155,7 @@ Paarisarvude summa
 
     print(even_sum)
 
-Või kasutades lambdat:
+Või kasutades list comprehensionit:
 
 .. code-block:: python
 
@@ -139,6 +180,50 @@ Või kasutades *stream*'i/lambdat:
             .filter(x -> x % 2 == 0)
             .sum()
     );
+
+---
+Sorteerimine ilma duplikaatideta
+--
+---
+
+.. code-block:: python
+
+    numbers = [3, 3, 1, 4, 7, 7, 7]
+    result = []
+    for n in numbers:
+        if n not in result:
+            result.append(n)
+
+    for nr in sorted(result):
+        print(nr)
+
+Või kasutades seti:
+
+.. code-block:: python
+
+    numbers = [3, 3, 1, 4, 7, 7, 7]
+    print(*sorted(set(numbers)), sep='\n')
+
+---
+
+.. code-block:: java
+
+    List<Integer> numbers = Arrays.asList(3, 3, 1, 4, 7, 7, 7);
+    List<Integer> result = new ArrayList<>();
+    for (Integer n: numbers) {
+        if (!result.contains(n)) {
+            result.add(n);
+        }
+    }
+    Collections.sort(result);
+    result.forEach(System.out::println);
+
+Või kasutades *stream*'i/lambdat:
+
+.. code-block:: java
+
+    List<Integer> numbers = List.of(3, 3, 1, 4, 7, 7, 7);
+    numbers.stream().distinct().sorted().forEach(System.out::println);
         
 ---.
 
