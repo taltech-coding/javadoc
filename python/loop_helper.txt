@@ -93,6 +93,14 @@ Või kasutades *stream*'i:
         System.out.println(i);
     }
 
+Või kasutades *stream*'i:
+
+.. code-block:: java
+
+    IntStream.iterate(10, n-> n -= 2)
+            .takeWhile(n -> n > 0)
+            .forEach(System.out::println);
+
 ---
 Paarisarvude summa
 --
