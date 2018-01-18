@@ -140,7 +140,9 @@ Või kasutades *stream*'i:
 .. code-block:: java
 
     String day = "Monday";
-    day.chars().mapToObj(c -> (char)c).forEach(System.out::println);
+    day.chars()
+            .mapToObj(c -> (char)c)
+            .forEach(System.out::println);
 
 ---
 Paarisarvude summa
@@ -208,7 +210,8 @@ Või kasutades seti:
 
 .. code-block:: java
 
-    List<Integer> numbers = Arrays.asList(3, 3, 1, 4, 7, 7, 7);
+    List<Integer> numbers =
+            Arrays.asList(3, 3, 1, 4, 7, 7, 7);
     List<Integer> result = new ArrayList<>();
     for (Integer n: numbers) {
         if (!result.contains(n)) {
@@ -223,7 +226,10 @@ Või kasutades *stream*'i/lambdat:
 .. code-block:: java
 
     List<Integer> numbers = List.of(3, 3, 1, 4, 7, 7, 7);
-    numbers.stream().distinct().sorted().forEach(System.out::println);
+    numbers.stream()
+        .distinct()
+        .sorted()
+        .forEach(System.out::println);
         
 ---.
 
