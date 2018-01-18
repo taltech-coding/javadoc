@@ -60,6 +60,14 @@ Tsüklid
 |         print(x)                                     |         System.out.println(i);                           |
 |                                                      |     }                                                    |
 |                                                      |                                                          |
+|                                                      | Või kasutades *stream*'i:                                |
+|                                                      |                                                          |
+|                                                      | .. code-block:: java                                     |
+|                                                      |                                                          |
+|                                                      |     IntStream.iterate(10, n-> n -= 2)                    |
+|                                                      |             .takeWhile(n -> n > 0)                       |
+|                                                      |             .forEach(System.out::println);               |
+|                                                      |                                                          |
 +------------------------------------------------------+----------------------------------------------------------+
 | Paarisarvude summa                                                                                              |
 +------------------------------------------------------+----------------------------------------------------------+
@@ -86,5 +94,6 @@ Tsüklid
 
 
 Loe tsüklite kohta siit: :doc:`../Loop`.
+
 
 .. generated using "python3 rst_table.py loop_helper.txt loop.rst"
