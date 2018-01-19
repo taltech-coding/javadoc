@@ -23,6 +23,7 @@ Sellelt lehelt leiad Javaga seonduvad õppematerjalid.
    BooleanDataType
    ConditionalStatements
    Loop
+   stream
    Method
    String
    Exceptions
