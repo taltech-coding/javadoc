@@ -76,6 +76,51 @@ if-elseif-else
     } else {
         doSomethingElse();
     }
+
+Pikem if-elseif-elseif-else
+--
+---
+
+.. code-block:: python
+
+    month = 2
+
+    if month == 1:
+        month_string = "January"
+    elif month == 2:
+        month_string = "February"
+    elif month == 3:
+        month_string = "March"
+    elif month == 4:
+        month_string = "April"
+    else:
+        month_string = "Invalid month"
+
+    print(month_string)
+        
+        
+---
+
+.. code-block:: java
+
+    int month = 2;
+    String monthString;
+
+    switch (month) {
+        case 1:  monthString = "January";
+            break;
+        case 2:  monthString = "February";
+            break;
+        case 3:  monthString = "March";
+            break;
+        case 4:  monthString = "April";
+            break;
+        default: monthString = "Invalid month";
+            break;
+    }
+    
+    System.out.println(monthString);
+
     
 ---
 Tingimus
