@@ -43,6 +43,7 @@ Kergem on võrrelda kahte *int* tüüpi muutujat, kui kahte *Integer* tüüpi.
 
 
 Javas esinevate *primitive* muutujate vaikeväärtused:
+
 +------------------------+---------------+
 | Data Type              | Default Value |
 +========================+===============+
