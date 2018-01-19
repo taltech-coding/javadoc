@@ -9,6 +9,7 @@ See võib aidata neid, kes on eelnevalt Pythoniga kokku puutunud ning tahaksid n
    :caption: Teemad:
    
    hello-world
+   variable-and-primitive
    string
    if
    loop
