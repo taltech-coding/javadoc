@@ -23,7 +23,7 @@ Lihtne tingimuslause
 
 .. code-block:: java
 
-    if (booleanContidion) {
+    if (booleanCondition) {
         doSomethingIfTrue();
     }
     
@@ -59,7 +59,7 @@ if-elseif-else
 
     if boolean_condition:
         do_something_if_true()
-    elif bome_other_condition:
+    elif some_other_condition:
         do_some_other_stuff()
     else:
         do_something_else()
@@ -69,7 +69,7 @@ if-elseif-else
 
 .. code-block:: java
 
-    if (booleanContidion) {
+    if (booleanCondition) {
         doSomethingIfTrue();
     } else if (otherCondition) {
         doSomeOtherThing();
@@ -92,5 +92,16 @@ Tingimus
 :code:`not a`
 ---
 :code:`!a`
+---
+Tõeväärtus
+--
+---
+:code:`True`
+---
+:code:`true`
+---
+:code:`False`
+---
+:code:`false`
 ---.
 
