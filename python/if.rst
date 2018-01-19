@@ -84,11 +84,15 @@ Tingimuslausega saab kontrollida, kas mingit osa koodist käivitatakse.
 +----------------------------------------+-------------------------------------------------+
 | Ternary operator                                                                         |
 +----------------------------------------+-------------------------------------------------+
-| >>> "true" if True else "false"        | jshell> true ? "true" : "false"                 |
-| 'true'                                 | $1 ==> "true"                                   |
+| >>> "true" if True else "false"        |                                                 |
+| 'true'                                 | .. code-block:: java                            |
 |                                        |                                                 |
-| >>> 'true' if False else 'false'       | jshell> false ? "true" : "false"                |
-| 'false'                                | $2 ==> "false"                                  |
+| >>> 'true' if False else 'false'       |     jshell> true ? "true" : "false"             |
+| 'false'                                |     $1 ==> "true"                               |
+|                                        |                                                 |
+|                                        |     jshell> false ? "true" : "false"            |
+|                                        |     $2 ==> "false"                              |
+|                                        |                                                 |
 +----------------------------------------+-------------------------------------------------+
 
 

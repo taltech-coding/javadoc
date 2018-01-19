@@ -159,10 +159,14 @@ Ternary operator
 >>> 'true' if False else 'false'
 'false'
 ---
-jshell> true ? "true" : "false"
-$1 ==> "true"
 
-jshell> false ? "true" : "false"
-$2 ==> "false"
+.. code-block:: java
+
+    jshell> true ? "true" : "false"
+    $1 ==> "true"
+
+    jshell> false ? "true" : "false"
+    $2 ==> "false"
+
 ---.
 
