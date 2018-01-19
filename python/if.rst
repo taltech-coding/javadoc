@@ -12,7 +12,7 @@ Tingimuslausega saab kontrollida, kas mingit osa koodist käivitatakse.
 |                                |                                  |
 | .. code-block:: python         | .. code-block:: java             |
 |                                |                                  |
-|     if boolean_condition:      |     if (booleanContidion) {      |
+|     if boolean_condition:      |     if (booleanCondition) {      |
 |         do_something_if_true() |         doSomethingIfTrue();     |
 |                                |     }                            |
 |                                |                                  |
@@ -34,9 +34,9 @@ Tingimuslausega saab kontrollida, kas mingit osa koodist käivitatakse.
 |                                |                                  |
 | .. code-block:: python         | .. code-block:: java             |
 |                                |                                  |
-|     if boolean_condition:      |     if (booleanContidion) {      |
+|     if boolean_condition:      |     if (booleanCondition) {      |
 |         do_something_if_true() |         doSomethingIfTrue();     |
-|     elif bome_other_condition: |     } else if (otherCondition) { |
+|     elif some_other_condition: |     } else if (otherCondition) { |
 |         do_some_other_stuff()  |         doSomeOtherThing();      |
 |     else:                      |     } else {                     |
 |         do_something_else()    |         doSomethingElse();       |
@@ -51,8 +51,14 @@ Tingimuslausega saab kontrollida, kas mingit osa koodist käivitatakse.
 +--------------------------------+----------------------------------+
 | :code:`not a`                  | :code:`!a`                       |
 +--------------------------------+----------------------------------+
+| Tõeväärtus                                                        |
++--------------------------------+----------------------------------+
+| :code:`True`                   | :code:`true`                     |
++--------------------------------+----------------------------------+
+| :code:`False`                  | :code:`false`                    |
++--------------------------------+----------------------------------+
 
 
 
 
-.. generated using "python3 rst_table.py if_helper.txt"
+.. generated using "python3 rst_table.py if_helper.txt if.rst"
