@@ -20,6 +20,25 @@ Näited intermediate operatsioonidest
 	                .count();
 	        System.out.println(numbersHigherThanFive); // 2
 
+:code:`.map()` rakendab etteantud funktsiooni igale elemendile. Vaata ka :code:`mapToInt()`, :code:`mapToLong()` ja :code:`mapToDouble()`
+
+.. code-block:: java
+
+    List<Integer> words = Stream.of("a", "ab", "abc")
+            .map(s -> s.length()) // with method reference .map(String::length)
+            .collect(Collectors.toList());
+
+:code:`.peek()` hea vahend debug info kogumiseks jaoks.
+
+.. code-block:: java
+
+    List<String> names = Stream.of("Bob", "tim", "Alice")
+            .filter(s -> Character.isUpperCase(s.charAt(0)))
+            .peek(s -> System.out.println(s)) // with method reference .peek(System.out::println)
+            .map(s -> s.toUpperCase()) // with method reference .map(String::toUpperCase)
+            .collect(Collectors.toList());
+
+
 Näited terminal operatsioonidest
 --------------------------------
 
