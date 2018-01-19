@@ -11,12 +11,13 @@ Streamil on kahte tüüpi opertsioone:
 Näited intermediate operatsioonidest
 ------------------------------------
 
-**filter** tagastab uue striimi, mis sisaldab ainult elemente, mis vastavad `predikaadile <https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html>`_.
+:code:`.filter()` tagastab uue striimi, mis sisaldab ainult elemente, mis vastavad `predikaadile <https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html>`_. seejärel loeb :code:`.count()` kokku elementide arvu.
 
 .. code-block:: java
 
 	long numbersHigherThanFive = Stream.of(7, 2, 3, 5, 6)
-	                .filter(n -> n > 5).count();
+	                .filter(n -> n > 5)
+	                .count();
 	        System.out.println(numbersHigherThanFive); // 2
 
 Näited terminal operatsioonidest
