@@ -52,7 +52,7 @@ Näited intermediate operatsioonidest
 Näited terminal operatsioonidest
 --------------------------------
 
-:code:`.forEach()` opereerib igal elemendil voos sarnaselt tavalise :code:`.for` loopiga.
+:code:`.forEach()` opereerib igal elemendil voos sarnaselt tavalise :code:`for` loopiga.
 
 .. code-block:: java
 
@@ -72,6 +72,24 @@ Näited terminal operatsioonidest
             .filter(s -> s.startsWith("o"))
             .collect(Collectors.toList());
 
+
+:code:`max()` ja :code:`min()` leiavad vastavalt maksimaalse ja minimaalse väärtuse.
+
+.. code-block:: java
+    OptionalInt max = IntStream.of(6, 7, 8).max();
+    OptionalInt min = IntStream.of(6, 7, 8).min();
+
+:code:`.anyMatch()`, :code:`allMatch()`, :code:`noneMatch()` vaatavad voos vähemalt ühe elemendi, kõike elementide või mitte ühtegi elemendi vastavust predikaadile.
+
+.. code-block:: java
+
+    List<String> days = Arrays.asList("Saturday", "Monday", "Friday", "Sunday");
+
+    boolean anyDayStartWithS = days.stream().anyMatch(s -> s.startsWith("S"));
+    boolean allStartWithM = days.stream().allMatch(s -> s.startsWith("M"));
+    boolean noneStartWithY = days.stream().noneMatch(s -> s.startsWith("Y"));
+
+    Optional<String> anyString = days.stream().findAny();
 
 
 -------
