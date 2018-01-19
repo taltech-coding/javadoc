@@ -165,6 +165,8 @@ Ternary operator
     jshell> true ? "true" : "false"
     $1 ==> "true"
 
+.. code-block:: java
+
     jshell> false ? "true" : "false"
     $2 ==> "false"
 

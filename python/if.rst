@@ -90,6 +90,8 @@ Tingimuslausega saab kontrollida, kas mingit osa koodist käivitatakse.
 | >>> 'true' if False else 'false'       |     jshell> true ? "true" : "false"             |
 | 'false'                                |     $1 ==> "true"                               |
 |                                        |                                                 |
+|                                        | .. code-block:: java                            |
+|                                        |                                                 |
 |                                        |     jshell> false ? "true" : "false"            |
 |                                        |     $2 ==> "false"                              |
 |                                        |                                                 |
