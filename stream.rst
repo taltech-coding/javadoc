@@ -1,9 +1,9 @@
 Stream
 ======
 
-Stream ehk voog on andmete liikumise kanal. Igast kollektsioonist saab moodustada voo, mille peal on võimalik opereerida kasutades Stream API'd. Selle kasutamine suurendab loetavust ja vähendab boilerplate. Sellega kaob vajadus tsüklite järele.
+Stream ehk voog on andmete liikumise kanal. Igast kollektsioonist saab moodustada voo, mille peal on võimalik opereerida kasutades Stream API't. Selle kasutamine suurendab loetavust ja vähendab boilerplate. Sellega kaob vajadus tsüklite järele.
 
-Streamil on kahte tüüpi opertsioone:
+Streamil on kahte tüüpi operatsioone:
 
 - **Intermediate** operatsioonid on laisad ja tagastavad uue striimi. Näiteks :code:`filter()` kasutamine ei hakka kohe midagi filtreerima, vaid loob uue voo. Uut voogu läbides näeb seal ainult predikaadile vastavaid ehk filtreeritud elemente.
 - **Terminal** operatsioonid on entusiastlikud ja võivad voo läbi käia tekitades mingit kõrvalmõju või saades kätte mingi tulemuse. Sellised on näiteks :code:`collect()` ja :code:`sum()`. Peale terminal operatsiooni ei saa striimi enam kasutada.
