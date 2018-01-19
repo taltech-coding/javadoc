@@ -149,5 +149,20 @@ Tõeväärtus
 :code:`False`
 ---
 :code:`false`
+---
+Ternary operator
+--
+---
+>>> "true" if True else "false"
+'true'
+
+>>> 'true' if False else 'false'
+'false'
+---
+jshell> true ? "true" : "false"
+$1 ==> "true"
+
+jshell> false ? "true" : "false"
+$2 ==> "false"
 ---.
 
