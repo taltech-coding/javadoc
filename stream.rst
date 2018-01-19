@@ -38,7 +38,7 @@ Näited intermediate operatsioonidest
             .map(s -> s.toUpperCase()) // with method reference .map(String::toUpperCase)
             .collect(Collectors.toList());
 
-:code:`.distinct()` otsib unikaalsed elemendid :code:`equals()` alusel. :code:`.limit()` paneb piiri elementide arvule. :code:`.sorted()` sorteerib elemendid kasvavas järjestuses.
+:code:`.distinct()` jätab :code:`equals()` alusel alles ainult unikaalsed elemendid. :code:`.limit()` paneb piiri elementide arvule. :code:`.sorted()` sorteerib elemendid kasvavas järjestuses.
 
 .. code-block:: java
 
@@ -76,6 +76,7 @@ Näited terminal operatsioonidest
 :code:`max()` ja :code:`min()` leiavad vastavalt maksimaalse ja minimaalse väärtuse.
 
 .. code-block:: java
+
     OptionalInt max = IntStream.of(6, 7, 8).max();
     OptionalInt min = IntStream.of(6, 7, 8).min();
 
