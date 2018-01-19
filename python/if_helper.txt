@@ -124,32 +124,6 @@ Pikem if-elseif-elseif-else
 
     
 ---
-Tingimus
---
----
-:code:`a and b`
----
-:code:`a && b`
----
-:code:`a or b`
----
-:code:`a || b`
----
-:code:`not a`
----
-:code:`!a`
----
-Tõeväärtus
---
----
-:code:`True`
----
-:code:`true`
----
-:code:`False`
----
-:code:`false`
----
 Ternary operator
 --
 ---
@@ -170,5 +144,31 @@ Ternary operator
     jshell> false ? "true" : "false"
     $2 ==> "false"
 
+---
+Tõeväärtus
+--
+---
+:code:`True`
+---
+:code:`true`
+---
+:code:`False`
+---
+:code:`false`
+---
+Tingimus
+--
+---
+:code:`a and b`
+---
+:code:`a && b`
+---
+:code:`a or b`
+---
+:code:`a || b`
+---
+:code:`not a`
+---
+:code:`!a`
 ---.
 
