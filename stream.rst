@@ -5,13 +5,19 @@ Stream ehk voog on andmete liikumise kanal. Igast kollektsioonist saab moodustad
 
 Streamil on kahte tüüpi opertsioone:
 
-- Intermediate operatsioonid on laisad ja tagastavad uue striimi. Näiteks :code:`filter()` kasutamine ei hakka kohe midagi filtreerima, vaid loob uue voo. Uut voogu läbides näeb seal ainult predikaadile vastavaid ehk filtreeritud elemente.
-- Terminal operatsioonid on entusiastlikud ja võivad voo läbi käia tekitades mingit kõrvalmõju või saades kätte mingi tulemuse. Sellised on näiteks :code:`Stream.forEach()` ja :code:`IntStream.sum()`. Peale terminal operatsiooni ei saa striimi enam kasutada.
+- **Intermediate** operatsioonid on laisad ja tagastavad uue striimi. Näiteks :code:`filter()` kasutamine ei hakka kohe midagi filtreerima, vaid loob uue voo. Uut voogu läbides näeb seal ainult predikaadile vastavaid ehk filtreeritud elemente.
+- **Terminal** operatsioonid on entusiastlikud ja võivad voo läbi käia tekitades mingit kõrvalmõju või saades kätte mingi tulemuse. Sellised on näiteks :code:`collect()` ja :code:`sum()`. Peale terminal operatsiooni ei saa striimi enam kasutada.
 
 Näited intermediate operatsioonidest
 ------------------------------------
 
-// TODO
+**filter** tagastab uue striimi, mis sisaldab ainult elemente, mis vastavad `predikaadile <https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html>`_.
+
+.. code-block:: java
+
+	long numbersHigherThanFive = Stream.of(7, 2, 3, 5, 6)
+	                .filter(n -> n > 5).count();
+	        System.out.println(numbersHigherThanFive); // 2
 
 Näited terminal operatsioonidest
 --------------------------------
