@@ -42,7 +42,7 @@ Kergem on võrrelda kahte *int* tüüpi muutujat, kui kahte *Integer* tüüpi.
 +-----------------------------------------+------------------------------------------+
 
 
-Javas esinevate *primitive* muutujate vaikeväärutsed:
+Javas esinevate *primitive* muutujate vaikeväärtused:
 +------------------------+---------------+
 | Data Type              | Default Value |
 +========================+===============+
@@ -62,7 +62,7 @@ Javas esinevate *primitive* muutujate vaikeväärutsed:
 +------------------------+---------------+
 | String (or any object) | null          |
 +------------------------+---------------+
-| boolean                |               |
+| boolean                | false         |
 +------------------------+---------------+
 
 
