@@ -38,11 +38,41 @@ Näited intermediate operatsioonidest
             .map(s -> s.toUpperCase()) // with method reference .map(String::toUpperCase)
             .collect(Collectors.toList());
 
+:code:`.distinct()` otsib unikaalsed elemendid :code:`equals()` alusel. :code:`.limit()` paneb piiri elementide arvule. :code:`.sorted()` sorteerib elemendid kasvavas järjestuses.
+
+.. code-block:: java
+
+    List<Integer> numbers = Stream.of(3, 2, 4, 4, 4, 1)
+            .distinct()
+            .limit(3)
+            .sorted()
+            .collect(Collectors.toList());
+
 
 Näited terminal operatsioonidest
 --------------------------------
 
-// TODO
+:code:`.forEach()` opereerib igal elemendil voos sarnaselt tavalise :code:`.for` loopiga.
+
+.. code-block:: java
+
+	Stream.of("a", "b").forEach(e -> System.out.println(e)); // .forEach(System.out::println)
+
+:code:`.reduce()` kombineerib voo elemendid :code:`BinaryOperator` alusel.
+
+.. code-block:: java
+
+	int sum = IntStream.of(7, 3).reduce(0, (a, b) -> a + b);
+
+:code:`collect()` loob voost mingi kollektsiooni (näiteks listi).
+
+.. code-block:: java
+
+    List<String> filtered = Stream.of("ok", "yup")
+            .filter(s -> s.startsWith("o"))
+            .collect(Collectors.toList());
+
+
 
 -------
 
