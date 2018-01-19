@@ -3,9 +3,10 @@ Stream
 
 Stream ehk voog on andmete liikumise kanal. Igast kollektsioonist saab moodustada voo, mille peal on võimalik opereerida kasutades Stream API'd. Selle kasutamine suurendab loetavust ja vähendab boilerplate. Sellega kaob vajadus tsüklite järele.
 
-Streamil on kahe tüüpi opertsioone:
-- Intermediate operatsioonid on laisad ja tagastavad uue striimi. Näiteks `filter()` kasutamine ei hakka kohe midagi filtreerima, vaid loob uue voo, mis läbi käies sisaldab ainult filtreeritud elemente.
-- Terminal operatsioonid on entusiastlikud ja võivad voo läbi käia tekitades mingit kõrvalmõju või saades kätte mingi tulemuse. Sellised on näiteks Stream.forEach() ja IntStream.sum(). Peale terminal operatsiooni ei saa striimi enam kasutada.
+Streamil on kahte tüüpi opertsioone:
+
+- Intermediate operatsioonid on laisad ja tagastavad uue striimi. Näiteks :code:`filter()` kasutamine ei hakka kohe midagi filtreerima, vaid loob uue voo. Uut voogu läbides näeb seal ainult predikaadile vastavaid ehk filtreeritud elemente.
+- Terminal operatsioonid on entusiastlikud ja võivad voo läbi käia tekitades mingit kõrvalmõju või saades kätte mingi tulemuse. Sellised on näiteks :code:`Stream.forEach()` ja :code:`IntStream.sum()`. Peale terminal operatsiooni ei saa striimi enam kasutada.
 
 Näited intermediate operatsioonidest
 ------------------------------------
