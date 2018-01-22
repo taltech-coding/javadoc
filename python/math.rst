@@ -14,8 +14,8 @@ Enamik matemaatlistest tehetest on mõlemas Pyhonis ja Javas samad
 |                  |     print(a + b)  # 15                   |     System.out.println(a + b);  // 15                            |
 |                  |                                          |                                                                  |
 +------------------+------------------------------------------+------------------------------------------------------------------+
-|                  |                                          |                                                                  |
-| Lahutamine       | .. code-block:: python                   | .. code-block:: java                                             |
+| Lahutamine       |                                          |                                                                  |
+|                  | .. code-block:: python                   | .. code-block:: java                                             |
 |                  |                                          |                                                                  |
 |                  |     a = 10                               |     int a = 10;                                                  |
 |                  |     b = 5                                |     int b = 5;                                                   |
