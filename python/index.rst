@@ -10,6 +10,7 @@ See võib aidata neid, kes on eelnevalt Pythoniga kokku puutunud ning tahaksid n
    
    hello-world
    variable-and-primitive
+   math
    string
    if
    loop
