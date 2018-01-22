@@ -2,12 +2,13 @@ math
 ====
 
 Enamik matemaatlistest tehetest on mõlemas Pyhonis ja Javas samad
+.. code-block:: python
+    a = 10
 
 +------------------+------------------------------------------+------------------------------------------------------------------+
 | Tehe             | Python                                   | Java                                                             |
 +==================+==========================================+==================================================================+
-| Liitmine         | Liitmine                                 | Liitmine                                                         |
-|                  |                                          |                                                                  |
+| Liitmine         |                                          |                                                                  |
 |                  | .. code-block:: python                   | .. code-block:: java                                             |
 |                  |     a = 10                               |     int a = 10;                                                  |
 |                  |     b = 5                                |     int b = 5;                                                   |
