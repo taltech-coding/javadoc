@@ -6,7 +6,8 @@ Enamik matemaatlistest tehetest on mõlemas Pyhonis ja Javas samad
 +------------------+------------------------------------------+------------------------------------------------------------------+
 | Tehe             | Python                                   | Java                                                             |
 +==================+==========================================+==================================================================+
-| Liitmine         |                                          |                                                                  |
+| Liitmine         | Liitmine                                 | Liitmine                                                         |
+|                  |                                          |                                                                  |
 |                  | .. code-block:: python                   | .. code-block:: java                                             |
 |                  |     a = 10                               |     int a = 10;                                                  |
 |                  |     b = 5                                |     int b = 5;                                                   |
@@ -63,11 +64,12 @@ Enamik matemaatlistest tehetest on mõlemas Pyhonis ja Javas samad
 |                  |     print(a ** b)  # 100000              |     System.out.println(Math.pow(a, b));  // 100000               |
 |                  |                                          |                                                                  |
 +------------------+------------------------------------------+------------------------------------------------------------------+
-| Logaritm         | .. code-block:: python                   |                                                                  |
-|                  |     import math                          | .. code-block:: java                                             |
-|                  |     a = 10                               |     int a = 10;                                                  |
-|                  |     b = 5                                |     int b = 5;                                                   |
-|                  |     print(math.log(a, b))  # 1.43067655  |     System.out.println(Math.log(a) / Math.log(b)); // 1.43067655 |
+| Logaritm         |                                          |                                                                  |
+|                  | .. code-block:: python                   | .. code-block:: java                                             |
+|                  |     import math                          |     int a = 10;                                                  |
+|                  |     a = 10                               |     int b = 5;                                                   |
+|                  |     b = 5                                |     System.out.println(Math.log(a) / Math.log(b)); // 1.43067655 |
+|                  |     print(math.log(a, b))  # 1.43067655  |                                                                  |
 |                  |                                          |                                                                  |
 +------------------+------------------------------------------+------------------------------------------------------------------+
 
