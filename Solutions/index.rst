@@ -7,7 +7,6 @@ Lahendused
    :maxdepth: 1
    :caption: Ülesanded:
 
-   EX01
    EX02
    EX05
    EX07
