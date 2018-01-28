@@ -24,21 +24,21 @@ Javas peavad kõik funktsioonid (ehk meetodid) olema deklareeritud klassides. Sa
 
 Javas on ka võimalik klassile, klassi meetoditele ning instansi muutujatele lisada nähtavuse taseme. Tüüpiliselt on selleks public, mis tähendab, et klassi / meetodi / muutuja poole saab pöörduda kõikjalt projekti seest, kuid on ka teisi valikuid (mitte midagi, private, protected, ...), millest räägime hiljem.
 
-Tüüpiliselt loome javas klassi meetodite kasutamiseks klassist objekti. See on tähtis juhul, kui klassi meetodi töö oleneb objekti iseäärasustest.
+Tüüpiliselt loome javas klassi meetodite kasutamiseks klassist objekti. See on tähtis juhul, kui meetodi töö oleneb objekti iseäärasustest.
 
 .. code-block:: java
 	
-	public class Hello {
-		public String name;
-		
-		public Hello(String name) {
-			this.name = name;
-		}
-		
-		public String sayHello() {
-			return "Hello, " + this.name;
-		}
-	}
+    public class Hello {
+        public String name;
+    	
+        public Hello(String name) {
+            this.name = name;
+        }
+    	
+        public String sayHello() {
+            return "Hello, " + this.name;
+        }
+    }
 
 .. code-block:: java
 	
@@ -54,5 +54,9 @@ Kuid juhtudel, kus meetodi töö ei olene objekti iseäärasustest (näiteks ei 
             return s1 + s2;
         }
     }
+
+.. code-block:: java
+    
+    System.out.println(StringAdder.addStrings("Hello", " world")); // => Hello world
 
 Static meetodite ning muutujate poole pöördutakse klassinime abil ning need on klassidest loodud objektide vahel jagatud. St, et näiteks muutes static andmevälja väärtust ühes objektis, muutub ta kõigis objektides.
