@@ -4,8 +4,14 @@
 
    
 
-Sõnastik - kujutis
+Sõnastik - Kujutis
 ==================
+
+Kirjeldus
+---------
+
+Kujutise andmetüüp lubab hoiustada erinevaid elemente võtme - väärtuste paaridena. Javas on ka võimalik (ning rangelt soovituslik) kujutise loomisel määrata tema võtmete ning väärtuste objektide tüübid.
+
 +----------------------------------------------------------+-------------------------------------------------------------+
 | Python                                                   | Java                                                        |
 +==========================================================+=============================================================+
