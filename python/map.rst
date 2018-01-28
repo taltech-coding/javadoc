@@ -15,8 +15,8 @@ Sõnastik - kujutis
 | .. code-block:: python                                   | .. code-block:: java                                        |
 |                                                          |                                                             |
 |     dict = {                                             |     Map dict = new Hashmap();                               |
-|         key1: value1,                                    |     dict.push(key1, value1);                                |
-|         key2: value2                                     |     dict.push(key1, value1);                                |
+|         key1: value1,                                    |     dict.put(key1, value1);                                 |
+|         key2: value2                                     |     dict.put(key1, value1);                                 |
 |     }                                                    |                                                             |
 |                                                          |                                                             |
 +----------------------------------------------------------+-------------------------------------------------------------+
@@ -26,8 +26,8 @@ Sõnastik - kujutis
 | .. code-block:: python                                   | .. code-block:: java                                        |
 |                                                          |                                                             |
 |     dict = {                                             |     Map dict = new Hashmap();                               |
-|         "hello": "world",                                |     dict.push("hello", "world");                            |
-|         "three": 3                                       |     dict.push("three", 3);                                  |
+|         "hello": "world",                                |     dict.put("hello", "world");                             |
+|         "three": 3                                       |     dict.put("three", 3);                                   |
 |     }                                                    |                                                             |
 |                                                          |     dict.get("hello"); // => example                        |
 |     dict["hello"] # => example                           |                                                             |
@@ -39,8 +39,8 @@ Sõnastik - kujutis
 | .. code-block:: python                                   | .. code-block:: java                                        |
 |                                                          |                                                             |
 |     dict = {                                             |     Map dict = new Hashmap();                               |
-|         "hello": "world",                                |     dict.push("hello", "world");                            |
-|         "three": 3                                       |     dict.push("three", 3);                                  |
+|         "hello": "world",                                |     dict.put("hello", "world");                             |
+|         "three": 3                                       |     dict.put("three", 3);                                   |
 |     }                                                    |                                                             |
 |                                                          |     dict.remove("hello");                                   |
 |     del dict["hello"]                                    |                                                             |
@@ -52,8 +52,8 @@ Sõnastik - kujutis
 | .. code-block:: python                                   | .. code-block:: java                                        |
 |                                                          |                                                             |
 |     dict = {                                             |     Map dict = new Hashmap();                               |
-|         "hello": "world",                                |     dict.push("hello", "world");                            |
-|         "three": 3                                       |     dict.push("three", 3);                                  |
+|         "hello": "world",                                |     dict.put("hello", "world");                             |
+|         "three": 3                                       |     dict.put("three", 3);                                   |
 |     }                                                    |                                                             |
 |                                                          |     dict.containsKey("hello") // => true                    |
 |     print("hello" in dict.keys()) # => True              |                                                             |
@@ -67,7 +67,7 @@ Sõnastik - kujutis
 |                                                          |                                                             |
 |                                                          |     Map<String, String> dict = new Hashmap();               |
 |                                                          |     // dict-i saab lisada vaid String tüüpi key-value paare.|
-|                                                          |     dict.push("hello", "world");                            |
-|                                                          |     dict.push("three", "3");                                |
+|                                                          |     dict.put("hello", "world");                             |
+|                                                          |     dict.put("three", "3");                                 |
 |                                                          |                                                             |
 +----------------------------------------------------------+-------------------------------------------------------------+
