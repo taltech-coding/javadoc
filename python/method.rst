@@ -9,24 +9,28 @@ Funktsioon (Meetod)
 
 Javas peavad kõik funktsioonid (ehk meetodid) olema deklareeritud klassides. Samuti tuleb lisada igale meetodile kaasaantud muutujatele ning ka meetodi tagastatavale väärtusele objektitüübi.
 
-+---------------------------------------------------+----------------------------------------------------------+
-| Python                                            | Java                                                     |
-+===================================================+==========================================================+
-|                                                   |                                                          |
-| .. code-block:: python                            | .. code-block:: java                                     |
-|                                                   |                                                          |
-|     def add_strings(s1, s2):                      |     public class StringAdder {                           |
-|         return s1 + s2                            |         public String addStrings(String s1, String s2) { |
-|                                                   |             return s1 + s2;                              |
-|                                                   |         }                                                |
-|                                                   |     }                                                    |
-+---------------------------------------------------+----------------------------------------------------------+
-
-Tüüpiline java meetodi süntaks on: 
-
-.. code-block:: java
-
-    visibilityType returnType methodName(varType varName, ...) {}
++---------------------------------------------------+------------------------------------------------------------------+
+| Python                                            | Java                                                             |
++===================================================+==================================================================+
+| Meetodi süntaks                                                                                                      |
++---------------------------------------------------+------------------------------------------------------------------+
+|                                                   |                                                                  |
+| .. code-block:: python                            | .. code-block:: java                                             |
+|                                                   |                                                                  |
+|     def func_name(var1, ...):                     |     visibilityType returnType methodName(varType varName, ...) { |
+|                                                   |                                                                  |
++---------------------------------------------------+------------------------------------------------------------------+
+| Meetodi näide                                                                                                        |
++---------------------------------------------------+------------------------------------------------------------------+
+|                                                   |                                                                  |
+| .. code-block:: python                            | .. code-block:: java                                             |
+|                                                   |                                                                  |
+|     def add_strings(s1, s2):                      |     public class StringAdder {                                   |
+|         return s1 + s2                            |         public String addStrings(String s1, String s2) {         |
+|                                                   |             return s1 + s2;                                      |
+|                                                   |         }                                                        |
+|                                                   |     }                                                            |
++---------------------------------------------------+------------------------------------------------------------------+
 
 Javas on võimalik klassile, klassi meetoditele ning instansi muutujatele lisada ka nähtavuse taseme. Tüüpiliselt on selleks public, mis tähendab, et klassi / meetodi / muutuja poole saab pöörduda kõikjalt projektist, kuid on ka teisi valikuid (mitte midagi, private, protected, ...), millest räägime hiljem.
 
