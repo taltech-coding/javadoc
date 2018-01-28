@@ -7,7 +7,7 @@
 Funktsioon (Meetod)
 ===================
 
-Javas peavad kõik funktsioonid (ehk meetodid) olema deklareeritud klassides. Samuti tuleb lisada igale meetodile kaasaantud muutujatele ning ka meetodi tagastatavale väärtusele objektitüübi.
+Javas peavad kõik funktsioonid (ehk meetodid) olema deklareeritud klassides. Samuti tuleb lisada iga meetodile kaasaantud muutujatele ning ka meetodi tagastatavale väärtusele objektitüübi.
 
 +---------------------------------------------------+------------------------------------------------------------------+
 | Python                                            | Java                                                             |
