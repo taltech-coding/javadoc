@@ -1,4 +1,6 @@
 .. |br| raw:: html
+   <br />
+   .. |br| raw:: html
 
    <br />
 
@@ -138,8 +140,16 @@ Sõnede võrdlus kahes keeles.
 |     s.find("e", 4) # 7                                   |     s.indexOf("e", 4); // 7                               |
 |     s.find("o") # -1                                     |     s.indexOf("o"); // -1                                 |
 +----------------------------------------------------------+-----------------------------------------------------------+
+|                                                          |                                                           |
+| .. code-block:: python                                   | .. code-block:: java                                      |
+|                                                          |                                                           |
+|     a = "RAINbow"                                        |     String a = "RAINbow";                                 |
+|     a.lower()  # "rainbow"                               |     a.toLowerCase();  // "rainbow"                        |
+|     a.upper()  # "RAINBOW"                               |     a.toUpperCase();  // "RAINBOW"                        |
+|                                                          |                                                           |
++----------------------------------------------------------+-----------------------------------------------------------+
 
 
 Vaata sõnede kohta: :doc:`../String`
 
-.. generated using "python3 rst_table.py string_helper.txt string.rst"
+.. generated using "python3 table_generator.py string_helper.txt string.rst"
