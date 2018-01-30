@@ -25,7 +25,7 @@ Pythonis on sõne loomiseks mitu võimalust:
     s = """tere"""
     s = '''tere'''
     s = str("tere")
-    
+
 Kõik annavad sama tulemuse.
 
 Kolme jutumärgiga eraldatud sõne |br|
@@ -35,9 +35,9 @@ korral saab sõnes kasutada ka reavahetusi.
 
     s = """tere
     siin
-    on 
+    on
     reavahetused"""
-    
+
 ---
 
 Javas saab sõne luua vaid jutumärkide abil.
@@ -46,7 +46,7 @@ Javas saab sõne luua vaid jutumärkide abil.
 
     String s = "tere";
     String s2 = new String();
-    
+
 Reavahetust saab kasutada järgmiselt:
 
 .. code-block:: java
@@ -71,7 +71,7 @@ Sõne ühendamine teist tüüpi väärtusega:
 .. code-block:: python
 
     s = "number:" + str(nr)
-    
+
 ---
 Javas ei saa sõne samuti muuta.
 
@@ -81,14 +81,14 @@ Sõnede ühendamine:
 
     String s = "tere" + "tulemast";
     String s2 = "tere " + "tulemast";
-    
+
 Javas saab sõnele numbreid liita mugavamalt:
 
 .. code-block:: java
 
     int nr = 3;
     String s = "Number: " + nr;
-    
+
 ---
 **Sõnede võrdlemine**
 --
@@ -101,7 +101,7 @@ tavapärast võrldlusoperaatoriga (==).
 
     if str1 == str2:
         print("str == str2")
-        
+
 ---
 
 Javas annab objektide (String on objekt) |br|
@@ -120,13 +120,13 @@ Selleks kasutame sõne meetodit "equals".
 Võrdluseks järgmine kood:
 
 .. code-block:: java
-    
+
     String s1 = new String("aa");
     String s2 = new String("aa");
     if (s1 == s2) {
         System.out.println("s1 == s2");
     }
-    
+
 Siin tingimus :code:`s1 == s2` ei kehti.
 
 ---
@@ -140,7 +140,7 @@ kontrollida, kas üks sõne on teisest tähestikus eespool.
     s2 = "bc"
     if s1 < s2:
         print("s1 < s2")
-        
+
 ---
 
 Javas saab sarnaselt kontrollida:
@@ -152,7 +152,7 @@ Javas saab sarnaselt kontrollida:
     if (s1.compareTo(s2) < 0) {
         System.out.println("s1 < s2");
     }
-    
+
 :code:`compareTo` tagastab negatiivse arvu, |br|
 kui sõne, millest meetod välja kutsuti (näites s1), |br|
 eelneb tähestikus sõnele, mis on argumendiks |br|
@@ -180,7 +180,7 @@ eelneb tähestikus sõnele, mis on argumendiks |br|
     s[:4] # tere
     s[5:7] # ul
     s[-3:] # ast
-    
+
 ---
 
 .. code-block:: java
@@ -199,7 +199,7 @@ Pythonis üks sümbol sõnest on sõne |br|
     s = "tere"
     first = s[0] # "t"
     c = 'a' # just a string
-    
+
 ---
 
 Javas on üks sümbol sõnest *char* tüüpi. |br|
@@ -229,6 +229,22 @@ jutumärkide (ülakomad) vahele.
     s.indexOf("e"); // 1
     s.indexOf("e", 4); // 7
     s.indexOf("o"); // -1
+---
+
+.. code-block:: python
+
+    a = "RAINbow"
+    a.lower()  # "rainbow"
+    a.upper()  # "RAINBOW"
+
+---
+
+.. code-block:: java
+
+    String a = "RAINbow";
+    a.toLowerCase();  // "rainbow"
+    a.toUpperCase();  // "RAINBOW"
+
 ---.
 
 Vaata sõnede kohta: :doc:`../String`
