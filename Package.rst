@@ -6,12 +6,12 @@ Mooduli loomine
 ---------------
 
 Pärast Git-iga üendamist luuakse automaatselt kaust iti0202.
-*Clickides* parema hiireklõpsuga selle peale, tuleb valida **NEW**, mille alt **Module**.
+*Clickides* parema hiireklõpsuga selle peale, tuleb valida **New**, mille alt **Module**.
 
 .. image:: images/Module1.png
 
 Pärast seda avaneb aken, kus saab valida erinevaid Java *framework*-e, aga soovitatav on alguses
-neid mitte muuta. Pärast valiku tegemist vajutada **NEXT** nuppu.
+neid mitte muuta. Pärast valiku tegemist vajutada **Next** nuppu.
 
 .. image:: images/module2.png
 
@@ -20,12 +20,12 @@ NB! Ülesande kirjenduses on Kaust Gitis, see on sama asi!
 
 .. image:: images/module3.png
 
-Pärast selle valmis saamist luuakse uus moodul, mille sees on kaust **SRC**.
+Pärast selle valmis saamist luuakse uus moodul, mille sees on kaust **src**.
 
 Package loomine
 ----------------
 
-Edasti tuleb teha parem *click*, et luua uus *package*.
+Edasti tuleb teha parem *click* kausta *src* peal, et luua uus *package*.
 
 .. image:: images/module4.png
 
