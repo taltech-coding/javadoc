@@ -108,7 +108,7 @@ Sõnede võrdlus kahes keeles.
 |                                                          | .. code-block:: java                                      |
 | .. code-block:: python                                   |                                                           |
 |                                                          |     String s = "teretulemast";                            |
-|     s = "teretulemast"                                   |     s.substring(s.length());                              |
+|     s = "teretulemast"                                   |     s.length(); // 12                                     |
 |     len(s) # 12                                          |                                                           |
 +----------------------------------------------------------+-----------------------------------------------------------+
 | .. code-block:: python                                   |                                                           |
