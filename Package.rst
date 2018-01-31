@@ -2,13 +2,63 @@
 Pakid, teegid
 =============
 
-Kirjeldus
----------
+Mooduli loomine
+---------------
 
-Pakk (ehk *package*) deklareerib, kuhu paketti klass kuulub.
+Pärast Git-iga üendamist luuakse automaatselt kaust iti0202.
+*Clickides* parema hiireklõpsuga selle peale, tuleb valida **NEW**, mille alt **Module**.
 
-Näide
------
+.. image:: images/Module1.png
+
+Pärast seda avaneb aken, kus saab valida erinevaid Java *framework*-e, aga soovitatav on alguses
+neid mitte muuta. Pärast valiku tegemist vajutada **NEXT** nuppu.
+
+.. image:: images/module2.png
+
+Kõige ülemine lahter on mooduli nime jaoks, kuhu tuleb sisestada ülesande kausta nimi.
+NB! Ülesande kirjenduses on Kaust Gitis, see on sama asi! 
+
+.. image:: images/module3.png
+
+Pärast selle valmis saamist luuakse uus moodul, mille sees on kaust **SRC**.
+
+Package loomine
+----------------
+
+Edasti tuleb teha parem *click*, et luua uus *package*.
+
+.. image:: images/module4.png
+
+Sellega avaneb uus aken, kuhu tuleb sisestada *package* nimi. Pannes punkti kausta nimede vahele, luuakse
+automaatselt alamkaust.
+NB! Ülesande kirjelduses on Pakk Gitis, see on jällegi sama asi!
+
+.. image:: images/module5.png
+
+Klassi loomine
+--------------
+
+Pärast seda tuleb luua Java klass. Jällegi parema hiire *click*-iga valida **NEW** ja siis **Java Class**.
+
+.. image:: images/module6.png
+
+Sellega avaneb uus aken, kuhu tuleb panna klassi nimi ja vajutada **OK** nuppu.
+
+.. image:: images/module7.png
+
+Sellega luuakse uus klass ja sinna saab kopeerida malli.
+
+Kasulik nõuanne
+----------------
+
+Kui Te ei soovi, et Teie tühjad kasutad oleksid trepina, siis saab ülevalt
+*setting*-ute alt valida, *Flatten packages* ja *Hide Empty Middle Packages*.
+
+.. image:: images/module8.png
+
+
+Näide klassist
+---------------
 
 .. image:: images/package.png
 
