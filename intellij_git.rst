@@ -18,11 +18,15 @@ Samm 3: Testime salve aadressi
 
 Veenduge, et salv on kättesaadav. Sisestage oma uniid ja parool:
 
-.. iage:: /images/intellij/gitlab_3_1_login.png
+.. image:: /images/intellij/gitlab_3_1_login.png
 
 Kui kõik õnnestub, peaksite nägema sellist teadet:
 
 .. image:: /images/intellij/gitlab_3_2_test.png
+
+Seejärel kloonime projekti:
+
+.. image:: /images/intellij/gitlab_3_3_clone.png
 
 Samm 4: Uus projekt
 -------------------
