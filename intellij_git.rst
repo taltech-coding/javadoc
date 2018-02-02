@@ -11,19 +11,27 @@ Samm 1: *Checkout from git*
 Samm 2: Salve aadress
 ----------------------
 
-.. image:: /images/intellij/git_2_clone.png
+.. image:: /images/intellij/gitlab_2_clone.png
 
 Samm 3: Testime salve aadressi
 -------------------------------
 
-Veenduge, et salv on kättesaadav (peaks nägema umbes sellist teadet):
+Veenduge, et salv on kättesaadav. Sisestage oma uniid ja parool:
 
-.. image:: /images/intellij/git_3_test.png
+.. image:: /images/intellij/gitlab_3_1_login.png
+
+Kui kõik õnnestub, peaksite nägema sellist teadet:
+
+.. image:: /images/intellij/gitlab_3_2_test.png
+
+Seejärel kloonime projekti:
+
+.. image:: /images/intellij/gitlab_3_3_clone.png
 
 Samm 4: Uus projekt
 -------------------
 
-.. image:: /images/intellij/git_4_new_project.png
+.. image:: /images/intellij/gitlab_4_new_project.png
 
 Samm 5: Projekti importimine, 1. samm
 ----------------------------------------
@@ -33,12 +41,12 @@ Samm 5: Projekti importimine, 1. samm
 Samm 6: Projekti nimi
 ------------------------------
 
-.. image:: /images/intellij/git_6_project_location.png
+.. image:: /images/intellij/gitlab_6_project_location.png
 
 Samm 7: Lähtefailide asukoht
 ------------------------------
 
-.. image:: /images/intellij/git_7_import_projects.png
+.. image:: /images/intellij/gitlab_7_import_projects.png
 
 Samm 8: Info raamistike kohta
 ------------------------------
@@ -52,7 +60,7 @@ Sarnaselt tuleks käituda iga ülesande puhul.
 
 Parem klikk projekti nimel, sealt valida New -> Module.
 
-.. image:: /images/intellij/git_9_new_module.png
+.. image:: /images/intellij/gitlab_9_new_module.png
 
 Samm 10: Uue mooduli aken
 ---------------------------
