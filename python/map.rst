@@ -35,7 +35,7 @@ Kujutise andmetüüp lubab hoiustada erinevaid elemente võtme - väärtuste paa
 |     dict["hello"] = "world"                              |     dict.put("hello", "world");                             |
 |     dict["three"] = 3                                    |     dict.put("three", 3);                                   |
 |                                                          |                                                             |
-|     dict["hello"] # => example                           |     dict.get("hello"); // => example                        |
+|     dict["hello"] # => world                             |     dict.get("hello"); // => world                          |
 |                                                          |                                                             |
 +----------------------------------------------------------+-------------------------------------------------------------+
 | Elementide kättesaamine                                                                                                |
