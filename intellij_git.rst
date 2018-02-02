@@ -98,48 +98,63 @@ Jätkame mooduli seadistamisega. Kui olete jõudnud teise sammu, määrake moodu
 
 .. image:: /images/intellij/module_2_name.png
 
+Uus pakk (*package*)
+--------------------
+
+Lisage uus pakk uue mooduli alla:
+
+.. image:: /images/intellij/module_3_new_package.png
+
+Määrage pakile nimi:
+
+.. image:: /iages/intellij/module_4_package_name.png
+
+Punkt paki nimes tähistab hierarhiat. Ehk siis ``ee`` paki all on pakk ``ttu`` jne. Tegelikult luuakse vastavad kaustad failisüsteemi (``src/ee/ttu/iti0202/hello/``).
+
 Uus klass
 -----------
 
 Looge uus vajalik klass:
 
-.. image:: /images/intellij/module_3_new_class.png
+.. image:: /images/intellij/module_5_new_class.png
+
+Määrake klassi nimi (vaadake ülesande tekstist):
+
+.. image:: /images/intellij/module_6_class_name.png
 
 Faili lisamine (*git add*)
 --------------------------------
 
-Peale mooduli/klassi jms loomist võib IntelliJ ise küsida, kas loodav fail panna git'i. Võite kohe "yes" valida.
+Peale mooduli/klassi jms loomist võib IntelliJ ise küsida, kas loodav fail panna Giti. Võite kohe ``yes`` valida.
 
-.. image:: /images/intellij/module_4_add_file_to_git.png
+.. image:: /images/intellij/module_7_add_file_to_git.png
 
-Mõistlik oleks ka .iml failid git'i panna. Seal failis on projekti ja mooduli struktuur. Kui avate sama salve mõnes teises arvutis, on teil automaatselt ka moodulite seaidstused paigas.
+Mõistlik oleks ka .iml failid Giti panna. Seal failis on projekti ja mooduli struktuur. Kui avate sama salve mõnes teises arvutis, on teil automaatselt ka moodulite seaidstused paigas.
 
-.. image:: /images/intellij/git_10_add_file_to_git.png
-
-Saate ka hiljem lisada: parem klikk failil/kaustas -> Git -> Add.
+Saate ka hiljem lisada: parem klikk failil/kaustas -> ``Git`` -> ``Add``.
 
 Failide lisamine giti (*git commit*)
 ---------------------------------------
 
-Faili lisamiseks git'i (*git commit*) tehke parem klikk failil -> Git -> Commit File ...:
+Faili lisamiseks git'i (*git commit*) tehke parem klikk faili nimel -> ``Git`` -> ``Commit File ...``:
 
 .. image:: /images/intellij/git_11_commit.png
 
-Saate lisada ka terve kausta. Parem klikk kaustas -> Git -> Commit Directory ...:
+Saate lisada ka terve kausta. Parem klikk kausta nimel -> ``Git`` -> ``Commit Directory ...``:
 
 .. image:: /images/intellij/git_11b_commit_directory.png
 
-Avaneb järgnev vaade. Mõistlik oleks lisada autori informatsioon. Kui te seda ei lisa, võib IntelliJ teilt seda järgmises sammus küsida. Sisestage mingi kommentaar. Seejärel valige alt "commit" nupu kõrval oleva noole abil "Commit and Push ...":
+Avaneb järgnev vaade. Mõistlik oleks lisada autori informatsioon. Kui te seda ei lisa, võib IntelliJ teilt seda järgmises sammus küsida. Sisestage mingi kommentaar. Seejärel valige alt ``Commit`` nupu kõrval oleva noole abil ``Commit and Push ...``:
 
 .. image:: /images/intellij/git_12_commit_window.png
 
-Seejärel arvatavasti küsib IntelliJ teilt koodi vigade kohta. Erinevad probleemid (stiil jms) annavad vastava teate, kus mainitakse, et failides esineb probleeme. Te võite Review nupu abil need üle vaadata. Aga üldised piisab "Commit" nupust:
+Seejärel arvatavasti küsib IntelliJ teilt koodi vigade kohta. Erinevad probleemid (stiil jms) annavad vastava teate, kus mainitakse, et failides esineb probleeme. Te võite ``Review`` nupu abil need üle vaadata. Aga üldised piisab ``Commit`` nupust:
 
 .. image:: /images/intellij/git_13_code_analysis.png
 
 Failide üleslaadimine (*git push*)
 -----------------------------------
 
-Failide üleslaadimiseks serverisse vajutage "Push":
+Failide üleslaadimiseks serverisse vajutage ``Push``:
 
 .. image:: /images/intellij/git_14_push.png
