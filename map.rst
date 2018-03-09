@@ -1,6 +1,7 @@
 ===============
 Kujutis ehk Map
 ===============
+
 Map on andmekogum, kus on võtmete hulga igale elemendile vastavuses üks väärtuste hulga element. Kujutis sisaldab kaheosalisi kirjeid, millest esimest komponenti nimetatakse võtmeks ja teist väärtuseks. Võtmete seas ei tohi olla korduvaid elemente. Kujutist kasutatakse juhul, kui on vaja kiiresti mingi võtme järgi üles leida vastavat väärtust. Võti on alati seotud ühe väärtusega.
 
 Enimlevinud on HashMap, kuid on ka teisi (LinkedHashMap, TreeMap - vt allpool näiteid).
@@ -16,8 +17,37 @@ Nii võti kui väärtus kumbki ei saa olla primitiivset andmetüüpi. Selleks, e
 Olulisemad meetodid:
 
 * :code:`map.put(K key, V value)` - väärtus *value* (andmetüüp V) lisatakse võtmega *key* (andmetüüp K) kohale. Näiteks :code:`map.put("tere", 3);` .
+* ``map.putIfAbsent(K key, V value)`` - kui sellist võtit kujutises ei ole, lisatakse võtmele ``key`` väärtus ``value``.
 * :code:`map.size()` - võti-väärtus seoste arv (võib mõelda ka kas lihtsalt võtmete arv või väärtuste arv).
-* :code:`map.get(K key)` - tagastab etteantud võtmega *key* (mille andmetüüp on K) seotud väärtuse (mille andmetüüp on V). K ja V andmetüübid on määratud Map'i loomise ajal. Näiteks :code:`Integer count = map.get("tere");`.
+* :code:`map.get(Object key)` - tagastab etteantud võtmega *key* (mille andmetüüp on K, kui lubatakse kõiki Object alamtüüpi objekte - need kõik tagastavad ``null``) seotud väärtuse (mille andmetüüp on V). K ja V andmetüübid on määratud Map'i loomise ajal. Näiteks :code:`Integer count = map.get("tere");`.
+* ``map.getOrDefault(Object key, V defaultValue)`` - kui etteantud võtmega ``key`` väärtust ei ole, tagastatakse ``defaultValue``. Muul juhul töötab nagu ``map.get(Object K)``.
+
+Näide, kuidas loendada elemente (võti on element, väärtus on selle elemendi kogus):
+
+.. code-block:: java
+
+    import java.util.Map;
+    import java.util.HashMap;
+    import java.util.List;
+    
+    public class CountNames {
+    
+        public static Map<String, Integer> getNameCounts(List<String> names) {
+            Map<String, Integer> map = new HashMap<>();
+            for (String name : names) {
+                // key = name, value = existing value + 1
+                // if currently there is not existing value, 
+                // then 0 is used (and 0 + 1 => 1)
+                map.put(name, map.getOrDefault(name, 0) + 1);
+            }
+            return map;
+        }
+    
+        public static void main(String[] args) {
+            System.out.println(getNameCounts(List.of("Lee", "Mati", "Kati", "Lee", "Kati", "Lee")));
+            // {Lee=3, Kati=2, Mati=1}
+        }
+    }
 
 Üks *HashMap*'i näide:
 
