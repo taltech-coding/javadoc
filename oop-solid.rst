@@ -28,6 +28,8 @@ The Dependency-Inversion Principle
 Viiteid
 -------
 
+`https://en.wikipedia.org/wiki/SOLID_(object-oriented_design) <https://en.wikipedia.org/wiki/SOLID_(object-oriented_design)>`_
+
 https://vimeo.com/111041651
 
 Koodinäiteid:
