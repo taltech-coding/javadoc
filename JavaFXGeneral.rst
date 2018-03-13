@@ -27,7 +27,7 @@ kuid alustuseks on seda märksa mugavam (ning võib-olla ka lõbusam) kasutada.
 IntelliJ pakub ka võimalust, mis laseb *SceneBuilder*'it kasutada otse koodikirjutamiseks mõeldud aknaga analoogses aknas. 
 
 *SceneBuilder*'i saab alla laadida järgnevalt lingilt:
-http://gluonhq.com/labs/scene-builder/
+http://gluonhq.com/products/scene-builder/
 
 .. image:: images/JavaFXSceneBuilder.png
 
