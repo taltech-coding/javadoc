@@ -212,4 +212,20 @@ Järgnevas koodinäites on *timeline*, mille abil animeeritakse punase ristküli
     timeline.getKeyFrames().add(kf);
     timeline.play();
 
+``Timeline`` objekti võib kasutada ka selleks, et peals teatud aja möödumist käivitada mingi kood. Selleks saab kasutada ``KeyValue`` asemel meetodit, mis käivitatakse peale aja lõppedes:
 
+.. code-block:: java
+
+    Timeline timeline = new Timeline();
+    timeline.getKeyFrames().add(
+            new KeyFrame(
+                    Duration.millis(1000),
+                    event -> {
+                        System.out.println("Another second has passed");
+                    }
+            )
+    );
+    timeline.setCycleCount(Timeline.INDEFINITE);
+    timeline.play();
+
+Eelnev näide prindib iga sekundi tagant välja vastava teksti.
