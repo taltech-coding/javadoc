@@ -11,6 +11,8 @@ Salve kloonimiseks kohalikku arvutisse (``UNIID`` asendage edaspidi enda uniid-g
 
 ``git clone https://UNIID@gitlab.cs.ttu.ee/UNIID/iti0202.git``
 
+Nüüd võib IntelliJ-ga avada loodud ``iti0202`` kausta ja sinna sisse luua uue mooduli. Vt: https://ained.ttu.ee/javadoc/intellij_git.html#samm-9-uue-mooduli-loomine-ulesande-jaoks
+
 Seejärel liikuge loodud kausta (kausta nimi on sama mis ainekood):
 
 ``cd iti0202``
