@@ -38,6 +38,6 @@ Kui commit on tehtud, on failid pandud lokaalsesse salve (kohalikus arvutis). Se
 ``git push origin master``
  
  
- IntelliJ jaoks Java asukoht arvutiklassis: ``C:\Program Files\Java\jdk1.8.0_144``.
+IntelliJ jaoks Java asukoht arvutiklassis: ``C:\Program Files\Java\jdk1.8.0_144``.
 
 
