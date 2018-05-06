@@ -461,7 +461,7 @@ Paar näidet:
         Assert.assertEquals(5, bosh.getRubbishContainer().getRubbishCapacity());
     }
     
-JÕUDU TÖÖLE ! :) 
+JÕUDU TÖÖLE ! :)
   
 
 
