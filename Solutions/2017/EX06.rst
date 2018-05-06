@@ -1,0 +1,467 @@
+EX06
+====
+
+
+Eesmärk
+----
+Antud ülesanne eesmärk on realiseerida köök kohvimasinatega. Selle ülesanne puhul on eriti oluline koodi struktureerimine, 
+sest ülesannega võib võimatu keerulisemaks minna, oluline on ikka kindel ja loogiline koodi ülesehitus. Jälgida tuleb kindlasti 
+ka SOLID konseptisooni (https://en.wikipedia.org/wiki/SOLID_(object-oriented_design). Tõsi küll on see, et ülesannel eksisteerib
+19375654 erinevat põnevat lahendust, seega see on ainult üks nendest võimalikest viisidest.
+Vaadates ülesanne teksti, võib märgata unnik alampealkirja, mis võiks viidata mingi klassile. Alustame siis kohvimasinast.
+
+Kohvimasin
+----
+Kuna ülesannes on nõutud realiseerida 3 tüüpi kohvimasinat, siis üks võimalus kuidas seda teha võiks olla järgmine:
+
+.. code-block:: java
+
+  public class CoffeMachine {}
+  public class ClassicCoffeeMachine extends CoffeMachine {}
+  public class AutomatedCoffeeMachine extends CoffeMachine {}
+  public class CapsuleCoffeeMachine extends CoffeMachine {}
+
+Ehk siis, me teeme CoffeeMachine ülemklassina (kuna ta on kõige tüüpilisem masin) ja sinna paneme kirja kõik meetodid, 
+mis on temaga seotud. Olgu masinad on erinevad, neil leiduvad ka samasugused meetodid nagu
+
+.. code-block:: java
+
+    public WaterContainer getWaterContainer() {
+        return waterContainer;
+    }
+    public BeansContainer getBeansContainer() {
+        return beansContainer;
+    }
+    public MilkContainer getMilkContainer() {
+        return milkContainer;
+    }
+    public RubbishContainer getRubbishContainer() {
+        return rubbishContainer;
+    }
+    
+Kuna AutomatedCoffeeMachine ja CapsuleCoffeeMachine pärivad CoffeeMachine, siis omandavad nad ka neid üleval toodud meetodid.
+Tuleb märgata, et meetod makeCoffee() on igal masinatüübil erinev. Seega, seda meetodit tulleb @Override. Loogiline on ka see, et
+meetod makeCoffee() peab tagastama midagi (kohvi).
+
+Kuna kohvimasinad on erinevad - on erinevad ka nende konstruktorid. Seega paremaks arusaamiseks mis funktsiooni ehk omaduse üks
+või teine masin endas hoiab võib teha järgmist tabelit:
+
++------------------------------+------------------------------+------------------------------+
+| CoffeMachine                 | Automated CoffeeMachine      | Capsule CoffeeMachine        |
++==============================+==============================+==============================+
+| makeCoffee()                 | makeCoffee()                 | makeCoffee()                 |
++------------------------------+------------------------------+------------------------------+
+| veepaak(n liitrit)           | veepaak(n liitrit)           | veepaak(n liitrit)           |
++------------------------------+------------------------------+------------------------------+
+| prügikonteiner (5 jooki)     | prügikonteiner (n jooki)     | prügikonteiner (n jooki)     |
++------------------------------+------------------------------+------------------------------+
+| piimapaak (n jooki)          |                              |                              |
++------------------------------+------------------------------+------------------------------+
+| kohvikonteiner (n jooki)     |                              | kapsel (1 jook)              |
++------------------------------+------------------------------+------------------------------+
+
+Nagu on tabelist näha masinatel peale makeCofffee() funktsioonit on olemas ka nö komponendid. 
+Paremaks struktuuri loomiseks on mõistlik veepaagist, prügikonteinerist, piimakonteinerist ja 
+kohvikonteinerist teha eraldi klassid ja panna näiteks "storages" pakki.
+
+Veepaak
+----
+
+Loome klassi
+
+.. code-block:: java
+
+    public class WaterContainer {}
+    
+ Konstruktorisse on mõistlik panna capacity ehk palju vett saab üks või teine veepaak hoida. 
+ Samuti oleks hea luua muutujat (koos getter ja setteriga!) nimega constantCapacity. Ehk idee 
+ on selles, et luues veepaaki - muutub constantCapacity nagu "konstandiks" ja kuna tavaline 
+ capacity hakkab vastavalt kohvi valmistamisel muutuma - constantCapacity jääb samaks --> saab 
+ teada, millal veepaak on tühjaks muutunud.
+ 
+    private int capacity;
+    private int constantCapacity;
+
+    public WaterContainer(int capacity) {
+        this.capacity = capacity;
+        this.constantCapacity = capacity;
+
+    }
+    
+ Selleks,et oleks võimalik kontrollida, kas veepaak on tühjaks läinud teeme sellest meetodit, mis võiks 
+ tagastada true/false
+ 
+     public boolean enoughWaterLeft(int amount) {
+        return amount <= getCapacity();
+    }
+    
+ Selleks, et muuta capacity, loome ka 2 järgmevat meetodit (tegelikult võib ka 1 teha)
+
+    public void setCapacityLeft(int capacity) {
+        if (capacity <= constantCapacity && capacity >= 0) {
+            this.capacity = capacity;
+        }
+    }
+
+    public void refillWaterContainer() {
+        setCapacityLeft(getConstantCapacity());
+    }
+    
+    Oluline on ka teha getterit capacity ja constantCapacity jaoks !
+    
+
+Sarnasel viisil realiseerime ka järgmised klassid, kus konstruktori parameetriks võiks nagu enne olla (int capacity):
+
+.. code-block:: java
+
+  public class BeansContainer {}
+  public class MilkContainer {}
+  public class RubbishContainer {}
+  
+  
+Kui see osa on valmis tuleb mõelda, kuidas paneme masinaid valmistama erivaid jooke. Kas teeme iga konkreetse joogi jaoks oma 
+eraldi klassi, kus oleksid vaid getterid? Kas oleks see mõistlik? Küll mitte. Seega lahenduses on toodud imeline enum !
+Iga enumi komponent võib omakorda sisalduda ka oma parameentreid, mis võiksid olla näiteks: "vesi", "kohv" ja "piim" -> 
+nende vajadus ühe või teise joogi jaoks.
+
+.. code-block:: java
+
+    public enum DrinkType {
+
+    BLACK_COFFEE(250, 16, 0), CAPPUCHINO(120, 13, 80), COFFEE_LATTE(50, 10, 130),
+    ESPRESSO(25, 12, 0), DOUBLE_ESPRESSO(50, 24, 0), WATER(250, 0, 0);
+
+    private int waterMililiters;
+    private int beans;
+    private int milkMililiters;
+
+    DrinkType(int waterLiters, int beans, int milkLiters) {
+        this.waterMililiters = waterLiters;
+        this.beans = beans;
+        this.milkMililiters = milkLiters;
+    }
+    
+    + getterid !!!
+  
+Järgmisena võime hakata kohvimasinate loomisega.
+See lahendusvariant lähtub järgmisest loogikast: kui me soovime luua (või näiteks ütleme "osta") kohvimasinat, 
+ei pea me selleks eraldi veepaaki, prügikonteinerit, piimapaaki jne looma. Sõltuvalt sellest, mis masinat me loome, 
+võiks sisaldada ta juba enda sees neen komponendid (objektid). Seega:
+
+.. code-block:: java
+
+  public class CoffeeMachine {
+
+    RubbishContainer rubbishContainer;
+    WaterContainer waterContainer;
+    private BeansContainer beansContainer;
+    private MilkContainer milkContainer;
+
+    public CoffeeMachine() {
+
+        this.rubbishContainer = new RubbishContainer(5);
+        this.waterContainer = new WaterContainer(1500);
+        this.beansContainer = new BeansContainer(250);
+        this.milkContainer = new MilkContainer(1000);
+
+    }
+    
+Automaatse kohvimasina puhul ei pea arvestama, et kohvioad või piim (v.a. vesi) otsa võiks saada. Seega, 
+kuna CoffeeMachine on AutomatedCoffeeMachine ülemklass kõik jääb samaks, aga me teeme automaatmasina 
+prügikonteineri mahtuvust suurem
+
+.. code-block:: java
+    
+        public AutomatedCoffeeMachine() {
+        this.rubbishContainer = new RubbishContainer(25);
+    }
+    
+Kapselmasina puhul lisandub ka parameeter "Kapsel" - ehk siis midagi, mille abil saab kohvi saada
+    
+Kapsel
+----
+    
+Kapsel on mõistlik teha eraldi klassina, mis võiks paikneda ka "storages" pakkis. Kuna kapslid võivad erinevad olla, siis
+konstruktori parameetriks võiks anda enumi jooki. Kuna tingimuses on see, et ühest kapslist saab ühte jooki teha -> siis
+tuleb ka kontrollida/vaadata, et kas pärast joogi valmistamist oli kapsel ära võetud. Samuti on juhul kui soovitakse jooki 
+teha -> Kontroll kas kapsel on üldse masinas olemas? Loogika võib olla realiseeritud järgmisel moel:
+    
+.. code-block:: java
+   
+      public class Capsule {
+
+      private DrinkType type;
+      private boolean isEmpty = false;
+
+      public Capsule(DrinkType type) {
+          this.type = type;
+      }
+
+      public boolean isEmpty() {
+          return isEmpty;
+      }
+
+      public void isUsed() {
+          isEmpty = true;
+      }
+      
+Siis, kui kapsel on valmis, saame ka kapslimasina klassi valmis teha
+
+.. code-block:: java
+    
+        private Capsule capsule;
+
+        public CapsuleCoffeeMachine() {
+
+        this.rubbishContainer = new RubbishContainer(7);
+        this.waterContainer = new WaterContainer(1500);
+        
+    }
+    
+Võiks öelda, et kapselmasin on kõikidest masinatest veits keerulisem, sest tuleb peale tavalisi konteinereid vaadata ka
+kapsli seis (kas on või ei ole). Seda aitavad teha järgmised meetodid:
+
+.. code-block:: java
+    
+    public void insertCapsule(Capsule capsule) {
+        this.capsule = capsule;
+    }
+
+    public void removeCapsule() {
+        capsule = null;
+    }
+
+    public boolean isCapsuleIsInside() {
+        return capsule != null;
+    }
+    
+Need on nö kontrollid tänu millele hakkame me kas kohvi või "tühja kovhi" (vett) valmistama.
+
+Exception
+----
+
+Tundub, et on aeg lõpuks realiseerida makeCoffee() meetodit. Aga teeme enne veel exceptionit, mida hakkame viskama juhul,
+kui mingi ressurss otsa saab. Exception võib sisaldada endas enumit ja olla realiseeritud sarnasel viisil: 
+
+.. code-block:: java
+    
+    public class CannotDoException extends Exception {
+
+      private Reason reason;
+
+      public enum Reason {
+          NOT_ENOUGH_COFFEE, RUBBISH_CONTAINER_IS_FULL, NOT_ENOUGH_MILK,
+          NOT_ENOUGH_WATER, NO_SUCH_MACHINE_EXIST_IN_THIS_KITCHEN
+      }
+
+      public CannotDoException(Reason reason) {
+          this.reason = reason;
+      }
+
+      public Reason getReason() {
+          return reason;
+      }
+}
+    
+Exceptionit on mõistlik hoida pakkis "exception"
+    
+Nüüd vaatame, kuidas võiks ikka see makeCoffee() meetod välja näha. Nagu oli juba enne mainitud, iga AutomatedCoffeMachine()
+ja CapsuleCoffeeMachine() puhul peab see meetod olema @Override - mis tähendab, et me ülekirjutame antud ülemklassis meetod.
+makeCoffee() võiks võtta parameetriks DrinkType type - ehk kindlat jooki, mida soovitatakse valmis teha.
+Juhul, kui me ei saa kohvi valmis teha -> viskame exceptionit ja selleks tuleb meetodi kõrvale panna vastavat signatuuri
+(throws CannotDoException). Kui ei pane, siis IntelliJ pakub sulle ta ise panna.
+
+.. code-block:: java
+
+    public Drink makeCoffee(DrinkType type) throws CannotDoException {
+    
+    if (!beansContainer.enoughBeansLeft(type.getBeans())) {
+            throw new CannotDoException(CannotDoException.Reason.NOT_ENOUGH_COFFEE);
+        }
+
+        if (!rubbishContainer.enoughSpaceLeft(getRubbishContainer().getRubbishCapacity())) {
+            throw new CannotDoException(CannotDoException.Reason.RUBBISH_CONTAINER_IS_FULL);
+        }
+
+        if (!milkContainer.enoughtMilkLeft(type.getMilkMililiters())) {
+
+            throw new CannotDoException(CannotDoException.Reason.NOT_ENOUGH_MILK);
+        }
+
+        if (!waterContainer.enoughWaterLeft(type.getWaterMililiters())) {
+            throw new CannotDoException(CannotDoException.Reason.NOT_ENOUGH_WATER);
+        }
+
+        getRubbishContainer().setRubbishCapacity(rubbishContainer.getRubbishCapacity() - 1);
+        getWaterContainer().setCapacityLeft(waterContainer.getCapacity() - type.getWaterMililiters());
+        getBeansContainer().setCapacity(beansContainer.getCapacity() - type.getBeans());
+        getMilkContainer().setCapacity(milkContainer.getCapacity() - type.getMilkMililiters());
+
+        return new Drink(type);
+        
+Nii võiks välja näha tavalise kohvimasina makeCoffee() meetod. Mõte on selles, et enne kohvi valmistamist kontrollime
+me kas selleks on piisavalt ressursse olemas -> kui ei ole, viskame exceptionit. Kui kõik on korras, siis vähendame
+konteinerite sisu (piim, kohv, vesi) ja lisame prügikonteinerisse tekitatud prügi. Tagastame jooki. Automated CoffeeMachine
+ja Capsule CoffeeMachine puhul see meetod veits erineb (näiteks automaatse masina puhul ei pea kontrollima ega vähendama piima ja 
+kohvi konteinereid).
+     
+Nüüd vaatame kuidas võiks klass köök välja näha
+
+Köök
+----
+
+Selles klassis on oluline 2 asja -> kööki saab kohvimasinaid lisada ja olemasolevatest masinatest saab kohvi valmis teha.
+Kui ülesannes on nõutud, et kohvimasinaid saab kööki lisada, tuleb mõelda, kus saaksime (mis andmetüübi kasutades) kohvimasinaid
+hoida. Äkki list? Kõlab loogiline.
+
+.. code-block:: java
+
+  public class Kitchen {
+
+      private List<CoffeeMachine> coffeeMachines = new ArrayList<>();
+
+      public List<CoffeeMachine> getCoffeeMachines() {
+          return coffeeMachines;
+      }
+      
+      
++ Alati getter !
+  
+Edasi, kui list nagu andmestruktuur on tehtud, hakkame realiseerima meetodit addMachine(). 
+
+.. code-block:: java
+  
+      public void addMachine(CoffeeMachine coffeeMachine) {
+
+        if (!getCoffeeMachines().contains(coffeeMachine)) {
+            getCoffeeMachines().add(coffeeMachine);
+        }
+    }
+    
+Juhul, kui selline masin on juba selles köögis olemas, ei lisa me teda. Meetod on void (ei tagasta midagi).
+
+.. code-block:: java
+  
+     public Drink orderCoffee(DrinkType type, CoffeeMachine coffeeMachine) throws CannotDoException {
+        
+        if (!getCoffeeMachines().contains(coffeeMachine)) {
+            throw new CannotDoException(CannotDoException.Reason.NO_SUCH_MACHINE_EXIST_IN_THIS_KITCHEN);
+        }
+
+        return coffeeMachine.makeCoffee(type);
+        
+    }
+    
+Metodis orderCoffee kontrollime, kas kohvimasin millest soovitatakse kohvi saada on köögis üldse olemas 
+(kui ei ole -> exception), kui on proovime kohvi teha (just nimelt proovime, sest juhul, kui ise kohvimasinal on midagi puudu
+ei saa me kohvi kätte, vaid exceptionit).
+ 
+Olulised tähelepanekud
+---- 
+
+Mugavaks tööks on mõistlik realiseerida kohvimasinate klassedes toString() meetodid. 
+
+.. code-block:: java
+
+   @Override
+    public String toString() {
+        return "Coffee Machine";
+    }
+    
+    @Override
+    public String toString() {
+        return "Capsule Coffee Machine";
+    }
+    
+    @Override
+    public String toString() {
+        return "Automated Coffee Machine";
+    }
+    
+Kui teed maini, siis exceptioni püüdmine näeb välja järgmisena:
+
+.. code-block:: java
+
+        try {
+            jura.makeCoffee(DrinkType.BLACK_COFFEE);
+
+        } catch (CannotDoException ex) {
+            System.out.println(ex.getReason()); //RUBBISH_CONTAINER_IS_FULL
+        }
+
+Mõtle pakkidest! (näiteks: coffee, kitchen, storages, exception...)
+
+Testid
+---- 
+
+Teste saab teha järgmisel viisil: vajuta moodulile -> New Directory -> Name: test. Vajuta tehtud directory peale ja vali
+Mark Directory As -> Test Source Root. Teste tuleb kirjutada igale klassile (v.a kui klassi sees on vaid getter() ja setter()
+meetodid). Seega on mõistlik teha pakke! 
+
+.. code-block:: java
+
+    @Test
+    public void testMakeCoffeeGeneral() 
+    
+Pane tähelepanu sellele, et enne meetodit peab olema vastav @Test kirjas ja meetodi nimetus peab algama "test..." 
+ja peegeldama selle meetodi testimis case!
+    
+Paar näidet:
+
+.. code-block:: java
+    
+    @Test
+    public void testMakeCoffeeGeneral() throws CannotDoException {
+
+        CoffeeMachine jura = new CoffeeMachine();
+
+        jura.makeCoffee(DrinkType.CAPPUCHINO);
+
+        Assert.assertEquals(237, jura.getBeansContainer().getCapacity());
+        Assert.assertEquals(1380, jura.getWaterContainer().getCapacity());
+        Assert.assertEquals(920, jura.getMilkContainer().getCapacity());
+        Assert.assertEquals(4, jura.getRubbishContainer().getRubbishCapacity());
+
+        jura.makeCoffee(DrinkType.BLACK_COFFEE);
+        jura.makeCoffee(DrinkType.BLACK_COFFEE);
+        jura.makeCoffee(DrinkType.BLACK_COFFEE);
+
+        Assert.assertEquals(189, jura.getBeansContainer().getCapacity());
+        Assert.assertEquals(630, jura.getWaterContainer().getCapacity());
+        Assert.assertEquals(920, jura.getMilkContainer().getCapacity());
+        Assert.assertEquals(1, jura.getRubbishContainer().getRubbishCapacity());
+
+        jura.makeCoffee(DrinkType.DOUBLE_ESPRESSO);
+
+        Assert.assertEquals(165, jura.getBeansContainer().getCapacity());
+        Assert.assertEquals(580, jura.getWaterContainer().getCapacity());
+        Assert.assertEquals(920, jura.getMilkContainer().getCapacity());
+        Assert.assertEquals(0, jura.getRubbishContainer().getRubbishCapacity());
+
+
+
+    }
+
+    @Test
+    public void testMakeCoffeeRubbishBinIsFull() throws CannotDoException {
+
+        CoffeeMachine bosh = new CoffeeMachine();
+
+        for (int i = 0; i < 5; i++) {
+            bosh.makeCoffee(DrinkType.BLACK_COFFEE);
+        }
+        
+        try {
+            bosh.makeCoffee(DrinkType.DOUBLE_ESPRESSO);
+        } catch (CannotDoException ex) {
+            Assert.assertEquals(CannotDoException.Reason.RUBBISH_CONTAINER_IS_FULL, ex.getReason());
+        }
+        
+        bosh.getRubbishContainer().refillRubbishContainer();
+        Assert.assertEquals(5, bosh.getRubbishContainer().getRubbishCapacity());
+    }
+    
+JÕUDU TÖÖLE ! :) 
+  
+
+
