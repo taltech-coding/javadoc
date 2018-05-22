@@ -148,21 +148,20 @@ Parem lahendus:
 		public abstract int getPrice();
 	}
 	
-	public class StandardRoom {
-		
+	public class StandardRoom extends HotelRoom {		
 		public int getPrice() {
 			return roomSize;
 		}
 	}
 	
-	public class BusinessRoom {
+	public class BusinessRoom extends HotelRoom {
 		
 		public int getPrice() {
 			return 0.8 * roomSize;
 		}
 	}
 	
-	public class LuxuryRoom {
+	public class LuxuryRoom extends HotelRoom {
 		
 		private boolean hasAdditionalBed;
 		
