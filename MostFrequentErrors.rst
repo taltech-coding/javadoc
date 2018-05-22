@@ -61,7 +61,7 @@ Näited: ``CannotMakeCoffeeException``, ``NoMoreActionsAllowedException``, ``Got
 
 Halvad nimed: ``testGetAge``, ``createPerson``, ``testBuyItem``
 
-Paremad nimed: ``testThrowsExceptionIfPersonIsNot18YearsOld``, ``testTicketIsFreeIfClientIsAChild``, ``testNoMoreActionsIfMoneyIsGone``, ``testMoneyIsChargedWhenItemIsBought``
+Paremad nimed: ``testThrowsExceptionIfPersonIsNot18YearsOld``, ``testTicketIsFreeIfClientIsAChild``, ``testNoMoreActionsIfMoneyIsGone``, ``testMoneyIsTakenWhenItemIsBought``
 
 Tüübid klassidena vs enumiga
 ----------------------------
