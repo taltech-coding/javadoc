@@ -234,7 +234,7 @@ Kui teil on valik, kas kasutada primitiivset andmetüüpi või selle klassi, sii
 
 Kui kasutate klasse primitiivse tüübi asemel, siis peate silmas pidama:
 
-* Objekt võiks olla null.
+* Objekt võib olla ``null``.
 * Objekte ei saa võrrelda == operaatoriga.
 
 Need klassid on põhimõtteliselt *wrapper*'id:
@@ -246,4 +246,4 @@ Need klassid on põhimõtteliselt *wrapper*'id:
 		...
 	}
 
-Ainuke koht, kus saab kasutada ainult primitiivsete tüüpide klasse on Generic'ud. Näiteks listid , mapid, optionalid jms. Te ei saa kirjutada nt List<int> ja peate kirjutama List<Integer>.
+Ainuke koht, kus saab kasutada ainult primitiivsete tüüpide klasse on Generic'ud. Näiteks listid, mapid, optionalid jms. Te ei saa kirjutada nt ``List<int>`` ja peate kirjutama ``List<Integer>``.
