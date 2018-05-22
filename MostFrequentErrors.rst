@@ -57,7 +57,7 @@ Liidese nimi: ``CoffeeMachine`` -> Implementatsioonide nimed: ``AutomaticCoffeeM
 
 Näited: ``CannotMakeCoffeeException``, ``NoMoreActionsAllowedException``, ``GotIncorrectOutputFromAPIException``
 
-* **Testi nimi:** peab olema selline, et kui see failib, siis kohe saab aru miks.
+* **Testi nimi:** peab olema selline, et kui see failib, siis kohe saab aru miks. **Alguses peab olema sõna** ``test`` 
 
 Halvad nimed: ``testGetAge``, ``createPerson``, ``testBuyItem``
 
