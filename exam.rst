@@ -33,7 +33,7 @@ Salve kloonimiseks kohalikku arvutisse (``UNIID`` asendage edaspidi enda uniid-g
 
 Nüüd võib IntelliJ-ga avada loodud kausta ja sinna sisse luua uue mooduli. Vt: https://ained.ttu.ee/javadoc/intellij_git.html#samm-9-uue-mooduli-loomine-ulesande-jaoks
 
-Testiülesanne
+Testülesanne
 -------------
 
 Selleks, et kontrollida, kas IntelliJ ja Git toimivad, lahenda testülesanne: kirjuta programm, mis trükib ekraanile ``Hello world!``.
@@ -44,9 +44,10 @@ Klass: ``ee.ttu.iti0202.exam.hello.HelloWorld``.
 
 Lahendus peab olema ``main`` meetodis (ehk kui programm käima panna, trükitakse tekst ja programm lõpetab).
 
-ained.ttu.ee lehel peaksid nägema tulemuse TEST ülesande juures. Selle ülesande eest peaks saama ühe testi läbitud ja teine kukub läbi.
+ained.ttu.ee lehel peaksid nägema tulemuse TEST ülesande juures. Paremal ääres peak olema sektsioon "Submissions". Selle all näete oma tulemusi.
+Klikkides ühe submissioni ääres oleva silma peal, avaneb dialoog, kus näete täpsemat tulemust (kaasa arvatud testi tulemust).
 
-Te peak nägema sellist tulemust:
+Selle ülesande eest peaks saama ühe testi läbitud ja teine kukub läbi (see peabki läbi kukkuma). Te peaks nägema sellist tulemust:
 
 ::
 
