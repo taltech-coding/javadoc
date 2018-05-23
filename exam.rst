@@ -76,7 +76,7 @@ Liikuge git bash'is loodud kausta (kausta nimes on teie uniid):
 
 Nüüd kopeerige oma projekt giti kausta:
 
-``cp -R /c/Users/UNIID/IdeaProjects/EXAM1 .``
+``cp -R /c/Users/guet16/IdeaProjects/EXAM1 .``
 
 (käsu lõpus on punkt, - märk R ees peab tavaline miinus olema, kopeerides võib sinna mingi sarnane muu sümbol tekkida)
 
