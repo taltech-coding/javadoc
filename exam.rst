@@ -74,12 +74,6 @@ Liikuge git bash'is loodud kausta (kausta nimes on teie uniid):
 
 ``cd exam1-UNIID``
 
-Nüüd kopeerige oma projekt giti kausta:
-
-``cp -R /c/Users/guet16/IdeaProjects/EXAM1 .``
-
-(käsu lõpus on punkt, - märk R ees peab tavaline miinus olema, kopeerides võib sinna mingi sarnane muu sümbol tekkida)
-
 Enne, kui faile saab Giti üles panna, on vaja teha kaks sammu. Esiteks tuleb muudetud failid lisada järgmisesse commiti:
 
 ``git add EXAM1``
