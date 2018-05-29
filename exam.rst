@@ -27,7 +27,7 @@ Kõigepealt tehke ära vajalik seadistus, et saaks gitlabiga ühendust:
 
 Salve kloonimiseks kohalikku arvutisse (``UNIID`` asendage edaspidi enda uniid-ga, näiteks 6-kohaline kombinatsioon ees- ja perenime tähtedest):
 
-``git clone https://gitlab.cs.ttu.ee/iti0202/eksamid/exam1-UNIID.git``
+``git clone https://gitlab.cs.ttu.ee/iti0202/eksamid/exam2-UNIID.git``
 
 **NB!** Kui UNIID sisaldab punkti, siis tuleb see asendada ``-`` märgiga. Näiteks ``ago.luberg`` asemel tuleb kasutada ``ago-luberg``. Kasutage väikeseid tähti.
 
@@ -72,11 +72,11 @@ Koodi üleslaadimiseks
 
 Liikuge git bash'is loodud kausta (kausta nimes on teie uniid):
 
-``cd exam1-UNIID``
+``cd exam2-UNIID``
 
 Enne, kui faile saab Giti üles panna, on vaja teha kaks sammu. Esiteks tuleb muudetud failid lisada järgmisesse commiti:
 
-``git add EXAM1``
+``git add EXAM2``
 
 seejärel saab teha ``commit``i (commititakse vaid need failid, mis on eelnevalt lisatud):´
 
