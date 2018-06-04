@@ -148,14 +148,17 @@ Parem lahendus:
 		public abstract int getPrice();
 	}
 	
-	public class StandardRoom extends HotelRoom {		
+	public class StandardRoom extends HotelRoom {	
+	
+		@Override
 		public int getPrice() {
 			return roomSize;
 		}
 	}
 	
 	public class BusinessRoom extends HotelRoom {
-		
+	
+		@Override
 		public int getPrice() {
 			return 0.8 * roomSize;
 		}
@@ -165,6 +168,7 @@ Parem lahendus:
 		
 		private boolean hasAdditionalBed;
 		
+		@Override
 		public int getPrice() {
 			return 0.9 * roomSize + (hasAdditionalBed ? 10 : 0);
 		}
