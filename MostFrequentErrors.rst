@@ -57,11 +57,13 @@ Liidese nimi: ``CoffeeMachine`` -> Implementatsioonide nimed: ``AutomaticCoffeeM
 
 Näited: ``CannotMakeCoffeeException``, ``NoMoreActionsAllowedException``, ``GotIncorrectOutputFromAPIException``
 
-* **Testi nimi:** peab olema selline, et kui see failib, siis kohe saab aru miks. **Alguses peab olema sõna** ``test`` 
+* **Testi nimi:** peab olema selline, et kui see failib, siis kohe saab aru miks. 
 
 Halvad nimed: ``testGetAge``, ``createPerson``, ``testBuyItem``
 
 Paremad nimed: ``testThrowsExceptionIfPersonIsNot18YearsOld``, ``testTicketIsFreeIfClientIsAChild``, ``testNoMoreActionsIfMoneyIsGone``, ``testMoneyIsTakenWhenItemIsBought``
+
+Siin (https://dzone.com/articles/7-popular-unit-test-naming) on välja toodud mõned nimetamise konventsioonid. Valige see, mis teile kõige rohkem meeldib ja kasutage seda igalpool.
 
 Tüübid klassidena vs enumiga
 ----------------------------
