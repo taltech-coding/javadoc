@@ -1,4 +1,4 @@
-Git'i kasutamine TTÜs
+Giti kasutamine TTÜs
 ----------------------
 
 Sammud projekti Giti panemisel:
