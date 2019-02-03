@@ -175,55 +175,6 @@ Parem lahendus:
 			return 0.9 * roomSize + (hasAdditionalBed ? 10 : 0);
 		}
 	}
-	
-null
-----
-
-Ärge tagastage oma meetodites ``null``'i. Kui tagastatav objekt võib puududa, siis tagastage ``Optional``.
-
-Halb:
-	
-.. code-block:: java
-
-	public class Smartphone {
-		private SDCard sdCard; // let's assume, that this field is not initialized
-	
-		public SDCard getSDCard() {
-			return sdCard;
-		}
-	}
-	
-	SDCard sdCard = smartPhone.getSDCard();
-	
-	if (sdCard != null) {
-		...
-	}
-
-Parem:
-
-.. code-block:: java
-
-	public class Smartphone {
-		private SDCard sdCard; // let's assume, that this field is not initialized
-	
-		public Optional<SDCard> getSDCard() {
-			return Optional.ofNullable(sdCard);
-		}
-	}
-	
-	Optional<SDCard> sdCardOptional = smartPhone.getSDCard();
-	
-	sdCardOptional.ifPresent(sdCard -> {
-		...
-	});
-	
-	/*
-		OR:
-		
-		if (sdCardOptional.isPresent()) {
-			...
-		}	
-	*/
 
 Integer vs int, Float vs float, Boolean vs boolean jne
 ------------------------------------------------------
