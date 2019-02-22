@@ -316,7 +316,9 @@ Numbriklasse saab kasutada primitiivsete andmetüüpide asendamiseks, kuid kuna 
 BigInteger ja BigDecimal klassid
 ---------------------------------
 
-Lisaks põhilistele numbriklassidele (Byte, Short, Long, Integer, Float, Double) on olemas ka klassid **BigInteger** ja **BigDecimal**. Neid saab kasutada väga suurte väärtuste hoidmiseks.
+Lisaks põhilistele numbriklassidele (Byte, Short, Long, Integer, Float, Double) on olemas ka klassid **BigInteger** ja **BigDecimal**. Neid saab kasutada väga suurte ja täpsete väärtuste hoidmiseks.
+
+``BigInteger`` võimaldab opereerida täisarvudega, mis ei mahu ``int`` või ``long`` piiridesse. Näiteks saab sellega arvutada 50 faktoriaali (arvude korrutis [1, .., 50] => ``30414093201713378043612608166064768844377641568960512000000000000``).
 
 .. code-block:: java
 
@@ -324,3 +326,44 @@ Lisaks põhilistele numbriklassidele (Byte, Short, Long, Integer, Float, Double)
     BigInteger j = BigInteger.valueOf(1);
     BigInteger sum = i.add(j);
     System.out.println(sum.toString());                   // Result is 2147483648
+
+    // factorial
+    BigInteger factorial  = BigInteger.ONE;
+    for (int i = 2; i <= 50; i++) {
+        factorial = factorial.multiply(BigInteger.valueOf(i));
+    }
+    System.out.println(factorial);
+
+``BigDecimal`` võimaldab kasutada ujukomaarve. Kindla täpsusega arvude puhul on ``BigDecimal`` täpsem kui ``double`` või ``float`` arvud. Näiteks rahaga opereerimisel tuleks pigem kasutada ``BigDecimal`` andmetüüpi. Järgnevalt üks näide ``double``/``float`` andmetüübi ebatäpsusest:
+
+.. code-block:: java
+
+    double d1 = 0.3;
+    double d2 = 0.2;
+    System.out.println("Double:\t 0.3 - 0.2 = " + (d1 - d2));
+    // Double:	 0.3 - 0.2 = 0.09999999999999998
+
+    float f1 = 0.3f;
+    float f2 = 0.2f;
+    System.out.println("Float:\t 0.3 - 0.2 = " + (f1 - f2));
+    // Float:	 0.3 - 0.2 = 0.10000001
+
+    BigDecimal bd1 = new BigDecimal("0.3");
+    BigDecimal bd2 = new BigDecimal("0.2");
+    System.out.println("BigDec:\t 0.3 - 0.2 = " + (bd1.subtract(bd2)));
+    // BigDec:	 0.3 - 0.2 = 0.1
+
+Nagu näha, siis näiliselt lihtsate arvude ``0.3`` ja ``0.2`` vahe on ``double`` ja ``float`` andmetüübi puhul natuke erinev ``0.1``-st. See tuleneb sellest, et neid väärtusi hoitakse kahendsüsteemis. Kahendsüsteemis ei ole kõiki kümnendsüsteemis "mugavaid" arve võimalik esitada täpselt, see tähendab, et mingi osa infost läheb kaduma. Täpsemalt ``double`` andmetüübi kohta võid lugeda `wikipediast<https://en.wikipedia.org/wiki/Double-precision_floating-point_format>`_.
+
+Tuleb meeles pidada, et ``BigInteger`` ja ``BigDecimal`` on mõlemad muutumatud (*immutable*) andmetüübid. See tähendab, et olemasoleva objekti väärtust muuta ei saa.
+
+.. code-block:: java
+
+    BigInteger a = BigInteger.valueOf(2);
+    a.add(BigInteger.ONE);
+    System.out.println(a);  // 2
+
+    a = a.add(BigInteger.ONE);
+    System.out.println(a);  // 3
+
+Primitiivsed andmetüübid (``int``, ``double`` jne) on oluliselt efektiivsemad arvutamisel. Seega, kui täpsus või väga suurte arvude kasutamine pole vajalik, tuleks eelistada primitiivseid andmetüüpe. Näiteks ka rahaga tegeledes on võimalik teha täpseid arvutusi. Kui oluline on sendi täpsus, siis võib kõiki summasid hoida täisarvudena sentides. Seega, kui pangas on kliendil 143 eurot ja 15 senti, siis võib seda esitada kui 14315. Selliselt eelmises näites oleks arvutus ``30 - 20 = 10``, mis tõlgendame kui ``0.10`` eurot.
