@@ -353,7 +353,7 @@ Lisaks põhilistele numbriklassidele (Byte, Short, Long, Integer, Float, Double)
     System.out.println("BigDec:\t 0.3 - 0.2 = " + (bd1.subtract(bd2)));
     // BigDec:	 0.3 - 0.2 = 0.1
 
-Nagu näha, siis näiliselt lihtsate arvude ``0.3`` ja ``0.2`` vahe on ``double`` ja ``float`` andmetüübi puhul natuke erinev ``0.1``-st. See tuleneb sellest, et neid väärtusi hoitakse kahendsüsteemis. Kahendsüsteemis ei ole kõiki kümnendsüsteemis "mugavaid" arve võimalik esitada täpselt, see tähendab, et mingi osa infost läheb kaduma. Täpsemalt ``double`` andmetüübi kohta võid lugeda `wikipediast<https://en.wikipedia.org/wiki/Double-precision_floating-point_format>`_.
+Nagu näha, siis näiliselt lihtsate arvude ``0.3`` ja ``0.2`` vahe on ``double`` ja ``float`` andmetüübi puhul natuke erinev ``0.1``-st. See tuleneb sellest, et neid väärtusi hoitakse kahendsüsteemis. Kahendsüsteemis ei ole kõiki kümnendsüsteemis "mugavaid" arve võimalik esitada täpselt, see tähendab, et mingi osa infost läheb kaduma. Täpsemalt ``double`` andmetüübi kohta võid lugeda `wikipediast <https://en.wikipedia.org/wiki/Double-precision_floating-point_format>`_.
 
 Tuleb meeles pidada, et ``BigInteger`` ja ``BigDecimal`` on mõlemad muutumatud (*immutable*) andmetüübid. See tähendab, et olemasoleva objekti väärtust muuta ei saa.
 
