@@ -40,7 +40,7 @@ Näide C#'ist:
    private string? secondName; // nullable
    
    public void SomeMethod() {
-       secondName = null // ok
+       secondName = null; // ok
        firstName = null; // error
    }
 
