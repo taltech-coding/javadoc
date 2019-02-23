@@ -296,6 +296,8 @@ Kombineerimine
 
 Neid meetodeid saab kombineerida. See on näide Codera lähtekoodist:
 
+``findEntity`` tagastab *Optional*'i.
+
 .. code-block:: java
 
     public ResponseEntity<ExerciseCategory> findExerciseCategoryById(Long id) {
