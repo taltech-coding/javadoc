@@ -230,7 +230,7 @@ Lisaks ``isPresent()`` ja ``get()`` meetoditele, *Optional*'il on hulk teisi mee
 
 Oletame, et meil on Optional<T>. T on mingi tüüp.
 
-*tagastatav tüüp* *meetodi nimi* (*argumendi tüüp ja nimi*)
+*[tagastatav tüüp]* *[meetodi nimi]* (*argumentide tüübid ja nimed*)
 
 T orElse(T defaultObject)
 """""""""""""""""""""""""
