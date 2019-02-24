@@ -240,7 +240,7 @@ Kui *Optional* ei ole tühi, siis tagastab selle objekti, mis on *Optional*'i se
 .. code-block:: java
 
   String resolvedSecondName = person.getSecondName().orElse(""); 
-  // If person.getSecondName returns empty Optional, then resolvedSecondName 
+  // If person.getSecondName returns non-empty Optional, then resolvedSecondName 
   // has the value from Optional, otherwise it is empty string.
   
 T orElseThrow(Lambda that returns an exception)
@@ -277,7 +277,7 @@ Filtreerib Optional'i mingi predikaadi järgi. Kui *Optional*'i sees olev objekt
     Optional<String> filteredSecondNameOptional = person.getSecondName()
         .filter(secondName -> secondName.startsWith("a"));
     
-Kui nimi ei algab 'a' tähega, siis saame tühja Optional'i.
+Kui nimi ei alga 'a' tähega, siis saame tühja Optional'i.
 
 Optional<T2> map(Lambda)
 """"""""""""""""""""""""
