@@ -175,8 +175,8 @@ Pigem halb:
 Parem:
 
 .. code-block:: java
-    private void aMethod() {
 
+   private void aMethod() {
         person.getSecondName().ifPresent(secondName -> methodWithSecondName(secondName));
         // or using method reference
         person.getSecondName().ifPresent(this::methodWithSecondName);
