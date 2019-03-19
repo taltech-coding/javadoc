@@ -34,6 +34,26 @@ Java 8 puhul mõistlik kasutada järgmist:
 BufferedWriter kasutab puhverdamist ning on efektiivne. Puhverdamine tähendab seda, et iga write operatsioon ei kirjuta andmeid kettale. Pigem puhverdatakse andmeid mingi hetk mälus. Kui teatud hulk andmeid on mälus juba puhverdatud (puhver saab täis), kirjutatakse need faili.
 
 Fail pannake peale **try**-plokki kinni.
+
+Olemasolevasse faili kirjutamine.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Olemasolevasse faili kirjutamiseks tuleb esmalt kontrollida, kas see eksisteerib. Faili saab teksti lisada, luues ``BufferedWriter`` objekti koos lisaparameetriga ``StandardOpenOption.APPEND``.
+
+.. code-block:: java
+
+    Path path = Paths.get("somefile.txt");
+    boolean fileExists = Files.exists(path);
+    
+    if (fileExists) {
+        try (BufferedWriter writer = Files.newBufferedWriter(path, StandardOpenOption.APPEND)) {
+            writer.write("Append to text!\n");
+        } catch (IOException e) {
+            System.out.println("IOException:" + e.getMessage());
+            e.printStackTrace();
+        }
+    }
+    
     
     
 PrintWriter
