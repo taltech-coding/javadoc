@@ -1,13 +1,13 @@
-==============================
-Ühiktestimine ehk Unit Testing
-==============================
+===============================
+Üksustestimine ehk Unit Testing
+===============================
 
 Definitsioon
 -------------
 
-Ühiktestimist (*unit testing*) saab kirjeldada väga mitmel moel. Testimise eesmärk üldisemalt on tagada mingi komponendi või süsteemi toimimine vastavalt nõuetele. Ühiktestimise puhul on testitav komponent üks "ühik" (*unit*) suuremast süsteemist. See, mida täpsemalt "ühiku" all mõeldakse, pole rangelt defineeritud. Mõnikord on "ühik" terve klass, teinekord üks funktsioon/meetod jne. "Ühikut" võib proovida defineerida kui kõige väiksemat iseseisvalt töötavat (sõltumatut) tarkvara osa. Testimisega kontrollitakse, kas see "ühik" töötab erinevates olukordades korrektselt. Selleks kirjutatakse ühiktestid. Kui kõik testid õnnestuvad, siis arvatavasti ühik töötab korrektselt (eeldab, et testid on piisavad). Selliselt saab kõik tarkvara väiksed komponendid läbi kontrollida. Kui komponendid töötavad, saab neid hakata kombineerima (et kokku panna suurem komponent ja lõpuks terve tarkvara). Kui mõni test ebaõnnestub, tuleb vastav komponent kõigepealt korda teha.
+Üksustestimist (*unit testing*) saab kirjeldada väga mitmel moel. Testimise eesmärk üldisemalt on tagada mingi komponendi või süsteemi toimimine vastavalt nõuetele. Üksustestimise puhul on testitav komponent üks "üksus" (*unit*) suuremast süsteemist. See, mida täpsemalt "üksuse" all mõeldakse, pole rangelt defineeritud. Mõnikord on "üksus" terve klass, teinekord üks funktsioon/meetod jne. "Üksust" võib proovida defineerida kui kõige väiksemat iseseisvalt töötavat (sõltumatut) tarkvara osa. Testimisega kontrollitakse, kas see "üksus" töötab erinevates olukordades korrektselt. Selleks kirjutatakse üksustestid. Kui kõik testid õnnestuvad, siis arvatavasti üksus töötab korrektselt (eeldab, et testid on piisavad). Selliselt saab kõik tarkvara väiksed komponendid läbi kontrollida. Kui komponendid töötavad, saab neid hakata kombineerima (et kokku panna suurem komponent ja lõpuks terve tarkvara). Kui mõni test ebaõnnestub, tuleb vastav komponent kõigepealt korda teha.
 
-Tuleb tähele panna, et see, kui testid õnnestuvad, ei tähenda tingimata seda, et komponent töötab 100% õigesti. Testide õnnestumine näitab seda, et komponent töötab täpselt nii, nagu ühiktestides kirjeldatud. 
+Tuleb tähele panna, et see, kui testid õnnestuvad, ei tähenda tingimata seda, et komponent töötab 100% õigesti. Testide õnnestumine näitab seda, et komponent töötab täpselt nii, nagu üksustestides kirjeldatud.
 
 .. image:: images/unit_testing_good_code_bad_tests.png
 
@@ -34,7 +34,7 @@ Testimisel kasutatakse *assert*-meetodeid. Neid meetodeid on erinevaid (nendest 
 *Test Driven Development*
 -------------------------
 
-Üks levinud viis testide kasutamiseks on *Test Driven Development* (TDD), mille põhimõtteks on enne kirjutada testid ja pärast seda hakata implementeerima koodi, mis peab läbima kirjutatud testid. Kood on valmis siis, kui ei olda enam suutelised kirjutama uusi teste, millest kood saaks läbi kukkuda.
+Üks levinud viis testide kasutamiseks on *Test Driven Development* (TDD), mille põhimõtteks on enne kirjutada testid ja pärast seda hakata implementeerima koodi, mis peab läbima kirjutatud testid. Kood on valmis siis, kui ei suudeta kirjutada uusi teste, millest kood saaks läbi kukkuda.
 
 -------------------------
 
@@ -42,11 +42,9 @@ Testklassi loomine
 -------------------
 - *IntelliJ*-s on võimalik autogenereerida testklass kui vajutada *alt+enter* klassi nime peal.
 - Uuest aknast saab valida kuhu tehakse *Test Class* ning milliseid meetodeid testitakse.
-- Tavaliselt on vaja lisada ka *Dependency* vastavale testing versioonile, olgu selleks *TestNG*, *JUnit5* või mõni muu.
+- Tavaliselt on vaja lisada ka *Dependency* vastavale kasutatavale testimisraamistikule, olgu selleks *TestNG*, *JUnit5* või mõni muu.
 - Seda saab kergelt teha kui vajutada *fix* nuppu ja valida esimene variant.
 - Teine võimalus *dependency* lisamiseks on *File* -> *Project Setting* -> *Modules*, sealt valida moodul, millele testi *library* külge panna, seejärel valida paremalt poolt *Dependencies* ja rohelise nuppuga lisada testi *library*.
-
-
 
 Testimise näide
 ---------------
