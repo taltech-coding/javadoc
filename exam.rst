@@ -8,13 +8,13 @@ Viited ja info
 
 Javadoc: https://ained.ttu.ee/javadoc/
 
-JDK 8 dokumentatsioon: https://ained.ttu.ee/javadoc/jdk/api/
+JDK 11 dokumentatsioon: https://ained.ttu.ee/javadoc/jdk/api/
 
 OOP vihjeid: https://ained.ttu.ee/javadoc/MostFrequentErrors.html
 
 IntelliJ käivitamisel võita valida "Licence server" ja vajutada "discover server". Ta peaks automaatselt laadima aadressi jms.
 
-IntelliJ jaoks Java asukoht arvutiklassis: ``C:\Program Files\Java\jdk1.8.0_144``.
+Java 11 asukoht arvutiklassis: ``C:\OpenJDK11``. (Java 8 asukoht arvutiklassis: ``C:\Program Files\Java\jdk1.8.0_202``).
 
 Git kasutamine käsureal
 -----------------------
@@ -27,7 +27,7 @@ Kõigepealt tehke ära vajalik seadistus, et saaks gitlabiga ühendust:
 
 Salve kloonimiseks kohalikku arvutisse (``UNIID`` asendage edaspidi enda uniid-ga, näiteks 6-kohaline kombinatsioon ees- ja perenime tähtedest):
 
-``git clone https://gitlab.cs.ttu.ee/iti0202/eksamid/exam3-UNIID.git``
+``git clone https://gitlab.cs.ttu.ee/iti0202-2019/eksamid/exam1-UNIID.git``
 
 **NB!** Kui UNIID sisaldab punkti, siis tuleb see asendada ``-`` märgiga. Näiteks ``ago.luberg`` asemel tuleb kasutada ``ago-luberg``. Kasutage väikeseid tähti.
 
@@ -40,7 +40,7 @@ Selleks, et kontrollida, kas IntelliJ ja Git toimivad, lahenda testülesanne: ki
 
 Kaust Gitis: ``TEST``
 
-Klass: ``ee.ttu.iti0202.exam.hello.HelloWorld``.
+Klass: ``ee.taltech.iti0202.exam.hello.HelloWorld``.
 
 Lahendus peab olema ``main`` meetodis (ehk kui programm käima panna, trükitakse tekst ja programm lõpetab).
 
@@ -72,11 +72,11 @@ Koodi üleslaadimiseks
 
 Liikuge git bash'is loodud kausta (kausta nimes on teie uniid):
 
-``cd exam3-UNIID``
+``cd exam1-UNIID``
 
 Enne, kui faile saab Giti üles panna, on vaja teha kaks sammu. Esiteks tuleb muudetud failid lisada järgmisesse commiti:
 
-``git add EXAM3``
+``git add EXAM1``
 
 seejärel saab teha ``commit``i (commititakse vaid need failid, mis on eelnevalt lisatud):´
 
