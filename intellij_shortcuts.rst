@@ -18,6 +18,8 @@ Koodikirjutamine
 
 :code:`alt` + :code:`shift` + :code:`klikk` - lisab tekstikursori (*caret*) klikitud positsioonile. Mitme tekstikursoriga saab sama teksti kirjutada mitmesse kohta korraga.
 
+:code:`ctrl` + :code:`tühik` - koodisoovitus: esimesel korral pakub kättesaadavaid klasse ja meetodeid, teisel korral pakub lisaks hetkel mitte kättesaadavaid klasse ja meetodeid.
+
 Koodis ringi liikumine
 --------------------------
 
