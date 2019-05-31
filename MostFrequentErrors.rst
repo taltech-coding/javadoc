@@ -32,10 +32,11 @@ Halvad muutujate nimed: ``p``, ``pricedollars``, ``cur``
 
 **Nimetamise konventsioon:** https://ained.ttu.ee/javadoc/CodeStyle.html?highlight=nimed
 
-**Pöörake tähelepanu pakettide nimetamisele! (paljud teevad seal vigu)**
-
-
 **Üldised reeglid:**
+
+* **Paketi nimi:** ainult väikesed tähed lubatud. Kui sisaldab mitu sõna, siis neid kirjutatakse kokku.
+
+Näited: ``student``, ``taltech``, ``superhero``, ``studyprogramme``
 
 * **Klassi nimi:** peab olema nimisõna. Tuleb vältida üldiseid nimesid nagu "Processor", "Parser", "Converter" jms. 
 
@@ -192,7 +193,7 @@ Kui teil on valik, kas kasutada primitiivset andmetüüpi või selle klassi, sii
 Kui kasutate klasse primitiivse tüübi asemel, siis peate silmas pidama:
 
 * Objekt võib olla ``null``.
-* Objekte ei saa võrrelda == operaatoriga.
+* Objekte ei soovitata võrrelda == operaatoriga.
 
 Need klassid on põhimõtteliselt *wrapper*'id:
 
