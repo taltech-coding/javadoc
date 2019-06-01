@@ -13,9 +13,9 @@ Sellest tasub mõelda juba enne koodi kirjutamist, sest järgmine viga on pakett
 Nähtavused
 ----------
 
-**Muutujate ja meetodite nähtavused peavad olema võimalikult madalamad.** 
+**Väljade nähtavused peavad olema võimalikult madalamad.** 
 
-OOP disaini järgi peavad klassid teineteisest teadma võimalikult vähe. Üks oluline printsiip OOP disainis on kapseldamine (``encapsulation``), mille järgi on kõikidel väljadel *(globaalne muutuja)* nähtavus ``private`` ning nendele saab ligi läbi getter'i/setter'i. Kõik väljad ei pea tingimata olema ``private``. Kui teil on vaja muuta välja väärtust alamklassis, siis võib panna väljale nähtavus ``protected`` või ``package-private`` (kui ülem- ja alamklassid on ühes paketis). **Aga ärge pange kunagi väljadele nähtavust** ``public`` **!** ``public``'ud saavad olla ainult ``static final`` muutujad ja selle tingimusega, et te kasutate neid teistes klassides.
+OOP disaini järgi peavad klassid teineteisest teadma võimalikult vähe. Üks oluline printsiip OOP disainis on kapseldamine (``encapsulation``), mille järgi on kõikidel väljadel nähtavus ``private`` ning nendele saab ligi läbi getteri/setteri. Kõik väljad ei pea tingimata olema ``private``. Kui teil on vaja muuta välja väärtust alamklassis, siis võib panna väljale nähtavus ``protected`` või ``package-private`` (kui ülem- ja alamklassid on ühes paketis). **Aga ärge pange kunagi väljadele nähtavust** ``public`` **!** ``public``'ud saavad olla ainult ``static final`` muutujad ja selle tingimusega, et te kasutate neid teistes klassides.
 
 IntelliJ analüüsib teie koodi ja kui väljal/meetodil on liiga kõrge nähtavus, siis ta kohe värvib seda kollaseks ning ütleb, et nähtavus võiks olla madalam.
 
@@ -205,3 +205,66 @@ Need klassid on põhimõtteliselt *wrapper*'id:
 	}
 
 Ainuke koht, kus saab kasutada ainult primitiivsete tüüpide klasse on Generic'ud. Näiteks listid, mapid, optionalid jms. Te ei saa kirjutada nt ``List<int>`` ja peate kirjutama ``List<Integer>``.
+
+Implementatsiooni kasutamine liidese asemel tüübina
+===================================================
+
+Klass peab olema disainitud niimoodi, et teised klassid teaks nii vähe kui võimalik sellest, kuidas see klass sisemiselt töötab. (*abstraheerimine*) Kui te valite välja või meetodi tüübiks liidese implementatsiooni liidese asemel, siis te rikute seda reeglit. Lisaks teil tekib probleeme, kui te hiljem otsustate implementatsioon vahetada teise vastu. Teiste sõnadega annab liidese kasutamine tüübiks teile rohkem vabadust. 
+
+Halb:
+
+.. code-block:: java
+
+	public class Student {
+	    private ArrayList<Grade> grades = new ArrayList<>();
+	    private HashMap<String, Integer> grants = new HashMap<>();
+	    
+	    public ArrayList<Grade> getGrades() {
+	    	return grades;
+	    }
+	    
+	    public HashMap<String, Integer> getGrants() {
+	    	return grants;
+	    }
+	    
+	}
+
+Parem:
+
+.. code-block:: java
+
+	public class Student {
+	    private List<Grade> grades = new ArrayList<>();
+	    private Map<String, Integer> grants = new HashMap<>();
+	    
+	    public List<Grade> getGrades() {
+	    	return grades;
+	    }
+	    
+	    public Map<String, Integer> getGrants() {
+	    	return grants;
+	    }
+	    
+	}
+	
+**Erand: Implementatsioon sobib välja tüübiks, kui te kasutate selle implementatsiooni spetsiifilisi meetodeid. Getteri tüübiks jätke pigem liidest.**
+
+.. code-block:: java
+
+	public class Student {
+	    private ArrayList<Grade> grades = new ArrayList<>();
+	    
+	    public void doSmartThings() {
+	    	...
+		// List<...> does not have ensureCapacity method. Only ArrayList<...> does. 
+		//  If grades list type was just List<Grade>, then you would need to cast 
+		// grades to ArrayList<Grade> to call this method.
+		grades.ensureCapacity(...);
+		...
+	    }
+	    
+	    public List<Grade> getGrades() {
+	    	return grades;
+	    }
+	    
+	}
