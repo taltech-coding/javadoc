@@ -13,7 +13,7 @@ Sellest tasub mõelda juba enne koodi kirjutamist, sest järgmine viga on pakett
 Nähtavused
 ----------
 
-**Väljade nähtavused peavad olema võimalikult madalamad.** 
+**Väljade nähtavused peavad olema võimalikult madalad.** 
 
 OOP disaini järgi peavad klassid teineteisest teadma võimalikult vähe. Üks oluline printsiip OOP disainis on kapseldamine (``encapsulation``), mille järgi on kõikidel väljadel nähtavus ``private`` ning nendele saab ligi läbi getteri/setteri. Kõik väljad ei pea tingimata olema ``private``. Kui teil on vaja muuta välja väärtust alamklassis, siis võib panna väljale nähtavus ``protected`` või ``package-private`` (kui ülem- ja alamklassid on ühes paketis). **Aga ärge pange kunagi väljadele nähtavust** ``public`` **!** ``public``'ud saavad olla ainult ``static final`` muutujad ja selle tingimusega, et te kasutate neid teistes klassides.
 
@@ -207,9 +207,9 @@ Need klassid on põhimõtteliselt *wrapper*'id:
 Ainuke koht, kus saab kasutada ainult primitiivsete tüüpide klasse on Generic'ud. Näiteks listid, mapid, optionalid jms. Te ei saa kirjutada nt ``List<int>`` ja peate kirjutama ``List<Integer>``.
 
 Implementatsiooni kasutamine liidese asemel tüübina
-===================================================
+---------------------------------------------------
 
-Klass peab olema disainitud niimoodi, et teised klassid teaks nii vähe kui võimalik sellest, kuidas see klass sisemiselt töötab. (*abstraheerimine*) Kui te valite välja või meetodi tüübiks liidese implementatsiooni liidese asemel, siis te rikute seda reeglit. Lisaks teil tekib probleeme, kui te hiljem otsustate implementatsioon vahetada teise vastu. Teiste sõnadega annab liidese kasutamine tüübiks teile rohkem vabadust. 
+Klass peab olema disainitud niimoodi, et teised klassid teaks nii vähe kui võimalik sellest, kuidas see klass sisemiselt töötab. (*abstraheerimine*) Kui te valite välja või meetodi tüübiks liidese implementatsiooni liidese asemel, siis te rikute seda reeglit. Lisaks tekib teil probleeme, kui te hiljem otsustate implementatsioon vahetada teise vastu. Teiste sõnadega annab liidese kasutamine tüübina teile rohkem vabadust. 
 
 Halb:
 
@@ -247,7 +247,7 @@ Parem:
 	    
 	}
 	
-**Erand: Implementatsioon sobib välja tüübiks, kui te kasutate selle implementatsiooni spetsiifilisi meetodeid. Getteri tüübiks jätke pigem liidest.**
+**Erand: Implementatsioon sobib välja tüübiks, kui te kasutate selle implementatsiooni spetsiifilisi meetodeid. Getteri tüübiks jätke pigem liides.**
 
 .. code-block:: java
 
