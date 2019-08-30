@@ -10,7 +10,7 @@ Java projekt koonseb tüüpiliselt ühest kaustast, kus asub java lähtekood. Or
 Näide
 -----
 
-.. image:: images/projectStructure.png
+.. image:: ../images/projectStructure.png
 
 Antud projektis on 2 paketti ja 4 klassi. *Animal* paketis on loomade klassid (sinna saab neid ka lisada) ning *person* paketis asub inimese klass. *Main* klassi kasutame koodi jooksutamiseks.
 Näeme, et *Main* klass ei paikne paketis. Väikeste projektide puhul on see OK, kuid üldjuhul peetakse seda halvaks harjumuseks. Kood peaks ikkagi jagunema pakettideks, millest igaühe nimi on unikaalne. Antud näites võiks *Main* klass paikneda näiteks paketis nimega *main*.

@@ -1,9 +1,9 @@
-EX06
-====
+EX06EX06 lahendus
+=================
 
 
 Eesmärk
-----
+-------
 Antud ülesanne eesmärk on realiseerida köök kohvimasinatega. Selle ülesanne puhul on eriti oluline koodi struktureerimine, 
 sest ülesannega võib võimatu keerulisemaks minna, oluline on ikka kindel ja loogiline koodi ülesehitus. Jälgida tuleb kindlasti 
 ka SOLID konseptisooni (https://en.wikipedia.org/wiki/SOLID_(object-oriented_design). Tõsi küll on see, et ülesannel eksisteerib
@@ -11,7 +11,7 @@ ka SOLID konseptisooni (https://en.wikipedia.org/wiki/SOLID_(object-oriented_des
 Vaadates ülesanne teksti, võib märgata unnik alampealkirja, mis võiks viidata mingi klassile. Alustame siis kohvimasinast.
 
 Kohvimasin
-----
+----------
 Kuna ülesannes on nõutud realiseerida 3 tüüpi kohvimasinat, siis üks võimalus kuidas seda teha võiks olla järgmine:
 
 .. code-block:: java
@@ -65,7 +65,7 @@ Paremaks struktuuri loomiseks on mõistlik veepaagist, prügikonteinerist, piima
 kohvikonteinerist teha eraldi klassid ja panna näiteks "storages" pakki.
 
 Veepaak
-----
+-------
 
 Loome klassi
 
@@ -179,7 +179,7 @@ prügikonteineri mahtuvust suurem
 Kapselmasina puhul lisandub ka parameeter "Kapsel" - ehk siis midagi, mille abil saab kohvi saada
     
 Kapsel
-----
+------
     
 Kapsel on mõistlik teha eraldi klassina, mis võiks paikneda ka "storages" pakkis. Kuna kapslid võivad erinevad olla, siis
 konstruktori parameetriks võiks anda enumi jooki. Kuna tingimuses on see, et ühest kapslist saab ühte jooki teha -> siis
@@ -238,7 +238,7 @@ kapsli seis (kas on või ei ole). Seda aitavad teha järgmised meetodid:
 Need on nö kontrollid tänu millele hakkame me kas kohvi või "tühja kovhi" (vett) valmistama.
 
 Exception
-----
+---------
 
 Tundub, et on aeg lõpuks realiseerida makeCoffee() meetodit. Aga teeme enne veel exceptionit, mida hakkame viskama juhul,
 kui mingi ressurss otsa saab. Exception võib sisaldada endas enumit ja olla realiseeritud sarnasel viisil: 
@@ -261,7 +261,7 @@ kui mingi ressurss otsa saab. Exception võib sisaldada endas enumit ja olla rea
       public Reason getReason() {
           return reason;
       }
-}
+    }
     
 Exceptionit on mõistlik hoida pakkis "exception"
     
@@ -357,7 +357,7 @@ Metodis orderCoffee kontrollime, kas kohvimasin millest soovitatakse kohvi saada
 ei saa me kohvi kätte, vaid exceptionit).
  
 Olulised tähelepanekud
----- 
+----------------------
 
 Mugavaks tööks on mõistlik realiseerida kohvimasinate klassedes toString() meetodid. 
 
@@ -392,7 +392,7 @@ Kui teed maini, siis exceptioni püüdmine näeb välja järgmisena:
 Mõtle pakkidest! (näiteks: coffee, kitchen, storages, exception...)
 
 Testid
----- 
+------
 
 Teste saab teha järgmisel viisil: vajuta moodulile -> New Directory -> Name: test. Vajuta tehtud directory peale ja vali
 Mark Directory As -> Test Source Root. Teste tuleb kirjutada igale klassile (v.a kui klassi sees on vaid getter() ja setter()
@@ -462,6 +462,3 @@ Paar näidet:
     }
     
 JÕUDU TÖÖLE ! :)
-  
-
-

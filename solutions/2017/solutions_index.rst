@@ -1,18 +1,20 @@
 Lahendused
 ===========================================
 
-Ülesannete lahendused
+Ülesannete lahendused 2017
 
 .. toctree::
    :maxdepth: 1
    :caption: Ülesanded:
 
-   EX02
-   EX05
-   EX07
-   EX08
-   EX09
-   EX10
-   EX12
+   Ex01
+   Ex02
+   Ex05
+   Ex06
+   Ex07
+   Ex08
+   Ex09
+   Ex10
+   Ex12
    B01
    B03

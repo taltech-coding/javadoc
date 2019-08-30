@@ -107,7 +107,7 @@ Lisage uus pakk uue mooduli alla:
 
 Määrage pakile nimi:
 
-.. image:: /iages/intellij/module_4_package_name.png
+.. image:: /images/intellij/module_4_package_name.png
 
 Punkt paki nimes tähistab hierarhiat. Ehk siis ``ee`` paki all on pakk ``ttu`` jne. Tegelikult luuakse vastavad kaustad failisüsteemi (``src/ee/ttu/iti0202/hello/``).
 

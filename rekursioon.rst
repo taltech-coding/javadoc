@@ -2,10 +2,6 @@
 Rekursioon
 ==========
 
-vaata :doc:`rekursioon`.
-
-.. image:: images/recursion_picture.jpg
-
 Mõiste vms kirjeldamine kasutades mõistet ennast
 
 Programmeerimises: probleemi lahendamiseks kutsub funktsioon ennast välja

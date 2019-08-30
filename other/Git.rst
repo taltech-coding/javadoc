@@ -1,13 +1,13 @@
 Git
 ====
 
-Git'i kasutamise kohta TTÜ-s loe seda: :doc:`GitTtu`
+Git'i kasutamise kohta TTÜ-s loe seda: :doc:`../GitTtu`
 
 Git on versioonihaldustarkvara, mis võimaldab koodis tehtud muudatusi säilitada ning neile ligi pääseda erinevatest arvutitest. 
 Git on võimalik alla laadida järgnevalt leheküljelt: https://git-for-windows.github.io/ (kui operatsioonisüsteemiks on Mac OS X, siis pole vaja enamasti Git'i tarvis installeerida, see on juba arvutis vaikimisi olemas koos Xcode'iga. Olemasolu saab kontrollida, kui kirjutada Terminali *git --version*).
 Windows'is on käskude jooksutamiseks *Git Bash*, Mac OS X'is *Terminal*.
 
-.. image:: /images/git.png
+.. image:: ../images/git.png
 
 Esmakordsel *Git Bashi*' käivitamisel tuleb kindlasti seadistada e-posti aadress, kuhu hakatakse *Git*'iga seotud teateid saatma. Lihtsaim moodus on kirjutada käsureale järgnev käsk:
 
@@ -110,7 +110,7 @@ Harud
 ------
 Harusid kasutatakse, et viia paraleelselt sisse muudatusi, mis on teineteisest isoleeritud. *master* haru on vaikimisi haru repositooriumi loomisel. Teisi harusid on mõistlik kasutada arendamiseks ja seejärel *master* haruga ühendamiseks (*merge*), kui arendus on lõpetatud.
 
-.. image:: /images/branches.png
+.. image:: ../images/branches.png
 
 Allikas: https://www.atlassian.com/git/images/tutorials/collaborating/using-branches/01.svg
 

@@ -54,4 +54,4 @@ Tulemusena peaks tulema e-maili aadressile (mail.ttu.ee) kiri õnnestumise või 
   
 Probleemide vältimiseks tuleks alati enne koodimuudatusi teha repositooriumile ``git pull``. See tõmbab uusima versiooni serverist. Kui see samm jääb tegemata, võib juhtuda, et failide seis arvutis läheb konflikti serveris oleva seisuga.
 
-Vaata rohkem Giti kohta: :doc:`Git`
+Vaata rohkem Giti kohta: :doc:`other/Git`

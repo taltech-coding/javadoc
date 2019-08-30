@@ -15,3 +15,5 @@ See võib aidata neid, kes on eelnevalt Pythoniga kokku puutunud ning tahaksid n
    if
    loop
    array
+   map
+   method
