@@ -78,7 +78,7 @@ Enne, kui faile saab Giti üles panna, on vaja teha kaks sammu. Esiteks tuleb mu
 
 ``git add EXAM1``
 
-seejärel saab teha ``commit``i (commititakse vaid need failid, mis on eelnevalt lisatud):´
+seejärel saab teha commiti (commititakse vaid need failid, mis on eelnevalt lisatud): 
 
 ``git commit -m "lahendus v1"``
 
@@ -87,8 +87,3 @@ Eelneva käsuga lisatakse commitides kohe ka kommentaar.
 Kui commit on tehtud, on failid pandud lokaalsesse salve (kohalikus arvutis). Selleks, et failid jõuaks serverisse ja meie neid hinnata saaks, tuleb nad üles laadida:
 
 ``git push origin master``
- 
- 
-
-
-

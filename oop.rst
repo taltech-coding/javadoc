@@ -26,3 +26,4 @@ See leht koondab objekt-orienteeritud programmeerimisega seonduvad materjalid
    oopSpecialMethods
    oopInheritance
    oop_enum
+   oop_solid

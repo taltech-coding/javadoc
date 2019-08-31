@@ -1,5 +1,5 @@
-EX07 lahendus.
-==============
+EX07 lahendus
+=============
 
 Sissejuhatus
 ------------
@@ -122,7 +122,7 @@ Analoogselt luuakse ka subjecte. Pärast igat aine lisamist, kontrollitakse, kas
 valmis ja arvutatakse EAPde kogus. 
 
 
-.. image:: ../images/ex09.png
+.. image:: ../../images/ex09.png
   
 
 

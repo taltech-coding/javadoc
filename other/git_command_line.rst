@@ -27,7 +27,7 @@ Enne, kui faile saab Giti üles panna, on vaja teha kaks sammu. Esiteks tuleb mu
 
 ``git add KT``
 
-seejärel saab teha ``commit``i (commititakse vaid need failid, mis on eelnevalt lisatud):´
+seejärel saab teha commiti (commititakse vaid need failid, mis on eelnevalt lisatud):
 
 ``git commit -m "lahendus v1"``
 
@@ -39,5 +39,3 @@ Kui commit on tehtud, on failid pandud lokaalsesse salve (kohalikus arvutis). Se
  
  
 IntelliJ jaoks Java asukoht arvutiklassis: ``C:\Program Files\Java\jdk1.8.0_144``.
-
-
