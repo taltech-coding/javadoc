@@ -7,14 +7,14 @@ Lahendused
    :maxdepth: 1
    :caption: Ülesanded:
 
-   Ex01
-   Ex02
-   Ex05
-   Ex06
-   Ex07
-   Ex08
-   Ex09
-   Ex10
-   Ex12
-   B01
-   B03
+   ex01
+   ex02
+   ex05
+   ex06
+   ex07
+   ex08
+   ex09
+   ex10
+   ex12
+   b01
+   b03

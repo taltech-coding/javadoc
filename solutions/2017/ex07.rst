@@ -1,5 +1,5 @@
-EX07 lahendus.
-==============
+EX07 lahendus
+=============
 
 Sissejuhatus
 ------------

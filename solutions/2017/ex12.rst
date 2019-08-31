@@ -1,5 +1,5 @@
-EX12 - rekursiivne otsing
-=========================
+EX12 lahendus
+=============
 
 Sissejuhatus
 ------------

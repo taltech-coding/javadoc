@@ -1,5 +1,5 @@
-EX10 lahendus.
-==============
+EX10 lahendus
+=============
 
 Üldidee: Jaotame mängu kolmeks osaks:
 -------------------------------------
