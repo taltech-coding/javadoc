@@ -16,7 +16,7 @@ Esimeseks tuleks luua Subject.java klass, mis on abstraktne. Abstrakne klass on 
 mis ei tee midagi. See on kasulik, kuna Subject klass, on selles ülesandes ülemklass.
 Kõik Subject klassi meetotid, peavad ka olema abstraktsed.
 
-**ObtionalSubject, CompulsorySubject ja Thesis**
+**OptionalSubject, CompulsorySubject ja Thesis**
 
 Need klassid on peaaegu identsed. Kõige pealt tuleb klassi loomisel neid extendida ehk 
 muuta neid alamklassideks. Alamklass pärib oma omadused ülemklassilt. Nendes meetodites
