@@ -100,4 +100,4 @@ Tingimuslausega saab kontrollida, kas mingit osa koodist käivitatakse.
 
 
 
-.. generated using "python3 rst_table.py if_helper.txt if.rst"
+.. generated using "python3 rst-table.py if-helper.txt if.rst"

@@ -7,10 +7,10 @@ See leht koondab JavaFX-ga seonduvad materjalid
    :maxdepth: 2
    :caption: Teemad:
    
-   JavaFXGeneral
-   JavaFXBasicStructure
-   JavaFXLayout
-   JavaFXComponents
-   JavaFXProperty
-   JavaFXAnimation
-   JavaFXEventHandler
+   javafx-general
+   javafx-basic-structure
+   javafx-layout
+   javafx-components
+   javafx-property
+   javafx-animation
+   javafx-event-handler

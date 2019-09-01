@@ -83,4 +83,4 @@ Enamik matemaatlistest tehetest on Pyhonis ja Javas sarnased:
 
 
 
-.. generated using "python3 table_generator.py PvsJava_math.txt math.rst"
+.. generated using "python3 table-generator.py pvs-java-math.txt math.rst"

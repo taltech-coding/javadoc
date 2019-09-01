@@ -150,6 +150,6 @@ Sõnede võrdlus kahes keeles.
 +----------------------------------------------------------+-----------------------------------------------------------+
 
 
-Vaata sõnede kohta: :doc:`../String`
+Vaata sõnede kohta: :doc:`../string`
 
-.. generated using "python3 table_generator.py string_helper.txt string.rst"
+.. generated using "python3 table-generator.py string-helper.txt string.rst"

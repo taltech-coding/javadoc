@@ -1,7 +1,7 @@
 Git
 ====
 
-Git'i kasutamise kohta TTÜ-s loe seda: :doc:`../GitTtu`
+Git'i kasutamise kohta TTÜ-s loe seda: :doc:`../git-ttu`
 
 Git on versioonihaldustarkvara, mis võimaldab koodis tehtud muudatusi säilitada ning neile ligi pääseda erinevatest arvutitest. 
 Git on võimalik alla laadida järgnevalt leheküljelt: https://git-for-windows.github.io/ (kui operatsioonisüsteemiks on Mac OS X, siis pole vaja enamasti Git'i tarvis installeerida, see on juba arvutis vaikimisi olemas koos Xcode'iga. Olemasolu saab kontrollida, kui kirjutada Terminali *git --version*).

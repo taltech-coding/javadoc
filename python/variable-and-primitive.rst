@@ -66,4 +66,4 @@ Javas esinevate *primitive* muutujate vaikeväärtused ja min/max väärtused:
 
 
 
-.. generated using "python3 table_generator.py PvsJava_variable.txt variable-and-primitive.rst"
+.. generated using "python3 table-generator.py pvs-java-variable.txt variable-and-primitive.rst"

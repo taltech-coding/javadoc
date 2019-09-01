@@ -16,9 +16,9 @@ Lisaks IntelliJ-le erinevaid IDE-sid, millega võib Javat kirjutada:
    :maxdepth: 2
    :caption: Teemad:
    
-   intellij_tutorial
-   intellij_shortcuts
-   intellij_git
-   intellij_checkstyle
-   intellij_project_output
-   intellij_testing
+   intellij-tutorial
+   intellij-shortcuts
+   intellij-git
+   intellij-checkstyle
+   intellij-project-output
+   intellij-testing

@@ -7,14 +7,14 @@ Selle lehel on kategoriseerimata teemad.
    :maxdepth: 2
    :caption: Teemad:
 
-   Bugs
-   JavaFileRun
-   JavaProjectStructure
-   Javadoc
-   Complexity
+   bugs
+   java-file-run
+   java-project-structure
+   javadoc
+   complexity
    terminid
-   Git
-   git_command_line
+   git
+   git-command-line
    gitlab
-   readingInputFromWeb
+   reading-input-from-web
    exam

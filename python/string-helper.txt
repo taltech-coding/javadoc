@@ -247,4 +247,4 @@ jutumärkide (ülakomad) vahele.
 
 ---.
 
-Vaata sõnede kohta: :doc:`../String`
+Vaata sõnede kohta: :doc:`../string`

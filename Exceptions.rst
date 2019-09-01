@@ -190,4 +190,4 @@ Teine viis erindit töödelda on see meetodist välja visata (*throw*). Niimoodi
 
 Antud näites on deklareeritud massiiv, mille suurus on 4, kuid on proovitud välja kutsuda selle massiivi 6-ndat elementi. Programmi käivitades ilmnebki antud *ArrayIndexOutOfBoundsException*.
 
-.. include:: oopUserExceptions.rst
+.. include:: oop-user-exceptions.rst
