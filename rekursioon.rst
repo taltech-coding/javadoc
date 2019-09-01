@@ -62,7 +62,7 @@ Minimaalne kood, mis kasutab rekursiivset väljakutset:
         }
     }
     
-Kood sisaldab lõputut tsüklit - meetod f() kutsub ennast lõputult välja. Käivitades saame :code:`StackOverflowError`'i. See tuleneb sellest, et iga meetodi olek jäätakse meelde. Kui kõigepealt kutsutakse välja f(), siis jääb main() meetodi olek meelde. Esimene rekursiivne väljakutse jätab välimise f() meetodi oleku meelde jne. Kuigi antud näites olek on minimaalne (muutujaid jms ei sisalda), siis sellegipoolest saab mingi hetk pinu (*stack*) täis.
+Kood sisaldab lõputut tsüklit - meetod f() kutsub ennast lõputult välja. Käivitades saame :code:`StackOverflowError`'i. See tuleneb sellest, et iga meetodi olek jäetakse meelde. Kui kõigepealt kutsutakse välja f(), siis jääb main() meetodi olek meelde. Esimene rekursiivne väljakutse jätab välimise f() meetodi oleku meelde jne. Kuigi antud näites olek on minimaalne (muutujaid jms ei sisalda), siis sellegipoolest saab mingi hetk pinu (*stack*) täis.
 
 .. code-block:: java
 
