@@ -16,7 +16,7 @@ Sellelt lehelt leiad Javaga seonduvad õppematerjalid.
    code-style
    code-modularity
    javadoc2
-   muutuja
+   variable
    primitive-data-types
    numeric-types
    date-time
@@ -39,7 +39,7 @@ Sellelt lehelt leiad Javaga seonduvad õppematerjalid.
    unit-testing
    javafx
    jar
-   rekursioon
+   recursion
    solutions/2017/index
    other/index
    
