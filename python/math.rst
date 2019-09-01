@@ -1,7 +1,7 @@
 Matemaatika
 ===========
 
-Enamik matemaatlistest tehetest on mõlemas Pyhonis ja Javas sarnased:
+Enamik matemaatlistest tehetest on Pyhonis ja Javas sarnased:
 
 +------------------+------------------------------------------+------------------------------------------------------------------+
 | Tehe             | Python                                   | Java                                                             |
