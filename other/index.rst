@@ -1,6 +1,8 @@
 Muu
 ===
 
+Selle lehel on kategoriseerimata teemad.
+
 .. toctree::
    :maxdepth: 2
    :caption: Teemad:

@@ -4,7 +4,7 @@ Lahendused
 Ülesannete lahendused 2017
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :caption: Ülesanded:
 
    ex01
