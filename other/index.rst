@@ -2,6 +2,7 @@ Muu
 ===
 
 .. toctree::
+   :maxdepth: 2
    :caption: Teemad:
 
    Bugs
