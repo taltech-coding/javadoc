@@ -6,7 +6,7 @@ siis selleks on kaustas üks skript. Sellele saab ette anda natuke mugavamal kuj
 
 Käivitamine:
 
-``python3 rst-table.py sisend.txt väljund.rst``
+``python3 rst_table.py sisend.txt väljund.rst``
 
 Sisendi kirjeldus
 -----------------
@@ -61,7 +61,7 @@ Näited on siinsamas kaustas ``example-helper.txt`` ja ``example.rst``.
     
 Käivitame järgmise käsu:
 
-``python3 rst-table.py example-helper.txt example.rst``
+``python3 rst_table.py example-helper.txt example.rst``
 
 Tulemus. ``example.rst``:
 
@@ -87,7 +87,7 @@ Tulemus. ``example.rst``:
 
     Peale tabelit saab veel mingi teksti panna, näiteks *siin* ja **siin**
 
-    .. generated using "python3 rst-table.py example-helper.txt example.rst"
+    .. generated using "python3 rst_table.py example-helper.txt example.rst"
     
 Formaaditud kujul:
 
@@ -111,4 +111,4 @@ Lehe päis
 
 Peale tabelit saab veel mingi teksti panna, näiteks *siin* ja **siin**
 
-.. generated using "python3 rst-table.py example-helper.txt example.rst"
+.. generated using "python3 rst_table.py example-helper.txt example.rst"

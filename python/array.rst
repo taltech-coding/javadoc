@@ -91,4 +91,4 @@ Järjend, massiiv
 
 Loe massiivi kohta siit: :doc:`../array`.
 
-.. generated using "python3 rst-table.py array-helper.txt array.rst"
+.. generated using "python3 rst_table.py array-helper.txt array.rst"

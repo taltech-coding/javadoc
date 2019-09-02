@@ -150,4 +150,4 @@ Tsüklid
 Loe tsüklite kohta siit: :doc:`../loop`.
 
 
-.. generated using "python3 rst-table.py loop-helper.txt loop.rst"
+.. generated using "python3 rst_table.py loop-helper.txt loop.rst"
