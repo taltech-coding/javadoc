@@ -76,7 +76,7 @@ Nagu on juba mitmeid kordi mainitud: klass on plaan või skeem, mille järgi obj
 
 Maja klass ning konstruktor.
 
-.. image:: images/oopBlueprint.jpg
+.. image:: images/oop_blueprint.jpg
      :width: 200px
      :height: 200px
  
@@ -94,7 +94,7 @@ Nüüd kui meil on joonis olemas, saab maju ehitama hakata joonise järgi. Samas
 
 Ühe maja isendi loomine objektina.
 
-.. image:: images/oopObject.jpg
+.. image:: images/oop_object.jpg
          :width: 200px
          :height: 100px
  

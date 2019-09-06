@@ -39,7 +39,7 @@ Kui me ei soovi *HBoxi* loomisel kohe komponente kaasa anda, võime hiljem pöö
 
 Tulemus:
 
-.. image:: images/Hbox.PNG
+.. image:: images/hbox.png
 
 .. code-block:: java
 
@@ -60,7 +60,7 @@ Tulemus:
 
 Tulemus:
 
-.. image:: images/Vbox.PNG
+.. image:: images/vbox.png
 
 *GridPane*
 ==========
@@ -97,7 +97,7 @@ Tulemus:
 
 Tulemus, esimesel pildil on abijooned nähtavaks pandud:
 
-.. image:: images/Gridpane.PNG
+.. image:: images/gridpane.png
 
 
 *FlowPane*
@@ -122,7 +122,7 @@ Tulemus, esimesel pildil on abijooned nähtavaks pandud:
 
 Lisatud kujundid paigutatakse vahetult teineteise järgi ning ruumi täitumisel jätkatakse järgmiselt realt.
 
-.. image:: images/Flowpane.PNG
+.. image:: images/flow_pane.png
 
 Vaikimisi on orientatsioon horisontaalne. Orientatsiooni muutmiseks saab kasutada meetodit **setOrientation**:
 
@@ -154,7 +154,7 @@ Vaikimisi on orientatsioon horisontaalne. Orientatsiooni muutmiseks saab kasutad
 
 Koodi käivitamisel näeme, et on tekkinud väikesed vahed, kuna suur punane ristkülik on veidi laiem kui väike kollane. Kontrollimiseks võib lisada juurde ka teistsuguseid elemente, näiteks *Label*'eid.
 
-.. image:: images/Tilepane.PNG
+.. image:: images/tilepane.png
 
 *StackPane*
 ===========
@@ -177,7 +177,7 @@ Koodi käivitamisel näeme, et on tekkinud väikesed vahed, kuna suur punane ris
 
 Tulemus:
 
-.. image:: images/Stackpane.PNG
+.. image:: images/stackpane.png
 
 *AnchorPane*
 ============
@@ -201,14 +201,14 @@ Tulemus:
 
 Akna suuruse muutmisel püsib Label alati alumises nurgas, kui aken on piisavalt suur, et teda ära mahutada.
 
-.. image:: images/Anchorpane.PNG
+.. image:: images/anchor_pane.png
 
 BorderPane
 ==========
 
 **BorderPane** jaotab akna viieks piirkonnaks, kuhu komponente saab paigutada:
 
-.. image:: images/Borderpane.PNG
+.. image:: images/border_pane.png
 
 Lisada võib nii komponente (*Label*, *Button* jne) kui ka paane.
 
@@ -422,7 +422,7 @@ Kasutame *BorderPane*'i, et ühendada mõned eelnevalt loodud paanid ühtseks ka
 
 Tulemus:
 
-.. image:: images/Smileysweeper.PNG
+.. image:: images/smiley_sweeper.png
 
 Kuna me kasutasime näites ruudustiku loomiseks *TilePane*'i, muutub akna suuruse muutmisel ka ruudukeste paigutus. Reaalselt sellise mängu loomisel oleks *GridPane* mõistlikum valik.
 

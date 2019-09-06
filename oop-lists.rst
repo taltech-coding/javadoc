@@ -53,7 +53,7 @@ Analoogiliselt saab teha ka teisi objektide kogumeid.
 
 Antud klassidel on selline hierarhia:
 
-.. image:: images/classHierarchy.png
+.. image:: images/class_hierarchy.png
 
 
 Objekti tüübi tuvastamine

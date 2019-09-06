@@ -71,4 +71,4 @@ Siis saab Javadoci genereerida käsuga *javadoc*.
 
 Javadoc genereerib samasse kausta vajalikud HTML, JavaScript ja CSS failid. Dokumentatsiooni saab vaadata, avades lehe index.html
 
-.. image:: images/boardingpass.png
+.. image:: images/boarding_pass.png

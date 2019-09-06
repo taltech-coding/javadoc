@@ -55,7 +55,7 @@ Võimalik on luua ka oma erandeid. Vt `Kasutaja defineeritud erind`_.
 
 Erindid (nagu ka kõik muud klassid) moodustavad hierarhia, mis on kujutatud järgneval pildil:
 
-.. image:: /images/ExceptionClasses.png
+.. image:: /images/exception_classes.png
 
 Error-tüüpi erindid on üldiselt väga tõsised ning nende tekkimisel on raske programmi tööd jätkata.
 

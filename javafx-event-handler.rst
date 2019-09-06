@@ -13,7 +13,7 @@ JavaFX-is on iga tegevus mingi notifikatsioon. Kui kasutaja vajutab mingit nuppu
 - KEY_RELEASED
 - KEY_TYPED
 
-.. image:: images/eventTypes.gif
+.. image:: images/event_types.gif
 
 Koodi näide, kus tehakse nupp, mille vajutamisel prindib "Hello World": 
 

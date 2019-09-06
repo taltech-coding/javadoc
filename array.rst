@@ -84,7 +84,7 @@ Kahemõõtmelise massiivi loomine:
     
 See on nagu tabel, milles on 6 rida ning 5 tulpa. 
 
-.. image:: /images/multidimensional.png
+.. image:: /images/multi_dimensional.png
 
 Näiteks soovides lisada esimesse ritta väärtusi, saab seda teha nii:
 
