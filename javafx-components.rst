@@ -97,7 +97,7 @@ Toggle button
 
 Tulemus:
 
-.. image:: images/togglebutton.png
+.. image:: images/toggle_button.png
 
 Ka tumblernuppude jaoks kehtivad Labeli juures kirjeldatud meetodid.
 
@@ -137,7 +137,7 @@ Nuppude grupi puhul saab juhtida programmi tööd vastavalt sellele, milline nup
 
 Tulemus:
 
-.. image:: images/togglegroup.png
+.. image:: images/toggle_group.png
 
 Radio button
 ============
