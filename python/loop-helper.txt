@@ -233,4 +233,4 @@ Või kasutades *stream*'i/lambdat:
         
 ---.
 
-Loe tsüklite kohta siit: :doc:`../Loop`.
+Loe tsüklite kohta siit: :doc:`../loop`.

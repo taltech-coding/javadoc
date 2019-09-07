@@ -37,7 +37,7 @@ millele rakendatakse hajumisega üleminekut. Loodav *FadeTransition* kestab 3 se
 *Path*'iga ehk teekonnaga üleminek
 -----------------------------------
 
-.. image:: images/JavaFXPathTransition.png
+.. image:: images/javafx_path_transition.png
 
 *Path*'iga üleminek liigutab graafi sõlme mööda määratud teed ühest otsast teise etteantud aja vältel. Järgnev kood liigutab oranži ümarate nurkadega ristkülikut, mööda loodud teed.
 
@@ -74,7 +74,7 @@ setNode() abil oranž ristkülik. Meetod *setOrientation* määrab kuidas riskü
 Paralleelne üleminek
 --------------------
 
-.. image:: images/JavaFXParallelTransition.png
+.. image:: images/javafx_parallel_transition.png
 
 Paralleelne üleminek paneb tööle mitu *transition*'it samaaegselt.
 Meetoditega *setTranslateX()* ning *setTranslateY()* antakse tumesinisele ristkülikule ette esialgsed koordinaadid. Antud näites pannakse korraga tööle tervelt neli erinevat üleminekut, mille hulgas on ka eelnevalt vaadeldud *FadeTransition*. Lisaks sellele luuakse ka üleminekutel põhinevad animatsioonid, mis muudavad risküliku suurust (*ScaleTransition*),  asukohta (*TranslateTransition*) ning
@@ -192,7 +192,7 @@ Järjestikuse ehk *sequential* ülemineku korral pannakse mitu erinevat animatsi
 *Timeline* animatsioonid
 ------------------------
 
-.. image:: images/JavaFXTimeline.png
+.. image:: images/javafx_timeline.png
 
 Animatsioone iseloomustab objektide omaduste, näiteks suuruse, asukoha ning värvi muutumine ajas. *Timeline*'i abil saab neid omadusi muuta erinevatel ajahetkedel vastavalt enda soovidele. *JavaFX* toetab ka *key frame* animatsiooni, mis lubab määrata alg- ning lõppkaadri, millel on kindlad ajahetked, nende kahe staadiumi vahele jäävaid olulisi kaadreid on samuti võimalik deklareerida, selle alusel saab automaatselt kuvada animatsioone, mida võib vastavalt enda tahtele, kas peatada, uuesti käivitada, panna tööle vastupidises suunas või korrata.
 Järgnevas koodinäites on *timeline*, mille abil animeeritakse punase ristküliku liikumist kahesaja piksli võrra paremale, animatsiooni kestuseks on 500 millisekundit.

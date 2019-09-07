@@ -7,39 +7,39 @@ Sellelt lehelt leiad Javaga seonduvad õppematerjalid.
    :maxdepth: 2
    :caption: Sisukord:
    
-   InstallingJava
-   HelloWorld
-   JavaFileStructure
-   GitTtu
+   installing-java
+   hello-world
+   java-file-structure
+   git-ttu
    intellij
    python/index
-   CodeStyle
-   CodeModularity
-   Javadoc2
-   Muutuja
-   PrimitiveDataTypes
-   NumericTypes
-   DateTime
-   BooleanDataType
-   ConditionalStatements
-   Loop
+   code-style
+   code-modularity
+   javadoc2
+   variable
+   primitive-data-types
+   numeric-types
+   date-time
+   boolean-data-type
+   conditional-statements
+   loop
    stream
-   Method
-   String
-   Exceptions
+   method
+   string
+   exceptions
    input
-   input_file
-   output_file
-   Array
+   input-file
+   output-file
+   array
    collections
-   Package
+   package
    oop
-   MostFrequentErrors
+   most-frequent-errors
    oop-optional
-   unit_testing
+   unit-testing
    javafx
    jar
-   rekursioon
+   recursion
    solutions/2017/index
    other/index
    

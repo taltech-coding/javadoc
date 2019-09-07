@@ -40,7 +40,7 @@ Java-faili saab käivitada käsurealt (command line). Selleks tuleb fail kõigep
 **Käsureal:** tuleb liikuda õigesse kausta ning siis saab Java-faili kompileerida käsuga
 *javac failinimi.java*
 
-.. image :: ../images/Javac.PNG
+.. image :: ../images/javac.png
 
 Alternatiivselt ei pea faili kompileerimiseks liikuma sinna kausta, vaid võib kasutada faili pathi. Sellisel juhul peab failis paki ära defineerima.
 Näiteks kui faili path on *src/maths/mathsoperations/Add.java* peab faili algusesse kirjutama
@@ -51,17 +51,17 @@ Näiteks kui faili path on *src/maths/mathsoperations/Add.java* peab faili algus
 
 Siis saab faili kompileerida
 
-.. image :: ../images/JavacPackage.PNG
+.. image :: ../images/javac_package.png
 
 Siis tuleb programm käivitada.
 
 **Käsureal:** saab Java-faili käivitada käsuga 
 *java failinimi*
 
-.. image :: ../images/JavaAdd.PNG
+.. image :: ../images/java_add.png
 
 Kui kompileerisid faili paki sees, pead faili käivitamisel kasutama failinimena *package1.package2.Main*.
 
 Näiteks:
 
-.. image :: ../images/JavaAddPackage.PNG
+.. image :: ../images/java_add_package.png

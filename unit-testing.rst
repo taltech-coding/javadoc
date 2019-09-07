@@ -236,7 +236,7 @@ Allpool olev testklassis kasutatakse *TestNG* raamistikku (kuigi ka *JUnit* või
 
 Eelnevas koodinäites on kasutatud mitmes kohas *assertEquals* koos true/false võrdlusega. Õigem oleks kasutada kohe kas *assertTure* või *assertFalse* (paaris kohas on seda tehtud ka).
   
-.. image:: images/unitTesting.png
+.. image:: images/unit_testing.png
 
 
 **Test NG Documentatsioon** http://testng.org/doc/documentation-main.html

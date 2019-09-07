@@ -8,7 +8,7 @@ Mooduli loomine
 Pärast Git-iga üendamist luuakse automaatselt kaust iti0202.
 *Clickides* parema hiireklõpsuga selle peale, tuleb valida **New**, mille alt **Module**.
 
-.. image:: images/Module1.png
+.. image:: images/module1.png
 
 Pärast seda avaneb aken, kus saab valida erinevaid Java *framework*-e, aga soovitatav on alguses
 neid mitte muuta. Pärast valiku tegemist vajutada **Next** nuppu.

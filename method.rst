@@ -59,7 +59,7 @@ Tagastustüüp on *List<Double>*, seega antud funktsioon tagastab *List*-tüüpi
    :maxdepth: 2
    :caption: Alamteemad:
    
-   VoidMethod
-   MethodArguments
-   MethodReturnValue
-   MethodOverload
+   void-method
+   method-arguments
+   method-return-value
+   method-overload

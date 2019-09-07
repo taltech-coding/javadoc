@@ -55,7 +55,7 @@ Võimalik on luua ka oma erandeid. Vt `Kasutaja defineeritud erind`_.
 
 Erindid (nagu ka kõik muud klassid) moodustavad hierarhia, mis on kujutatud järgneval pildil:
 
-.. image:: /images/ExceptionClasses.png
+.. image:: /images/exception_classes.png
 
 Error-tüüpi erindid on üldiselt väga tõsised ning nende tekkimisel on raske programmi tööd jätkata.
 
@@ -190,4 +190,4 @@ Teine viis erindit töödelda on see meetodist välja visata (*throw*). Niimoodi
 
 Antud näites on deklareeritud massiiv, mille suurus on 4, kuid on proovitud välja kutsuda selle massiivi 6-ndat elementi. Programmi käivitades ilmnebki antud *ArrayIndexOutOfBoundsException*.
 
-.. include:: oopUserExceptions.rst
+.. include:: oop-user-exceptions.rst

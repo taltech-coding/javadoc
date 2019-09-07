@@ -5,7 +5,7 @@
 Allpool olev kood loob rakenduse, mis kuvab kasutajaliidese, millel on nupp, sellele vajutades prinditakse konsooli "*Hello World*", 
 tegevust saab korrata mitu korda.
 
-.. image:: images/JavaFXHelloWorldUI.png
+.. image:: images/javafx_helloworld_ui.png
 
 Koodinäide
 ----------
@@ -87,7 +87,7 @@ Kuidas infot säilitatakse?
 - Antud juhul on *root node*'il üks *child node* - nupp.
 - Nupul on tekst ning *event handler*, mille abil prinditakse tekst konsooli, kui nuppu vajutatakse.
 
-.. image:: images/JavaFXHelloWorldSceneGraph.png
+.. image:: images/javafx_helloworld_scene_graph.png
 
 
 JAR fail

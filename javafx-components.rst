@@ -23,7 +23,7 @@ Label
     
 Tulemus:
 
-.. image:: images/Labels.PNG
+.. image:: images/labels.png
 
 Kasulikud meetodid
 ------------------
@@ -69,7 +69,7 @@ Button
 
 Tulemus:
 
-.. image:: images/Buttons.PNG
+.. image:: images/buttons.png
 
 Nupuvajutuse töötlemine
 -----------------------
@@ -97,7 +97,7 @@ Toggle button
 
 Tulemus:
 
-.. image:: images/Togglebutton.PNG
+.. image:: images/toggle_button.png
 
 Ka tumblernuppude jaoks kehtivad Labeli juures kirjeldatud meetodid.
 
@@ -137,7 +137,7 @@ Nuppude grupi puhul saab juhtida programmi tööd vastavalt sellele, milline nup
 
 Tulemus:
 
-.. image:: images/Togglegroup.PNG
+.. image:: images/toggle_group.png
 
 Radio button
 ============
@@ -151,7 +151,7 @@ Radio button
 
 Tulemus:
 
-.. image:: images/Radiobutton.PNG
+.. image:: images/radio_button.png
 
 Grupeerimine ja valiku töötlemine käib samuti ToggleGroup objekti kaudu. Kasutada saab kõiki eelpoolnimetatud meetodeid. Raadionupul pole konstruktorit, millega saab pildi lisada, kuid setGraphic meetodiga saab seda sellegipoolest teha.
 
@@ -178,7 +178,7 @@ Checkboxi väärtus võib olla määratud või määramata. Selleks, et väärtu
 
 Tulemus:
 
-.. image:: images/Checkbox.PNG
+.. image:: images/checkbox.png
 
 Väärtuse saab kätte, kasutades meetodit **isSelected**:
 
@@ -244,7 +244,7 @@ Kasutamise demonstreerimiseks võib lisada sellise koodijupi:
 
 Nupu vajutamisel kuvatakse ekraanil valitud elemendi väärtus.
 
-.. image:: images/Choicebox.PNG
+.. image:: images/choicebox.png
 
 Combobox
 ========
@@ -263,7 +263,7 @@ Combobox
 
 Välimuselt on ChoiceBox ja ComboBox peaaegu identsed. Kui elemente on rohkem, tekib ComboBoxile veoriba:
 
-.. image:: images/Combobox.PNG
+.. image:: images/combobox.png
 
 Text field
 ==========
@@ -299,7 +299,7 @@ Kasulikud meetodid
 
 Tulemus:
 
-.. image:: images/Textfield.PNG
+.. image:: images/textfield.png
 
 Password field
 ==============
@@ -315,14 +315,14 @@ Parooliväli erineb tavalisest tekstiväljast selle poolest, et tema sisu on var
 
 Tulemus:
 
-.. image:: images/password.PNG
+.. image:: images/password.png
 
 Kõik tekstivälja meetodid töötavad samamoodi ka paroolivälja puhul.
 
 Kasutajaliidese näidis (registreerimisvorm)
 ===========================================
 
-.. image:: images/Registrationform.PNG
+.. image:: images/registration_form.png
 
 .. code-block:: java
 

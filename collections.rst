@@ -7,7 +7,7 @@ See leht koondab andmestruktuurid
    :maxdepth: 2
    :caption: Teemad:
    
-   List
-   ListList
-   Set
+   list
+   list-list
+   set
    map

@@ -19,7 +19,7 @@ OOP disaini järgi peavad klassid teineteisest teadma võimalikult vähe. Üks o
 
 IntelliJ analüüsib teie koodi ja kui väljal/meetodil on liiga kõrge nähtavus, siis ta kohe värvib seda kollaseks ning ütleb, et nähtavus võiks olla madalam.
 
-.. image:: /images/VisibilityError.png
+.. image:: /images/visibility_error.png
 
 Nimed
 -----

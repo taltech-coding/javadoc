@@ -75,4 +75,4 @@ Samuti kompileerub kood, kui ülemklassis on olemas argumendita konstruktor.
 Detailsemalt käsitletakse konstruktoreid:
 https://github.com/tutjava/materjalid/blob/master/oopConstructor.rst
 
-*super* võtmesõna kohta saab lisainfot: :doc:`oopSuper`
+*super* võtmesõna kohta saab lisainfot: :doc:`oop-super`

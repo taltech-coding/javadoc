@@ -6,5 +6,5 @@ Võrdleme "kõige lihtsama" programmi loomist kahes keeles.
 +--------------------------------------------+--------------------------------------------+
 | Python                                     | Java                                       |
 +============================================+============================================+
-| .. include:: hello_world_python.rst        | .. include:: hello_world_java.rst          |
+| .. include:: hello-world-python.rst        | .. include:: hello-world-java.rst          |
 +--------------------------------------------+--------------------------------------------+
