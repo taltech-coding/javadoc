@@ -1,20 +1,24 @@
 Muu
 ===
 
-Selle lehel on kategoriseerimata teemad.
+See leht koondab kategoriseerimata materjalid.
 
 .. toctree::
    :maxdepth: 2
    :caption: Teemad:
 
-   bugs
-   java-file-run
-   java-project-structure
-   javadoc
-   complexity
+   hello-world
+   installing-java
    terminid
-   git
-   git-command-line
-   gitlab
+   variable
+   string
+   exceptions
+   stream
+   date-time
+   bugs
+   complexity
+   most-frequent-errors
+   recursion
+   unit-testing
    reading-input-from-web
    exam

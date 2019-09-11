@@ -30,14 +30,14 @@ Kõige enam kasutatakse keerukuse väljendamiseks asümptootilist keerukust, mil
 Algoritm võib töötada erinevatel sisendandmetel väga erineva kiirusega ning kuna tihtipeale meid huvitab kriitiliste süsteemide loomisel 
 see, mis on maksimaalne algoritmi töötamise aeg suvaliste sisendandmete juures, siis räägitakse asümptootilise keerukuse juures tavaliselt **halvima juhu** keerukusest.
 
-.. image:: ../images/best_worst_avg.jpg
+.. image:: /_images/best_worst_avg.jpg
          :width: 200px
          :height: 100px
 
 
 Järgmiseks tähtsaks mõisteks on Suur-O notatsioon, mis on relatiivne algoritmi keerukuse näitaja, mida on mugav väljendada graafiku abil, kus on erinevate keerukusklasside põhioperatsioonide arv sõltuvusest sisendi suurusest. 
 
-.. image:: ../images/o_notatsioon.png
+.. image::/_images/o_notatsioon.png
          :width: 200px
          :height: 100px
 
