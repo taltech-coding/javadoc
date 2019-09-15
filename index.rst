@@ -7,9 +7,9 @@ Sellelt lehelt leiad Javaga seonduvad õppematerjalid.
    :maxdepth: 2
    :caption: Sisukord:
 
-   python_comparison/index
+   python_and_java_comparison/index
    java_file/index
-   types/index
+   data_types/index
    control_flow/index
    method/index
    input_output/index
