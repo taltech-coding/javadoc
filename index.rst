@@ -1,45 +1,24 @@
 Java õppematerjalid
-===========================================
+===================
 
 Sellelt lehelt leiad Javaga seonduvad õppematerjalid.
 
 .. toctree::
    :maxdepth: 2
    :caption: Sisukord:
-   
-   installing-java
-   hello-world
-   java-file-structure
-   git-ttu
-   intellij
-   python/index
-   code-style
-   code-modularity
-   javadoc2
-   variable
-   primitive-data-types
-   numeric-types
-   date-time
-   boolean-data-type
-   conditional-statements
-   loop
-   stream
-   method
-   string
-   exceptions
-   input
-   input-file
-   output-file
-   array
-   collections
-   package
-   oop
-   most-frequent-errors
-   oop-optional
-   unit-testing
-   javafx
-   jar
-   recursion
-   solutions/2017/index
+
+   python_and_java_comparison/index
+   java_file/index
+   data_types/index
+   control_flow/index
+   method/index
+   input_output/index
+   intellij/index
+   data_structures/index
+   project_structure/index
+   git/index
+   code_style/index
+   oop/index
+   javafx/index
+   solutions/index
    other/index
-   
