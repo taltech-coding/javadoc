@@ -1,10 +1,8 @@
 #!/bin/bash
 
-SOURCE="materjalid"
-rm -rf $SOURCE
+CLONED_JAVADOC_LOCATION="materjalid"
+rm -rf $CLONED_JAVADOC_LOCATION
 
-git clone https://github.com/taltech-coding/javadoc.git $SOURCE
+git clone https://github.com/taltech-coding/javadoc.git $CLONED_JAVADOC_LOCATION
 
-source ../py/bin/activate
-
-sphinx-build -b html $SOURCE /javadoc
+source ./materjalid/setup.sh
