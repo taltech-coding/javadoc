@@ -51,7 +51,7 @@ Erind on objekt, mis kannab endaga kaasas täiendavat infot:
 - erindi tekkimise koht (fail, rida)
 - kogu eelnenud programmi kutsungite ahel (mis meetod kutsus välja meetodi, kus erind tekkis jne), ingl k *stack trace*.
  
-Võimalik on luua ka oma erandeid. Vt `Kasutaja defineeritud erind`_.
+Võimalik on luua ka oma erandeid. Vt :doc:`/exception/user-exceptions`.
 
 Erindid (nagu ka kõik muud klassid) moodustavad hierarhia, mis on kujutatud järgneval pildil:
 
@@ -189,5 +189,3 @@ Teine viis erindit töödelda on see meetodist välja visata (*throw*). Niimoodi
     System.out.println(array[5]);
 
 Antud näites on deklareeritud massiiv, mille suurus on 4, kuid on proovitud välja kutsuda selle massiivi 6-ndat elementi. Programmi käivitades ilmnebki antud *ArrayIndexOutOfBoundsException*.
-
-.. include:: ../oop/oop-user-exceptions.rst
