@@ -5,7 +5,7 @@ Pakid, teegid
 Mooduli loomine
 ---------------
 
-Pärast Git-iga üendamist luuakse automaatselt kaust iti0202.
+Pärast Git-iga ühendamist luuakse automaatselt kaust iti0202.
 *Clickides* parema hiireklõpsuga selle peale, tuleb valida **New**, mille alt **Module**.
 
 .. image:: /_images/module1.png

@@ -55,7 +55,7 @@ Tüüpiliselt loome javas klassi meetodite kasutamiseks klassist objekti. See on
 	Hello john = new Hello("John");
 	System.out.println(john.sayHello()); // => Hello, John
 
-Kuid juhtudel, kus meetodi töö ei olene objekti iseäärasustest (näiteks ei kasutata ühtegi objekti andmevälja), on mõtekas lisada meetodile võtmesõna **static**. Niimoodi ei ole vaja meetodi kasutamiseks luua klassist objekti ning üldiselt öeldakse, et meetod kuulub klassile, mitte instansile (eraldi objektile).
+Kuid juhtudel, kus meetodi töö ei olene objekti iseäärasustest (näiteks ei kasutata ühtegi objekti andmevälja), on mõttekas lisada meetodile võtmesõna **static**.Niimoodi ei ole vaja meetodi kasutamiseks luua klassist objekti ning üldiselt öeldakse, et meetod kuulub klassile, mitte instansile (eraldi objektile).
 
 .. code-block:: java
     

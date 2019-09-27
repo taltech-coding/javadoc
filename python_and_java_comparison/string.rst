@@ -61,7 +61,7 @@ Sõnede võrdlus kahes keeles.
 +----------------------------------------------------------+-----------------------------------------------------------+
 |                                                          |                                                           |
 | Pythonis saab sõnesid võrrelda |br|                      | Javas annab objektide (String on objekt) |br|             |
-| tavapärast võrldlusoperaatoriga (==).                    | võrdlemine võrdlusoperaatoriga (==) |br|                  |
+| tavapärast võrdlusoperaatoriga (==).                     | võrdlemine võrdlusoperaatoriga (==) |br|                  |
 |                                                          | tulemuseks selle, kas kaks objekti on täpselt samad. |br| |
 | .. code-block:: python                                   | Üldiselt me pigem tahame võrrelda, |br|                   |
 |                                                          | kas sõnede sisud on samad. |br|                           |

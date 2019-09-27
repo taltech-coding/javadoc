@@ -38,7 +38,7 @@ Tsüklid
 |     lst = [1, 2, 3]                                  |     List<Integer> list = new ArrayList<>();               |
 |     for x in lst:                                    |     list.add(1); list.add(2); list.add(3);                |
 |         print(x)                                     |     //List<Integer> list = new ArrayList<>(               |
-|                                                      |     //    Arrays.asList(new Integer[] {1, 2, 3}));        |
+|                                                      |     //    Arrays.asList(1, 2, 3));                        |
 |                                                      |     for (Integer x : list) {                              |
 |                                                      |         System.out.println(x);                            |
 |                                                      |     }                                                     |
@@ -48,7 +48,7 @@ Tsüklid
 |                                                      | .. code-block:: java                                      |
 |                                                      |                                                           |
 |                                                      |     List<Integer> list = new ArrayList<>(                 |
-|                                                      |             Arrays.asList(new Integer[] {1, 2, 3})        |
+|                                                      |             Arrays.asList(1, 2, 3)                        |
 |                                                      |     );                                                    |
 |                                                      |     list.stream().forEach(System.out::println);           |
 |                                                      |                                                           |
