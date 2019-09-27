@@ -9,4 +9,3 @@ See leht koondab koodistiiliga seotud materjalid.
    
    code-style
    javadoc
-   javadoc2

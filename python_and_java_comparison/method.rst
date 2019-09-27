@@ -7,7 +7,7 @@
 Funktsioon (Meetod)
 ===================
 
-Javas peavad kõik funktsioonid (ehk meetodid) olema deklareeritud klassides. Samuti tuleb lisada iga meetodile kaasaantud muutujatele ning ka meetodi tagastatavale väärtusele objektitüübi.
+Javas peavad kõik funktsioonid (ehk meetodid) olema deklareeritud klassides. Igale meetodi sisendparameetrile tuleb määrata objektitüüp. Sama tuleb teha ka meetodi poolt tagastatava väärtuse jaoks.
 
 +---------------------------------------------------+------------------------------------------------------------------+
 | Python                                            | Java                                                             |
@@ -32,7 +32,7 @@ Javas peavad kõik funktsioonid (ehk meetodid) olema deklareeritud klassides. Sa
 |                                                   |     }                                                            |
 +---------------------------------------------------+------------------------------------------------------------------+
 
-Javas on võimalik klassile, klassi meetoditele ning instansi muutujatele lisada ka **nähtavuse taseme**. Tüüpiliselt on selleks public, mis tähendab, et klassi / meetodi / muutuja poole saab pöörduda kõikjalt projektist, kuid on ka teisi valikuid (mitte midagi, private, protected, ...), millest räägime hiljem.
+Javas on võimalik klassile, klassi meetoditele ning instansi muutujatele lisada ka **nähtavuse tase**. Tüüpiliselt on selleks public, mis tähendab, et klassi / meetodi / muutuja poole saab pöörduda kõikjalt projektist, kuid on ka teisi valikuid (mitte midagi, private, protected, ...), millest räägime hiljem.
 
 Tüüpiliselt loome javas klassi meetodite kasutamiseks klassist objekti. See on tähtis juhul, kui meetodi töö oleneb objekti iseäärasustest.
 
