@@ -13,7 +13,7 @@ ning aitab kergelt siduda Javas kirjutatud rakenduse loogika (meetodid)
 ja kujunduselemendid (erinavad *JavaFX* objektid). *SceneBuilder* loob ise FXML faili sisu,
 rakenduse loojal tuleb ainult vajalikud elemendid ekraanil õigesse kohta panna.
 
-Kus saada *JavaFX*?
+Kust saada *JavaFX*?
 --------------------
 
 Alates Java 11-st ei ole *JavaFX* enam *Java Development Kit*'i (JDK) osa ning peab alla laadima: 
@@ -22,7 +22,7 @@ https://gluonhq.com/products/javafx/.
 Varasemates Java versioonides oli *JavaFX* JDK osaks, seega ei olnud tarvis seda eraldi alla laadida.
 
 
-Kus saada *SceneBuilder*?
+Kust saada *SceneBuilder*?
 --------------------------
 
 Nagu eelnevalt mainitud, pole *SceneBuilder*'it otseselt tarvis, et luua *JavaFX* rakendusi,
