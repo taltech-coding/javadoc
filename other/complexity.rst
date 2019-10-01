@@ -2,7 +2,7 @@ Keerukus
 =====================
 
 Algoritmi keerukus on põhioperatsiooni(de) arvu sõltuvusfunktsioon K(n) sisendi(te) suurusest n.
-Tavaliselt põhioperatsiooni ei defineerida üheselt, mis tähendab, et põhioperatsiooniks võivad olla näiteks:
+Tavaliselt põhioperatsiooni ei defineerita üheselt, mis tähendab, et põhioperatsiooniks võivad olla näiteks:
 
 - aritmeetika tehe, võrdlus, omistus
 - vahel valitakse üks põhioperatsioon ja loetaks selle arvu, näiteks tsüklitingimuse võrdlus
