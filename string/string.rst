@@ -187,10 +187,10 @@ Javas on String klassis olemas staatiline avalik meetod *format* mis võimaldab 
 
 Mõned levinumad konverteerimise karakterid on järgmised:
 
-- s – stringide formaatimiseks
-- d – täisarvude formaatimiseks
-- f – ujukomaarvude formaatimiseks
-- t – kuupäevade formaatimiseks
+- s – stringide vormindamiseks
+- d – täisarvude vormindamiseks
+- f – ujukomaarvude vormindamiseks
+- t – kuupäevade vormindamiseks
 
 
 Näited koodis:
