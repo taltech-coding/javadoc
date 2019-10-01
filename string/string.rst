@@ -208,7 +208,7 @@ Näited koodis:
   
   String.format("name: %s", "John Pineapple"); // name: John Pineapple
   String.format("25 in hexadecimal: %x", 25); // 25 in hexadecimal: 19
-  String.format("boolean %B", false); // boolean TRUE
+  String.format("boolean %B", true); // boolean TRUE
   String.format("boolean %b", true); // boolean true
   String.format("%s%n%s", "onFirstLine", "onSecondLine"); // onFirstLine
                                                           // onSecondLine
