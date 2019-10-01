@@ -20,5 +20,4 @@ Sellelt lehelt leiad Javaga seonduvad õppematerjalid.
    code_style/index
    oop/index
    javafx/index
-   solutions/index
    other/index
