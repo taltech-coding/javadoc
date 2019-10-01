@@ -17,8 +17,8 @@ byte        1 bait (8 bitti)      -128 ... 127        byte b = 42;
 short       2 baiti (16 bitti)    -32768 ... 32767    short s = -12345;
 int         4 baiti (32 bitti)    -2^31 ... 2^31 - 1  int i = 10;
 long        8 baiti (64 bitti)    -2^63 ... 2^63 - 1  long l = -100;
-float       32-bitine ujukomaarv  *                   float f = 3.14f;
-double      64-bitine ujukomaarv  *                   double d = 1.2345;
+float       4-baidine ujukomaarv  *                   float f = 3.14f;
+double      8-baidine ujukomaarv  *                   double d = 1.2345;
 ==========  ====================  ==================  ==================
 
 Väärtustamine
@@ -127,7 +127,7 @@ Numbreid võib lugemise lihtsustamiseks grupeerida, kasutades gruppide eraldamis
     float pi =  3.14_15F;
     int x = 3______1;
 
-Alakriipse **ei tohi lisada**:
+Alakriipse **ei saa lisada**:
 
 - Numbri algusesse või lõppu (_123, 55\_, 67889L\_, 0x52\_)
 - Komakoha kõrvale (2._34, 2\_.34)

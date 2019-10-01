@@ -23,7 +23,7 @@ The Open/Closed Principle
 *Entities (classes, modules, functions, etc.) should be open for extension, but closed for modification.*
 
 Klassid tuleb struktureerida selliselt, et neid saab uue funktsionaalsuse vajadusel mugavalt laiendada (*open for extensions*). 
-Samas seda osa koodist, mis on juba kirjutatud, ei tohiks kunagi uuta (välja arvatud vigade parandamiseks) (*closed for modifications*).
+Samas seda osa koodist, mis on juba kirjutatud, ei tohiks kunagi muuta (välja arvatud vigade parandamiseks) (*closed for modifications*).
 
 The Liskov Substitution Principle
 ---------------------------------

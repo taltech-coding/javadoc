@@ -10,11 +10,14 @@ Sellelt lehelt leiad Javaga seonduvad õppematerjalid.
    python_and_java_comparison/index
    java_file/index
    data_types/index
+   string/index
    control_flow/index
    method/index
+   exception/index
    input_output/index
-   intellij/index
    data_structures/index
+   stream/index
+   intellij/index
    project_structure/index
    git/index
    code_style/index

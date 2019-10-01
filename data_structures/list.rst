@@ -13,8 +13,8 @@ ArrayList vs LinkedList
 -----------------------
 
 Nii ArrayList kui ka LinkedList on kaks enimkasutatud listi tüüpi, mõlemal on omad eelised.
-- **ArrayList** - ArrayListi on parem kasutada, kui võtta elemente niivõrd-kuivõrd randomilt
-- **LinkedList** - LinkedListi on parem kasutada, kui on vaja kiirelt lisada või eemaldada elemente listi lõpust.
+- **ArrayList** - ArrayListi on parem kasutada, kui võtta elemente suvalises järjekorras
+- **LinkedList** - LinkedListi on parem kasutada, kui on vaja kiirelt lisada või eemaldada järjest listi elemente.
 
 Koodinäide, kuidas ArrayListi lisada asju ja sellega töödelda.
 

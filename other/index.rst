@@ -9,11 +9,7 @@ See leht koondab kategoriseerimata materjalid.
 
    hello-world
    installing-java
-   terminid
    variable
-   string
-   exceptions
-   stream
    date-time
    bugs
    complexity
