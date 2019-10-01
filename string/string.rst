@@ -189,7 +189,7 @@ Mõned levinumad konverteerimise karakterid on järgmised:
 
 - s – stringide formaatimiseks
 - d – täisarvude formaatimiseks
-- f – ujukoma arvude formaatimiseks
+- f – ujukomaarvude formaatimiseks
 - t – kuupäevade formaatimiseks
 
 
