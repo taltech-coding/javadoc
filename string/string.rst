@@ -178,6 +178,41 @@ Kui nüüd teha näiteks:
 	
 Selle asemel, et "Orange" muutuks, luuakse täiesti uus sõne objekt sisuga "Orange juice", millel on uus viit.	
 
+Sõne vormindamine
+-----------------
+
+Javas on String klassis olemas staatiline avalik meetod *format* mis võimaldab konverteerida sisendit soovitud stringi kujule.
+
+Üldine süntaks: **%[argumendiIndeks$][lipud][laius][.täpsus]konverteerimiseKarakter** *([] sees pole kohustuslikud)*
+
+Mõned levinumad konverteerimise karakterid on järgmised:
+
+- s – stringide vormindamiseks
+- d – täisarvude vormindamiseks
+- f – ujukomaarvude vormindamiseks
+- t – kuupäevade vormindamiseks
+
+
+Näited koodis:
+
+.. code-block:: java
+
+  String.format("%d", 145); // 145
+  String.format("%c", 'a'); // a
+  String.format("%f", 11.6455555); // 11.645556
+
+  String.format("Index: %2$s, %1$s", "first", "second"); // Index: second, first
+  String.format("Flag: %+f", 234.5); // Flag: +234.500000
+  String.format("Width: %5s", "abc"); // Width:   abc
+  String.format("Precision: %.2f", 11.6455555); // Precision: 11.65
+  
+  String.format("name: %s", "John Pineapple"); // name: John Pineapple
+  String.format("25 in hexadecimal: %x", 25); // 25 in hexadecimal: 19
+  String.format("boolean %B", true); // boolean TRUE
+  String.format("boolean %b", true); // boolean true
+  String.format("%s%n%s", "onFirstLine", "onSecondLine"); // onFirstLine
+                                                          // onSecondLine
+
 -------
 
 Dokumentatsioon: 
