@@ -14,7 +14,10 @@ Samuti erinevat moodi võib olla defineeritud sisendi suurus. See võib olla:
 - Sisendparameetriväärtus
 - Sisendparameetrisuurus(bittide/baitide arv)
 
-Kui hakata mõõtma algoritmi keerukust, siis üheks variandiks oleks kirjutada programm, seejärel lasta tal töötada erineva suurusega ja sisuga andmetega ning mõõta programmi täitmiseks kuluvat aega. Samas ei ole selline metoodika efektiivne, kuna vajab palju käsitsi tööd.
+Kui hakata mõõtma algoritmi keerukust, siis üheks variandiks oleks kirjutada programm, seejärel lasta tal töötada erineva suurusega 
+ja sisuga andmetega ning mõõta programmi täitmiseks kuluvat aega. Samas ei ole selline metoodika mõistlik.
+Algoritmi tööaega on keeruline üheselt määrata näiteks sekundites või minutites, sest arvutite võimsused on väga erinevad. 
+Mida rohkem on andmeid, seda paremini hakkab arvutite vaheline võimsus esile kerkima.
 
 Seetõttu on palju mõistlikum kasutada üldist metoodikat, mis erinevalt eksperimentaalsest lähenemisest:
 
@@ -22,7 +25,10 @@ Seetõttu on palju mõistlikum kasutada üldist metoodikat, mis erinevalt eksper
 - arvestab kõikvõimalikke sisendandmeid
 - võimaldab hinnata algoritmi efektiivsust sõltumatult tark-ja riistvaraplatvormist
 
-Kõige enam kasutatakse keerukuse väljendamiseks asümptootilist keerukust, mille eesmärk on jätta sarnaselt ümardamisele ebaolulised detailid mainimata.Näiteks 1,000,001≈1,000,000
+Lisaks ajalisele keerukusele on võimalik hinnata algoritmi headust mälukasutuse osas ehk kui kiiresti kasvab mälukasutus algandmete suhtes.
+Võib juhtuda, et algoritm mis kasutab rohkem mälu on ajaliselt vähem keerukas (kiirem) kui algoritm mis on mälukasutuselt efektiivsem, aga ajaliselt keerukam (aeglasem).
+
+Kõige enam kasutatakse keerukuse väljendamiseks asümptootilist keerukust, mille eesmärk on jätta sarnaselt ümardamisele ebaolulised detailid mainimata. Näiteks 1,000,001≈1,000,000
 
 
 *Asümptootiline keerukus ja suure O notatsioon* 
@@ -37,9 +43,12 @@ see, mis on maksimaalne algoritmi töötamise aeg suvaliste sisendandmete juures
 
 Järgmiseks tähtsaks mõisteks on Suur-O notatsioon, mis on relatiivne algoritmi keerukuse näitaja, mida on mugav väljendada graafiku abil, kus on erinevate keerukusklasside põhioperatsioonide arv sõltuvusest sisendi suurusest. 
 
-.. image::/_images/o_notatsioon.png
+.. image:: /_images/o_notatsioon.png
          :width: 200px
          :height: 100px
+
+O-notatsiooni abil saab väljendada nii ajalist kui mälulist keerukust. 
+Näiteks algoritmi keerukus on O(n) aja suhtes või algoritm kasutab O(n) ruumi (mälu) algandmete suhtes.
 
 Kui vaadata eraldi keerukusklasse, siis:
 
@@ -85,7 +94,7 @@ Kui vaadata eraldi keerukusklasse, siis:
 
 O notatsiooni omadusi:
 
-- Konstantseid kordajaid võib ignoreerida ∀ k> 0, k∙f on O(f)
+- Konstantseid kordajaid võib ignoreerida ∀ k > 0, k∙f on O(f)
 - Kõrgemad astmed kasvavad kiiremini n^r on O(n^s),kui 0 ≤ r ≤ s
 - Kiiremini kasvav liidetav määrab summa kiiruse näiteks an^4 + bn^3 on O(n^4)
 - Exponentfunktsioonid kasvavad kiiremini kui astmed näiteks n^20 on O(1.05^n)
@@ -115,7 +124,7 @@ Analüüsime ühte koodijuppi ja määrame selle keerukuse
            c++
       Kui alustada seestpoolt, ehk for(j=0; j < 3*n; j++), siis näeme, et j = 0 ja läheb kuni 3*n. 
       Sammuks on j++, seega peab iga elemendi kuni 3n läbi käima.
-      seega on selle jupi keerukus O(3n) = O(n), kuna meid huvitab ainult oluline osa, 
+      Seega on selle jupi keerukus O(3n) = O(n), kuna meid huvitab ainult oluline osa, 
       kordaja ei oma tähtsust üldise pildi saamiseks.
       Kuna tegemist on tsükliga tsükli sees, siis me peame leidma välimise tsükli keerukuse 
       ja korrutama selle sisemise tsükli keerukusega läbi.
