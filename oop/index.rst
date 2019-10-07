@@ -25,6 +25,7 @@ See leht koondab objekt-orienteeritud programmeerimisega seonduvad materjalid.
    oop-lists
    oop-special-methods
    oop-inheritance
+   oop-interface
    oop-enum
    oop-solid
    oop-optional
