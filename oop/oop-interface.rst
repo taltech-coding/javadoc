@@ -20,7 +20,10 @@ Näiteks erinevate sõidukite jaoks võib esmalt luua üldise liidese sõiduki j
         void increaseSpeed(int increaseAmount); 
     }
 
-Edaspidi saavad konkreedsed seda liidest implementeerida, kasutades *implements* võtmesõna.
+Edaspidi saavad konkreetsed seda liidest implementeerida, kasutades *implements* võtmesõna.
+
+.. note::
+    Hea tava kohaselt tasub kasutada @Override annotatsiooni meetodi kohal mis implementeerib liidese meetodit.
 
 .. code-block:: java
 
@@ -41,10 +44,12 @@ Edaspidi saavad konkreedsed seda liidest implementeerida, kasutades *implements*
         
         int speed; 
         
+        @Override
         public void start() {
             System.out.println("Bike is starting");
         }
 
+        @Override
         public void increaseSpeed(int increaseAmount){ 
             speed = speed + increaseAmount; 
         } 
@@ -61,10 +66,12 @@ Edaspidi saavad konkreedsed seda liidest implementeerida, kasutades *implements*
         
         int speed; 
         
+        @Override
         public void start() {
             System.out.println("Plane is starting");
         }
 
+        @Override
         public void increaseSpeed(int increaseAmount){ 
             speed = speed + increaseAmount; 
         } 
@@ -76,21 +83,56 @@ Liides saab ka teist liidest laiendada (*extends*).
 
 .. code-block:: java
 
-    public interface BaseVehicle {
+    interface BaseVehicle {
         public void start();
     }
 
-    public interface AirVehicle extends BaseVehicle {
+    interface AirVehicle extends BaseVehicle {
         public void fly();
     }
 
-    public class Helicopter implements Airvehicle {
+    public class Helicopter implements AirVehicle {
+        @Override
         public void start() {
             System.out.println("Helicopter is starting");
         }
 
+        @Override
         public void fly() {
             System.out.println("Helicopter is taking off");
         }
     }
 
+Liides võib sisaldada *default* ja *static* meetodeid.
+
+.. code-block:: java
+
+    interface TestInterface {
+    
+      // abstract method (must be overridden)
+      void calculateSum(int value1, int value2);
+    
+      // default method (can be overridden)
+      default void defaultPrint() {
+        System.out.println("Default method executed");
+      }
+    
+      static void staticPrint() {
+        System.out.println("Static method executed");
+      }
+    }
+    
+    public class TestClass implements TestInterface {
+    
+      @Override
+      public void calculateSum(int value1, int value2) {
+        System.out.println(value1 + value2);
+      }
+    
+      public static void main(String[] args) {
+        TestClass testClass = new TestClass();
+        testClass.calculateSum(4, 2);
+        testClass.defaultPrint();
+        TestInterface.staticPrint();
+      }
+    }
