@@ -2,7 +2,7 @@ Keerukus
 =====================
 
 Algoritmi keerukus on põhioperatsiooni(de) arvu sõltuvusfunktsioon K(n) sisendi(te) suurusest n.
-Tavaliselt põhioperatsiooni ei defineerida üheselt, mis tähendab, et põhioperatsiooniks võivad olla näiteks:
+Tavaliselt põhioperatsiooni ei defineerita üheselt, mis tähendab, et põhioperatsiooniks võivad olla näiteks:
 
 - aritmeetika tehe, võrdlus, omistus
 - vahel valitakse üks põhioperatsioon ja loetaks selle arvu, näiteks tsüklitingimuse võrdlus
@@ -12,7 +12,7 @@ Samuti erinevat moodi võib olla defineeritud sisendi suurus. See võib olla:
 
 - Sisendandmetemaht(massiivi, faili, andmebaasisuurus)
 - Sisendparameetriväärtus
-- Sisendparameetrisuurus(bittide/baitidearv)
+- Sisendparameetrisuurus(bittide/baitide arv)
 
 Kui hakata mõõtma algoritmi keerukust, siis üheks variandiks oleks kirjutada programm, seejärel lasta tal töötada erineva suurusega ja sisuga andmetega ning mõõta programmi täitmiseks kuluvat aega. Samas ei ole selline metoodika efektiivne, kuna vajab palju käsitsi tööd.
 
@@ -69,7 +69,7 @@ Kui vaadata eraldi keerukusklasse, siis:
      10 items: 100 seconds
      100 items: 1000 seconds
     
-     Näiteks kahekordse tsükli korral peab täitma sisemist tsüklit täitma O(n) korda ja välimist samuti O(n) korda.
+     Näiteks kahekordse tsükli korral peab täitma sisemist tsüklit O(n) korda ja välimist samuti O(n) korda.
      for(j=0; j<n; j++){
       for(k=0; k<n; k++){s;}}
 
