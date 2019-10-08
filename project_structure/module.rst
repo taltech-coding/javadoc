@@ -105,7 +105,7 @@ Võimalik on anda *Reflection* ligipääs paketipõhiselt kindlatele tarbijatele
     }
 
 
-Terviklikum näide java.sql moodulist:
+Näide java.sql moodulist:
 
 .. code-block:: java
 
