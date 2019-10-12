@@ -11,3 +11,4 @@ See leht koondab projektiga struktuuiga seonduvad materjalid.
    package
    jar
    code-modularity
+   module
