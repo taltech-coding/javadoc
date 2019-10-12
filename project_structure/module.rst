@@ -101,7 +101,7 @@ Võimalik on anda *Reflection* ligipääs paketipõhiselt kindlatele tarbijatele
 .. code-block:: java
 
     module my.module {
-      opens com.package1 to moduleOne, moduleTwo;
+      opens com.package1 to module1, module2;
     }
 
 
