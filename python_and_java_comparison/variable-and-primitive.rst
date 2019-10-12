@@ -12,7 +12,7 @@ Kergem on võrrelda kahte *int* tüüpi muutujat, kui kahte *Integer* tüüpi.
 +-----------------------------------------+------------------------------------------+
 | Python                                  | Java                                     |
 +=========================================+==========================================+
-| Pythonis arvu loomine:                  | Javas erinevad kõik need.                |
+| Pythonis arvu loomine:                  | Javas erinevaid tüüpe arvude loomiseks:  |
 |                                         |                                          |
 | .. code-block:: python                  | .. code-block:: java                     |
 |                                         |                                          |
