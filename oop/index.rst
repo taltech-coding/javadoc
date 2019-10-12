@@ -28,3 +28,4 @@ See leht koondab objekt-orienteeritud programmeerimisega seonduvad materjalid.
    oop-enum
    oop-solid
    oop-optional
+   oop-builder-class
