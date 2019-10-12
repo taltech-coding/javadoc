@@ -35,12 +35,12 @@ my.module sõltub module1-st:
     }
 
 
-Lubame mooduli my.module paketi com.package avalike meetodeid ja muutujaid kasutada tarbijatel (vaikeseadetes ei ole avalikud liikmed tarbijatele nähtavad - tugev kapseldamine):
+Lubame mooduli my.module paketi com.package1 avalike meetodeid ja muutujaid kasutada tarbijatel (vaikeseadetes ei ole avalikud liikmed tarbijatele nähtavad - tugev kapseldamine):
 
 .. code-block:: java
 
     module my.module {
-      exports com.package;
+      exports com.package1;
     }
 
 my.module sõltub transitiivsest java.sql moodulist, tarbijad kes kasutavad my.module-t omavad ligipääsu ka java.sql moodulile:
@@ -49,16 +49,16 @@ my.module sõltub transitiivsest java.sql moodulist, tarbijad kes kasutavad my.m
 
     module my.module {
       requires transitive java.sql;
-      exports com.package;
+      exports com.package1;
     }
 
 
-Lubame mooduli my.module paketi com.package avalike meetodeid kasutada ainult kindlas paketis olevatel tarbijatel (com.specific):
+Lubame mooduli my.module paketi com.package1 avalike meetodeid kasutada ainult kindlas paketis olevatel tarbijatel (com.specific):
 
 .. code-block:: java
 
     module my.module {
-      exports com.package to com.specific;
+      exports com.package1 to com.specific;
     }
 
 
@@ -92,7 +92,7 @@ Võimalik on anda *Reflection* ligipääs paketipõhiselt:
 .. code-block:: java
 
     module my.module {
-      opens com.package;
+      opens com.package1;
     }
 
 
@@ -101,7 +101,7 @@ Võimalik on anda *Reflection* ligipääs paketipõhiselt kindlatele tarbijatele
 .. code-block:: java
 
     module my.module {
-      opens com.package to moduleOne, moduleTwo;
+      opens com.package1 to module1, module2;
     }
 
 
