@@ -14,12 +14,13 @@ Samuti on Javas *primitiivsed* andmetüübid ning *objekti* muutujad. Erinevus o
 Kirjeldus
 ---------
 
-- integer-tüüpi muutuja on täisarvuline number.
-- double-tüüpi muutuja on komakohaga.
-- byte-tüüpi muutuja minimaalne väärtus on -128 (-2^7) ning maksimaalne väärtus 127 (2^7-1).
-- character-tüüpi muutuja koosneb ühest Unicode tähest.
-- string-tüüpi muutuja on kas täht, sõna või tekst.
-- boolean-tüüpi muutuja on kas "true" või "false".
+- *int*-tüüpi muutuja on täisarvuline number.
+- *float*-tüüpi muutuja on komakohaga arv (4 baidine).
+- *double*-tüüpi muutuja on komakohaga arv (8 baidine).
+- *byte*-tüüpi muutuja minimaalne väärtus on -128 (-2^7) ning maksimaalne väärtus 127 (2^7-1).
+- *char*-tüüpi muutuja koosneb ühest Unicode sümbolist.
+- *string*-tüüpi muutuja on kas täht, sõna või tekst.
+- *boolean*-tüüpi muutuja on kas "true" või "false".
 
 Muutuja võib olla lokaalne või globaalne.
 
@@ -32,8 +33,9 @@ Näited
 
     int a, b, c;         // declare 3 integers: a, b and c
     int d = 10, e = 10;  // initializing
-    byte F = 22;
-    double pi = 3.14159;
+    float pi = 3.14159f;
+    double pi2 = 3.14159;
+    byte f = 22;
     char g = 'g';
     String word = "word or text";
     boolean illuminatiConfirmed = true;

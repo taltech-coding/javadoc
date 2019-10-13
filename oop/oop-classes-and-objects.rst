@@ -44,7 +44,7 @@ Näiteks on erandiks sõne loomine *String* klassist. Seal ei kasuta me tavalise
 *Klass* 
 --------
 
-On arusaadav, et *ArrayList* järgi loodud objektid erinevad meeletult objektidest, mis on loodud *String* klassist. Kõigil *ArrayList* objektidel on meetodid *add, contains, remove, size ...*, ning igal *String* objektil on meetodid *substring, length, charAt...*. *ArrayList* ja *String* loovad erinevat tüüpi objekte ning seetõttu neil on erinevad meetodid.
+On arusaadav, et *ArrayList* (järjendi) järgi loodud objektid erinevad meeletult objektidest, mis on loodud *String* (sõne) klassist. Kõigil *ArrayList* objektidel on meetodid *add, contains, remove, size ...*, ning igal *String* objektil on meetodid *substring, length, charAt...*. *ArrayList* ja *String* loovad erinevat tüüpi objekte ning seetõttu neil on erinevad meetodid.
 
 Kindlate objektide grupi tüübiks on klass. *ArrayList* on klass, *String* on klass, *Scanner* on klass jne. Objetid ise on klassi järgi loodud eraldiseisvad juhud, ehk isendid.
 
