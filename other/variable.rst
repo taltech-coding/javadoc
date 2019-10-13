@@ -19,7 +19,7 @@ Kirjeldus
 - *double*-tüüpi muutuja on komakohaga arv (8 baidine).
 - *byte*-tüüpi muutuja minimaalne väärtus on -128 (-2^7) ning maksimaalne väärtus 127 (2^7-1).
 - *char*-tüüpi muutuja koosneb ühest Unicode sümbolist.
-- *string*-tüüpi muutuja on kas täht, sõna või tekst.
+- *String*-tüüpi muutuja on kas täht, sõna või tekst.
 - *boolean*-tüüpi muutuja on kas "true" või "false".
 
 Muutuja võib olla lokaalne või globaalne.
