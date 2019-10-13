@@ -23,7 +23,7 @@ Kergem on võrrelda kahte *int* tüüpi muutujat, kui kahte *Integer* tüüpi.
 |     e = 10000000000                     |     float e = 1000000000;                |
 |                                         |                                          |
 +-----------------------------------------+------------------------------------------+
-| Pythonis string tüüpi muutuja loomine:  | Javas string tüüpi muutuja loomine:      |
+| Pythonis sõne tüüpi muutuja loomine:    | Javas sõne tüüpi muutuja loomine:        |
 |                                         |                                          |
 | .. code-block:: python                  | .. code-block:: java                     |
 |                                         |                                          |

@@ -27,7 +27,7 @@ Meetodi ülesehitus
     }
 
 Kuna nähtavus on *public*, siis see funktsioon on nähtav kõikjale.
-Tagastustüüp on *int*, seega antud funktsioon tagastab *int*-tüüpi väärtuse.
+Tagastustüüp on *int*, seega antud funktsioon tagastab täisarvu ehk *int*-tüüpi väärtuse.
 
 .. code-block:: java
 
@@ -36,7 +36,7 @@ Tagastustüüp on *int*, seega antud funktsioon tagastab *int*-tüüpi väärtus
     }
     
 Kuna nähtavus on *private*, siis see funktsioon on nähtav vaid klassis, kus see paikneb.
-Tagastustüüp on *String*, seega antud funktsioon tagastab *String*-tüüpi väärtuse.
+Tagastustüüp on *String*, seega antud funktsioon tagastab sõne ehk *String*-tüüpi väärtuse.
 
 .. code-block:: java
 
@@ -47,7 +47,7 @@ Tagastustüüp on *String*, seega antud funktsioon tagastab *String*-tüüpi vä
 Kui nähtavust ei ole defineeritud, on see *package-private*.
 
 Kuna nähtavus on *package-private*, siis see funktsioon on nähtav vaid selle paketi klassidele, kus see paikneb.
-Tagastustüüp on *List<Double>*, seega antud funktsioon tagastab *List*-tüüpi väärtuse.
+Tagastustüüp on *List<Double>*, seega antud funktsioon tagastab loendi ujukomaarvudest ehk *List<Double>*-tüüpi väärtuse.
 
 .. code-block:: java
 

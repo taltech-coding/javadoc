@@ -181,13 +181,13 @@ Selle asemel, et "Orange" muutuks, luuakse täiesti uus sõne objekt sisuga "Ora
 Sõne vormindamine
 -----------------
 
-Javas on String klassis olemas staatiline avalik meetod *format* mis võimaldab konverteerida sisendit soovitud stringi kujule.
+Javas on sõne klassis olemas staatiline avalik meetod *format* mis võimaldab konverteerida sisendit soovitud sõne kujule.
 
 Üldine süntaks: **%[argumendiIndeks$][lipud][laius][.täpsus]konverteerimiseKarakter** *([] sees pole kohustuslikud)*
 
 Mõned levinumad konverteerimise karakterid on järgmised:
 
-- s – stringide vormindamiseks
+- s – sõnede vormindamiseks
 - d – täisarvude vormindamiseks
 - f – ujukomaarvude vormindamiseks
 - t – kuupäevade vormindamiseks
