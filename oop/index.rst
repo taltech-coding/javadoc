@@ -27,6 +27,7 @@ See leht koondab objekt-orienteeritud programmeerimisega seonduvad materjalid.
    oop-inheritance
    oop-interface
    oop-enum
+   oop-generics
    oop-solid
    oop-optional
    oop-builder-class
