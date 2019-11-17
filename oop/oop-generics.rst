@@ -1,5 +1,5 @@
-Java Generics
-=============
+Geneerilised tüübid
+===================
 
 *Generics* ehk geneerilised tüübid funktsionaalsust on võimalik kasutada alates Java 5-st. 
 Geneerilised tüübid võimaldavad arendajatel luua geneerilisi algoritme, see tähendab, et näiteks teatud funktsioon parameetriks saab korraga anda nii 
@@ -91,7 +91,7 @@ Klass, konstruktor, muutuja:
         public static void main(String[] args) {
             Entry<String, Integer> mike = new Entry<>("Mike", 100);
             System.out.println(mike); // Mike, 100
-            System.out.println(mike.getKey()); // Mark
+            System.out.println(mike.getKey()); // Mike
             System.out.println(mike.getValue()); // 100
         }
     
@@ -111,8 +111,8 @@ Tüüpide piiramine:
 ------------------
 Tüübid:
 
-- **T** - võib olla suvaline muutuja, tavaliselt T-ga tähistatakse tüübi parameetrit, laseb parameetriks määrata suvalise *Object* alamklassi.
-- **?** - tundmatu (*wildcard*), kogude (*Collection*) ülemtüübiks ei ole *Object* vaid tundmatu
+- **T** - muutuja geneerilise tüübi määramiseks, võib olla suvaline muutuja, tavaliselt T-ga tähistatakse tüüpi.
+- **?** - tundmatu tüüp (*wildcard*).
 
 Võimalik on piirata geneerilisi tüüpe, näiteks tüüp peab olema Number klassi alamklass:
 
@@ -144,4 +144,25 @@ Järjendis olevate elementide tüüp peab olema Integer klassi ülemklass (Integ
         objects.add(new Object());
         addNumbers(objects);
         System.out.println(objects); // [4, java.lang.Object@65b54208, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    }
+
+Lisades funktsiooni parameetriks järjendi tundmatu tüübiga (?), saab funktsiooni parameetriks anda ette järjendi suvalise tüübiga:
+
+.. code-block:: java
+
+    public static void usingWildCard(List<?> param) {}
+    public static void usingObject(List<Object> param) {}
+
+    public static void main(String[] args) {
+        List<String> strings = new ArrayList<>();
+        List<Integer> integers = new ArrayList<>();
+        List<Object> objects = new ArrayList<>();
+
+        usingWildCard(strings); // works
+        usingWildCard(integers); // works
+        usingWildCard(objects); // works
+
+        usingObject(strings); // doesn't work
+        usingObject(integers); // doesn't work
+        usingObject(objects); // works
     }
