@@ -2,7 +2,7 @@ Geneerilised tüübid
 ===================
 
 *Generics* ehk geneerilised tüübid funktsionaalsust on võimalik kasutada alates Java 5-st. 
-Geneerilised tüübid võimaldavad arendajatel luua geneerilisi algoritme, see tähendab, et näiteks teatud funktsioon parameetriks saab korraga anda nii 
+Geneerilised tüübid võimaldavad arendajatel luua geneerilisi algoritme, see tähendab, et näiteks teatud funktsiooni parameetriks saab korraga anda nii 
 Boolean tüüpi kui Integer tüüpi järjendi. Lisaks tagab geneeriline tüüp kompileerimise ajal tüübikindluse ja ei nõua käsitsi tüübi määramist (*cast*).  
 
 Geneerilist tüüpi märgitakse kujul **<Tüüp>**. Näited: List<String>, Map<String, Integer>.
