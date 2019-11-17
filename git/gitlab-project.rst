@@ -25,7 +25,7 @@ Siin pannakse uue haru nimeks "UUS-HARU". Arusadavuse parandamiseks hea on panna
 
 Samamoodi saab lokaalselt uue haru luua kasutades ka IntelliJ'd. Menüüst valida `VCS -> Git -> Branches... -> New Branch`.
 
-Teine võimalus ülesande lahendamiseks haru tegemiseks on Gitlab'i veebileht. Avades lahendatava ülesande lehekülje Gitlabis on võimalik valida "Create merge request" mille puhul tehakse uus haru, kuhu kood lisada ja kohe ka *merge request*. Valides kõrvalt väiksema nupuga valiku, saab teha ka ainult uue haru ja *merge requesti* tegemise jätta hiljemaks.
+Teine võimalus ülesande lahendamiseks haru tegemiseks on Gitlab'i veebileht. Avades lahendatava ülesande lehekülje Gitlabis on võimalik valida "**Create merge request**" mille puhul tehakse uus haru, kuhu kood lisada ja kohe ka *merge request*. Valides kõrvalt väiksema nupuga valiku, saab teha ka ainult uue haru ja *merge requesti* tegemise jätta hiljemaks.
 
 .. image:: /_images/gitlab_issue_merge_request_submenu.png
    :scale: 50
@@ -42,7 +42,7 @@ Harude liitmine (*merge*)
 
 Ülesande lahendamise lõpetamisel on vaja see mõne teise haruga ühendada. Üldjuhul on kõik asjad vaja lõpuks liita *master* haruga. Liitmiseks on samuti mitu erinevat võimalust, kas teha seda lokaalselt käsureal, IntelliJ'ga või läbi Gitlab'i.
 
-Kui Gitlab'is minna lehele "*Merge Requests*" ja valida sealt "*New merge request*", siis saab teha uue "soovi" harude liitmiseks. *Source* ehk allika haruks valida haru, kus on ülesande lahendus ja üldjuhul *target* haru võib jääda *master*'iks.
+Kui Gitlab'is minna lehele "**Merge Requests**" ja valida sealt "**New merge request**", siis saab teha uue "soovi" harude liitmiseks. *Source* ehk allika haruks valida haru, kus on ülesande lahendus ja üldjuhul *target* haru võib jääda *master*'iks.
 
 .. image:: /_images/gitlab_merge_request.png
 
@@ -51,12 +51,12 @@ Harude ühendamise saab teha läbi Gitlab'i lihtsalt kui ei ole konflikte.
 .. image:: /_images/gitlab_merge.png
    :scale: 50
 
-Kui harude liitmisel esineb konflikte, siis tuleb liitmine teostada käsitsi ja lokaalselt. Väiksemate konfliktide puhul pakub Gitlab ise ka nuppu "*Resolve Conflicts*", siis võib soovi korral seda ka brauseris teha.
+Kui harude liitmisel esineb konflikte, siis tuleb liitmine teostada käsitsi ja lokaalselt. Väiksemate konfliktide puhul pakub Gitlab ise ka nuppu "**Resolve Conflicts**", siis võib soovi korral seda ka brauseris teha.
 
 .. image:: /_images/gitlab_merge_conflict.png
    :scale: 50
 
-Vajutades nupule "*Merge locally*" on kõik sammud käsurealt harude liitmiseks ilusti välja toodud. Sama konfliktide lahendamise ja harude liitmise saab teha muidugi ka läbi IntelliJ'ga.
+Vajutades nupule "**Merge locally**" on kõik sammud käsurealt harude liitmiseks ilusti välja toodud. Sama konfliktide lahendamise ja harude liitmise saab teha muidugi ka läbi IntelliJ'ga.
 
 .. image:: /_images/gitlab_merge_locally.png
    :scale: 50
