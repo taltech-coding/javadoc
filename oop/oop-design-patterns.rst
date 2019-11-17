@@ -9,7 +9,7 @@ lahendanud sama probleemi mida soovid lahendada.
 Disainimustrite kasutamise eelised:
 
 - Kulub vähem aega probleemi lahendamiseks, sest keegi on disaininud selleks lahenduse, pole vaja hakata ise täiesti algusest probleemi lahendama.
-- Disainimustrid on üldtundtud, rääkides inimestega kes on disainimustritega kursis, on lihtsalt seletada, mida või kuidas teha, kuna ei pea seletama lahti oma eksootilist lahendust.
+- Disainimustrid on üldtundtud - rääkides inimestega, kes on disainimustritega kursis on lihtsam seletada mida või kuidas teha, kuna ei pea seletama lahti oma eksootilist lahendust.
 - Tõenäoliselt on disainimustri põhine lahendus elegantsem ja arusaadavam kui ise leiutatud lahendus.
 
 Samas pole disainimustreid võimalik või mõistlik alati kasutada. Teatud olukordades võib see muuta koodi loetavust halvemaks, näiteks kui üritatakse kasutada mustrit
@@ -17,7 +17,7 @@ vales olukorras kus see pole kasutamiseks ette nähtud.
 
 Järgnevalt mõned näited enimkasutatavatest disainimustritest.
 
-Singel (*Singletion*)
+Singel (*Singleton*)
 ---------------------
 Singli korral on klassist võimalik luua ainult üks objekt. Klassi konstruktor on privaatne ja uut objekti läbi konstruktori pole võimalik luua.
 Singli objekti kasutamiseks luuakse selleks staatiline avalik meetod mille kaudu kontrollitakse, et alati on klassist ainult üks objekt.
