@@ -9,7 +9,7 @@ lahendanud sama probleemi mida soovid lahendada.
 Disainimustrite kasutamise eelised:
 
 - Kulub vähem aega probleemi lahendamiseks, sest keegi on disaininud selleks lahenduse, pole vaja hakata ise täiesti algusest probleemi lahendama.
-- Disainimustrid on üldtundtud - rääkides inimestega, kes on disainimustritega kursis on lihtsam seletada mida või kuidas teha, kuna ei pea seletama lahti oma eksootilist lahendust.
+- Disainimustrid on üldtundtud - rääkides inimestega, kes on disainimustritega kursis, on lihtsam seletada mida või kuidas teha, kuna ei pea seletama lahti oma eksootilist lahendust.
 - Tõenäoliselt on disainimustri põhine lahendus elegantsem ja arusaadavam kui ise leiutatud lahendus.
 
 Samas pole disainimustreid võimalik või mõistlik alati kasutada. Teatud olukordades võib see muuta koodi loetavust halvemaks, näiteks kui üritatakse kasutada mustrit
@@ -51,7 +51,7 @@ Singli objekti kasutamiseks luuakse selleks staatiline avalik meetod mille kaudu
         }
     }
 
-Tehase meetodid (*static Factory methods*)
+Tehase meetodid (*Static factory methods*)
 ------------------------------------------
 Tehase meetodite muster võimaldab hoida konstruktori üleliigsest loogikast eraldatuna ehk konstruktori ülesanne on ainult uue objekti loomine. 
 Lisaks võimaldavad tehase meetodite nimetused selgemalt väljendada mida luuakse võrreldes konstruktoriga kus nimetamine on piiratud. 
