@@ -25,7 +25,7 @@ Siin pannakse uue haru nimeks "UUS-HARU". Arusadavuse parandamiseks hea on panna
 
 Samamoodi saab lokaalselt uue haru luua kasutades ka IntelliJ'd. Menüüst valida `VCS -> Git -> Branches... -> New Branch`.
 
-Teine võimalus ülesande lahendamiseks haru tegemiseks on Gitlab'i veebileht. Avades lahendatava ülesande lehekülje Gitlabis on võimalik valida "**Create merge request**" mille puhul tehakse uus haru, kuhu kood lisada ja kohe ka *merge request*. Valides kõrvalt väiksema nupuga valiku, saab teha ka ainult uue haru ja *merge requesti* tegemise jätta hiljemaks.
+Teine võimalus ülesande lahendamisel haru tegemiseks on Gitlab'i veebileht. Avades lahendatava ülesande lehekülje Gitlabis on võimalik valida "**Create merge request**" mille puhul tehakse uus haru, kuhu kood lisada ja kohe ka *merge request*. Valides kõrvalt väiksema nupuga valiku, saab teha ka ainult uue haru ja *merge requesti* tegemise jätta hiljemaks.
 
 .. image:: /_images/gitlab_issue_merge_request_submenu.png
    :scale: 50
