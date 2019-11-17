@@ -11,3 +11,4 @@ See leht koondab Gitiga seotud materjalid.
    git-command-line
    git-ttu
    gitlab
+   gitlab-project
