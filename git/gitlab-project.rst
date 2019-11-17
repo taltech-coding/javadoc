@@ -7,7 +7,7 @@ Suuremate projektide puhul on lisaks tavalisele Git'ile võimalik Gitlabis kasut
 Ülesanded (*issue*)
 -------------------
 
-Tööülesandeid on hea jaotada kasutades Gitlabi *issue*'sid. Iga uue funktsionaalsuse loomise, veaparanduse või muu tegevuse jaoks saab luua Gitlabis ülesande, kuhu on lühidalt kirjutatud, mida teha vaja on. Ülesannetele saab määrata ka sildid (*labels*), mis võimaldavad nende olemust kiiremini haarata. Näiteks veaparanduse ülesandele võiks panna külge sildi *bug*. Igale ülesandele saab määrata ka isiku, kes selle töö ära tegema peab ja vahest on hea panna ka kuupäev, milleks töö valmis olema peab.
+Tööülesandeid on hea jaotada kasutades Gitlabi *issue*'sid. Iga uue funktsionaalsuse loomise, veaparanduse või muu tegevuse jaoks saab luua Gitlabis ülesande, kuhu on lühidalt kirjutatud, mida teha vaja on. Ülesannetele saab määrata ka sildid (*labels*), mis võimaldavad nende olemust kiiremini haarata. Näiteks veaparanduse ülesandele võiks panna külge sildi *bug*. Igale ülesandele saab määrata ka isiku, kes selle töö ära tegema peab ja vahest on hea panna ka kuupäev, millal töö valmis olema peab.
 
 .. image:: /_images/gitlab_issues.png
 
@@ -17,15 +17,15 @@ Tööülesandeid on hea jaotada kasutades Gitlabi *issue*'sid. Iga uue funktsion
 
 Tavaliselt on projekti põhikood alati *master* harus. 
 
-Ülesannete lahendamiseks on kasulik teha eraldi git'i haru. Seda saab teha nii lokaalselt enda giti salvest kui ka läbi Gitlabi veebiliidese. Lokaalselt saab läbi Git'i käsurea teha uue haru järnevalt: 
+Ülesannete lahendamiseks on kasulik teha eraldi Git'i haru. Seda saab teha nii lokaalselt enda Git'i salvest kui ka läbi Gitlabi veebiliidese. Lokaalselt saab läbi Git'i käsurea teha uue haru järnevalt: 
 
 `git checkout -b "UUS-HARU"`
 
-Siin pannakse uue haru nimeks "UUS-HARU". Arusadavuse parandamiseks hea on panna harule nimi, mis on lahendatava ülesande sisuga sarnane. Näiteks "#1-readme", siin #1 viitab Gitlab'i ülesande id-le.
+Siin pannakse uue haru nimeks "UUS-HARU". Arusadavuse parandamiseks hea on panna harule nimi, mis on lahendatava ülesande sisuga sarnane. Näiteks "#1-create-readme", siin #1 viitab Gitlab'i ülesande id-le.
 
 Samamoodi saab lokaalselt uue haru luua kasutades ka IntelliJ'd. Menüüst valida `VCS -> Git -> Branches... -> New Branch`.
 
-Teine võimalus ülesande lahendamisel haru tegemiseks on Gitlab'i veebileht. Avades lahendatava ülesande lehekülje Gitlabis on võimalik valida "**Create merge request**" mille puhul tehakse uus haru, kuhu kood lisada ja kohe ka *merge request*. Valides kõrvalt väiksema nupuga valiku, saab teha ka ainult uue haru ja *merge requesti* tegemise jätta hiljemaks.
+Teine võimalus haru tegemiseks on Gitlab'i veebileht. Avades lahendatava ülesande lehekülje Gitlabis on võimalik valida "**Create merge request**" mille puhul tehakse uus haru, kuhu kood lisada ja kohe ka *merge request*. Valides kõrvalt väiksema nupuga valiku, saab teha ka ainult uue haru ja *merge requesti* tegemise jätta hiljemaks.
 
 .. image:: /_images/gitlab_issue_merge_request_submenu.png
    :scale: 50
