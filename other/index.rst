@@ -9,6 +9,7 @@ See leht koondab kategoriseerimata materjalid.
 
    hello-world
    installing-java
+   java-versions
    variable
    date-time
    bugs
