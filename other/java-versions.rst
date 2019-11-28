@@ -41,7 +41,7 @@ Vana tsükli järgi Java versioonid (alates 1-st):
 
 Ajakohase Java (JDK) allalaadimise lingid:
 ------------------------------------------
-|  Java OpenJDK 8, 11 ja uusima mitte LTS versioon (AdoptOpenJDK): https://adoptopenjdk.net
+|  Java OpenJDK 8, 11 ja uusim mitte LTS versioon (AdoptOpenJDK): https://adoptopenjdk.net
 |  Java OracleJDK 11 (LTS): https://www.oracle.com/technetwork/java/javase/downloads/jdk11-downloads-5066655.html  
 |  Java OracleJDK 13: https://www.oracle.com/technetwork/java/javase/downloads/jdk13-downloads-5672538.html
 
