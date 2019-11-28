@@ -218,6 +218,8 @@ Viiteid
 
 `https://en.wikipedia.org/wiki/SOLID_(object-oriented_design) <https://en.wikipedia.org/wiki/SOLID_(object-oriented_design)>`_
 
+https://www.baeldung.com/solid-principles
+
 https://vimeo.com/111041651
 
 Koodinäiteid:
