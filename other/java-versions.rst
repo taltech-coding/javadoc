@@ -3,7 +3,7 @@ Java versioonid
 
 Üldist
 ------
-Kuni Java 8-ni ei olnud määratud kindlat tsükklit kuna uus Java versioon välja lastakse. Alates Java 9-st kasutatakse järgnevat süsteemi:
+Kuni Java 8-ni ei olnud määratud kindlat tsüklit kuna uus Java versioon välja lastakse. Alates Java 9-st kasutatakse järgnevat süsteemi:
 
 - Iga 6 kuu tagant uus versioon. Kui lastakse välja uus versioon, siis vana versiooni tugi saab läbi, välja arvatud pikaajalise toega versioonid (LTS).
 - Iga 3 aasta tagant uus pikaajalise toega versioon (LTS).
@@ -15,7 +15,7 @@ Uuele mudelile liikumisega muutis Oracle JDK kasutamise tingimusi:
 
 Sisult on Oracle JDK ja Oracle OpenJDK samad. 
 
-Uue tsükkli järgi Java versioonid (alates 9-st):
+Uue tsükli järgi Java versioonid (alates 9-st):
 ------------------------------------------------
 - Java 9 - september 2017
 - Java 10 - märts 2018
@@ -27,7 +27,7 @@ Uue tsükkli järgi Java versioonid (alates 9-st):
 - Java 16 - märts 2021
 - Java 17 - (**LTS**) september 2021
 
-Vana tsükkli järgi Java versioonid (alates 1-st):
+Vana tsükli järgi Java versioonid (alates 1-st):
 -------------------------------------------------
 - JDK 1.0 - jaanuar 1996
 - JDK 1.1 - veebruar 1997
