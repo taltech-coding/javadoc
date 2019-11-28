@@ -16,6 +16,33 @@ Sulge aken ja ava command prompt.
 Kirjuta sinna *path* ja vajuta Enter. Peaksid nägema installeeritud JDK asukohta, mille just lisasid.
 Kirjuta seejärel *java -version* ja vajuta enter. Peaksid nägema installeeritud Java versiooni.
 
+Linux (Ubuntu)
+--------------
+Ubuntu 18.04-s on juba OpenJDK pakk installitud.
+Seda saab kontrollida käsuga terminalis
+
+::
+
+    javac -version
+
+Kui JDK pole installitud kuvatakse midagi sarnast:
+
+::
+
+    Command 'javac' not found
+
+Sellisel juhul on vaja JDK installida läbi käsurea. OpenJDK 11 puhul:
+
+::
+
+    sudo apt install openjdk-11-jdk
+
+pärast installeerimist peaks javac käsk andma installitud versiooni info:
+
+::
+
+    javac 11.0.1
+
 Mac OS X
 --------
 Tee topeltklõps alla laetud failil, et avada installeerimise aken.
