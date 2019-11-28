@@ -1,10 +1,11 @@
 Java installeerimine
 ====================
 
-Enne kui saab luua ja muuta Java programme, tuleb endale installeerida JDK (Java Software Development Kit). Selleks vaata: :doc:`java-versions`
+| Enne kui saab luua ja muuta Java programme, tuleb endale installeerida JDK (Java Software Development Kit). Selleks vaata: :doc:`java-versions` alapealkirja "Ajakohase Java (JDK) allalaadimise lingid".  
+| *Linux Ubuntu operatsioonisüsteemiga saab OpenJDK installeerida käsitsi allalaadides või läbi Ubuntu Apt paketihalduri. Paketihalduri kaudu installeerides pole JDK-d eraldi vaja alla laadida.*
 
 Windows
---------
+-------
 Ava installeerimise aken ning luba sellel oma arvutis muudatusi teha.
 Vajuta "Next" ja nõustu installeerimise seadetega. Kui installeerimine on lõpetatud, võid akna sulgeda.
 Ava *Control Panel* -> *System and Security* -> *System* -> *Advanced system settings*. 
@@ -16,10 +17,10 @@ Sulge aken ja ava command prompt.
 Kirjuta sinna *path* ja vajuta Enter. Peaksid nägema installeeritud JDK asukohta, mille just lisasid.
 Kirjuta seejärel *java -version* ja vajuta enter. Peaksid nägema installeeritud Java versiooni.
 
-Linux (Ubuntu)
---------------
+Linux (Ubuntu), Apt paketihalduri abil
+--------------------------------------
 Ubuntu 18.04-s on juba OpenJDK pakk installitud.
-Seda saab kontrollida käsuga terminalis
+Seda saab kontrollida käsuga terminalis:
 
 ::
 
