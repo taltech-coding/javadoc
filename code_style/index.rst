@@ -8,4 +8,5 @@ See leht koondab koodistiiliga seotud materjalid.
    :caption: Teemad:
    
    code-style
+   clean-code
    javadoc
